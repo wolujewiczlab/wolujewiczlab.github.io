@@ -20,7 +20,6 @@ repository: "wolujewiczlab/wolujewiczlab.github.io"
 teaser: # path of fallback teaser image
 logo: # path of logo image to display in the masthead
 masthead_title: # overrides the website title displayed in the masthead
-logo: "/assets/images/bio-photo.jpg"
 
 # Site Author
 author:
