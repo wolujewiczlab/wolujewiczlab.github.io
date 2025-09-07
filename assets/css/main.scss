@@ -14,82 +14,220 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===== FIXED BIO PHOTO - PROPER ASPECT RATIO ===== */
-.author__avatar {
-  display: table-cell;
-  vertical-align: top;
-  width: 180px;
-  height: 180px;
+/* ===== HEADER LOGO STYLING ===== */
+.masthead {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 10;
+  background: var(--global-bg-color);
   
-  img {
-    width: 180px !important;
-    height: 180px !important;
-    object-fit: cover; // This prevents stretching
-    border-radius: 50%;
-    border: 3px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-      border-color: rgba(255, 255, 255, 0.25);
-    }
+  .masthead__inner-wrap {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
   }
 }
 
-/* ===== REFINED SIDEBAR ===== */
-.sidebar {
-  width: 300px !important;
+.site-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  margin-right: 15px;
+  object-fit: cover;
+  transition: all 0.3s ease;
   
-  .author__content {
-    margin-top: 1.2em;
+  &:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.4);
   }
+}
+
+.site-title {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1;
+}
+
+/* ===== REMOVE OLD SIDEBAR - REPLACE WITH GALLERY ===== */
+.sidebar {
+  display: none !important;
+}
+
+.archive {
+  width: 100% !important;
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5em;
+}
+
+.main-content {
+  grid-column: 1;
+}
+
+.research-gallery {
+  grid-column: 2;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
   
-  .author__name {
+  h3 {
     font-size: 1.2em;
     font-weight: 600;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+    color: #64b5f6;
+    text-align: center;
   }
   
-  .author__bio {
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin-bottom: 1.5em;
-    color: rgba(255, 255, 255, 0.85);
-  }
-  
-  .author__urls {
-    margin-top: 1.2em;
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
     
-    .btn {
-      margin-bottom: 0.4em;
-      padding: 0.4em 0.9em;
-      border-radius: 5px;
-      font-weight: 500;
-      font-size: 0.9em;
-      transition: all 0.2s ease;
+    .gallery-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       
       &:hover {
-        transform: translateX(3px);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        border-color: rgba(100, 181, 246, 0.4);
+      }
+      
+      img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+      }
+      
+      .gallery-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 1em;
+        font-size: 0.85em;
+        font-weight: 500;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+      }
+      
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+        
+        .gallery-caption {
+          transform: translateY(0);
+        }
       }
     }
   }
 }
 
-@include breakpoint($large) {
-  .sidebar {
-    padding-left: 0;
-    width: calc(300px - 1em) !important;
+/* ===== CONTACT INFO SECTION ===== */
+.contact-info {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-top: 1.5em;
+  
+  h4 {
+    color: #64b5f6;
+    margin-bottom: 1em;
+    font-size: 1.1em;
   }
   
-  .archive {
-    width: calc(100% - 300px) !important;
-    padding-left: 2.5em;
+  .contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8em;
+    font-size: 0.9em;
+    
+    i {
+      width: 20px;
+      margin-right: 10px;
+      color: #64b5f6;
+    }
+    
+    a {
+      color: rgba(255, 255, 255, 0.9);
+      text-decoration: none;
+      
+      &:hover {
+        color: #64b5f6;
+      }
+    }
   }
 }
 
-/* ===== CLEANER TYPOGRAPHY ===== */
+/* ===== RESPONSIVE LAYOUT ===== */
+@include breakpoint($large) {
+  .archive {
+    grid-template-columns: 1fr 320px;
+    padding: 2em;
+  }
+}
+
+@include breakpoint($medium) {
+  .archive {
+    grid-template-columns: 1fr;
+    padding: 1.5em;
+  }
+  
+  .research-gallery {
+    position: relative;
+    top: auto;
+    max-height: none;
+    margin-top: 2em;
+    
+    .gallery-grid {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+  }
+  
+  .contact-info {
+    margin-top: 1em;
+  }
+}
+
+@include breakpoint($small) {
+  .masthead__inner-wrap {
+    flex-direction: column;
+    text-align: center;
+    
+    .site-logo {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  
+  .archive {
+    padding: 1em;
+  }
+  
+  .research-gallery .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== EXISTING CONTENT STYLING ===== */
 .page__title {
   font-size: 2.1em;
   font-weight: 700;
@@ -123,7 +261,6 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* ===== REFINED VISUAL ELEMENTS ===== */
 .notice--info {
   background: rgba(100, 181, 246, 0.08);
   border: 1px solid rgba(100, 181, 246, 0.25);
@@ -136,10 +273,6 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
     margin-bottom: 0.8em;
     font-weight: 600;
     font-size: 1.1em;
-  }
-  
-  p, li {
-    margin-bottom: 0.5em;
   }
 }
 
@@ -184,124 +317,23 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
       color: rgba(255, 255, 255, 0.9);
     }
     
-    ul {
-      margin-top: 0;
+    ul li {
+      margin-bottom: 0.6em;
+      line-height: 1.5;
+      font-size: 0.95em;
       
-      li {
-        margin-bottom: 0.6em;
-        line-height: 1.5;
-        font-size: 0.95em;
-        
-        strong {
-          color: rgba(255, 255, 255, 0.95);
-        }
+      strong {
+        color: rgba(255, 255, 255, 0.95);
       }
     }
   }
 }
 
-/* ===== PROFESSIONAL LISTS ===== */
-ul {
-  li {
-    margin-bottom: 0.7em;
-    line-height: 1.6;
-    
-    strong {
-      font-weight: 600;
-    }
-  }
-}
-
-/* ===== CLEAN RESPONSIVE DESIGN ===== */
-@include breakpoint($small) {
-  .sidebar {
-    width: 100% !important;
-    margin-bottom: 2em;
-  }
+ul li {
+  margin-bottom: 0.7em;
+  line-height: 1.6;
   
-  .author__avatar img {
-    width: 140px !important;
-    height: 140px !important;
+  strong {
+    font-weight: 600;
   }
-  
-  .research-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5em;
-  }
-  
-  .page__title {
-    font-size: 1.8em;
-  }
-  
-  .page__content {
-    font-size: 1em;
-  }
-}
-
-@include breakpoint($medium) {
-  .research-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ===== FIX SCROLL OVERLAP ISSUES ===== */
-.masthead {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 10;
-  background: var(--global-bg-color);
-}
-
-.sidebar {
-  position: relative;
-  z-index: 5;
-  background: transparent;
-}
-
-.archive {
-  position: relative;
-  z-index: 1;
-  background: var(--global-bg-color);
-  padding-top: 1.5em;
-}
-
-.page__content {
-  position: relative;
-  z-index: 1;
-  background: var(--global-bg-color);
-}
-
-.page__footer {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  margin-top: 3em;
-  padding-top: 2em;
-  position: relative;
-  z-index: 1;
-  background: var(--global-bg-color);
-}
-
-/* ===== ENSURE PROPER STACKING ===== */
-.initial-content {
-  position: relative;
-  z-index: 1;
-}
-
-.layout--single {
-  .archive {
-    background: var(--global-bg-color);
-  }
-}
-
-// Improve link hover states
-a {
-  transition: color 0.2s ease;
-  
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-// Fix any sticky positioning issues
-.sticky {
-  position: relative !important;
 }
