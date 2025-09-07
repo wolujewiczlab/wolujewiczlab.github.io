@@ -11,9 +11,9 @@
 # Site settings
 title: "Wolujewicz Lab"
 title_separator: "-"
-subtitle: "Computational Biology & Genomics Research"
+subtitle: "Computational Biomedicine and Integrative Genomics"
 name: "Paul Wolujewicz"
-description: "Computational Biology and Genomics Laboratory at Quinnipiac University. Advancing our understanding of neurogenomic disorders and tick-borne pathogen ecology through cutting-edge bioinformatics and multi-omic approaches."
+description: "Computational Biology and Genomics Laboratory at Quinnipiac University. Advancing our understanding of neurogenomic disorders and vector-borne pathogens using systems biology, AI, and multi-omic approaches."
 url: "https://wolujewiczlab.github.io"
 baseurl: ""
 repository: "wolujewiczlab/wolujewiczlab.github.io"
