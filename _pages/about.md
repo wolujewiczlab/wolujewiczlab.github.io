@@ -1,12 +1,13 @@
 ---
 permalink: /
 title: "Wolujewicz Laboratory"
-excerpt: "Computational Biology & Genomics Research at Quinnipiac University"
-author_profile: true
-redirect_from: 
-  - /about/
-  - /about.html
+excerpt: "Computational Biomedicine & Integrative Genomics"
+layout: single
+classes: wide
+author_profile: false
 ---
+
+<div class="main-content">
 
 <div class="notice--info">
 <h4>🧬 Research Mission</h4>
@@ -50,7 +51,6 @@ Welcome to the **Wolujewicz Laboratory**, where we are at the forefront of compu
       <li><strong>Pipeline Development</strong>: Creating reproducible, scalable workflows for sequencing, assembly, and variant interpretation</li>
       <li><strong>Algorithm & Script Design</strong>: Custom tool development for sequence assembly, variant calling, and data visualization</li>
       <li><strong>Integrative Machine Learning</strong>: Applying AI approaches to uncover hidden patterns and predict biological outcomes across multi-omic datasets</li>
-      <li><strong>Open Science</strong>: Sharing code, workflows, and resources with the broader scientific community</li>
     </ul>
   </div>
 </div>
@@ -78,25 +78,68 @@ Our lab provides a collaborative, interdisciplinary environment where computatio
 
 ## Join Our Team
 
-We welcome motivated individuals passionate about computational biology and genomics research. Current opportunities include:
+🔬 👨‍🔬 🎓 We welcome motivated individuals passionate about computational biology and genomics research. 
 
-**🎓 Graduate Students**: Ph.D. and M.S. positions in biomedical sciences  
-**🔬 Undergraduate Researchers**: Hands-on experience with cutting-edge genomics projects  
-**👨‍🔬 Postdoctoral Fellows**: Advanced research positions for recent Ph.D. graduates  
-**🌐 Visiting Scholars**: Collaborative opportunities for established researchers
 
 ### What We Offer:
 - State-of-the-art computational resources and bioinformatics infrastructure
 - Mentorship in both computational and experimental genomics approaches
-- Opportunities to publish in high-impact journals and present at international conferences
+- Opportunities to publish in high-impact journals and present at national conferences
 - Professional development and career advancement support
-- Collaborative environment with leading researchers in genomics and computational biology
 
 <div class="notice--info">
 <h4>📬 Ready to Join?</h4>
 <strong>Interested in joining our research team?</strong> Please email Dr. Wolujewicz with your CV, research interests, and career goals. We encourage applications from individuals of all backgrounds who are passionate about advancing genomics research.
 </div>
 
----
+</div>
 
-*For the latest news, publications, and research updates, explore the rest of our website or follow our research progress.*
+<div class="research-gallery">
+  <h3>Research Showcase</h3>
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="/assets/images/research1.jpg" alt="Research Image 1">
+      <div class="gallery-caption">
+        Neurogenomic Analysis Pipeline
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/images/research2.jpg" alt="Research Image 2">
+      <div class="gallery-caption">
+        Tick Microbiome Sequencing
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/images/research3.jpg" alt="Research Image 3">
+      <div class="gallery-caption">
+        Multi-omic Data Integration
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="/assets/images/research4.jpg" alt="Research Image 4">
+      <div class="gallery-caption">
+        AI-Driven Variant Analysis
+      </div>
+    </div>
+  </div>
+  
+  <div class="contact-info">
+    <h4>Contact Information</h4>
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <a href="mailto:paul.wolujewicz@quinnipiac.edu">paul.wolujewicz@quinnipiac.edu</a>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-university"></i>
+      <span>Quinnipiac University</span>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Hamden, CT</span>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <a href="https://github.com/pwolujewicz">GitHub</a>
+    </div>
+  </div>
+</div>
