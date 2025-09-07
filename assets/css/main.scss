@@ -3,67 +3,75 @@
 
 @charset "utf-8";
 
-// Import custom fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+// Import professional fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Code+Pro:wght@400;500&display=swap');
 
 // Custom font variables
-$global-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", sans-serif;
+$global-font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 $header-font-family: "Inter", sans-serif;
-$monospace: "JetBrains Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===== ENHANCED BIO PHOTO ===== */
+/* ===== FIXED BIO PHOTO - PROPER ASPECT RATIO ===== */
 .author__avatar {
   display: table-cell;
   vertical-align: top;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   
   img {
-    max-width: 200px !important;
-    width: 200px !important;
-    height: 200px !important;
+    width: 180px !important;
+    height: 180px !important;
+    object-fit: cover; // This prevents stretching
     border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     
     &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.25);
     }
   }
 }
 
-/* ===== ENHANCED SIDEBAR ===== */
+/* ===== REFINED SIDEBAR ===== */
 .sidebar {
-  width: 320px !important;
+  width: 300px !important;
   
   .author__content {
-    margin-top: 1em;
+    margin-top: 1.2em;
+  }
+  
+  .author__name {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
   }
   
   .author__bio {
-    font-size: 0.9em;
-    line-height: 1.6;
+    font-size: 0.95em;
+    line-height: 1.5;
     margin-bottom: 1.5em;
+    color: rgba(255, 255, 255, 0.85);
   }
   
   .author__urls {
-    margin-top: 1em;
+    margin-top: 1.2em;
     
     .btn {
-      margin-bottom: 0.5em;
-      padding: 0.5em 1em;
-      border-radius: 6px;
+      margin-bottom: 0.4em;
+      padding: 0.4em 0.9em;
+      border-radius: 5px;
       font-weight: 500;
+      font-size: 0.9em;
       transition: all 0.2s ease;
       
       &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        transform: translateX(3px);
       }
     }
   }
@@ -72,153 +80,191 @@ $monospace: "JetBrains Mono", Monaco, Consolas, "Liberation Mono", "Courier New"
 @include breakpoint($large) {
   .sidebar {
     padding-left: 0;
-    width: calc(320px - 1em) !important;
+    width: calc(300px - 1em) !important;
   }
   
   .archive {
-    width: calc(100% - 320px) !important;
-    padding-left: 2em;
+    width: calc(100% - 300px) !important;
+    padding-left: 2.5em;
   }
 }
 
-/* ===== TYPOGRAPHY ENHANCEMENTS ===== */
-h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font-family;
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.3;
-}
-
+/* ===== CLEANER TYPOGRAPHY ===== */
 .page__title {
-  font-size: 2.2em;
+  font-size: 2.1em;
   font-weight: 700;
-  margin-bottom: 0.5em;
-  background: linear-gradient(135deg, #64b5f6, #42a5f5);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 0.8em;
+  line-height: 1.2;
 }
 
 .page__content {
-  font-size: 1.1em;
-  line-height: 1.7;
+  font-size: 1.05em;
+  line-height: 1.65;
   
   p {
-    margin-bottom: 1.5em;
+    margin-bottom: 1.4em;
   }
   
   h2 {
-    font-size: 1.8em;
-    margin-top: 2em;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    border-bottom: 2px solid rgba(100, 181, 246, 0.3);
+    font-size: 1.7em;
+    font-weight: 600;
+    margin-top: 2.5em;
+    margin-bottom: 1.2em;
+    padding-bottom: 0.4em;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
   }
   
   h3 {
-    font-size: 1.4em;
-    margin-top: 1.5em;
+    font-size: 1.35em;
+    font-weight: 600;
+    margin-top: 1.8em;
     margin-bottom: 0.8em;
     color: #64b5f6;
   }
 }
 
-/* ===== VISUAL ENHANCEMENTS ===== */
+/* ===== REFINED VISUAL ELEMENTS ===== */
 .notice--info {
-  background: linear-gradient(135deg, rgba(100, 181, 246, 0.1), rgba(66, 165, 245, 0.05));
-  border: 1px solid rgba(100, 181, 246, 0.3);
-  border-radius: 12px;
+  background: rgba(100, 181, 246, 0.08);
+  border: 1px solid rgba(100, 181, 246, 0.25);
+  border-radius: 8px;
   padding: 1.5em;
   margin: 2em 0;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   
   h4 {
     color: #64b5f6;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     font-weight: 600;
+    font-size: 1.1em;
+  }
+  
+  p, li {
+    margin-bottom: 0.5em;
   }
 }
 
 .research-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
-  margin: 2em 0;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.8em;
+  margin: 2.5em 0;
   
   .research-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 1.5em;
+    border-radius: 10px;
+    padding: 1.8em;
     transition: all 0.3s ease;
     
     &:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      border-color: rgba(100, 181, 246, 0.4);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      border-color: rgba(100, 181, 246, 0.3);
+      background: rgba(255, 255, 255, 0.05);
     }
     
     h3 {
       color: #64b5f6;
       margin-bottom: 1em;
-      font-size: 1.3em;
+      font-size: 1.25em;
+      font-weight: 600;
+      margin-top: 0.5em;
     }
     
     .research-icon {
-      font-size: 2.5em;
-      margin-bottom: 0.5em;
+      font-size: 2.2em;
+      margin-bottom: 0.8em;
       display: block;
+      opacity: 0.9;
+    }
+    
+    p {
+      margin-bottom: 1.2em;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.9);
+    }
+    
+    ul {
+      margin-top: 0;
+      
+      li {
+        margin-bottom: 0.6em;
+        line-height: 1.5;
+        font-size: 0.95em;
+        
+        strong {
+          color: rgba(255, 255, 255, 0.95);
+        }
+      }
     }
   }
 }
 
-/* ===== ENHANCED LISTS ===== */
+/* ===== PROFESSIONAL LISTS ===== */
 ul {
   li {
-    margin-bottom: 0.8em;
+    margin-bottom: 0.7em;
     line-height: 1.6;
     
-    &::marker {
-      color: #64b5f6;
+    strong {
+      font-weight: 600;
     }
   }
 }
 
-/* ===== BUTTONS AND LINKS ===== */
-.btn {
-  border-radius: 8px;
-  font-weight: 500;
-  padding: 0.75em 1.5em;
-  transition: all 0.2s ease;
-  
-  &--primary {
-    background: linear-gradient(135deg, #64b5f6, #42a5f5);
-    border: none;
-    
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(100, 181, 246, 0.4);
-    }
-  }
-}
-
-/* ===== RESPONSIVE ADJUSTMENTS ===== */
+/* ===== CLEAN RESPONSIVE DESIGN ===== */
 @include breakpoint($small) {
   .sidebar {
     width: 100% !important;
+    margin-bottom: 2em;
   }
   
   .author__avatar img {
-    max-width: 150px !important;
-    width: 150px !important;
-    height: 150px !important;
+    width: 140px !important;
+    height: 140px !important;
   }
   
   .research-grid {
     grid-template-columns: 1fr;
+    gap: 1.5em;
   }
   
   .page__title {
     font-size: 1.8em;
   }
+  
+  .page__content {
+    font-size: 1em;
+  }
+}
+
+@include breakpoint($medium) {
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== SUBTLE IMPROVEMENTS ===== */
+.masthead {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.page__footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3em;
+  padding-top: 2em;
+}
+
+// Improve link hover states
+a {
+  transition: color 0.2s ease;
+  
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+// Better spacing for the main content area
+.archive {
+  padding-top: 1.5em;
 }
