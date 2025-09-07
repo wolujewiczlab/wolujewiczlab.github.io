@@ -41,6 +41,9 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 /* ===== ENHANCED SIDEBAR ===== */
 .sidebar {
   width: 300px !important;
+  position: relative;
+  z-index: 5;
+  background: var(--global-bg-color);
   
   .author__content {
     margin-top: 1.2em;
@@ -166,6 +169,9 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 .page__content {
   font-size: 1.05em;
   line-height: 1.65;
+  position: relative;
+  z-index: 2;
+  background: var(--global-bg-color);
   
   p {
     margin-bottom: 1.4em;
@@ -341,11 +347,18 @@ ul li {
 .masthead {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   position: relative;
-  z-index: 10;
+  z-index: 20;
   background: var(--global-bg-color);
 }
 
-.page__content {
+.archive {
+  position: relative;
+  z-index: 1;
+  background: var(--global-bg-color);
+  min-height: 100vh;
+}
+
+.initial-content {
   position: relative;
   z-index: 1;
   background: var(--global-bg-color);
@@ -358,6 +371,24 @@ ul li {
   position: relative;
   z-index: 1;
   background: var(--global-bg-color);
+}
+
+/* Force proper stacking context */
+.layout--single {
+  .archive {
+    background: var(--global-bg-color);
+  }
+}
+
+/* Remove any problematic fixed positioning */
+.sticky {
+  position: relative !important;
+}
+
+/* Ensure content areas don't overlap */
+.page {
+  position: relative;
+  z-index: 1;
 }
 
 a {
