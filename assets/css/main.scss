@@ -14,12 +14,14 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* ===== ENHANCED BIO PHOTO IN SIDEBAR ===== */
+/* ===== HORIZONTAL BIO LAYOUT ===== */
 .author__avatar {
-  display: table-cell;
+  display: inline-block;
   vertical-align: top;
   width: 140px;
   height: 140px;
+  margin-right: 1em;
+  margin-bottom: 0;
   
   img {
     width: 140px !important;
@@ -47,24 +49,29 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   background: var(--global-bg-color);
   
   .author__content {
-    margin-top: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% - 160px);
+    margin-top: 0;
   }
   
   .author__name {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 600;
     margin-bottom: 0.5em;
+    margin-top: 0;
   }
   
   .author__bio {
-    font-size: 0.95em;
-    line-height: 1.5;
-    margin-bottom: 1.5em;
+    font-size: 0.85em;
+    line-height: 1.4;
+    margin-bottom: 1em;
     color: rgba(255, 255, 255, 0.85);
   }
   
   .author__urls {
     margin-top: 1.2em;
+    clear: both;
     
     .btn {
       margin-bottom: 0.4em;
@@ -236,9 +243,22 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
     margin-bottom: 2em;
   }
   
-  .author__avatar img {
-    width: 140px !important;
-    height: 140px !important;
+  .author__avatar {
+    display: block;
+    margin-bottom: 1em;
+    margin-right: 0;
+    width: 120px;
+    height: 120px;
+    
+    img {
+      width: 120px !important;
+      height: 120px !important;
+    }
+  }
+  
+  .author__content {
+    display: block;
+    width: 100%;
   }
   
   .research-gallery .gallery-grid {
