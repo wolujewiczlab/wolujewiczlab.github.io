@@ -25,7 +25,7 @@ masthead_title: # overrides the website title displayed in the masthead
 author:
   name: "Paul Wolujewicz"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Assistant Professor of Biomedical Sciences at Quinnipiac University. Computational biologist specializing in translational genomics."
+  bio: "Assistant Professor of Biomedical Sciences at Quinnipiac University. Adjunct Assistant Professor of Neuroscience at Weill Cornell Medicine. Computational biologist specializing in translational genomics."
   location: "Hamden, CT"
   email: "paul.wolujewicz@quinnipiac.edu"
   links:
@@ -49,6 +49,7 @@ footer:
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
+minimal_mistakes_skin: "contrast"
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
