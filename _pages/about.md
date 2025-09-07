@@ -3,11 +3,8 @@ permalink: /
 title: "Wolujewicz Laboratory"
 excerpt: "Computational Biomedicine & Integrative Genomics"
 layout: single
-classes: wide
-author_profile: false
+author_profile: true
 ---
-
-<div class="main-content">
 
 <div class="notice--info">
 <h4>🧬 Research Mission</h4>
@@ -76,26 +73,10 @@ Our lab provides a collaborative, interdisciplinary environment where computatio
 </ul>
 </div>
 
-## Join Our Team
-
-🔬 👨‍🔬 🎓 We welcome motivated individuals passionate about computational biology and genomics research. 
-
-
-### What We Offer:
-- State-of-the-art computational resources and bioinformatics infrastructure
-- Mentorship in both computational and experimental genomics approaches
-- Opportunities to publish in high-impact journals and present at national conferences
-- Professional development and career advancement support
-
-<div class="notice--info">
-<h4>📬 Ready to Join?</h4>
-<strong>Interested in joining our research team?</strong> Please email Dr. Wolujewicz with your CV, research interests, and career goals. We encourage applications from individuals of all backgrounds who are passionate about advancing genomics research.
-</div>
-
-</div>
+## Research Showcase
 
 <div class="research-gallery">
-  <h3>Research Showcase</h3>
+  <h2>Visual Research Portfolio</h2>
   <div class="gallery-grid">
     <div class="gallery-item">
       <img src="/assets/images/research1.jpg" alt="Research Image 1">
@@ -122,24 +103,19 @@ Our lab provides a collaborative, interdisciplinary environment where computatio
       </div>
     </div>
   </div>
-  
-  <div class="contact-info">
-    <h4>Contact Information</h4>
-    <div class="contact-item">
-      <i class="fas fa-envelope"></i>
-      <a href="mailto:paul.wolujewicz@quinnipiac.edu">paul.wolujewicz@quinnipiac.edu</a>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-university"></i>
-      <span>Quinnipiac University</span>
-    </div>
-    <div class="contact-item">
-      <i class="fas fa-map-marker-alt"></i>
-      <span>Hamden, CT</span>
-    </div>
-    <div class="contact-item">
-      <i class="fab fa-github"></i>
-      <a href="https://github.com/pwolujewicz">GitHub</a>
-    </div>
-  </div>
+</div>
+
+## Join Our Team
+
+🔬 👨‍🔬 🎓 We welcome motivated individuals passionate about computational biology and genomics research. 
+
+### What We Offer:
+- State-of-the-art computational resources and bioinformatics infrastructure
+- Mentorship in both computational and experimental genomics approaches
+- Opportunities to publish in high-impact journals and present at national conferences
+- Professional development and career advancement support
+
+<div class="notice--info">
+<h4>📬 Ready to Join?</h4>
+<strong>Interested in joining our research team?</strong> Please email Dr. Wolujewicz with your CV, research interests, and career goals. We encourage applications from individuals of all backgrounds who are passionate about advancing genomics research.
 </div>
