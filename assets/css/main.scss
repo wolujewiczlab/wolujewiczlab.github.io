@@ -66,11 +66,25 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
     .university-qu {
       color: #DAA520; // Quinnipiac gold
       font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: #FFD700; // Brighter gold on hover
+        text-decoration: none;
+      }
     }
     
     .university-wcm {
       color: #CC0000; // Cornell dark red
       font-weight: 500;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        color: #FF0000; // Brighter red on hover
+        text-decoration: none;
+      }
     }
     
     .research-mission {
