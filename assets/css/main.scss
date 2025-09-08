@@ -15,13 +15,17 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 @import "minimal-mistakes";
 
 /* ===== HORIZONTAL BIO LAYOUT ===== */
+.sidebar .author {
+  display: flex;
+  align-items: flex-start;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
 .author__avatar {
-  display: inline-block;
-  vertical-align: top;
+  flex-shrink: 0;
   width: 140px;
   height: 140px;
-  margin-right: 1em;
-  margin-bottom: 0;
   
   img {
     width: 140px !important;
@@ -41,33 +45,54 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
+.author__content {
+  flex: 1;
+  min-width: 0; // Prevents text overflow
+  
+  .author__name {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    line-height: 1.2;
+  }
+  
+  .author__bio {
+    font-size: 0.8em;
+    line-height: 1.3;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.85);
+    
+    .university-qu {
+      color: #DAA520; // Quinnipiac gold
+      font-weight: 500;
+    }
+    
+    .university-wcm {
+      color: #CC0000; // Cornell dark red
+      font-weight: 500;
+    }
+    
+    .research-mission {
+      display: block;
+      margin-top: 0.8em;
+      font-family: "Inter", serif;
+      font-size: 1.1em;
+      font-weight: 400;
+      line-height: 1.4;
+      color: rgba(255, 255, 255, 0.95);
+      font-style: italic;
+      letter-spacing: 0.3px;
+    }
+  }
+}
+
 /* ===== ENHANCED SIDEBAR ===== */
 .sidebar {
   width: 300px !important;
   position: relative;
   z-index: 5;
   background: var(--global-bg-color);
-  
-  .author__content {
-    display: inline-block;
-    vertical-align: top;
-    width: calc(100% - 160px);
-    margin-top: 0;
-  }
-  
-  .author__name {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 0.5em;
-    margin-top: 0;
-  }
-  
-  .author__bio {
-    font-size: 0.85em;
-    line-height: 1.4;
-    margin-bottom: 1em;
-    color: rgba(255, 255, 255, 0.85);
-  }
   
   .author__urls {
     margin-top: 1.2em;
