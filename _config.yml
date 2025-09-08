@@ -27,7 +27,7 @@ logo: "/assets/images/logo.png"
 author:
   name: "Paul Wolujewicz, PhD, MPH"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Assistant Professor of Biomedical Sciences at Quinnipiac University. Adjunct Assistant Professor of Neuroscience at Weill Cornell Medicine. Advancing discovery in neurogenomic disorders and vector-borne pathogens with integrative systems biology, AI-driven analytics, and multi-omic technologies."
+  bio: "Assistant Professor of Biomedical Sciences at <span class='university-qu'>Quinnipiac University</span>. Adjunct Assistant Professor of Neuroscience at <span class='university-wcm'>Weill Cornell Medicine</span>. <span class='research-mission'>Advancing discovery in neurogenomic disorders and vector-borne pathogens with integrative systems biology, AI-driven analytics, and multi-omic technologies.</span>"
   location: "Hamden, CT"
   email: "paul.wolujewicz@quinnipiac.edu"
   links:
