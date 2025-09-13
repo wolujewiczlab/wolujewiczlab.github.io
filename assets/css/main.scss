@@ -314,6 +314,61 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
+/* ===== RESEARCH BANNER STYLES ===== */
+.research-banner {
+  margin: 2rem 0 3rem 0;
+  width: 100%;
+  
+  .banner-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+    .banner-image {
+      width: 100%;
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(100, 181, 246, 0.3);
+      }
+    }
+  }
+}
+
+/* Responsive adjustments for banner */
+@include breakpoint($small) {
+  .research-banner {
+    margin: 1.5rem 0 2rem 0;
+    
+    .banner-container {
+      padding: 0 0.5rem;
+      
+      .banner-image {
+        max-height: 250px;
+        border-radius: 8px;
+      }
+    }
+  }
+}
+
+@include breakpoint($medium) {
+  .research-banner {
+    .banner-container {
+      .banner-image {
+        max-height: 300px;
+      }
+    }
+  }
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 @include breakpoint($small) {
   .sidebar {
