@@ -15,11 +15,7 @@ layout: default
       {% endif %}
     </div>
 
-    <div class="archive">
-      {% unless page.header.overlay_color or page.header.overlay_image %}
-        <h1 id="page-title" class="page__title">{{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}</h1>
-      {% endunless %}
-      
+    <div class="archive">      
       {{ content }}
       
       {% assign posts = site.posts | where_exp: "post", "post.hidden != true" %}
