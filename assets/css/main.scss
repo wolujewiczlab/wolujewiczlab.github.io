@@ -315,29 +315,30 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 /* ===== RESEARCH BANNER STYLES ===== */
+
 .research-banner {
-  margin: 2rem 0 3rem 0;
+  margin: 1rem 0 2rem 0;
   width: 100%;
   
   .banner-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
     
     .banner-image {
       width: 100%;
-      height: auto;
-      max-height: 400px;
+      height: 120px; // Much smaller fixed height
       object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
+      object-position: center;
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: all 0.2s ease;
       border: 1px solid rgba(255, 255, 255, 0.1);
+      display: block;
       
       &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-        border-color: rgba(100, 181, 246, 0.3);
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
       }
     }
   }
@@ -346,14 +347,12 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 /* Responsive adjustments for banner */
 @include breakpoint($small) {
   .research-banner {
-    margin: 1.5rem 0 2rem 0;
+    margin: 0.5rem 0 1.5rem 0;
     
     .banner-container {
-      padding: 0 0.5rem;
-      
       .banner-image {
-        max-height: 250px;
-        border-radius: 8px;
+        height: 80px; // Even smaller on mobile
+        border-radius: 4px;
       }
     }
   }
@@ -363,9 +362,16 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   .research-banner {
     .banner-container {
       .banner-image {
-        max-height: 300px;
+        height: 100px; // Medium size for tablets
       }
     }
+  }
+}
+
+// Ensure banner doesn't interfere with layout
+.layout--home .archive {
+  .research-banner + * {
+    margin-top: 1rem;
   }
 }
 
