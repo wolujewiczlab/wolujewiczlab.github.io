@@ -314,82 +314,100 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* ===== COMPACT RESEARCH BANNER - PROPERLY CONSTRAINED ===== */
+/* ===== RESEARCH BANNER - PROPERLY POSITIONED AND SIZED ===== */
 .research-banner {
-  margin: 0.3rem auto 0.8rem auto;
+  margin: 1rem auto 2rem auto;
   width: 100%;
-  max-width: 800px; // Constrain maximum width
+  max-width: 1000px; // Wider banner
   clear: both;
+  position: relative;
+  z-index: 10;
   
   .banner-container {
     max-width: 100%;
     margin: 0;
-    padding: 0;
-    overflow: hidden;
+    padding: 0 1rem;
     
     .banner-image {
       width: 100%;
-      height: 35px; // Very compact height
-      max-height: 35px;
-      min-height: 35px;
+      height: 120px; // Bigger height
+      max-height: 120px;
+      min-height: 120px;
       object-fit: cover;
       object-position: center;
-      border-radius: 3px;
-      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.2s ease;
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.1);
       display: block;
       
       &:hover {
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        border-color: rgba(100, 181, 246, 0.3);
       }
     }
   }
 }
 
-/* Mobile - even more compact */
+/* Responsive banner sizing */
 @include breakpoint($small) {
   .research-banner {
-    margin: 0.2rem auto 0.6rem auto;
-    max-width: 100%;
+    margin: 0.8rem auto 1.5rem auto;
     
-    .banner-container .banner-image {
-      height: 28px;
-      max-height: 28px;
-      min-height: 28px;
-      border-radius: 2px;
+    .banner-container {
+      padding: 0 0.5rem;
+      
+      .banner-image {
+        height: 80px; // Smaller on mobile
+        max-height: 80px;
+        min-height: 80px;
+        border-radius: 6px;
+      }
     }
   }
 }
 
-/* Medium screens */
 @include breakpoint($medium) {
   .research-banner {
-    max-width: 700px;
+    max-width: 900px;
     
     .banner-container .banner-image {
-      height: 32px;
-      max-height: 32px;
-      min-height: 32px;
+      height: 100px; // Medium size for tablets
+      max-height: 100px;
+      min-height: 100px;
     }
   }
 }
 
-// Ensure banner doesn't interfere with layout flow
+// Position banner in main content area but above sidebar
 .layout--home {
-  .research-banner {
+  .initial-content {
     position: relative;
-    z-index: 1;
+    
+    .research-banner {
+      margin-bottom: 2rem;
+    }
   }
   
   .archive {
     position: relative;
-    z-index: 2;
-    
-    .research-banner + * {
-      margin-top: 0.5rem;
-    }
+    z-index: 5;
   }
+  
+  .sidebar {
+    position: relative;
+    z-index: 5;
+  }
+}
+
+// Ensure proper spacing with content below
+.research-banner + .archive {
+  margin-top: 1rem;
+}
+
+.research-banner + .sidebar {
+  margin-top: 1rem;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
