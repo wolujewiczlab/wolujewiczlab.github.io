@@ -55,6 +55,7 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   flex-shrink: 0;
   width: 140px;
   height: 140px;
+  cursor: pointer;
   
   img {
     width: 140px !important;
@@ -65,9 +66,10 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
     border: 3px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    cursor: pointer;
     
     &:hover {
-      transform: translateY(-2px);
+      transform: translateY(-2px) scale(1.02);
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
       border-color: rgba(255, 255, 255, 0.25);
     }
@@ -314,54 +316,58 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* ===== RESEARCH BANNER - PROPERLY POSITIONED AND SIZED ===== */
-.research-banner {
-  margin: 1rem auto 2rem auto;
+/* ===== RESEARCH BANNER WRAPPER - FULL WIDTH POSITIONING ===== */
+.research-banner-wrapper {
   width: 100%;
-  max-width: 1000px; // Wider banner
-  clear: both;
+  margin: 1.5rem 0 2rem 0;
+  padding: 0;
+  background: var(--global-bg-color);
   position: relative;
-  z-index: 10;
+  z-index: 1;
   
-  .banner-container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0 1rem;
+  .research-banner {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
     
-    .banner-image {
-      width: 100%;
-      height: 120px; // Bigger height
-      max-height: 120px;
-      min-height: 120px;
-      object-fit: cover;
-      object-position: center;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      display: block;
+    .banner-container {
+      padding: 0 1rem;
       
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-        border-color: rgba(100, 181, 246, 0.3);
+      .banner-image {
+        width: 100%;
+        height: 140px;
+        max-height: 140px;
+        min-height: 140px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
+        
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+          border-color: rgba(100, 181, 246, 0.3);
+        }
       }
     }
   }
 }
 
-/* Responsive banner sizing */
+/* Responsive banner wrapper */
 @include breakpoint($small) {
-  .research-banner {
-    margin: 0.8rem auto 1.5rem auto;
+  .research-banner-wrapper {
+    margin: 1rem 0 1.5rem 0;
     
-    .banner-container {
+    .research-banner .banner-container {
       padding: 0 0.5rem;
       
       .banner-image {
-        height: 80px; // Smaller on mobile
-        max-height: 80px;
-        min-height: 80px;
+        height: 90px;
+        max-height: 90px;
+        min-height: 90px;
         border-radius: 6px;
       }
     }
@@ -369,45 +375,20 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 }
 
 @include breakpoint($medium) {
-  .research-banner {
-    max-width: 900px;
-    
-    .banner-container .banner-image {
-      height: 100px; // Medium size for tablets
-      max-height: 100px;
-      min-height: 100px;
+  .research-banner-wrapper {
+    .research-banner .banner-container .banner-image {
+      height: 120px;
+      max-height: 120px;
+      min-height: 120px;
     }
   }
 }
 
-// Position banner in main content area but above sidebar
+/* Ensure proper spacing with the main layout */
 .layout--home {
   .initial-content {
-    position: relative;
-    
-    .research-banner {
-      margin-bottom: 2rem;
-    }
+    margin-top: 0;
   }
-  
-  .archive {
-    position: relative;
-    z-index: 5;
-  }
-  
-  .sidebar {
-    position: relative;
-    z-index: 5;
-  }
-}
-
-// Ensure proper spacing with content below
-.research-banner + .archive {
-  margin-top: 1rem;
-}
-
-.research-banner + .sidebar {
-  margin-top: 1rem;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -600,5 +581,30 @@ a {
   
   &:hover {
     text-decoration: none;
+  }
+}
+
+/* ===== CLICKABLE AVATAR JAVASCRIPT ===== */
+.author__avatar {
+  &::after {
+    content: "🔗";
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  &:hover::after {
+    opacity: 1;
   }
 }
