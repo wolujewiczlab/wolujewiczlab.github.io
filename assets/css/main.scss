@@ -314,66 +314,81 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* ===== PERFECT SIZED RESEARCH BANNER ===== */
+/* ===== COMPACT RESEARCH BANNER - PROPERLY CONSTRAINED ===== */
 .research-banner {
-  margin: 0.5rem 0 1.2rem 0;
+  margin: 0.3rem auto 0.8rem auto;
   width: 100%;
+  max-width: 800px; // Constrain maximum width
+  clear: both;
   
   .banner-container {
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
+    overflow: hidden;
     
     .banner-image {
       width: 100%;
-      height: 45px !important; // Perfect compact size
-      max-height: 45px !important;
+      height: 35px; // Very compact height
+      max-height: 35px;
+      min-height: 35px;
       object-fit: cover;
       object-position: center;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-      transition: all 0.2s ease;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 3px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.2s ease;
+      border: 1px solid rgba(255, 255, 255, 0.08);
       display: block;
       
       &:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
       }
     }
   }
 }
 
-/* Responsive adjustments for banner */
+/* Mobile - even more compact */
 @include breakpoint($small) {
   .research-banner {
-    margin: 0.4rem 0 1rem 0;
+    margin: 0.2rem auto 0.6rem auto;
+    max-width: 100%;
     
-    .banner-container {
-      .banner-image {
-        height: 45px !important; // Even smaller on mobile
-        max-height: 45px !important;
-        border-radius: 3px;
-      }
+    .banner-container .banner-image {
+      height: 28px;
+      max-height: 28px;
+      min-height: 28px;
+      border-radius: 2px;
     }
   }
 }
 
+/* Medium screens */
 @include breakpoint($medium) {
   .research-banner {
-    .banner-container {
-      .banner-image {
-        height: 55px !important; // Medium size for tablets
-        max-height: 55px !important;
-      }
+    max-width: 700px;
+    
+    .banner-container .banner-image {
+      height: 32px;
+      max-height: 32px;
+      min-height: 32px;
     }
   }
 }
 
-// Ensure banner doesn't interfere with layout
-.layout--home .archive {
-  .research-banner + * {
-    margin-top: 0.8rem;
+// Ensure banner doesn't interfere with layout flow
+.layout--home {
+  .research-banner {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .archive {
+    position: relative;
+    z-index: 2;
+    
+    .research-banner + * {
+      margin-top: 0.5rem;
+    }
   }
 }
 
