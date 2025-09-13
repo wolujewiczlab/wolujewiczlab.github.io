@@ -26,18 +26,17 @@ logo: "/assets/images/logo.png"
 # Site Author
 author:
   name: "Paul Wolujewicz, PhD, MPH"
-  avatar: "/assets/images/bio-photo.jpg" # path to your photo
-  bio: "Assistant Professor of Biomedical Sciences"
-  location: "Quinnipiac University"
+  avatar: "/assets/images/bio-photo.jpg"
+  bio: 'Assistant Professor of Biomedical Sciences at <a href="https://www.qu.edu" class="university-qu">Quinnipiac University</a>.<br>Adjunct Assistant Professor of Neuroscience at <a href="https://weill.cornell.edu" class="university-wcm">Weill Cornell Medicine</a>.'
+  location: "Hamden, Connecticut, USA"
   avatar_link: "https://www.qu.edu/faculty-and-staff/paul-wolujewicz/"
   links:
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:paul.wolujewicz@quinnipiac.edu"
-    - label: "Quinnipiac Faculty Page"
-      icon: "fas fa-fw fa-university"
-      url: "https://www.qu.edu/faculty-and-staff/paul-wolujewicz/"
-    # Add other social links here
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/paul-wolujewicz-82b73314/"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0003-2982-9448"
 
 # Site Footer
 footer:
