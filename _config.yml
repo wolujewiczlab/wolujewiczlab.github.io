@@ -26,7 +26,7 @@ logo: "/assets/images/logo.png"
 # Site Author
 author:
   name: "Paul Wolujewicz, PhD, MPH"
-  avatar: "/assets/images/your-photo.jpg" # path to your photo
+  avatar: "/assets/images/bio-photo.jpg" # path to your photo
   bio: "Assistant Professor of Biomedical Sciences"
   location: "Quinnipiac University"
   avatar_link: "https://www.qu.edu/faculty-and-staff/paul-wolujewicz/"
