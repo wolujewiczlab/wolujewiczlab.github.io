@@ -26,19 +26,18 @@ logo: "/assets/images/logo.png"
 # Site Author
 author:
   name: "Paul Wolujewicz, PhD, MPH"
-  avatar: "/assets/images/bio-photo.jpg"
-  bio: "Assistant Professor of Biomedical Sciences at <a href='https://www.quinnipiac.edu' target='_blank' class='university-qu'>Quinnipiac University</a>. Adjunct Assistant Professor of Neuroscience at <a href='https://weill.cornell.edu' target='_blank' class='university-wcm'>Weill Cornell Medicine</a>.<br><br><em>Advancing discovery in neurogenomic disorders and vector-borne pathogens with integrative systems biology, AI-driven analytics, and multi-omic technologies.</em>"
-  email: "paul.wolujewicz@quinnipiac.edu"
+  avatar: "/assets/images/your-photo.jpg" # path to your photo
+  bio: "Assistant Professor of Biomedical Sciences"
+  location: "Quinnipiac University"
+  avatar_link: "https://www.qu.edu/faculty-and-staff/paul-wolujewicz/"
   links:
-    - label: "Quinnipiac University"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:paul.wolujewicz@quinnipiac.edu"
+    - label: "Quinnipiac Faculty Page"
       icon: "fas fa-fw fa-university"
       url: "https://www.qu.edu/faculty-and-staff/paul-wolujewicz/"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: # Add your Google Scholar URL later
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: # Add your ORCID URL later
+    # Add other social links here
 
 # Site Footer
 footer:
