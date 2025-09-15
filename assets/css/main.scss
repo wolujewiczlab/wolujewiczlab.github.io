@@ -316,7 +316,7 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* ===== RESEARCH BANNER WRAPPER - FULL WIDTH POSITIONING ===== */
+/* ===== RESEARCH BANNER WRAPPER - DOUBLED HEIGHT ===== */
 .research-banner-wrapper {
   width: 100%;
   margin: 1.5rem 0 2rem 0;
@@ -335,9 +335,9 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
       
       .banner-image {
         width: 100%;
-        height: 300px;
-        max-height: 300px;
-        min-height: 300px;
+        height: 280px; // Doubled from 140px
+        max-height: 280px;
+        min-height: 280px;
         object-fit: cover;
         object-position: center;
         border-radius: 8px;
@@ -356,7 +356,7 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
   }
 }
 
-/* Responsive banner wrapper */
+/* Responsive banner wrapper - all heights doubled */
 @include breakpoint($small) {
   .research-banner-wrapper {
     margin: 1rem 0 1.5rem 0;
@@ -365,9 +365,9 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
       padding: 0 0.5rem;
       
       .banner-image {
-        height: 90px;
-        max-height: 90px;
-        min-height: 90px;
+        height: 180px; // Doubled from 90px
+        max-height: 180px;
+        min-height: 180px;
         border-radius: 6px;
       }
     }
@@ -377,9 +377,9 @@ $monospace: "Source Code Pro", Monaco, Consolas, "Liberation Mono", monospace;
 @include breakpoint($medium) {
   .research-banner-wrapper {
     .research-banner .banner-container .banner-image {
-      height: 120px;
-      max-height: 120px;
-      min-height: 120px;
+      height: 240px; // Doubled from 120px
+      max-height: 240px;
+      min-height: 240px;
     }
   }
 }
