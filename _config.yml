@@ -7,11 +7,10 @@
 #
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
 title: "Wolujewicz Lab"
 title_separator: "-"
-subtitle: "Computational Biomedicine and Integrative Genomics"
+subtitle: ""  # REMOVED - was showing in top-left logo area
 description: "Advancing discovery in neurogenomic disorders and vector-borne pathogens with integrative systems biology, AI-driven analytics, and multi-omic technologies."
 name: "Paul Wolujewicz, PhD, MPH"
 description: "Computational Biology and Genomics Laboratory at Quinnipiac University."
@@ -22,7 +21,6 @@ teaser: # path of fallback teaser image
 logo: # path of logo image to display in the masthead
 masthead_title: # overrides the website title displayed in the masthead
 logo: "/assets/images/logo.png"
-
 # Site Author
 author:
   name: "Paul Wolujewicz, PhD, MPH"
@@ -37,35 +35,31 @@ author:
     - label: "ORCID"
       icon: "fab fa-fw fa-orcid"
       url: "https://orcid.org/0000-0003-2982-9448"
-
 # Site Footer
 footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
       url: "mailto:paul.wolujewicz@quinnipiac.edu"
-
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "dark"
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+# COMMENTED OUT - This removes "Recent Posts" section
+# paginate: 5 # amount of posts to show
+# paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-
 include:
   - _pages
-
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+  # REMOVED jekyll-paginate since we're not using pagination anymore
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
-
 defaults:
   # _posts
   - scope:
@@ -85,15 +79,12 @@ defaults:
     values:
       layout: single
       author_profile: true
-
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-
-
 # Custom CSS for Animated Banner
 head_scripts:
   - /assets/css/custom.css
