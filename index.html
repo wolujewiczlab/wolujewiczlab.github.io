@@ -269,10 +269,66 @@ main,
     display: none;
 }
 
+/* LAB OVERVIEW SECTION */
+.overview-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #f8f9fa;
+    padding: 80px 40px;
+}
+
+.overview-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.overview-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overview-text h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.overview-text p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.overview-text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .research-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+    
+    .overview-content {
+        grid-template-columns: 400px 1fr;
         gap: 40px;
     }
 }
@@ -299,6 +355,15 @@ main,
         padding: 60px 20px;
     }
     
+    .overview-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .overview-section {
+        padding: 60px 20px;
+    }
+    
     .dna-ticker-top,
     .dna-ticker-bottom {
         font-size: 16px;
@@ -321,6 +386,18 @@ main,
     
     .research-section {
         padding: 50px 15px;
+    }
+    
+    .overview-section {
+        padding: 50px 15px;
+    }
+    
+    .overview-text h2 {
+        font-size: 26px;
+    }
+    
+    .overview-text p {
+        font-size: 16px;
     }
     
     .dna-ticker-top,
@@ -453,6 +530,23 @@ main,
                 <a href="/research/#public-health-metagenomics" class="read-more">Read More</a>
             </div>
             
+        </div>
+    </div>
+</div>
+
+<!-- Lab Overview Section - BELOW THREE PANELS -->
+<div class="overview-section">
+    <div class="overview-container">
+        <div class="overview-content">
+            <div class="overview-image">
+                <img src="https://via.placeholder.com/500x600/22a8b8/ffffff?text=Lab+Photo" alt="Wolujewicz Lab">
+            </div>
+            <div class="overview-text">
+                <h2>Wolujewicz Lab Overview</h2>
+                <p>
+                    Our research integrates multi-omic data, advanced genomic technologies, and artificial intelligence to investigate the molecular and genetic underpinnings of neurological disorders and vector-borne diseases. Scientists in our group employ systems biology approaches to study neural tube defects and complex neurogenetic conditions including multiple sclerosis, autism spectrum disorder, and schizophrenia. We develop innovative computational methods and high-throughput sequencing strategies to identify disease biomarkers, elucidate pathogenic mechanisms, and advance precision medicine applications in neuroscience and public health.
+                </p>
+            </div>
         </div>
     </div>
 </div>
