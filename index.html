@@ -2,24 +2,36 @@
 layout: home
 author_profile: true
 classes: wide
-header:
-  overlay_image: 
-  overlay_filter: 
 ---
 
 <style>
-/* FORCE HIDE OLD BANNER */
+/* FORCE HIDE OLD BANNER COMPLETELY */
 .page__hero,
 .page__hero--overlay,
-.page__hero-image {
+.page__hero-image,
+.page__hero-caption,
+img[src*="banner1.jpg"],
+img[alt*="banner"] {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
-/* Animated DNA Banner Styles */
+/* Make banner full-width - override any container margins */
 .animated-banner-container {
-    width: 100%;
-    margin: 0 0 2em 0;
-    padding: 0;
+    width: 100vw !important;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    margin-top: 0 !important;
+    margin-bottom: 2em !important;
+    padding: 0 !important;
 }
 
 .animated-banner {
@@ -211,7 +223,7 @@ header:
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Animated DNA Banner -->
+<!-- Animated DNA Banner - Full Width -->
 <div class="animated-banner-container">
     <div class="animated-banner">
         <div class="dna-ticker-top">
@@ -234,6 +246,17 @@ header:
 <script>
 (function() {
     'use strict';
+    
+    // Also hide old banner with JavaScript as backup
+    document.addEventListener('DOMContentLoaded', function() {
+        const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
+        oldBanners.forEach(function(el) {
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.height = '0';
+            el.style.opacity = '0';
+        });
+    });
     
     function generateDNA(length) {
         const bases = ['A', 'C', 'T', 'G'];
