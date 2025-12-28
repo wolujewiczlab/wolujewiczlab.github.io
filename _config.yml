@@ -92,3 +92,11 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+# Custom CSS
+head_scripts:
+  - /assets/css/animated-banner.css
+
+# Custom JS  
+footer_scripts:
+  - /assets/js/animated-banner.js
