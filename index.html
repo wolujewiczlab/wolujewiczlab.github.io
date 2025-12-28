@@ -21,7 +21,16 @@ img[alt*="banner"] {
     padding: 0 !important;
 }
 
-/* Make banner full-width - override any container margins */
+/* Move author profile (your picture) BELOW the banner */
+.sidebar.sticky {
+    order: 2 !important;
+}
+
+.page__content {
+    order: 3 !important;
+}
+
+/* Make banner full-width and position below nav */
 .animated-banner-container {
     width: 100vw !important;
     position: relative;
@@ -32,6 +41,17 @@ img[alt*="banner"] {
     margin-top: 0 !important;
     margin-bottom: 2em !important;
     padding: 0 !important;
+    order: 1 !important;
+}
+
+/* Ensure banner appears first after nav */
+main.page__content {
+    display: flex;
+    flex-direction: column;
+}
+
+main.page__content > .animated-banner-container {
+    order: -1 !important;
 }
 
 .animated-banner {
@@ -70,10 +90,11 @@ img[alt*="banner"] {
     text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
+/* TOP DNA TICKER - MOVED UP for symmetry */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
-    top: 32%;
+    top: 20%;  /* Changed from 32% to 20% - lifts it up */
     font-family: 'Courier New', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -93,10 +114,11 @@ img[alt*="banner"] {
     100% { transform: translateX(-50%); }
 }
 
+/* BOTTOM DNA TICKER - MOVED DOWN for symmetry */
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
-    top: 68%;
+    top: 80%;  /* Changed from 68% to 80% - moves it down */
     font-family: 'Courier New', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -223,7 +245,7 @@ img[alt*="banner"] {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Animated DNA Banner - Full Width -->
+<!-- Animated DNA Banner - Full Width, Below Nav, Above Profile -->
 <div class="animated-banner-container">
     <div class="animated-banner">
         <div class="dna-ticker-top">
@@ -247,7 +269,7 @@ img[alt*="banner"] {
 (function() {
     'use strict';
     
-    // Also hide old banner with JavaScript as backup
+    // Hide old banner with JavaScript as backup
     document.addEventListener('DOMContentLoaded', function() {
         const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
         oldBanners.forEach(function(el) {
@@ -256,6 +278,15 @@ img[alt*="banner"] {
             el.style.height = '0';
             el.style.opacity = '0';
         });
+        
+        // Move banner to appear first (right after nav, before profile)
+        const banner = document.querySelector('.animated-banner-container');
+        const mainContent = document.querySelector('.page__content') || document.querySelector('main');
+        
+        if (banner && mainContent) {
+            // Insert banner as first child of main content
+            mainContent.insertBefore(banner, mainContent.firstChild);
+        }
     });
     
     function generateDNA(length) {
