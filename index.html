@@ -21,16 +21,15 @@ img[alt*="banner"] {
     padding: 0 !important;
 }
 
-/* Move author profile (your picture) BELOW the banner */
-.sidebar.sticky {
-    order: 2 !important;
+/* Remove ALL spacing above banner */
+.page__content,
+main,
+.initial-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
 
-.page__content {
-    order: 3 !important;
-}
-
-/* Make banner full-width and position below nav */
+/* Make banner full-width and position AT THE VERY TOP */
 .animated-banner-container {
     width: 100vw !important;
     position: relative;
@@ -41,17 +40,6 @@ img[alt*="banner"] {
     margin-top: 0 !important;
     margin-bottom: 2em !important;
     padding: 0 !important;
-    order: 1 !important;
-}
-
-/* Ensure banner appears first after nav */
-main.page__content {
-    display: flex;
-    flex-direction: column;
-}
-
-main.page__content > .animated-banner-container {
-    order: -1 !important;
 }
 
 .animated-banner {
@@ -90,11 +78,11 @@ main.page__content > .animated-banner-container {
     text-shadow: 0 2px 10px rgba(0,0,0,0.6);
 }
 
-/* TOP DNA TICKER - MOVED UP for symmetry */
+/* TOP DNA TICKER - Symmetrical positioning */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
-    top: 20%;  /* Changed from 32% to 20% - lifts it up */
+    top: 20%;
     font-family: 'Courier New', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -114,11 +102,11 @@ main.page__content > .animated-banner-container {
     100% { transform: translateX(-50%); }
 }
 
-/* BOTTOM DNA TICKER - MOVED DOWN for symmetry */
+/* BOTTOM DNA TICKER - Symmetrical positioning */
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
-    top: 80%;  /* Changed from 68% to 80% - moves it down */
+    top: 80%;
     font-family: 'Courier New', monospace;
     font-size: 20px;
     font-weight: 700;
@@ -245,7 +233,67 @@ main.page__content > .animated-banner-container {
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<!-- Animated DNA Banner - Full Width, Below Nav, Above Profile -->
+<script>
+// CRITICAL: Move banner to absolute top immediately
+(function() {
+    'use strict';
+    
+    function positionBannerAtTop() {
+        // Hide old banner
+        const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
+        oldBanners.forEach(function(el) {
+            if (el) {
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+                el.style.height = '0';
+                el.style.opacity = '0';
+            }
+        });
+        
+        // Get the banner
+        const banner = document.querySelector('.animated-banner-container');
+        if (!banner) return;
+        
+        // Find the main content container - try multiple selectors
+        let mainContent = document.querySelector('.page__content');
+        if (!mainContent) mainContent = document.querySelector('main');
+        if (!mainContent) mainContent = document.querySelector('.initial-content');
+        if (!mainContent) mainContent = document.querySelector('#main');
+        
+        if (mainContent) {
+            // Remove all top spacing from main content
+            mainContent.style.paddingTop = '0';
+            mainContent.style.marginTop = '0';
+            
+            // Insert banner as THE FIRST CHILD (absolute top)
+            if (mainContent.firstChild) {
+                mainContent.insertBefore(banner, mainContent.firstChild);
+            } else {
+                mainContent.appendChild(banner);
+            }
+        }
+        
+        // Also remove spacing from parent containers
+        const initialContent = document.querySelector('.initial-content');
+        if (initialContent) {
+            initialContent.style.paddingTop = '0';
+            initialContent.style.marginTop = '0';
+        }
+    }
+    
+    // Run immediately and also on DOM ready
+    positionBannerAtTop();
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', positionBannerAtTop);
+    }
+    
+    // Also run after a tiny delay to catch late-loading elements
+    setTimeout(positionBannerAtTop, 100);
+})();
+</script>
+
+<!-- Animated DNA Banner - MUST BE AT TOP OF PAGE -->
 <div class="animated-banner-container">
     <div class="animated-banner">
         <div class="dna-ticker-top">
@@ -268,26 +316,6 @@ main.page__content > .animated-banner-container {
 <script>
 (function() {
     'use strict';
-    
-    // Hide old banner with JavaScript as backup
-    document.addEventListener('DOMContentLoaded', function() {
-        const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
-        oldBanners.forEach(function(el) {
-            el.style.display = 'none';
-            el.style.visibility = 'hidden';
-            el.style.height = '0';
-            el.style.opacity = '0';
-        });
-        
-        // Move banner to appear first (right after nav, before profile)
-        const banner = document.querySelector('.animated-banner-container');
-        const mainContent = document.querySelector('.page__content') || document.querySelector('main');
-        
-        if (banner && mainContent) {
-            // Insert banner as first child of main content
-            mainContent.insertBefore(banner, mainContent.firstChild);
-        }
-    });
     
     function generateDNA(length) {
         const bases = ['A', 'C', 'T', 'G'];
