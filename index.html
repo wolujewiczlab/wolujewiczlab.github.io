@@ -298,6 +298,8 @@ main,
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    object-fit: cover;  /* Prevents distortion, crops to fit nicely */
+    max-height: 600px;  /* Prevents image from being too tall */
 }
 
 .overview-text h2 {
@@ -539,7 +541,7 @@ main,
     <div class="overview-container">
         <div class="overview-content">
             <div class="overview-image">
-                <img src="https://via.placeholder.com/500x600/22a8b8/ffffff?text=Lab+Photo" alt="Wolujewicz Lab">
+                <img src="/assets/images/sleeping_giant.jpg" alt="Wolujewicz Lab">
             </div>
             <div class="overview-text">
                 <h2>Wolujewicz Lab Overview</h2>
