@@ -303,23 +303,55 @@ main,
 }
 
 .overview-text h2 {
-    font-size: 32px;
-    font-weight: 600;
+    font-size: 36px;
+    font-weight: 400;  /* Lighter weight for elegance like Landau */
     color: #1a1a1a;
-    margin-bottom: 25px;
-    font-family: 'Inter', sans-serif;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', 'Georgia', serif;  /* Elegant serif like Landau */
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #22a8b8;  /* Clean turquoise line separator */
 }
 
 .overview-text p {
     font-size: 17px;
     line-height: 1.8;
-    color: #444;
-    margin-bottom: 20px;
+    color: #1a1a1a;  /* BLACK instead of grey - pops more! */
+    margin-bottom: 25px;
+    margin-top: 25px;
     font-family: 'Inter', sans-serif;
 }
 
 .overview-text p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 30px;
+}
+
+/* Overview Stats/Icons Section */
+.overview-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e0e0e0;  /* Subtle separator above icons */
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat-icon {
+    font-size: 24px;
+    color: #22a8b8;
+}
+
+.stat-text {
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* Responsive */
@@ -402,6 +434,11 @@ main,
         font-size: 16px;
     }
     
+    .overview-stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
     .dna-ticker-top,
     .dna-ticker-bottom {
         font-size: 14px;
@@ -413,7 +450,7 @@ main,
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <!-- Font Awesome for icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -548,6 +585,28 @@ main,
                 <p>
                     Our research integrates multi-omic data, advanced genomic technologies, and artificial intelligence to investigate the molecular and genetic underpinnings of neurological disorders and vector-borne diseases. Scientists in our group employ systems biology approaches to study neural tube defects and complex neurogenetic conditions including multiple sclerosis, autism spectrum disorder, and schizophrenia. We develop innovative computational methods and high-throughput sequencing strategies to identify disease biomarkers, elucidate pathogenic mechanisms, and advance precision medicine applications in neuroscience and public health.
                 </p>
+                
+                <!-- Sleek Stats/Icons -->
+                <div class="overview-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <div class="stat-text">Multi-Omic Research</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="stat-text">Computational Biology</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="stat-text">Precision Medicine</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
