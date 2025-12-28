@@ -1,6 +1,5 @@
 ---
-layout: home
-author_profile: true
+layout: splash
 classes: wide
 ---
 
@@ -19,13 +18,17 @@ classes: wide
     color: #ffffff !important;
 }
 
-/* FORCE HIDE OLD BANNER COMPLETELY */
+/* FORCE HIDE OLD BANNER AND RECENT POSTS */
 .page__hero,
 .page__hero--overlay,
 .page__hero-image,
 .page__hero-caption,
 img[src*="banner1.jpg"],
-img[alt*="banner"] {
+img[alt*="banner"],
+.home .archive,
+.page__content .archive,
+.list__item,
+.archive__item {
     display: none !important;
     visibility: hidden !important;
     height: 0 !important;
@@ -35,7 +38,7 @@ img[alt*="banner"] {
     padding: 0 !important;
 }
 
-/* Remove ALL spacing above banner */
+/* Remove ALL spacing */
 .page__content,
 main,
 .initial-content {
@@ -43,7 +46,7 @@ main,
     margin-top: 0 !important;
 }
 
-/* Make banner full-width and position AT THE VERY TOP */
+/* Make banner full-width */
 .animated-banner-container {
     width: 100vw !important;
     position: relative;
@@ -89,7 +92,7 @@ main,
     font-weight: 400;
     color: #22a8b8;
     opacity: 1;
-    text-shadow: none;  /* REMOVED GLOW - cleaner, more professional */
+    text-shadow: none;
     letter-spacing: 0.3px;
 }
 
@@ -180,12 +183,18 @@ main,
 .large-dot.green { background: #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); }
 .large-dot.orange { background: #f59e0b; box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); }
 
-/* THREE-COLUMN RESEARCH SECTION */
+/* THREE-PANEL RESEARCH SECTION - FULL WIDTH */
 .research-section {
-    width: 100%;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background: #ffffff;
-    padding: 60px 20px;
-    margin: 0;
+    padding: 80px 40px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .research-container {
@@ -196,15 +205,14 @@ main,
 .research-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 40px;
+    gap: 50px;
+    margin-top: 0;
 }
 
 .research-card {
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 30px;
     background: #ffffff;
-    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -213,52 +221,56 @@ main,
 }
 
 .research-icon {
-    font-size: 48px;
-    color: #22a8b8;
-    margin-bottom: 20px;
+    font-size: 64px;
+    color: #d3d3d3;  /* LIGHT GREY like Kentsis Lab */
+    margin-bottom: 25px;
 }
 
 .research-card h3 {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-family: 'Inter', sans-serif;
 }
 
 .research-card p {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.7;
     color: #555;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    text-align: center;
 }
 
 .read-more {
     display: inline-block;
-    padding: 10px 24px;
+    padding: 12px 28px;
     background: #22a8b8;
     color: #ffffff;
     text-decoration: none;
     border-radius: 4px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 15px;
     transition: background 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 .read-more:hover {
     background: #1a8a98;
     color: #ffffff;
+    text-decoration: none;
 }
 
-/* Move author profile below research section */
+/* Hide author profile sidebar on splash layout */
 .sidebar {
-    order: 3;
+    display: none;
 }
 
 /* Responsive */
 @media (max-width: 1024px) {
     .research-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
     }
 }
 
@@ -277,7 +289,11 @@ main,
     
     .research-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
+    }
+    
+    .research-section {
+        padding: 60px 20px;
     }
     
     .dna-ticker-top,
@@ -300,6 +316,10 @@ main,
         font-size: 16px;
     }
     
+    .research-section {
+        padding: 50px 15px;
+    }
+    
     .dna-ticker-top,
     .dna-ticker-bottom {
         font-size: 14px;
@@ -316,13 +336,14 @@ main,
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script>
-// Position banner at top
+// Position banner at top and remove Recent Posts
 (function() {
     'use strict';
     
     function positionBannerAtTop() {
-        const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
-        oldBanners.forEach(function(el) {
+        // Hide old banner and Recent Posts
+        const elementsToHide = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"], .home .archive, .page__content .archive, .list__item, .archive__item');
+        elementsToHide.forEach(function(el) {
             if (el) {
                 el.style.display = 'none';
                 el.style.visibility = 'hidden';
@@ -364,6 +385,7 @@ main,
     }
     
     setTimeout(positionBannerAtTop, 100);
+    setTimeout(positionBannerAtTop, 500); // Extra check
 })();
 </script>
 
@@ -387,52 +409,43 @@ main,
     </div>
 </div>
 
-<!-- Three-Column Research Section -->
+<!-- Three-Panel Research Section - DIRECTLY BELOW BANNER -->
 <div class="research-section">
     <div class="research-container">
         <div class="research-grid">
             
-            <!-- Column 1: Neural Tube Defects -->
+            <!-- Panel 1: Neural Tube Defects -->
             <div class="research-card">
                 <div class="research-icon">
                     <i class="fas fa-dna"></i>
                 </div>
                 <h3>Neural Tube Defects</h3>
                 <p>
-                    Between the mind and matter,<br>
-                    Cells divide and patterns scatter,<br>
-                    In the neural tube's first days,<br>
-                    We seek the genomic ways.
+                    Employing systems biology and integrative genomics approaches to advance our understanding of structural birth defects affecting the developing brain and spinal cord, with a focus on elucidating molecular mechanisms and identifying novel therapeutic targets.
                 </p>
                 <a href="/research/#neural-tube-defects" class="read-more">Read More</a>
             </div>
             
-            <!-- Column 2: Neurogenetic Disorders -->
+            <!-- Panel 2: Neurogenetic Disorders -->
             <div class="research-card">
                 <div class="research-icon">
                     <i class="fas fa-brain"></i>
                 </div>
                 <h3>Neurogenetic Disorders</h3>
                 <p>
-                    Pathways twist and signals fade,<br>
-                    Where genetic variants played,<br>
-                    Through computational light we see,<br>
-                    The brain's complex mystery.
+                    Investigating the multi-omic signatures of complex neurogenetic disorders including multiple sclerosis, autism spectrum disorder, and schizophrenia through advanced computational approaches and high-throughput genomic technologies to identify disease biomarkers and pathogenic mechanisms.
                 </p>
                 <a href="/research/#neurogenetic-disorders" class="read-more">Read More</a>
             </div>
             
-            <!-- Column 3: Public Health Metagenomics -->
+            <!-- Panel 3: Public Health Metagenomics -->
             <div class="research-card">
                 <div class="research-icon">
                     <i class="fas fa-viruses"></i>
                 </div>
                 <h3>Public Health Metagenomics</h3>
                 <p>
-                    In vectors small, pathogens hide,<br>
-                    Through sequence data, far and wide,<br>
-                    We chart the invisible threat,<br>
-                    That public health has met.
+                    Leveraging advances in metagenomics and high-throughput sequencing to improve public and population health outcomes through enhanced surveillance and characterization of vector-borne pathogens, enabling precision public health interventions.
                 </p>
                 <a href="/research/#public-health-metagenomics" class="read-more">Read More</a>
             </div>
