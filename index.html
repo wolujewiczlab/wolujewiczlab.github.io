@@ -5,6 +5,20 @@ classes: wide
 ---
 
 <style>
+/* BLACK TOP NAVIGATION BAR */
+.masthead {
+    background-color: #000000 !important;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+.site-title,
+.site-subtitle {
+    color: #ffffff !important;
+}
+
 /* FORCE HIDE OLD BANNER COMPLETELY */
 .page__hero,
 .page__hero--overlay,
@@ -38,7 +52,7 @@ main,
     margin-left: -50vw !important;
     margin-right: -50vw !important;
     margin-top: 0 !important;
-    margin-bottom: 2em !important;
+    margin-bottom: 0 !important;
     padding: 0 !important;
 }
 
@@ -58,14 +72,7 @@ main,
     z-index: 100;
     text-align: center;
     padding: 40px;
-    /* OPTION 1: Try Inter (similar to Landau Lab style) */
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    
-    /* OPTION 2: Uncomment this to try Montserrat instead */
-    /* font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
-    
-    /* OPTION 3: Uncomment this to use system Helvetica/Arial (most similar to Landau) */
-    /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "Segoe UI", Roboto, sans-serif; */
 }
 
 .banner-content h1 {
@@ -79,14 +86,14 @@ main,
 
 .banner-content p {
     font-size: 24px;
-    font-weight: 400;  /* Changed from 300 to 400 for slightly bolder look like Landau */
+    font-weight: 400;
     color: #22a8b8;
     opacity: 1;
-    text-shadow: 0 2px 12px rgba(34, 168, 184, 0.5);
-    letter-spacing: 0.3px;  /* Added subtle letter spacing like Landau */
+    text-shadow: none;  /* REMOVED GLOW - cleaner, more professional */
+    letter-spacing: 0.3px;
 }
 
-/* TOP DNA TICKER - Symmetrical positioning */
+/* DNA TICKERS */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
@@ -110,7 +117,6 @@ main,
     100% { transform: translateX(-50%); }
 }
 
-/* BOTTOM DNA TICKER - Symmetrical positioning */
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
@@ -140,6 +146,7 @@ main,
     text-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
 }
 
+/* COLORFUL DOTS */
 .large-dots {
     position: absolute;
     width: 100%;
@@ -166,34 +173,93 @@ main,
     }
 }
 
-.large-dot.pink {
-    background: #ec4899;
-    box-shadow: 0 0 35px rgba(236, 72, 153, 0.8);
+.large-dot.pink { background: #ec4899; box-shadow: 0 0 35px rgba(236, 72, 153, 0.8); }
+.large-dot.blue { background: #3b82f6; box-shadow: 0 0 35px rgba(59, 130, 246, 0.8); }
+.large-dot.purple { background: #a855f7; box-shadow: 0 0 35px rgba(168, 85, 247, 0.8); }
+.large-dot.cyan { background: #06b6d4; box-shadow: 0 0 35px rgba(6, 182, 212, 0.8); }
+.large-dot.green { background: #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); }
+.large-dot.orange { background: #f59e0b; box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); }
+
+/* THREE-COLUMN RESEARCH SECTION */
+.research-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 60px 20px;
+    margin: 0;
 }
 
-.large-dot.blue {
-    background: #3b82f6;
-    box-shadow: 0 0 35px rgba(59, 130, 246, 0.8);
+.research-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.large-dot.purple {
-    background: #a855f7;
-    box-shadow: 0 0 35px rgba(168, 85, 247, 0.8);
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.large-dot.cyan {
-    background: #06b6d4;
-    box-shadow: 0 0 35px rgba(6, 182, 212, 0.8);
+.research-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
 }
 
-.large-dot.green {
-    background: #10b981;
-    box-shadow: 0 0 35px rgba(16, 185, 129, 0.8);
+.research-card:hover {
+    transform: translateY(-5px);
 }
 
-.large-dot.orange {
-    background: #f59e0b;
-    box-shadow: 0 0 35px rgba(245, 158, 11, 0.8);
+.research-icon {
+    font-size: 48px;
+    color: #22a8b8;
+    margin-bottom: 20px;
+}
+
+.research-card h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+}
+
+.research-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 10px 24px;
+    background: #22a8b8;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.read-more:hover {
+    background: #1a8a98;
+    color: #ffffff;
+}
+
+/* Move author profile below research section */
+.sidebar {
+    order: 3;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .research-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -207,6 +273,11 @@ main,
     
     .banner-content p {
         font-size: 18px;
+    }
+    
+    .research-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
     }
     
     .dna-ticker-top,
@@ -237,18 +308,19 @@ main,
 }
 </style>
 
-<!-- Google Fonts - Inter & Montserrat as options -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script>
-// CRITICAL: Move banner to absolute top immediately
+// Position banner at top
 (function() {
     'use strict';
     
     function positionBannerAtTop() {
-        // Hide old banner
         const oldBanners = document.querySelectorAll('.page__hero, .page__hero--overlay, .page__hero-image, img[src*="banner1.jpg"]');
         oldBanners.forEach(function(el) {
             if (el) {
@@ -259,22 +331,18 @@ main,
             }
         });
         
-        // Get the banner
         const banner = document.querySelector('.animated-banner-container');
         if (!banner) return;
         
-        // Find the main content container - try multiple selectors
         let mainContent = document.querySelector('.page__content');
         if (!mainContent) mainContent = document.querySelector('main');
         if (!mainContent) mainContent = document.querySelector('.initial-content');
         if (!mainContent) mainContent = document.querySelector('#main');
         
         if (mainContent) {
-            // Remove all top spacing from main content
             mainContent.style.paddingTop = '0';
             mainContent.style.marginTop = '0';
             
-            // Insert banner as THE FIRST CHILD (absolute top)
             if (mainContent.firstChild) {
                 mainContent.insertBefore(banner, mainContent.firstChild);
             } else {
@@ -282,7 +350,6 @@ main,
             }
         }
         
-        // Also remove spacing from parent containers
         const initialContent = document.querySelector('.initial-content');
         if (initialContent) {
             initialContent.style.paddingTop = '0';
@@ -290,19 +357,17 @@ main,
         }
     }
     
-    // Run immediately and also on DOM ready
     positionBannerAtTop();
     
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', positionBannerAtTop);
     }
     
-    // Also run after a tiny delay to catch late-loading elements
     setTimeout(positionBannerAtTop, 100);
 })();
 </script>
 
-<!-- Animated DNA Banner - MUST BE AT TOP OF PAGE -->
+<!-- Animated DNA Banner -->
 <div class="animated-banner-container">
     <div class="animated-banner">
         <div class="dna-ticker-top">
@@ -318,6 +383,60 @@ main,
         <div class="banner-content">
             <h1>Wolujewicz Lab</h1>
             <p>Integrative Genomics and Computational Biomedicine</p>
+        </div>
+    </div>
+</div>
+
+<!-- Three-Column Research Section -->
+<div class="research-section">
+    <div class="research-container">
+        <div class="research-grid">
+            
+            <!-- Column 1: Neural Tube Defects -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3>Neural Tube Defects</h3>
+                <p>
+                    Between the mind and matter,<br>
+                    Cells divide and patterns scatter,<br>
+                    In the neural tube's first days,<br>
+                    We seek the genomic ways.
+                </p>
+                <a href="/research/#neural-tube-defects" class="read-more">Read More</a>
+            </div>
+            
+            <!-- Column 2: Neurogenetic Disorders -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Neurogenetic Disorders</h3>
+                <p>
+                    Pathways twist and signals fade,<br>
+                    Where genetic variants played,<br>
+                    Through computational light we see,<br>
+                    The brain's complex mystery.
+                </p>
+                <a href="/research/#neurogenetic-disorders" class="read-more">Read More</a>
+            </div>
+            
+            <!-- Column 3: Public Health Metagenomics -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-viruses"></i>
+                </div>
+                <h3>Public Health Metagenomics</h3>
+                <p>
+                    In vectors small, pathogens hide,<br>
+                    Through sequence data, far and wide,<br>
+                    We chart the invisible threat,<br>
+                    That public health has met.
+                </p>
+                <a href="/research/#public-health-metagenomics" class="read-more">Read More</a>
+            </div>
+            
         </div>
     </div>
 </div>
