@@ -10,7 +10,7 @@
 # Site settings
 title: "Wolujewicz Lab"
 title_separator: "-"
-subtitle: ""  # REMOVED - was showing in top-left logo area
+subtitle: ""
 description: "Advancing discovery in neurogenomic disorders and vector-borne pathogens with integrative systems biology, AI-driven analytics, and multi-omic technologies."
 name: "Paul Wolujewicz, PhD, MPH"
 description: "Computational Biology and Genomics Laboratory at Quinnipiac University."
@@ -54,7 +54,6 @@ include:
   - _pages
 # Plugins (previously gems:)
 plugins:
-  # REMOVED jekyll-paginate since we're not using pagination anymore
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
