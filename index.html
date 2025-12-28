@@ -58,24 +58,32 @@ main,
     z-index: 100;
     text-align: center;
     padding: 40px;
-    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* OPTION 1: Try Inter (similar to Landau Lab style) */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    
+    /* OPTION 2: Uncomment this to try Montserrat instead */
+    /* font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; */
+    
+    /* OPTION 3: Uncomment this to use system Helvetica/Arial (most similar to Landau) */
+    /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Arial", "Segoe UI", Roboto, sans-serif; */
 }
 
 .banner-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin-bottom: 18px;
-    color: #ffffff;  /* WHITE */
+    color: #ffffff;
     text-shadow: 0 3px 20px rgba(0,0,0,0.6);
     letter-spacing: -1px;
 }
 
 .banner-content p {
     font-size: 24px;
-    font-weight: 300;
-    color: #22a8b8;  /* DEEPER BLUE-TURQUOISE */
+    font-weight: 400;  /* Changed from 300 to 400 for slightly bolder look like Landau */
+    color: #22a8b8;
     opacity: 1;
     text-shadow: 0 2px 12px rgba(34, 168, 184, 0.5);
+    letter-spacing: 0.3px;  /* Added subtle letter spacing like Landau */
 }
 
 /* TOP DNA TICKER - Symmetrical positioning */
@@ -229,9 +237,10 @@ main,
 }
 </style>
 
+<!-- Google Fonts - Inter & Montserrat as options -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <script>
 // CRITICAL: Move banner to absolute top immediately
