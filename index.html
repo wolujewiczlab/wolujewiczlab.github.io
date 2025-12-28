@@ -2,25 +2,228 @@
 layout: home
 author_profile: true
 classes: wide
+header:
+  overlay_image: 
+  overlay_filter: 
 ---
+
+<style>
+/* FORCE HIDE OLD BANNER */
+.page__hero,
+.page__hero--overlay,
+.page__hero-image {
+    display: none !important;
+}
+
+/* Animated DNA Banner Styles */
+.animated-banner-container {
+    width: 100%;
+    margin: 0 0 2em 0;
+    padding: 0;
+}
+
+.animated-banner {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 100;
+    text-align: center;
+    padding: 40px;
+    font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.banner-content h1 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #ffffff;
+    text-shadow: 0 3px 20px rgba(0,0,0,0.6);
+    letter-spacing: -1px;
+}
+
+.banner-content p {
+    font-size: 24px;
+    font-weight: 300;
+    color: #ffffff;
+    opacity: 0.95;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+.dna-ticker-top {
+    position: absolute;
+    width: 100%;
+    top: 32%;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: rgba(59, 130, 246, 0.25);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ticker-content-top {
+    display: inline-block;
+    animation: ticker 40s linear infinite;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.dna-ticker-bottom {
+    position: absolute;
+    width: 100%;
+    top: 68%;
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    color: rgba(59, 130, 246, 0.25);
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.ticker-content-bottom {
+    display: inline-block;
+    animation: tickerReverse 40s linear infinite;
+}
+
+@keyframes tickerReverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+}
+
+.dna-ticker-top .highlight-base,
+.dna-ticker-bottom .highlight-base {
+    color: rgba(59, 130, 246, 0.7);
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.large-dots {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.large-dot {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    animation: largeDotFloat 6s ease-in-out infinite;
+}
+
+@keyframes largeDotFloat {
+    0%, 100% { 
+        transform: translateY(0) scale(1); 
+        opacity: 0.6; 
+    }
+    50% { 
+        transform: translateY(-35px) scale(1.2); 
+        opacity: 1; 
+    }
+}
+
+.large-dot.pink {
+    background: #ec4899;
+    box-shadow: 0 0 35px rgba(236, 72, 153, 0.8);
+}
+
+.large-dot.blue {
+    background: #3b82f6;
+    box-shadow: 0 0 35px rgba(59, 130, 246, 0.8);
+}
+
+.large-dot.purple {
+    background: #a855f7;
+    box-shadow: 0 0 35px rgba(168, 85, 247, 0.8);
+}
+
+.large-dot.cyan {
+    background: #06b6d4;
+    box-shadow: 0 0 35px rgba(6, 182, 212, 0.8);
+}
+
+.large-dot.green {
+    background: #10b981;
+    box-shadow: 0 0 35px rgba(16, 185, 129, 0.8);
+}
+
+.large-dot.orange {
+    background: #f59e0b;
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.8);
+}
+
+@media (max-width: 768px) {
+    .animated-banner {
+        height: 350px;
+    }
+    
+    .banner-content h1 {
+        font-size: 36px;
+    }
+    
+    .banner-content p {
+        font-size: 18px;
+    }
+    
+    .dna-ticker-top,
+    .dna-ticker-bottom {
+        font-size: 16px;
+        letter-spacing: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-banner {
+        height: 300px;
+    }
+    
+    .banner-content h1 {
+        font-size: 28px;
+    }
+    
+    .banner-content p {
+        font-size: 16px;
+    }
+    
+    .dna-ticker-top,
+    .dna-ticker-bottom {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+}
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <!-- Animated DNA Banner -->
 <div class="animated-banner-container">
     <div class="animated-banner">
-        <!-- Top DNA Ticker -->
         <div class="dna-ticker-top">
             <div class="ticker-content-top"></div>
         </div>
         
-        <!-- Bottom DNA Ticker -->
         <div class="dna-ticker-bottom">
             <div class="ticker-content-bottom"></div>
         </div>
         
-        <!-- Colorful Dots -->
         <div class="large-dots" id="banner-dots"></div>
         
-        <!-- Main Content -->
         <div class="banner-content">
             <h1>Wolujewicz Lab</h1>
             <p>Integrative Genomics and Computational Biomedicine</p>
@@ -29,11 +232,9 @@ classes: wide
 </div>
 
 <script>
-// Animated DNA Banner JavaScript
 (function() {
     'use strict';
     
-    // Helper function to generate random DNA sequence
     function generateDNA(length) {
         const bases = ['A', 'C', 'T', 'G'];
         let sequence = '';
@@ -43,9 +244,7 @@ classes: wide
         return sequence;
     }
     
-    // Initialize banner when DOM is ready
     function initBanner() {
-        // Generate DNA ticker content for TOP ticker
         const tickerTop = document.querySelector('.ticker-content-top');
         if (tickerTop) {
             let tickerSeqTop = '';
@@ -60,7 +259,6 @@ classes: wide
             tickerTop.innerHTML = tickerSeqTop + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tickerSeqTop;
         }
         
-        // Generate DNA ticker content for BOTTOM ticker
         const tickerBottom = document.querySelector('.ticker-content-bottom');
         if (tickerBottom) {
             let tickerSeqBottom = '';
@@ -75,7 +273,6 @@ classes: wide
             tickerBottom.innerHTML = tickerSeqBottom + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tickerSeqBottom;
         }
         
-        // Colorful dot positions and colors
         const dotConfigs = [
             { left: '8%', top: '20%', color: 'pink', delay: 0 },
             { left: '18%', top: '75%', color: 'cyan', delay: 1.2 },
@@ -85,7 +282,6 @@ classes: wide
             { left: '50%', top: '82%', color: 'orange', delay: 2 }
         ];
         
-        // Add larger dots
         const largeDots = document.getElementById('banner-dots');
         if (largeDots) {
             dotConfigs.forEach(function(config) {
@@ -99,7 +295,6 @@ classes: wide
         }
     }
     
-    // Run when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initBanner);
     } else {
