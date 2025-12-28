@@ -329,21 +329,38 @@ main,
 /* Overview Stats/Icons Section */
 .overview-stats {
     display: flex;
-    gap: 40px;
+    gap: 30px;
     margin-top: 35px;
     padding-top: 25px;
     border-top: 1px solid #e0e0e0;  /* Subtle separator above icons */
+    justify-content: flex-start;  /* Evenly space icons */
 }
 
 .stat-item {
     display: flex;
     align-items: center;
-    gap: 12px;
+    justify-content: center;
 }
 
 .stat-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;  /* Perfect circle */
+    border: 2px solid #22a8b8;  /* Sleek turquoise border */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
     color: #22a8b8;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.stat-icon:hover {
+    background: #22a8b8;  /* Fill on hover */
+    color: #ffffff;  /* White icon on hover */
+    transform: translateY(-3px);  /* Subtle lift */
+    box-shadow: 0 4px 12px rgba(34, 168, 184, 0.3);
 }
 
 .stat-text {
@@ -435,8 +452,15 @@ main,
     }
     
     .overview-stats {
-        flex-direction: column;
+        flex-direction: row;
         gap: 20px;
+        justify-content: center;
+    }
+    
+    .stat-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
     }
     
     .dna-ticker-top,
@@ -586,25 +610,22 @@ main,
                     Our research integrates multi-omic data, advanced genomic technologies, and artificial intelligence to investigate the molecular and genetic underpinnings of neurological disorders and vector-borne diseases. Scientists in our group employ systems biology approaches to study neural tube defects and complex neurogenetic conditions including multiple sclerosis, autism spectrum disorder, and schizophrenia. We develop innovative computational methods and high-throughput sequencing strategies to identify disease biomarkers, elucidate pathogenic mechanisms, and advance precision medicine applications in neuroscience and public health.
                 </p>
                 
-                <!-- Sleek Stats/Icons -->
+                <!-- Sleek Icons -->
                 <div class="overview-stats">
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-microscope"></i>
                         </div>
-                        <div class="stat-text">Multi-Omic Research</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-laptop-code"></i>
                         </div>
-                        <div class="stat-text">Computational Biology</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-icon">
                             <i class="fas fa-brain"></i>
                         </div>
-                        <div class="stat-text">Precision Medicine</div>
                     </div>
                 </div>
             </div>
