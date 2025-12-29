@@ -458,7 +458,13 @@ main,
     margin-top: 35px;
     padding-top: 25px;
     border-top: 1px solid #e0e0e0;  /* Subtle separator above icons */
-    justify-content: flex-start;  /* Evenly space icons */
+    justify-content: space-between;  /* Space between icons and text */
+    align-items: center;  /* Vertically center everything */
+}
+
+.stat-icons-group {
+    display: flex;
+    gap: 30px;
 }
 
 .stat-item {
@@ -486,6 +492,32 @@ main,
     color: #ffffff;  /* White icon on hover */
     transform: translateY(-3px);  /* Subtle lift */
     box-shadow: 0 4px 12px rgba(34, 168, 184, 0.3);
+}
+
+.institutional-text {
+    text-align: right;
+    line-height: 1.4;
+}
+
+.institutional-text .school-line {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e3a5f;  /* Navy blue like Quinnipiac */
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.institutional-text .university-line {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e3a5f;  /* Navy blue like Quinnipiac */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    margin-top: 4px;
 }
 
 .stat-text {
@@ -674,6 +706,15 @@ main,
         justify-content: center;
     }
     
+    .stat-icons-group {
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .institutional-text {
+        display: none;  /* Hide on mobile to keep it clean */
+    }
+    
     .stat-icon {
         width: 50px;
         height: 50px;
@@ -831,22 +872,29 @@ main,
                     Our research integrates multi-omic data, advanced genomic technologies, and artificial intelligence to investigate the molecular and genetic underpinnings of neurological disorders and vector-borne diseases. Scientists in our group employ systems biology approaches to study neural tube defects and complex neurogenetic conditions including multiple sclerosis, autism spectrum disorder, and schizophrenia. We develop innovative computational methods and high-throughput sequencing strategies to identify disease biomarkers, elucidate pathogenic mechanisms, and advance precision medicine applications in neuroscience and public health.
                 </p>
                 
-                <!-- Sleek Icons -->
+                <!-- Icons and Institutional Text -->
                 <div class="overview-stats">
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-microscope"></i>
+                    <div class="stat-icons-group">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-icon">
-                            <i class="fas fa-brain"></i>
-                        </div>
+                    
+                    <div class="institutional-text">
+                        <p class="school-line">School of Health Sciences</p>
+                        <p class="university-line">Quinnipiac University</p>
                     </div>
                 </div>
             </div>
