@@ -1,15 +1,12 @@
+# Main navigation links
 main:
   - title: "Research"
     url: /research/
-  - title: "Publications"
-    url: /publications/
   - title: "Team"
     url: /team/
+  - title: "Publications"
+    url: /publications/
   - title: "Teaching"
     url: /teaching/
-  - title: "CV"
-    url: /cv/
-  - title: "News"
-    url: /news/
   - title: "Contact"
     url: /contact/
