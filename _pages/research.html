@@ -1,0 +1,467 @@
+---
+layout: splash
+classes: wide
+title: "Research"
+permalink: /research/
+---
+
+<!-- Import Playfair Display Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* BLACK TOP NAVIGATION BAR */
+.masthead {
+    background-color: #000000 !important;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+.site-title,
+.site-subtitle {
+    color: #ffffff !important;
+}
+
+/* HIDE SIDEBAR */
+.sidebar,
+.author__avatar,
+.author__content,
+.author__urls-wrapper {
+    display: none !important;
+}
+
+.page {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+.page__content,
+main,
+.initial-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* BLACK INTRO SECTION - Research Themes Overview */
+.research-intro {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #1a1a1a;
+    padding: 100px 40px;
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 80px;
+    align-items: center;
+}
+
+.intro-text h1 {
+    font-size: 52px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+}
+
+.intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+}
+
+.research-themes {
+    margin-top: 40px;
+}
+
+.research-themes h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #22a8b8;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.theme-item {
+    font-size: 16px;
+    color: #b0b0b0;
+    padding-left: 20px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.theme-item:before {
+    content: "▸";
+    color: #22a8b8;
+    position: absolute;
+    left: 0;
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* TWO-TONE SECTIONS - Landau Lab Style */
+.two-tone-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 700px;
+    scroll-margin-top: 80px;
+}
+
+/* Alternate layout for different sections */
+.two-tone-section.reverse {
+    grid-template-columns: 55% 45%;
+}
+
+.tone-dark {
+    background: #8b2e3f; /* Deep burgundy like Landau */
+    padding: 100px 60px 100px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tone-light {
+    background: #f5ebe0; /* Warm cream like Landau */
+    padding: 100px 80px 100px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Alternate colors for variety */
+.section-neurogenetics .tone-dark {
+    background: #1e3a5f; /* Navy blue */
+}
+
+.section-neurogenetics .tone-light {
+    background: #e8f2f7; /* Light blue */
+}
+
+.section-metagenomics .tone-dark {
+    background: #2d5a3b; /* Forest green */
+}
+
+.section-metagenomics .tone-light {
+    background: #f0f7f0; /* Light green */
+}
+
+/* Section content */
+.section-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 35px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+}
+
+/* Key Research Questions Box */
+.key-questions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #22a8b8;
+    backdrop-filter: blur(10px);
+}
+
+.key-questions h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.key-questions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-questions li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.key-questions li:before {
+    content: "▸";
+    color: #22a8b8;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+}
+
+/* Overlapping image - Landau style */
+.overlapping-image {
+    width: 120%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: -10%;
+}
+
+.reverse .overlapping-image {
+    left: auto;
+    right: -10%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .intro-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .two-tone-section,
+    .two-tone-section.reverse {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .tone-dark,
+    .tone-light {
+        padding: 60px 40px;
+    }
+    
+    .overlapping-image,
+    .reverse .overlapping-image {
+        width: 100%;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+    }
+    
+    .theme-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .research-intro {
+        padding: 60px 20px;
+    }
+    
+    .intro-text h1 {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .tone-dark,
+    .tone-light {
+        padding: 50px 30px;
+    }
+}
+</style>
+
+<!-- BLACK INTRO SECTION - Research Overview -->
+<div class="research-intro">
+    <div class="intro-content">
+        <div class="intro-text">
+            <h1>Research</h1>
+            <p>
+                Our laboratory advances precision medicine and public health through the integration of cutting-edge genomic technologies, artificial intelligence, and systems biology approaches. We investigate fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
+            </p>
+            <p>
+                By leveraging high-throughput sequencing, multi-omic integration, and computational modeling, we seek to uncover the biological mechanisms underlying complex diseases and translate these discoveries into actionable clinical and public health interventions.
+            </p>
+            
+            <div class="research-themes">
+                <h3>Core Research Themes</h3>
+                <div class="theme-list">
+                    <div class="theme-item">Genomic Medicine</div>
+                    <div class="theme-item">Machine Learning</div>
+                    <div class="theme-item">Systems Biology</div>
+                    <div class="theme-item">Computational Genomics</div>
+                    <div class="theme-item">Precision Medicine</div>
+                    <div class="theme-item">Public Health Surveillance</div>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+        </div>
+    </div>
+</div>
+
+<!-- Neural Tube Defects Section - Burgundy/Cream -->
+<div id="neural-tube-defects" class="two-tone-section section-ntd">
+    <div class="tone-dark">
+        <img src="/assets/images/NTD.png" alt="Neural Tube Defects" class="section-icon">
+        
+        <h2 class="section-title">Neural Tube Defects</h2>
+        
+        <p class="section-subtitle">
+            Employing systems biology and integrative genomics to advance our understanding of structural birth defects affecting the developing brain and spinal cord
+        </p>
+        
+        <p class="section-description">
+            Neural tube defects (NTDs) represent some of the most common and severe congenital malformations, affecting approximately 1 in 1,000 pregnancies worldwide. Our laboratory investigates the complex molecular and genetic mechanisms underlying NTD pathogenesis using cutting-edge genomic technologies and computational approaches.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>What are the rare and common genetic variants that contribute to NTD risk?</li>
+                <li>How do gene regulatory networks govern neural tube closure during embryonic development?</li>
+                <li>Can machine learning predict NTD risk for precision genetic counseling?</li>
+                <li>What gene-environment interactions contribute to NTD etiology?</li>
+                <li>How can multi-omic integration reveal novel therapeutic targets?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="tone-light">
+        <img src="/assets/images/ntd-research.jpg" alt="NTD Research" class="overlapping-image">
+    </div>
+</div>
+
+<!-- Neurogenetic Disorders Section - Navy/Light Blue -->
+<div id="neurogenetic-disorders" class="two-tone-section section-neurogenetics reverse">
+    <div class="tone-light">
+        <img src="/assets/images/neurogenetics-research.jpg" alt="Neurogenetic Research" class="overlapping-image">
+    </div>
+    
+    <div class="tone-dark">
+        <svg class="section-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" fill="none" stroke="#22a8b8" stroke-width="3"/>
+            <circle cx="50" cy="25" r="8" fill="#22a8b8"/>
+            <circle cx="30" cy="45" r="8" fill="#22a8b8"/>
+            <circle cx="70" cy="45" r="8" fill="#22a8b8"/>
+            <circle cx="35" cy="75" r="8" fill="#22a8b8"/>
+            <circle cx="65" cy="75" r="8" fill="#22a8b8"/>
+            <line x1="50" y1="25" x2="30" y2="45" stroke="#22a8b8" stroke-width="2"/>
+            <line x1="50" y1="25" x2="70" y2="45" stroke="#22a8b8" stroke-width="2"/>
+            <line x1="30" y1="45" x2="35" y2="75" stroke="#22a8b8" stroke-width="2"/>
+            <line x1="70" y1="45" x2="65" y2="75" stroke="#22a8b8" stroke-width="2"/>
+        </svg>
+        
+        <h2 class="section-title">Neurogenetic Disorders</h2>
+        
+        <p class="section-subtitle">
+            Investigating the multi-omic signatures of complex neurogenetic conditions through advanced computational approaches and high-throughput genomic technologies
+        </p>
+        
+        <p class="section-description">
+            Complex neurogenetic disorders such as multiple sclerosis, autism spectrum disorder, and schizophrenia present significant challenges due to their polygenic nature and environmental influences. Our research integrates genomic, transcriptomic, epigenomic, and proteomic data to decode molecular disease mechanisms and identify precision medicine strategies.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>How can multi-omic integration reveal disease biomarkers and subtypes?</li>
+                <li>What machine learning approaches best classify neurogenetic disorders?</li>
+                <li>How does cellular heterogeneity contribute to disease manifestation?</li>
+                <li>What gene-gene and gene-environment networks drive pathogenesis?</li>
+                <li>Can computational models enable personalized therapeutic strategies?</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Public Health Metagenomics Section - Forest Green/Light Green -->
+<div id="public-health-metagenomics" class="two-tone-section section-metagenomics">
+    <div class="tone-dark">
+        <img src="/assets/images/phylo2.jpg" alt="Metagenomics" class="section-icon">
+        
+        <h2 class="section-title">Public Health Metagenomics</h2>
+        
+        <p class="section-subtitle">
+            Leveraging long-read metagenomic sequencing to advance epidemiological surveillance of vector-borne pathogens and improve public health monitoring
+        </p>
+        
+        <p class="section-description">
+            Vector-borne diseases pose significant public health challenges, with tick-borne pathogens representing a growing concern in the northeastern United States. Our laboratory employs Oxford Nanopore long-read sequencing to generate comprehensive pathogen profiles and develop real-time surveillance strategies through partnerships with state health departments.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>What is the diversity of tick-borne pathogen communities in Connecticut?</li>
+                <li>How can bioinformatics enable rapid pathogen detection and classification?</li>
+                <li>What temporal and spatial patterns drive pathogen prevalence?</li>
+                <li>Can environmental and climate data predict pathogen emergence?</li>
+                <li>How do we translate genomic surveillance into public health action?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="tone-light">
+        <img src="/assets/images/metagenomics-research.jpg" alt="Metagenomics Research" class="overlapping-image">
+    </div>
+</div>
