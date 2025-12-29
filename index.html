@@ -22,11 +22,11 @@ classes: wide
 /* DNA HELIX IN NAV BAR */
 .nav-dna-container {
     position: absolute;
-    left: 35%;  /* Moved left - centered between logo and menu */
+    left: 35%;  /* Centered between logo and menu */
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 120px;  /* Wider for better helix shape */
-    height: 60px;
+    width: 90px;  /* Narrower for tighter helix */
+    height: 50px;  /* Slightly shorter */
     pointer-events: none;
     z-index: 100;
 }
@@ -45,7 +45,7 @@ classes: wide
 
 .helix-v2-nav .nucleotide {
     position: absolute;
-    width: 7px;  /* Slightly larger for visibility */
+    width: 7px;
     height: 7px;
     border-radius: 50%;
     left: 50%;
@@ -64,15 +64,15 @@ classes: wide
 }
 
 @keyframes sine-left-nav {
-    0% { transform: translateX(-50%) translateX(-40px) scale(0.8); opacity: 0.6; }
-    50% { transform: translateX(-50%) translateX(40px) scale(1.2); opacity: 1; }
-    100% { transform: translateX(-50%) translateX(-40px) scale(0.8); opacity: 0.6; }
+    0% { transform: translateX(-50%) translateX(-30px) scale(0.8); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateX(30px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateX(-30px) scale(0.8); opacity: 0.6; }
 }
 
 @keyframes sine-right-nav {
-    0% { transform: translateX(-50%) translateX(40px) scale(1.2); opacity: 1; }
-    50% { transform: translateX(-50%) translateX(-40px) scale(0.8); opacity: 0.6; }
-    100% { transform: translateX(-50%) translateX(40px) scale(1.2); opacity: 1; }
+    0% { transform: translateX(-50%) translateX(30px) scale(1.2); opacity: 1; }
+    50% { transform: translateX(-50%) translateX(-30px) scale(0.8); opacity: 0.6; }
+    100% { transform: translateX(-50%) translateX(30px) scale(1.2); opacity: 1; }
 }
 
 .helix-v2-nav .nucleotide:nth-child(1) { top: 0%; animation-delay: 0s; }
