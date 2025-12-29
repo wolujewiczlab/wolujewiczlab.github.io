@@ -578,17 +578,27 @@ main,
     justify-content: center;
 }
 
+.affiliation-item a {
+    display: block;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.affiliation-item a:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
 .affiliation-item img {
     max-width: 100%;
     height: auto;
     max-height: 120px;
     object-fit: contain;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.affiliation-item:hover img {
-    transform: scale(1.05);
+.affiliation-item a:hover img {
     opacity: 1;
 }
 
@@ -827,7 +837,7 @@ main,
             <!-- Panel 1: Neural Tube Defects -->
             <div class="research-card">
                 <div class="research-icon">
-                    <i class="fas fa-dna"></i>
+                    <i class="fas fa-brain"></i>
                 </div>
                 <h3>Neural Tube Defects</h3>
                 <p>
@@ -839,7 +849,7 @@ main,
             <!-- Panel 2: Neurogenetic Disorders -->
             <div class="research-card">
                 <div class="research-icon">
-                    <i class="fas fa-brain"></i>
+                    <i class="fas fa-dna"></i>
                 </div>
                 <h3>Neurogenetic Disorders</h3>
                 <p>
@@ -915,17 +925,23 @@ main,
         <div class="affiliations-grid">
             <!-- Quinnipiac University -->
             <div class="affiliation-item">
-                <img src="/assets/images/quinnipiac-logo.png" alt="Quinnipiac University">
+                <a href="https://www.qu.edu/" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/images/quinnipiac-logo.png" alt="Quinnipiac University">
+                </a>
             </div>
             
             <!-- Weill Cornell Medicine -->
             <div class="affiliation-item">
-                <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine">
+                <a href="https://weill.cornell.edu/" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine">
+                </a>
             </div>
             
             <!-- Connecticut Agricultural Experiment Station -->
             <div class="affiliation-item">
-                <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station">
+                <a href="https://portal.ct.gov/caes" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station">
+                </a>
             </div>
         </div>
         
