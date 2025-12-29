@@ -3,6 +3,11 @@ layout: splash
 classes: wide
 ---
 
+<!-- Import Playfair Display Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* BLACK TOP NAVIGATION BAR */
 .masthead {
@@ -80,20 +85,21 @@ main,
 
 .banner-content h1 {
     font-size: 56px;
-    font-weight: 700;
+    font-weight: 600;  /* Semi-bold */
     margin-bottom: 18px;
     color: #ffffff;
     text-shadow: 0 3px 20px rgba(0,0,0,0.6);
     letter-spacing: -1px;
+    font-family: 'Playfair Display', serif;  /* CHANGED TO PLAYFAIR */
 }
 
 .banner-content p {
-    font-size: 24px;
-    font-weight: 400;
+    font-size: 21px;  /* Smaller for single line */
+    font-weight: 600;  /* Semi-bold */
     color: #22a8b8;
-    opacity: 1;
-    text-shadow: none;
     letter-spacing: 0.3px;
+    font-family: 'Playfair Display', serif;  /* CHANGED TO PLAYFAIR */
+    white-space: nowrap;  /* Keep on one line */
 }
 
 /* DNA TICKERS */
@@ -108,6 +114,7 @@ main,
     color: rgba(59, 130, 246, 0.25);
     white-space: nowrap;
     overflow: hidden;
+    z-index: 60;  /* Above edge dots */
 }
 
 .ticker-content-top {
@@ -131,6 +138,7 @@ main,
     color: rgba(59, 130, 246, 0.25);
     white-space: nowrap;
     overflow: hidden;
+    z-index: 60;  /* Above edge dots */
 }
 
 .ticker-content-bottom {
@@ -141,6 +149,48 @@ main,
 @keyframes tickerReverse {
     0% { transform: translateX(-50%); }
     100% { transform: translateX(0); }
+}
+
+/* Highlighted Bases */
+.highlight-base {
+    color: rgba(59, 130, 246, 0.7);
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+}
+
+.highlight-special {
+    color: rgba(236, 72, 153, 0.8);
+    text-shadow: 0 0 15px rgba(236, 72, 153, 0.6);
+}
+
+/* Rainbow Highlights - Cycling through 6 colors */
+.highlight-pink {
+    color: rgba(236, 72, 153, 0.75);
+    text-shadow: 0 0 12px rgba(236, 72, 153, 0.6);
+}
+
+.highlight-blue {
+    color: rgba(59, 130, 246, 0.75);
+    text-shadow: 0 0 12px rgba(59, 130, 246, 0.6);
+}
+
+.highlight-purple {
+    color: rgba(168, 85, 247, 0.75);
+    text-shadow: 0 0 12px rgba(168, 85, 247, 0.6);
+}
+
+.highlight-cyan {
+    color: rgba(6, 182, 212, 0.75);
+    text-shadow: 0 0 12px rgba(6, 182, 212, 0.6);
+}
+
+.highlight-green {
+    color: rgba(16, 185, 129, 0.75);
+    text-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+}
+
+.highlight-orange {
+    color: rgba(245, 158, 11, 0.75);
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
 }
 
 .dna-ticker-top .highlight-base,
@@ -155,6 +205,7 @@ main,
     width: 100%;
     height: 100%;
     pointer-events: none;
+    z-index: 70;  /* Above tickers */
 }
 
 .large-dot {
@@ -182,6 +233,51 @@ main,
 .large-dot.cyan { background: #06b6d4; box-shadow: 0 0 35px rgba(6, 182, 212, 0.8); }
 .large-dot.green { background: #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); }
 .large-dot.orange { background: #f59e0b; box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); }
+
+/* SUBTLE DOTS AT EDGES */
+.edge-dots-top, .edge-dots-bottom {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    z-index: 5;  /* Below tickers */
+}
+
+.edge-dots-top {
+    top: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40"><circle cx="60" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="120" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="180" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="240" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="300" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="360" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="420" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="480" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="540" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="600" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="660" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="720" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="780" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="840" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="900" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="960" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="1020" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="1080" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="1140" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/></svg>');
+    background-size: cover;
+}
+
+.edge-dots-bottom {
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 40"><circle cx="60" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="120" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="180" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="240" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="300" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="360" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="420" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="480" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="540" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="600" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="660" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="720" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="780" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="840" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="900" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="960" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="1020" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/><circle cx="1080" cy="20" r="1.5" fill="%2322a8b8" opacity="0.2"/><circle cx="1140" cy="20" r="1.5" fill="%2322a8b8" opacity="0.25"/></svg>');
+    background-size: cover;
+}
+
+/* DNA RIBBON ENHANCEMENT - Elegant helix silhouettes at edges */
+.dna-ribbon-top, .dna-ribbon-bottom {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    pointer-events: none;
+    z-index: 50;
+}
+
+.dna-ribbon-top {
+    top: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q100,20 200,60 T400,60 T600,60 T800,60 T1000,60 T1200,60" stroke="%2322a8b8" stroke-width="2.5" fill="none" opacity="0.15"/><path d="M0,60 Q100,100 200,60 T400,60 T600,60 T800,60 T1000,60 T1200,60" stroke="%2322a8b8" stroke-width="2.5" fill="none" opacity="0.15"/><circle cx="100" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="300" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="500" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="700" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="900" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="1100" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/></svg>');
+    background-repeat: repeat-x;
+    background-size: 1200px 120px;
+    opacity: 1;
+}
+
+.dna-ribbon-bottom {
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"><path d="M0,60 Q100,20 200,60 T400,60 T600,60 T800,60 T1000,60 T1200,60" stroke="%2322a8b8" stroke-width="2.5" fill="none" opacity="0.15"/><path d="M0,60 Q100,100 200,60 T400,60 T600,60 T800,60 T1000,60 T1200,60" stroke="%2322a8b8" stroke-width="2.5" fill="none" opacity="0.15"/><circle cx="100" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="300" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="500" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="700" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="900" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/><circle cx="1100" cy="60" r="3" fill="%2322a8b8" opacity="0.2"/></svg>');
+    background-repeat: repeat-x;
+    background-size: 1200px 120px;
+    opacity: 1;
+}
 
 /* THREE-PANEL RESEARCH SECTION - FULL WIDTH */
 .research-section {
@@ -535,6 +631,10 @@ main,
 <!-- Animated DNA Banner -->
 <div class="animated-banner-container">
     <div class="animated-banner">
+        <!-- Subtle Edge Dots Pattern -->
+        <div class="edge-dots-top"></div>
+        <div class="edge-dots-bottom"></div>
+        
         <div class="dna-ticker-top">
             <div class="ticker-content-top"></div>
         </div>
@@ -647,13 +747,19 @@ main,
     }
     
     function initBanner() {
+        // Array of color classes matching the 6 floating dots
+        const colorClasses = ['highlight-pink', 'highlight-blue', 'highlight-purple', 'highlight-cyan', 'highlight-green', 'highlight-orange'];
+        
         const tickerTop = document.querySelector('.ticker-content-top');
         if (tickerTop) {
             let tickerSeqTop = '';
             const longDNATop = generateDNA(200);
             for (let i = 0; i < longDNATop.length; i++) {
-                if (i % 10 === 0) {
-                    tickerSeqTop += '<span class="highlight-base">' + longDNATop[i] + '</span>';
+                if ((i + 1) % 10 === 0) {
+                    // Every 10th base - cycle through all 6 colors!
+                    const colorIndex = Math.floor((i + 1) / 10) % 6;
+                    const colorClass = colorClasses[colorIndex];
+                    tickerSeqTop += '<span class="' + colorClass + '">' + longDNATop[i] + '</span>';
                 } else {
                     tickerSeqTop += longDNATop[i];
                 }
@@ -666,8 +772,11 @@ main,
             let tickerSeqBottom = '';
             const longDNABottom = generateDNA(200);
             for (let i = 0; i < longDNABottom.length; i++) {
-                if (i % 10 === 0) {
-                    tickerSeqBottom += '<span class="highlight-base">' + longDNABottom[i] + '</span>';
+                if ((i + 1) % 10 === 0) {
+                    // Every 10th base - cycle through all 6 colors!
+                    const colorIndex = Math.floor((i + 1) / 10) % 6;
+                    const colorClass = colorClasses[colorIndex];
+                    tickerSeqBottom += '<span class="' + colorClass + '">' + longDNABottom[i] + '</span>';
                 } else {
                     tickerSeqBottom += longDNABottom[i];
                 }
