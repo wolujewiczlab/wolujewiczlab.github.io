@@ -125,6 +125,69 @@ main,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
+/* DNA HELIX V2 - Research Page Top */
+.research-dna-container {
+    width: 250px;
+    height: 380px;
+}
+
+.helix-v2-research {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.helix-v2-research .strand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.helix-v2-research .nucleotide {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.helix-v2-research .strand-left .nucleotide {
+    background: radial-gradient(circle, #22a8b8, #0d7a87);
+    box-shadow: 0 0 20px rgba(34, 168, 184, 0.9);
+    animation: sine-left-research 5s ease-in-out infinite;
+}
+
+.helix-v2-research .strand-right .nucleotide {
+    background: radial-gradient(circle, #a855f7, #7c3aed);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.9);
+    animation: sine-right-research 5s ease-in-out infinite;
+}
+
+@keyframes sine-left-research {
+    0% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
+}
+
+@keyframes sine-right-research {
+    0% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
+    50% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
+    100% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
+}
+
+.helix-v2-research .nucleotide:nth-child(1) { top: 0%; animation-delay: 0s; }
+.helix-v2-research .nucleotide:nth-child(2) { top: 8%; animation-delay: -0.4s; }
+.helix-v2-research .nucleotide:nth-child(3) { top: 16%; animation-delay: -0.8s; }
+.helix-v2-research .nucleotide:nth-child(4) { top: 24%; animation-delay: -1.2s; }
+.helix-v2-research .nucleotide:nth-child(5) { top: 32%; animation-delay: -1.6s; }
+.helix-v2-research .nucleotide:nth-child(6) { top: 40%; animation-delay: -2s; }
+.helix-v2-research .nucleotide:nth-child(7) { top: 48%; animation-delay: -2.4s; }
+.helix-v2-research .nucleotide:nth-child(8) { top: 56%; animation-delay: -2.8s; }
+.helix-v2-research .nucleotide:nth-child(9) { top: 64%; animation-delay: -3.2s; }
+.helix-v2-research .nucleotide:nth-child(10) { top: 72%; animation-delay: -3.6s; }
+.helix-v2-research .nucleotide:nth-child(11) { top: 80%; animation-delay: -4s; }
+.helix-v2-research .nucleotide:nth-child(12) { top: 88%; animation-delay: -4.4s; }
+
 /* TWO-TONE SECTIONS - Landau Lab Style */
 .two-tone-section {
     width: 100vw;
@@ -353,8 +416,43 @@ main,
             </div>
         </div>
         
-        <div>
-            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+        <div style="display: flex; gap: 40px; align-items: center;">
+            <!-- DNA Helix Animation -->
+            <div class="research-dna-container">
+                <div class="helix-v2-research">
+                    <div class="strand strand-left">
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                    </div>
+                    <div class="strand strand-right">
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                        <div class="nucleotide"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Word Cloud Image -->
+            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image" style="max-width: 350px;">
         </div>
     </div>
 </div>
