@@ -503,6 +503,15 @@ main,
     align-self: center;  /* Vertically center with icons */
 }
 
+.institutional-text a {
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.institutional-text a:hover {
+    opacity: 0.7;
+}
+
 .institutional-text .school-line {
     font-size: 13px;
     font-weight: 600;
@@ -511,7 +520,7 @@ main,
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
     margin: 0;
-    margin-bottom: 14px;  /* Increased from 10px to 14px to lower text more */
+    margin-bottom: 18px;  /* Increased from 14px to 18px to lower text more */
 }
 
 .institutional-text .university-line {
@@ -908,8 +917,10 @@ main,
                     </div>
                     
                     <div class="institutional-text">
-                        <p class="school-line">School of Health Sciences</p>
-                        <p class="university-line">Quinnipiac University</p>
+                        <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
+                            <p class="school-line">School of Health Sciences</p>
+                            <p class="university-line">Quinnipiac University</p>
+                        </a>
                     </div>
                 </div>
             </div>
