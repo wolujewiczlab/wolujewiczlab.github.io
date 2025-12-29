@@ -288,7 +288,7 @@ main,
     margin-left: -50vw;
     margin-right: -50vw;
     background: #ffffff;
-    padding: 80px 40px;
+    padding: 60px 40px 80px 40px;  /* Reduced top padding from 80px to 60px */
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -307,7 +307,7 @@ main,
 
 .research-card {
     text-align: center;
-    padding: 40px 30px;
+    padding: 20px 30px 40px 30px;  /* Reduced top padding to move circles up */
     background: #ffffff;
     transition: transform 0.3s ease;
 }
@@ -330,6 +330,14 @@ main,
     transition: all 0.3s ease;
     background: transparent;
     box-shadow: 0 2px 8px rgba(34, 168, 184, 0.15);  /* Subtle shadow for polish */
+    line-height: 1;  /* Remove extra line height */
+    padding: 0;  /* Remove any padding */
+}
+
+.research-icon i {
+    display: block;
+    line-height: 1;
+    vertical-align: middle;
 }
 
 .research-card:hover .research-icon {
