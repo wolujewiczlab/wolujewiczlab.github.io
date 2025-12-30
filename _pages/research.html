@@ -14,10 +14,168 @@ permalink: /research/
 /* BLACK TOP NAVIGATION BAR */
 .masthead {
     background-color: #000000 !important;
+    position: relative;
 }
 
 .greedy-nav {
     background: #000000 !important;
+}
+
+/* DNA HELIX IN NAV BAR - Option 3 Cascading Wave */
+.nav-dna-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 33px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.helix-nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.helix-nav .strand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.helix-nav .nucleotide {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.helix-nav .strand-left .nucleotide:nth-child(1) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: 0s, 0s;
+    top: 0%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(2) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -0.7s, -1.25s;
+    top: 14%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(3) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -1.4s, -2.5s;
+    top: 28%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(4) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -2.1s, -3.75s;
+    top: 42%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(5) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -2.8s, -5s;
+    top: 56%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(6) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -3.5s, -6.25s;
+    top: 70%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(7) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -4.2s, -7.5s;
+    top: 84%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(8) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -4.9s, -8.75s;
+    top: 98%;
+}
+
+.helix-nav .strand-right .nucleotide:nth-child(1) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: 0s, -5s;
+    top: 0%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(2) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -0.7s, -6.25s;
+    top: 14%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(3) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -1.4s, -7.5s;
+    top: 28%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(4) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -2.1s, -8.75s;
+    top: 42%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(5) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -2.8s, -10s;
+    top: 56%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(6) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -3.5s, -11.25s;
+    top: 70%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(7) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -4.2s, -12.5s;
+    top: 84%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(8) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-cascade-nav 10s linear infinite;
+    animation-delay: -4.9s, -13.75s;
+    top: 98%;
+}
+
+@keyframes color-cascade-nav {
+    0%, 100% { 
+        background: radial-gradient(circle, #ec4899, #be185d); 
+        box-shadow: 0 0 15px rgba(236, 72, 153, 0.9); 
+    }
+    16.66% { 
+        background: radial-gradient(circle, #3b82f6, #1e40af); 
+        box-shadow: 0 0 15px rgba(59, 130, 246, 0.9); 
+    }
+    33.33% { 
+        background: radial-gradient(circle, #a855f7, #7c3aed); 
+        box-shadow: 0 0 15px rgba(168, 85, 247, 0.9); 
+    }
+    50% { 
+        background: radial-gradient(circle, #06b6d4, #0891b2); 
+        box-shadow: 0 0 15px rgba(6, 182, 212, 0.9); 
+    }
+    66.66% { 
+        background: radial-gradient(circle, #10b981, #059669); 
+        box-shadow: 0 0 15px rgba(16, 185, 129, 0.9); 
+    }
+    83.33% { 
+        background: radial-gradient(circle, #f59e0b, #d97706); 
+        box-shadow: 0 0 15px rgba(245, 158, 11, 0.9); 
+    }
+}
+
+@keyframes sine-left-nav {
+    0% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+}
+
+@keyframes sine-right-nav {
+    0% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    50% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+}
+
+.greedy-nav .visible-links {
+    margin-left: 30px;
 }
 
 .site-title,
@@ -125,68 +283,91 @@ main,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* DNA HELIX V2 - Research Page Top */
+/* DNA HELIX V1 - Research Page Top (True Helical Wave) */
 .research-dna-container {
     width: 250px;
     height: 380px;
 }
 
-.helix-v2-research {
+.helix-v1-research {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.helix-v2-research .strand {
+.helix-v1-research .strand {
     position: absolute;
     width: 100%;
     height: 100%;
 }
 
-.helix-v2-research .nucleotide {
+.helix-v1-research .nucleotide {
     position: absolute;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     left: 50%;
+    transform: translateX(-50%);
 }
 
-.helix-v2-research .strand-left .nucleotide {
-    background: radial-gradient(circle, #22a8b8, #0d7a87);
-    box-shadow: 0 0 20px rgba(34, 168, 184, 0.9);
-    animation: sine-left-research 5s ease-in-out infinite;
+.helix-v1-research .strand-left .nucleotide {
+    background: radial-gradient(circle, #22a8b8, #1a8a9a);
+    box-shadow: 0 0 15px rgba(34, 168, 184, 0.8);
+    animation: helix-left-research 4s ease-in-out infinite;
 }
 
-.helix-v2-research .strand-right .nucleotide {
-    background: radial-gradient(circle, #a855f7, #7c3aed);
-    box-shadow: 0 0 20px rgba(168, 85, 247, 0.9);
-    animation: sine-right-research 5s ease-in-out infinite;
+.helix-v1-research .strand-right .nucleotide {
+    background: radial-gradient(circle, #ec4899, #be185d);
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.8);
+    animation: helix-right-research 4s ease-in-out infinite;
 }
 
-@keyframes sine-left-research {
-    0% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
-    50% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
-    100% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
+@keyframes helix-left-research {
+    0% { transform: translateX(-50%) translateX(-60px); }
+    50% { transform: translateX(-50%) translateX(60px); }
+    100% { transform: translateX(-50%) translateX(-60px); }
 }
 
-@keyframes sine-right-research {
-    0% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
-    50% { transform: translateX(-50%) translateX(-70px) scale(0.8); opacity: 0.6; }
-    100% { transform: translateX(-50%) translateX(70px) scale(1.2); opacity: 1; }
+@keyframes helix-right-research {
+    0% { transform: translateX(-50%) translateX(60px); }
+    50% { transform: translateX(-50%) translateX(-60px); }
+    100% { transform: translateX(-50%) translateX(60px); }
 }
 
-.helix-v2-research .nucleotide:nth-child(1) { top: 0%; animation-delay: 0s; }
-.helix-v2-research .nucleotide:nth-child(2) { top: 8%; animation-delay: -0.4s; }
-.helix-v2-research .nucleotide:nth-child(3) { top: 16%; animation-delay: -0.8s; }
-.helix-v2-research .nucleotide:nth-child(4) { top: 24%; animation-delay: -1.2s; }
-.helix-v2-research .nucleotide:nth-child(5) { top: 32%; animation-delay: -1.6s; }
-.helix-v2-research .nucleotide:nth-child(6) { top: 40%; animation-delay: -2s; }
-.helix-v2-research .nucleotide:nth-child(7) { top: 48%; animation-delay: -2.4s; }
-.helix-v2-research .nucleotide:nth-child(8) { top: 56%; animation-delay: -2.8s; }
-.helix-v2-research .nucleotide:nth-child(9) { top: 64%; animation-delay: -3.2s; }
-.helix-v2-research .nucleotide:nth-child(10) { top: 72%; animation-delay: -3.6s; }
-.helix-v2-research .nucleotide:nth-child(11) { top: 80%; animation-delay: -4s; }
-.helix-v2-research .nucleotide:nth-child(12) { top: 88%; animation-delay: -4.4s; }
+.helix-v1-research .nucleotide:nth-child(1) { top: 0%; animation-delay: 0s; }
+.helix-v1-research .nucleotide:nth-child(2) { top: 10%; animation-delay: -0.4s; }
+.helix-v1-research .nucleotide:nth-child(3) { top: 20%; animation-delay: -0.8s; }
+.helix-v1-research .nucleotide:nth-child(4) { top: 30%; animation-delay: -1.2s; }
+.helix-v1-research .nucleotide:nth-child(5) { top: 40%; animation-delay: -1.6s; }
+.helix-v1-research .nucleotide:nth-child(6) { top: 50%; animation-delay: -2s; }
+.helix-v1-research .nucleotide:nth-child(7) { top: 60%; animation-delay: -2.4s; }
+.helix-v1-research .nucleotide:nth-child(8) { top: 70%; animation-delay: -2.8s; }
+.helix-v1-research .nucleotide:nth-child(9) { top: 80%; animation-delay: -3.2s; }
+.helix-v1-research .nucleotide:nth-child(10) { top: 90%; animation-delay: -3.6s; }
+
+.helix-v1-research .connector {
+    position: absolute;
+    height: 2px;
+    background: linear-gradient(90deg, #22a8b8, rgba(34, 168, 184, 0.3), #ec4899);
+    left: 50%;
+    transform-origin: center;
+    opacity: 0.5;
+}
+
+.helix-v1-research .connector:nth-child(1) { top: 5%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -0.2s; }
+.helix-v1-research .connector:nth-child(2) { top: 15%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -0.6s; }
+.helix-v1-research .connector:nth-child(3) { top: 25%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1s; }
+.helix-v1-research .connector:nth-child(4) { top: 35%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1.4s; }
+.helix-v1-research .connector:nth-child(5) { top: 45%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1.8s; }
+.helix-v1-research .connector:nth-child(6) { top: 55%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -2.2s; }
+.helix-v1-research .connector:nth-child(7) { top: 65%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -2.6s; }
+.helix-v1-research .connector:nth-child(8) { top: 75%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -3s; }
+.helix-v1-research .connector:nth-child(9) { top: 85%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -3.4s; }
+
+@keyframes connector-pulse {
+    0%, 100% { opacity: 0.3; width: 100px; }
+    50% { opacity: 0.8; width: 140px; }
+}
 
 /* TWO-TONE SECTIONS - Landau Lab Style */
 .two-tone-section {
@@ -391,6 +572,60 @@ main,
 }
 </style>
 
+<script>
+// Inject DNA Helix into Navigation Bar
+(function() {
+    'use strict';
+    
+    function addDNAToNav() {
+        const masthead = document.querySelector('.masthead');
+        if (!masthead) return;
+        
+        // Check if already added
+        if (document.querySelector('.nav-dna-container')) return;
+        
+        // Create DNA helix container
+        const dnaContainer = document.createElement('div');
+        dnaContainer.className = 'nav-dna-container';
+        dnaContainer.innerHTML = `
+            <div class="helix-nav">
+                <div class="strand strand-left">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+                <div class="strand strand-right">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+            </div>
+        `;
+        
+        masthead.appendChild(dnaContainer);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', addDNAToNav);
+    } else {
+        addDNAToNav();
+    }
+    
+    setTimeout(addDNAToNav, 100);
+    setTimeout(addDNAToNav, 500);
+})();
+</script>
+
 <!-- BLACK INTRO SECTION - Research Overview -->
 <div class="research-intro">
     <div class="intro-content">
@@ -417,12 +652,20 @@ main,
         </div>
         
         <div style="display: flex; gap: 40px; align-items: center;">
-            <!-- DNA Helix Animation -->
+            <!-- DNA Helix Animation - Version 1 with connectors -->
             <div class="research-dna-container">
-                <div class="helix-v2-research">
+                <div class="helix-v1-research">
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    <div class="connector"></div>
+                    
                     <div class="strand strand-left">
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
@@ -435,8 +678,6 @@ main,
                         <div class="nucleotide"></div>
                     </div>
                     <div class="strand strand-right">
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
                         <div class="nucleotide"></div>
