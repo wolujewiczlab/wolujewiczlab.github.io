@@ -283,90 +283,68 @@ main,
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* DNA HELIX V1 - Research Page Top (True Helical Wave) */
-.research-dna-container {
-    width: 250px;
-    height: 380px;
-}
-
-.helix-v1-research {
+/* ELEGANT DNA HELIX - Research Page Background (No Dots, Sophisticated Colors) */
+/* Color palette inspired by MIT, Stanford, Broad Institute - professional academic aesthetic */
+.helix-elegant {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-.helix-v1-research .strand {
+.helix-elegant .strand {
     position: absolute;
-    width: 100%;
+    width: 6px;
     height: 100%;
+    top: 0;
+    border-radius: 3px;
 }
 
-.helix-v1-research .nucleotide {
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
+.helix-elegant .strand-left {
     left: 50%;
-    transform: translateX(-50%);
+    background: linear-gradient(to bottom, 
+        #2D5A7B 0%,      /* Deep academic blue */
+        #4A7BA7 25%,     /* Medium blue */
+        #6B9BC3 50%,     /* Lighter blue */
+        #4A7BA7 75%,     /* Medium blue */
+        #2D5A7B 100%     /* Deep academic blue */
+    );
+    animation: elegant-wave-left 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(45, 90, 123, 0.4);
 }
 
-.helix-v1-research .strand-left .nucleotide {
-    background: radial-gradient(circle, #22a8b8, #1a8a9a);
-    box-shadow: 0 0 15px rgba(34, 168, 184, 0.8);
-    animation: helix-left-research 4s ease-in-out infinite;
+.helix-elegant .strand-right {
+    right: 50%;
+    background: linear-gradient(to bottom, 
+        #5A7D8C 0%,      /* Muted teal-grey */
+        #7A9DAC 25%,     /* Light teal-grey */
+        #9DBDCC 50%,     /* Lighter teal-grey */
+        #7A9DAC 75%,     /* Light teal-grey */
+        #5A7D8C 100%     /* Muted teal-grey */
+    );
+    animation: elegant-wave-right 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(90, 125, 140, 0.3);
 }
 
-.helix-v1-research .strand-right .nucleotide {
-    background: radial-gradient(circle, #ec4899, #be185d);
-    box-shadow: 0 0 15px rgba(236, 72, 153, 0.8);
-    animation: helix-right-research 4s ease-in-out infinite;
+@keyframes elegant-wave-left {
+    0%, 100% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
 }
 
-@keyframes helix-left-research {
-    0% { transform: translateX(-50%) translateX(-60px); }
-    50% { transform: translateX(-50%) translateX(60px); }
-    100% { transform: translateX(-50%) translateX(-60px); }
-}
-
-@keyframes helix-right-research {
-    0% { transform: translateX(-50%) translateX(60px); }
-    50% { transform: translateX(-50%) translateX(-60px); }
-    100% { transform: translateX(-50%) translateX(60px); }
-}
-
-.helix-v1-research .nucleotide:nth-child(1) { top: 0%; animation-delay: 0s; }
-.helix-v1-research .nucleotide:nth-child(2) { top: 10%; animation-delay: -0.4s; }
-.helix-v1-research .nucleotide:nth-child(3) { top: 20%; animation-delay: -0.8s; }
-.helix-v1-research .nucleotide:nth-child(4) { top: 30%; animation-delay: -1.2s; }
-.helix-v1-research .nucleotide:nth-child(5) { top: 40%; animation-delay: -1.6s; }
-.helix-v1-research .nucleotide:nth-child(6) { top: 50%; animation-delay: -2s; }
-.helix-v1-research .nucleotide:nth-child(7) { top: 60%; animation-delay: -2.4s; }
-.helix-v1-research .nucleotide:nth-child(8) { top: 70%; animation-delay: -2.8s; }
-.helix-v1-research .nucleotide:nth-child(9) { top: 80%; animation-delay: -3.2s; }
-.helix-v1-research .nucleotide:nth-child(10) { top: 90%; animation-delay: -3.6s; }
-
-.helix-v1-research .connector {
-    position: absolute;
-    height: 2px;
-    background: linear-gradient(90deg, #22a8b8, rgba(34, 168, 184, 0.3), #ec4899);
-    left: 50%;
-    transform-origin: center;
-    opacity: 0.5;
-}
-
-.helix-v1-research .connector:nth-child(1) { top: 5%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -0.2s; }
-.helix-v1-research .connector:nth-child(2) { top: 15%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -0.6s; }
-.helix-v1-research .connector:nth-child(3) { top: 25%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1s; }
-.helix-v1-research .connector:nth-child(4) { top: 35%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1.4s; }
-.helix-v1-research .connector:nth-child(5) { top: 45%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -1.8s; }
-.helix-v1-research .connector:nth-child(6) { top: 55%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -2.2s; }
-.helix-v1-research .connector:nth-child(7) { top: 65%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -2.6s; }
-.helix-v1-research .connector:nth-child(8) { top: 75%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -3s; }
-.helix-v1-research .connector:nth-child(9) { top: 85%; width: 120px; transform: translateX(-50%); animation: connector-pulse 4s ease-in-out infinite; animation-delay: -3.4s; }
-
-@keyframes connector-pulse {
-    0%, 100% { opacity: 0.3; width: 100px; }
-    50% { opacity: 0.8; width: 140px; }
+@keyframes elegant-wave-right {
+    0%, 100% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
 }
 
 /* TWO-TONE SECTIONS - Landau Lab Style */
@@ -627,15 +605,21 @@ main,
 </script>
 
 <!-- BLACK INTRO SECTION - Research Overview -->
-<div class="research-intro">
-    <div class="intro-content">
-        <div class="intro-text">
+<div class="research-intro" style="position: relative; overflow: hidden;">
+    
+    <!-- Elegant DNA Helix - Background Element -->
+    <div style="position: absolute; right: -50px; top: 50%; transform: translateY(-50%); width: 300px; height: 450px; opacity: 0.12; pointer-events: none; z-index: 1;">
+        <div class="helix-elegant">
+            <div class="strand strand-left"></div>
+            <div class="strand strand-right"></div>
+        </div>
+    </div>
+    
+    <div class="intro-content" style="position: relative; z-index: 2;">
+        <div class="intro-text" style="max-width: 700px;">
             <h1>Research</h1>
-            <p>
-                Our laboratory advances precision medicine and public health through the integration of cutting-edge genomic technologies, artificial intelligence, and systems biology approaches. We investigate fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
-            </p>
-            <p>
-                By leveraging high-throughput sequencing, multi-omic integration, and computational modeling, we seek to uncover the biological mechanisms underlying complex diseases and translate these discoveries into actionable clinical and public health interventions.
+            <p style="margin-bottom: 50px;">
+                Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology. We investigate fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology, leveraging high-throughput sequencing and computational modeling to uncover disease mechanisms and translate discoveries into clinical interventions.
             </p>
             
             <div class="research-themes">
@@ -651,49 +635,9 @@ main,
             </div>
         </div>
         
-        <div style="display: flex; gap: 40px; align-items: center;">
-            <!-- DNA Helix Animation - Version 1 with connectors -->
-            <div class="research-dna-container">
-                <div class="helix-v1-research">
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    <div class="connector"></div>
-                    
-                    <div class="strand strand-left">
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                    </div>
-                    <div class="strand strand-right">
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                        <div class="nucleotide"></div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Word Cloud Image -->
-            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image" style="max-width: 350px;">
+        <!-- Word Cloud Image - Moved right to avoid DNA -->
+        <div style="margin-left: auto;">
+            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image" style="max-width: 380px;">
         </div>
     </div>
 </div>
