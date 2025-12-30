@@ -22,7 +22,7 @@ classes: wide
 /* DNA HELIX IN NAV BAR */
 .nav-dna-container {
     position: absolute;
-    left: 35%;  /* Centered between logo and menu */
+    left: 50%;  /* Moved right - closer to "Research" */
     top: 50%;
     transform: translate(-50%, -50%);
     width: 33px;  /* Proper 1:1.5 ratio with 50px height */
@@ -52,15 +52,75 @@ classes: wide
 }
 
 .helix-v2-nav .strand-left .nucleotide {
-    background: radial-gradient(circle, #22a8b8, #0d7a87);
-    box-shadow: 0 0 12px rgba(34, 168, 184, 0.8);
-    animation: sine-left-nav 5s ease-in-out infinite;
+    animation: sine-left-nav 5s ease-in-out infinite, color-rotate-left 12s linear infinite;
 }
 
 .helix-v2-nav .strand-right .nucleotide {
-    background: radial-gradient(circle, #a855f7, #7c3aed);
-    box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
-    animation: sine-right-nav 5s ease-in-out infinite;
+    animation: sine-right-nav 5s ease-in-out infinite, color-rotate-right 12s linear infinite;
+}
+
+/* Color rotation for left strand - cycles through 6 colors like Christmas lights */
+@keyframes color-rotate-left {
+    0% { 
+        background: radial-gradient(circle, #ec4899, #be185d); /* Pink */
+        box-shadow: 0 0 12px rgba(236, 72, 153, 0.8);
+    }
+    16.66% { 
+        background: radial-gradient(circle, #3b82f6, #1e40af); /* Blue */
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+    }
+    33.33% { 
+        background: radial-gradient(circle, #a855f7, #7c3aed); /* Purple */
+        box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+    }
+    50% { 
+        background: radial-gradient(circle, #06b6d4, #0891b2); /* Cyan */
+        box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+    }
+    66.66% { 
+        background: radial-gradient(circle, #10b981, #059669); /* Green */
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
+    }
+    83.33% { 
+        background: radial-gradient(circle, #f59e0b, #d97706); /* Orange */
+        box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+    }
+    100% { 
+        background: radial-gradient(circle, #ec4899, #be185d); /* Pink */
+        box-shadow: 0 0 12px rgba(236, 72, 153, 0.8);
+    }
+}
+
+/* Color rotation for right strand - offset by 50% for alternating effect */
+@keyframes color-rotate-right {
+    0% { 
+        background: radial-gradient(circle, #06b6d4, #0891b2); /* Cyan - offset */
+        box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+    }
+    16.66% { 
+        background: radial-gradient(circle, #10b981, #059669); /* Green */
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.8);
+    }
+    33.33% { 
+        background: radial-gradient(circle, #f59e0b, #d97706); /* Orange */
+        box-shadow: 0 0 12px rgba(245, 158, 11, 0.8);
+    }
+    50% { 
+        background: radial-gradient(circle, #ec4899, #be185d); /* Pink */
+        box-shadow: 0 0 12px rgba(236, 72, 153, 0.8);
+    }
+    66.66% { 
+        background: radial-gradient(circle, #3b82f6, #1e40af); /* Blue */
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.8);
+    }
+    83.33% { 
+        background: radial-gradient(circle, #a855f7, #7c3aed); /* Purple */
+        box-shadow: 0 0 12px rgba(168, 85, 247, 0.8);
+    }
+    100% { 
+        background: radial-gradient(circle, #06b6d4, #0891b2); /* Cyan */
+        box-shadow: 0 0 12px rgba(6, 182, 212, 0.8);
+    }
 }
 
 @keyframes sine-left-nav {
