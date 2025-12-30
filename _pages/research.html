@@ -205,6 +205,7 @@ main,
 
 /* BLACK INTRO SECTION - Research Themes Overview */
 /* BLACK INTRO SECTION - Two-Tone Layout (Grey Left / Black Right) */
+/* BLACK INTRO SECTION - ORIGINAL STYLE WITH SUBTLE TWO-TONE */
 .research-intro {
     width: 100vw;
     position: relative;
@@ -212,56 +213,44 @@ main,
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
-    display: flex;
-    min-height: 600px;
-}
-
-.intro-tone-grey {
-    flex: 1;
-    background: #f0f0f0;
-    padding: 80px 60px 80px 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.intro-tone-black {
-    flex: 1;
-    background: #000000;
-    padding: 80px 120px 80px 60px;
-    display: flex;
+    background: #1a1a1a;
+    padding: 100px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
     align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.intro-tone-grey h1 {
-    font-size: 56px;
-    font-weight: 600;
-    color: #1a1a1a;
+.intro-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.intro-content h1 {
+    font-size: 52px;
+    font-weight: 400;
+    color: #ffffff;
     margin-bottom: 30px;
     font-family: 'Playfair Display', serif;
     letter-spacing: -0.5px;
 }
 
-.intro-tone-grey p {
-    font-size: 18px;
+.intro-content p {
+    font-size: 19px;
     line-height: 1.8;
-    color: #2a2a2a;
+    color: #d0d0d0;
     margin-bottom: 50px;
-    max-width: 550px;
     font-family: 'Inter', sans-serif;
 }
 
 .research-themes {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .research-themes h3 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #22a8b8;
     margin-bottom: 20px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
@@ -271,109 +260,38 @@ main,
 .theme-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    max-width: 500px;
+    gap: 15px;
 }
 
 .theme-item {
-    background: #ffffff;
-    padding: 12px 18px;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #1a1a1a;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 16px;
+    color: #b0b0b0;
+    padding-left: 20px;
+    position: relative;
     font-family: 'Inter', sans-serif;
 }
 
-.theme-item:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* DNA Helix - Behind word cloud on black background */
-.intro-dna-container {
+.theme-item:before {
+    content: "▸";
+    color: #22a8b8;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 280px;
-    height: 420px;
-    opacity: 0.18;
-    pointer-events: none;
-    z-index: 1;
+    left: 0;
 }
 
-.helix-elegant-intro {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.helix-elegant-intro .strand {
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    top: 0;
-    border-radius: 3px;
-}
-
-.helix-elegant-intro .strand-left {
-    left: 50%;
-    background: linear-gradient(to bottom, 
-        #22a8b8 0%,
-        #1a8a9a 25%,
-        #2abfcf 50%,
-        #1a8a9a 75%,
-        #22a8b8 100%
-    );
-    animation: elegant-wave-left-intro 5s ease-in-out infinite;
-    box-shadow: 0 0 30px rgba(34, 168, 184, 0.5);
-}
-
-.helix-elegant-intro .strand-right {
-    right: 50%;
-    background: linear-gradient(to bottom, 
-        #3b82f6 0%,
-        #2563eb 25%,
-        #60a5fa 50%,
-        #2563eb 75%,
-        #3b82f6 100%
-    );
-    animation: elegant-wave-right-intro 5s ease-in-out infinite;
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
-}
-
-@keyframes elegant-wave-left-intro {
-    0%, 100% { 
-        transform: translateX(-70px);
-        opacity: 0.7;
-    }
-    50% { 
-        transform: translateX(70px);
-        opacity: 1;
-    }
-}
-
-@keyframes elegant-wave-right-intro {
-    0%, 100% { 
-        transform: translateX(70px);
-        opacity: 1;
-    }
-    50% { 
-        transform: translateX(-70px);
-        opacity: 0.7;
-    }
+.intro-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    padding: 60px;
+    border-radius: 0;
 }
 
 .intro-image {
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    max-width: 400px;
     border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.15);
-    position: relative;
-    z-index: 2;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
     height: auto;
     border-radius: 8px;
@@ -637,14 +555,14 @@ main,
 })();
 </script>
 
-<!-- BLACK INTRO SECTION - Two-Tone Layout -->
+<!-- BLACK INTRO SECTION - ORIGINAL ELEGANT DESIGN -->
 <div class="research-intro">
     
-    <!-- Left Side - Grey with Text -->
-    <div class="intro-tone-grey">
+    <!-- Left Side - Text Content -->
+    <div class="intro-content">
         <h1>Research</h1>
         <p>
-            Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology. We investigate fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology, leveraging high-throughput sequencing and computational modeling to uncover disease mechanisms and translate discoveries into clinical interventions.
+            Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology, investigating fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
         </p>
         
         <div class="research-themes">
@@ -653,25 +571,16 @@ main,
                 <div class="theme-item">Genomic Medicine</div>
                 <div class="theme-item">Machine Learning</div>
                 <div class="theme-item">Systems Biology</div>
-                <div class="theme-item">Computational Genomics</div>
-                <div class="theme-item">Precision Medicine</div>
+                <div class="theme-item">Metagenomics</div>
+                <div class="theme-item">Neurobiology</div>
                 <div class="theme-item">Public Health Surveillance</div>
             </div>
         </div>
     </div>
     
-    <!-- Right Side - Black with Word Cloud & DNA -->
-    <div class="intro-tone-black">
-        <!-- DNA Helix Background -->
-        <div class="intro-dna-container">
-            <div class="helix-elegant-intro">
-                <div class="strand strand-left"></div>
-                <div class="strand strand-right"></div>
-            </div>
-        </div>
-        
-        <!-- Word Cloud Image -->
-        <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image" style="max-width: 450px;">
+    <!-- Right Side - Word Cloud on Black -->
+    <div class="intro-image-container">
+        <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
     </div>
     
 </div>
