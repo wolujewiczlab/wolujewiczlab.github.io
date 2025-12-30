@@ -66,33 +66,8 @@ permalink: /teaching/
     padding: 80px 40px;
 }
 
-/* PHILOSOPHY SECTION - Elegant Quote Style */
-.philosophy-section {
-    max-width: 900px;
-    margin: 0 auto 80px auto;
-    background: #ffffff;
-    padding: 60px;
-    border-radius: 12px;
-    border-left: 5px solid #22a8b8;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
 
-.philosophy-section h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    color: #1a1a1a;
-    margin-bottom: 30px;
-    text-align: center;
-}
 
-.philosophy-text {
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    text-align: center;
-    font-style: italic;
-}
 
 /* COURSES SECTION */
 .courses-section {
@@ -193,40 +168,9 @@ permalink: /teaching/
     margin-left: 8px;
 }
 
-/* STATS BAR */
-.stats-bar {
-    max-width: 1100px;
-    margin: 60px auto 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 30px;
-}
 
-.stat-card {
-    background: #ffffff;
-    padding: 35px;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    border-top: 3px solid #22a8b8;
-}
 
-.stat-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 48px;
-    font-weight: 700;
-    color: #22a8b8;
-    line-height: 1;
-    margin-bottom: 10px;
-}
 
-.stat-label {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: #666;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
 
 /* DIVIDER */
 .section-divider {
@@ -272,14 +216,6 @@ permalink: /teaching/
 </div>
 
 <div class="teaching-container">
-    
-    <!-- TEACHING PHILOSOPHY -->
-    <div class="philosophy-section">
-        <h2>Teaching Philosophy</h2>
-        <p class="philosophy-text">
-            "Modern biomedical research demands both depth of biological understanding and fluency in computational methods. My courses bridge molecular biology, genetics, and data science to prepare students for the evolving landscape of precision medicine and genomic discovery."
-        </p>
-    </div>
     
     <!-- CURRICULUM INNOVATION -->
     <div class="courses-section">
@@ -436,22 +372,6 @@ permalink: /teaching/
                 </div>
             </div>
             
-        </div>
-    </div>
-    
-    <!-- STATS -->
-    <div class="stats-bar">
-        <div class="stat-card">
-            <div class="stat-number">10</div>
-            <div class="stat-label">Courses Taught</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">4</div>
-            <div class="stat-label">New Curricula</div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-number">11</div>
-            <div class="stat-label">Independent Studies</div>
         </div>
     </div>
     
