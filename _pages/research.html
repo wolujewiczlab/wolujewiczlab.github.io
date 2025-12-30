@@ -204,8 +204,6 @@ main,
 }
 
 /* BLACK INTRO SECTION - Research Themes Overview */
-/* BLACK INTRO SECTION - Two-Tone Layout (Grey Left / Black Right) */
-/* BLACK INTRO SECTION - ORIGINAL STYLE WITH SUBTLE TWO-TONE */
 .research-intro {
     width: 100vw;
     position: relative;
@@ -215,18 +213,18 @@ main,
     margin-right: -50vw;
     background: #1a1a1a;
     padding: 100px 40px;
+}
+
+.intro-content {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 400px;
     gap: 80px;
     align-items: center;
 }
 
-.intro-content {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.intro-content h1 {
+.intro-text h1 {
     font-size: 52px;
     font-weight: 400;
     color: #ffffff;
@@ -235,11 +233,11 @@ main,
     letter-spacing: -0.5px;
 }
 
-.intro-content p {
+.intro-text p {
     font-size: 19px;
     line-height: 1.8;
     color: #d0d0d0;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -278,24 +276,68 @@ main,
     left: 0;
 }
 
-.intro-image-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000000;
-    padding: 60px;
-    border-radius: 0;
-}
-
 .intro-image {
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-}
     height: auto;
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+
+.helix-elegant .strand {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    top: 0;
+    border-radius: 3px;
+}
+
+.helix-elegant .strand-left {
+    left: 50%;
+    background: linear-gradient(to bottom, 
+        #2D5A7B 0%,      /* Deep academic blue */
+        #4A7BA7 25%,     /* Medium blue */
+        #6B9BC3 50%,     /* Lighter blue */
+        #4A7BA7 75%,     /* Medium blue */
+        #2D5A7B 100%     /* Deep academic blue */
+    );
+    animation: elegant-wave-left 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(45, 90, 123, 0.4);
+}
+
+.helix-elegant .strand-right {
+    right: 50%;
+    background: linear-gradient(to bottom, 
+        #5A7D8C 0%,      /* Muted teal-grey */
+        #7A9DAC 25%,     /* Light teal-grey */
+        #9DBDCC 50%,     /* Lighter teal-grey */
+        #7A9DAC 75%,     /* Light teal-grey */
+        #5A7D8C 100%     /* Muted teal-grey */
+    );
+    animation: elegant-wave-right 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(90, 125, 140, 0.3);
+}
+
+@keyframes elegant-wave-left {
+    0%, 100% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
+}
+
+@keyframes elegant-wave-right {
+    0%, 100% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
 }
 
 /* TWO-TONE SECTIONS - Landau Lab Style */
@@ -555,34 +597,33 @@ main,
 })();
 </script>
 
-<!-- BLACK INTRO SECTION - ORIGINAL ELEGANT DESIGN -->
+<!-- BLACK INTRO SECTION - Full Width -->
 <div class="research-intro">
-    
-    <!-- Left Side - Text Content -->
     <div class="intro-content">
-        <h1>Research</h1>
-        <p>
-            Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology, investigating fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
-        </p>
-        
-        <div class="research-themes">
-            <h3>Core Research Themes</h3>
-            <div class="theme-list">
-                <div class="theme-item">Genomic Medicine</div>
-                <div class="theme-item">Machine Learning</div>
-                <div class="theme-item">Systems Biology</div>
-                <div class="theme-item">Metagenomics</div>
-                <div class="theme-item">Neurobiology</div>
-                <div class="theme-item">Public Health Surveillance</div>
+        <div class="intro-text">
+            <h1>Research</h1>
+            <p>
+                Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology, investigating fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
+            </p>
+            
+            <div class="research-themes">
+                <h3>Core Research Themes</h3>
+                <div class="theme-list">
+                    <div class="theme-item">Genomic Medicine</div>
+                    <div class="theme-item">Machine Learning</div>
+                    <div class="theme-item">Systems Biology</div>
+                    <div class="theme-item">Metagenomics</div>
+                    <div class="theme-item">Neurobiology</div>
+                    <div class="theme-item">Public Health Surveillance</div>
+                </div>
             </div>
         </div>
+        
+        <!-- Word Cloud Image -->
+        <div class="intro-image-wrapper">
+            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+        </div>
     </div>
-    
-    <!-- Right Side - Word Cloud on Black -->
-    <div class="intro-image-container">
-        <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
-    </div>
-    
 </div>
 
 <!-- Neural Tube Defects Section - Burgundy/Cream -->
