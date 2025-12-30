@@ -45,15 +45,15 @@ permalink: /publications/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* HEADER - Just title */
+/* HEADER - Black banner matching other pages */
 .publications-header { background: #000000; padding: 80px 40px 60px 40px; text-align: center; }
 .publications-header h1 { font-family: 'Playfair Display', serif; font-size: 56px; color: #ffffff; margin: 0; }
 
-/* CONTAINER */
-.publications-container { max-width: 1100px; margin: 0 auto; padding: 80px 40px; background: #ffffff; }
+/* CONTAINER - Full width white background */
+.publications-container { max-width: 100%; margin: 0 auto; padding: 80px 40px; background: #ffffff; }
 
-/* PUB CARD - Smaller visual column */
-.pub-card { display: grid; grid-template-columns: 1fr 320px; gap: 40px; margin-bottom: 50px; padding: 40px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 5px solid #22a8b8; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
+/* Inner content constrained */
+.pub-card { max-width: 1100px; margin: 0 auto 50px auto; display: grid; grid-template-columns: 1fr 320px; gap: 40px; padding: 40px; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-radius: 12px; border-left: 5px solid #22a8b8; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; }
 .pub-card:hover { box-shadow: 0 8px 30px rgba(34, 168, 184, 0.2); transform: translateY(-3px); }
 .pub-content { display: flex; flex-direction: column; }
 .pub-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #1a1a1a; line-height: 1.4; margin-bottom: 15px; transition: color 0.3s; }
@@ -129,7 +129,7 @@ permalink: /publications/
             <h3 class="pub-title">Integrative computational analyses implicate regulatory genomic elements contributing to spina bifida</h3>
             <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, Thareja G, Suhre K, Elemento O, Finnell RH, Ross ME</p>
             <p class="pub-journal">Genetics in Medicine Open (2024) 2:101894</p>
-            <div class="pub-meta"><span class="meta-tag">FIRST AUTHOR</span><span class="meta-tag">DEEP LEARNING</span><span class="meta-tag">SPINA BIFIDA</span></div>
+            <div class="pub-meta"><span class="meta-tag">DEEP LEARNING</span><span class="meta-tag">SPINA BIFIDA</span></div>
             <div class="pub-links"><a href="https://doi.org/10.1016/j.gimo.2024.101894" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2024.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
         </div>
         <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2024.png" alt="Regulatory elements"></div>
@@ -189,7 +189,7 @@ permalink: /publications/
             <h3 class="pub-title">Unraveling the complex genetics of neural tube defects: From biological models to human genomics and back</h3>
             <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Steele JW, Kaltschmidt JA, Finnell RH, Ross ME</p>
             <p class="pub-journal">Genesis (2021) 59(11):e23459</p>
-            <div class="pub-meta"><span class="meta-tag">FIRST AUTHOR</span><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
+            <div class="pub-meta"><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
             <div class="pub-links"><a href="https://doi.org/10.1002/dvg.23459" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-rev-2021.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
         </div>
         <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-rev-2021.png" alt="NTD genetics"></div>
@@ -201,7 +201,7 @@ permalink: /publications/
             <h3 class="pub-title">Genome-wide investigation identifies a rare copy-number variant burden associated with human spina bifida</h3>
             <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, AbdelAleem A, Nair V, Thareja G, Suhre K, Shaw GM, Finnell RH, Elemento O, Ross ME</p>
             <p class="pub-journal">Genetics in Medicine (2021) 23(7):1211–1218</p>
-            <div class="pub-meta"><span class="meta-tag">FIRST AUTHOR</span><span class="meta-tag">COPY NUMBER VARIANTS</span><span class="meta-tag">SPINA BIFIDA</span></div>
+            <div class="pub-meta"><span class="meta-tag">COPY NUMBER VARIANTS</span><span class="meta-tag">SPINA BIFIDA</span></div>
             <div class="pub-links"><a href="https://doi.org/10.1038/s41436-021-01126-9" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2021.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
         </div>
         <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2021.png" alt="CNV analysis"></div>
@@ -225,7 +225,7 @@ permalink: /publications/
             <h3 class="pub-title">The search for genetic determinants of human neural tube defects</h3>
             <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Ross ME</p>
             <p class="pub-journal">Current Opinion in Pediatrics (2019) 31(6):739–746</p>
-            <div class="pub-meta"><span class="meta-tag">FIRST AUTHOR</span><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
+            <div class="pub-meta"><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
             <div class="pub-links"><a href="https://doi.org/10.1097/MOP.0000000000000817" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2019.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
         </div>
         <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2019.png" alt="NTD determinants"></div>
