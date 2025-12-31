@@ -257,7 +257,7 @@ main,
 }
 
 .banner-tagline {
-    font-size: 32px;  /* INCREASED from 28px for better sub-header presence */
+    font-size: 36px;  /* INCREASED from 32px - more prominent sub-header */
     font-weight: 600;
     color: #22a8b8;
     letter-spacing: 0.5px;
@@ -276,11 +276,11 @@ main,
     margin: 0 auto;
 }
 
-/* DNA TICKERS - Optimized symmetrical spacing */
+/* DNA TICKERS - Perfect symmetrical spacing */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
-    top: 8%;  /* Moved up slightly for better balance */
+    top: 8%;
     font-family: 'Courier New', monospace;
     font-size: 32px;
     font-weight: 700;
@@ -304,7 +304,7 @@ main,
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
-    top: 92%;  /* Symmetrical with top (8% from bottom) */
+    bottom: 8%;  /* CHANGED to bottom positioning - mirrors top perfectly */
     font-family: 'Courier New', monospace;
     font-size: 32px;
     font-weight: 700;
@@ -640,11 +640,14 @@ main,
 .institutional-affiliation {
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 20px;  /* Reduced from 25px - moves bobcat slightly left */
 }
 
 .bobcat-logo {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    margin-top: -3px;  /* Nudge up slightly for perfect vertical alignment */
 }
 
 .bobcat-logo img {
