@@ -226,7 +226,7 @@ main,
 
 .animated-banner {
     width: 100%;
-    height: 450px;
+    height: 600px;  /* INCREASED from 450px for better screen fit */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -254,12 +254,13 @@ main,
 }
 
 .banner-content p {
-    font-size: 21px;  /* Smaller for single line */
-    font-weight: 600;  /* Semi-bold */
+    font-size: 28px;  /* LARGER font size */
+    font-weight: 600;
     color: #22a8b8;
-    letter-spacing: 0.3px;
-    font-family: 'Playfair Display', serif;  /* CHANGED TO PLAYFAIR */
-    white-space: nowrap;  /* Keep on one line */
+    letter-spacing: 0.5px;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.4;  /* Allow multiple lines */
+    text-align: center;
 }
 
 /* DNA TICKERS */
@@ -268,13 +269,13 @@ main,
     width: 100%;
     top: 20%;
     font-family: 'Courier New', monospace;
-    font-size: 20px;
+    font-size: 32px;  /* INCREASED from 20px */
     font-weight: 700;
-    letter-spacing: 8px;
+    letter-spacing: 12px;  /* Adjusted spacing */
     color: rgba(59, 130, 246, 0.25);
     white-space: nowrap;
     overflow: hidden;
-    z-index: 60;  /* Above edge dots */
+    z-index: 60;
 }
 
 .ticker-content-top {
@@ -292,9 +293,9 @@ main,
     width: 100%;
     top: 80%;
     font-family: 'Courier New', monospace;
-    font-size: 20px;
+    font-size: 32px;  /* INCREASED from 20px - EQUAL to top */
     font-weight: 700;
-    letter-spacing: 8px;
+    letter-spacing: 12px;  /* Adjusted spacing */
     color: rgba(59, 130, 246, 0.25);
     white-space: nowrap;
     overflow: hidden;
@@ -1046,52 +1047,11 @@ main,
         
         <div class="banner-content">
             <h1>Wolujewicz Lab</h1>
-            <p>Integrative Genomics and Computational Biomedicine</p>
-        </div>
-    </div>
-</div>
-
-<!-- Three-Panel Research Section - DIRECTLY BELOW BANNER -->
-<div class="research-section">
-    <div class="research-container">
-        <div class="research-grid">
-            
-            <!-- Panel 1: Neural Tube Defects -->
-            <div class="research-card">
-                <div class="research-icon">
-                    <i class="fas fa-brain"></i>
-                </div>
-                <h3>Neural Tube<br>Defects</h3>
-                <p>
-                    Employing systems biology and integrative genomics approaches to advance our understanding of structural birth defects affecting the developing brain and spinal cord, with a focus on elucidating molecular mechanisms and identifying novel therapeutic targets.
-                </p>
-                <a href="/research/#neural-tube-defects" class="read-more">Read More</a>
-            </div>
-            
-            <!-- Panel 2: Neurogenetic Disorders -->
-            <div class="research-card">
-                <div class="research-icon">
-                    <i class="fas fa-dna"></i>
-                </div>
-                <h3>Neurogenetic Disorders</h3>
-                <p>
-                    Investigating the multi-omic signatures of complex neurogenetic disorders including multiple sclerosis, autism spectrum disorder, and schizophrenia through advanced computational approaches and high-throughput genomic technologies to identify disease biomarkers and pathogenic mechanisms.
-                </p>
-                <a href="/research/#neurogenetic-disorders" class="read-more">Read More</a>
-            </div>
-            
-            <!-- Panel 3: Public Health Metagenomics -->
-            <div class="research-card">
-                <div class="research-icon">
-                    <i class="fas fa-viruses"></i>
-                </div>
-                <h3>Public Health Metagenomics</h3>
-                <p>
-                    Leveraging advances in metagenomics and high-throughput sequencing to improve public and population health outcomes through enhanced surveillance and characterization of vector-borne pathogens, enabling precision public health interventions.
-                </p>
-                <a href="/research/#public-health-metagenomics" class="read-more">Read More</a>
-            </div>
-            
+            <p>
+                Integrative Genomics<br>
+                &<br>
+                Computational Biomedicine
+            </p>
         </div>
     </div>
 </div>
@@ -1141,9 +1101,57 @@ main,
     </div>
 </div>
 
+<!-- Three-Panel Research Section - DIRECTLY BELOW BANNER -->
+<div class="research-section">
+    <div class="research-container">
+        <div class="research-grid">
+            
+            <!-- Panel 1: Neural Tube Defects -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>Neural Tube<br>Defects</h3>
+                <p>
+                    Employing systems biology and integrative genomics approaches to advance our understanding of structural birth defects affecting the developing brain and spinal cord, with a focus on elucidating molecular mechanisms and identifying novel therapeutic targets.
+                </p>
+                <a href="/research/#neural-tube-defects" class="read-more">Read More</a>
+            </div>
+            
+            <!-- Panel 2: Neurogenetic Disorders -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <h3>Neurogenetic Disorders</h3>
+                <p>
+                    Investigating the multi-omic signatures of complex neurogenetic disorders including multiple sclerosis, autism spectrum disorder, and schizophrenia through advanced computational approaches and high-throughput genomic technologies to identify disease biomarkers and pathogenic mechanisms.
+                </p>
+                <a href="/research/#neurogenetic-disorders" class="read-more">Read More</a>
+            </div>
+            
+            <!-- Panel 3: Public Health Metagenomics -->
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-viruses"></i>
+                </div>
+                <h3>Public Health Metagenomics</h3>
+                <p>
+                    Leveraging advances in metagenomics and high-throughput sequencing to improve public and population health outcomes through enhanced surveillance and characterization of vector-borne pathogens, enabling precision public health interventions.
+                </p>
+                <a href="/research/#public-health-metagenomics" class="read-more">Read More</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
 <!-- Affiliations Section - Landau Lab Style -->
 <div class="affiliations-section">
     <div class="affiliations-container">
+        <!-- Research Affiliations Header -->
+        <h3 style="text-align: center; font-family: 'Inter', sans-serif; font-size: 14px; color: #999; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px; font-weight: 600;">Research Affiliations</h3>
+        
         <div class="affiliations-divider-top"></div>
         
         <div class="affiliations-grid">
