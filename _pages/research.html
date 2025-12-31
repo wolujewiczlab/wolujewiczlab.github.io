@@ -206,7 +206,7 @@ main,
     margin-top: 0 !important;
 }
 
-/* BLACK INTRO SECTION - Research Themes Overview */
+/* BLACK INTRO SECTION - Full height like main banner */
 .research-intro {
     width: 100vw;
     position: relative;
@@ -215,15 +215,19 @@ main,
     margin-left: -50vw;
     margin-right: -50vw;
     background: #1a1a1a;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
     padding: 100px 40px;
 }
 
 .intro-content {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 80px;
+    grid-template-columns: 1.2fr 500px;
+    gap: 100px;
     align-items: center;
 }
 
@@ -240,19 +244,19 @@ main,
     font-size: 19px;
     line-height: 1.8;
     color: #d0d0d0;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     font-family: 'Inter', sans-serif;
 }
 
 .research-themes {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .research-themes h3 {
     font-size: 22px;
     font-weight: 600;
     color: #22a8b8;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -261,7 +265,7 @@ main,
 .theme-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 18px;
 }
 
 .theme-item {
@@ -279,11 +283,36 @@ main,
     left: 0;
 }
 
+/* Right column - word cloud and animation */
+.intro-visual-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.intro-image-wrapper {
+    position: relative;
+}
+
 .intro-image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    border-radius: 12px;
+    border: 3px solid #22a8b8;
+    box-shadow: 0 12px 32px rgba(34, 168, 184, 0.2);
+}
+
+.reads-animation-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    opacity: 0.9;
+}
+
+.reads-animation {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
 }
 
 
@@ -686,7 +715,7 @@ main,
 })();
 </script>
 
-<!-- BLACK INTRO SECTION - Full Width -->
+<!-- BLACK INTRO SECTION - Full Width, Full Height -->
 <div class="research-intro">
     <div class="intro-content">
         <div class="intro-text">
@@ -708,9 +737,17 @@ main,
             </div>
         </div>
         
-        <!-- Word Cloud Image -->
-        <div class="intro-image-wrapper">
-            <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+        <!-- Right Column: Word Cloud + Animation -->
+        <div class="intro-visual-column">
+            <!-- Word Cloud Image with border -->
+            <div class="intro-image-wrapper">
+                <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+            </div>
+            
+            <!-- Reads to Tree Animation -->
+            <div class="reads-animation-wrapper">
+                <img src="/assets/images/hero-reads-to-tree.svg" alt="Sequencing Analysis" class="reads-animation">
+            </div>
         </div>
     </div>
 </div>
