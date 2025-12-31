@@ -261,7 +261,7 @@ main,
     font-weight: 600;
     color: #22a8b8;
     letter-spacing: 0.5px;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif;  /* Consistent with title */
     margin-bottom: 25px;
 }
 
@@ -269,22 +269,22 @@ main,
     font-size: 16px;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.85);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;  /* CHANGED to Playfair for consistency */
     font-style: italic;
     line-height: 1.7;
     max-width: 750px;
     margin: 0 auto;
 }
 
-/* DNA TICKERS */
+/* DNA TICKERS - Equal spacing from edges */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
-    top: 20%;
+    top: 10%;  /* Equal distance from top edge */
     font-family: 'Courier New', monospace;
-    font-size: 32px;  /* INCREASED from 20px */
+    font-size: 32px;
     font-weight: 700;
-    letter-spacing: 12px;  /* Adjusted spacing */
+    letter-spacing: 12px;
     color: rgba(59, 130, 246, 0.25);
     white-space: nowrap;
     overflow: hidden;
@@ -304,9 +304,9 @@ main,
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
-    top: 80%;
+    top: 90%;  /* Equal distance from bottom edge (10% from bottom) */
     font-family: 'Courier New', monospace;
-    font-size: 32px;  /* INCREASED from 20px - EQUAL to top */
+    font-size: 32px;
     font-weight: 700;
     letter-spacing: 12px;  /* Adjusted spacing */
     color: rgba(59, 130, 246, 0.25);
