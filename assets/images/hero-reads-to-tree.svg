@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="Reads to phylogeny animation" fill="none">
+  <defs>
+    <style>
+      .s{stroke:#22a8b8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;}
+      .thin{stroke-width:2.4;opacity:.55;}
+      .tip{fill:#22a8b8;}
+      @keyframes drift{0%{transform:translateX(0);opacity:.15}20%{opacity:.55}80%{opacity:.55}100%{transform:translateX(-140px);opacity:.15}}
+      @keyframes draw{from{stroke-dashoffset:1200;opacity:.15}to{stroke-dashoffset:0;opacity:.85}}
+      @keyframes pop{0%,60%{opacity:0;transform:scale(.7)}100%{opacity:1;transform:scale(1)}}
+      .read{animation:drift 7.0s linear infinite;}
+      .read2{animation:drift 8.2s linear infinite 1.0s;}
+      .read3{animation:drift 9.4s linear infinite 2.0s;}
+      .tree{stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 4.8s ease-out infinite;}
+      .tips{animation:pop 4.8s ease-out infinite;transform-origin:center;}
+    </style>
+  </defs>
+
+  <g class="thin">
+    <path class="s read" d="M520 70H160"/>
+    <path class="s read2" d="M520 105H220"/>
+    <path class="s read3" d="M520 140H180"/>
+    <path class="s read2" d="M520 175H240"/>
+    <path class="s read" d="M520 210H200"/>
+  </g>
+
+  <path class="s tree" d="M560 205V55
+                          M560 130H690 M690 130V85 M690 130V175
+                          M690 85H810 M810 85V70 M810 85V100
+                          M690 175H810 M810 175V155 M810 175V195
+                          M560 55H960 M960 55V35 M960 55V95
+                          M960 35H1060 M1060 35V25 M1060 35V45
+                          M960 95H1060 M1060 95V80 M1060 95V110
+                          M1060 25H1140 M1060 45H1140 M1060 80H1140 M1060 110H1140"/>
+
+  <g class="tips">
+    <circle class="tip" cx="1140" cy="25" r="4"/>
+    <circle class="tip" cx="1140" cy="45" r="4"/>
+    <circle class="tip" cx="1140" cy="80" r="4"/>
+    <circle class="tip" cx="1140" cy="110" r="4"/>
+    <circle class="tip" cx="810" cy="70" r="4"/>
+    <circle class="tip" cx="810" cy="100" r="4"/>
+    <circle class="tip" cx="810" cy="155" r="4"/>
+    <circle class="tip" cx="810" cy="195" r="4"/>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" role="img" aria-label="Network signal animation (color-cycle signal)" fill="none">
+  <defs>
+    <style>
+      .l{stroke:#192133;stroke-width:2.6;stroke-linecap:round;opacity:.26;}
+      .h{stroke-width:3.2;stroke-linecap:round;opacity:.88;}
+      .r{stroke:#34c8ec;stroke-width:2.6;fill:none;opacity:.18;}
+      @keyframes pulse{0%{r:4;opacity:.95}50%{r:6;opacity:.35}100%{r:4;opacity:.95}}
+      @keyframes ripple{0%{r:7;opacity:.28}70%{r:22;opacity:0}100%{r:22;opacity:0}}
+      @keyframes travel{to{stroke-dashoffset:-900;}}
+      @keyframes cycle{
+        0%{stroke:#34c8ec;}
+        20%{stroke:#369dce;}
+        40%{stroke:#376da7;}
+        60%{stroke:#6473c4;}
+        80%{stroke:#34476e;}
+        100%{stroke:#34c8ec;}
+      }
+      .sig{stroke-dasharray:14 18;animation:travel 6.5s linear infinite, cycle 9.5s ease-in-out infinite;}
+      .p{animation:pulse 3.2s ease-in-out infinite;}
+      .rip1{animation:ripple 3.0s ease-out infinite;}
+      .rip2{animation:ripple 3.4s ease-out infinite .8s;}
+    </style>
+  </defs>
+
+  <path class="l" d="M140 150L280 85L420 120L560 70L730 130L900 85L1060 150"/>
+  <path class="l" d="M280 85L330 195L420 120L505 195L730 130"/>
+  <path class="l" d="M560 70L625 190L730 130L820 190L900 85"/>
+
+  <path class="h sig" d="M140 150L280 85L420 120L560 70L730 130L900 85L1060 150"/>
+
+  <g>
+    <circle class="p" cx="140" cy="150" r="4" fill="#34476e"/>
+    <circle class="p" cx="280" cy="85" r="4" fill="#376da7"/>
+    <circle class="p" cx="330" cy="195" r="4" fill="#369dce"/>
+    <circle class="p" cx="420" cy="120" r="4" fill="#34c8ec"/>
+    <circle class="p" cx="505" cy="195" r="4" fill="#6473c4"/>
+    <circle class="p" cx="560" cy="70" r="4" fill="#376da7"/>
+    <circle class="p" cx="625" cy="190" r="4" fill="#369dce"/>
+    <circle class="p" cx="730" cy="130" r="4" fill="#34c8ec"/>
+    <circle class="p" cx="820" cy="190" r="4" fill="#34476e"/>
+    <circle class="p" cx="900" cy="85" r="4" fill="#6473c4"/>
+    <circle class="p" cx="1060" cy="150" r="4" fill="#34c8ec"/>
+
+    <circle class="r rip1" cx="420" cy="120" r="7"/>
+    <circle class="r rip2" cx="730" cy="130" r="7"/>
+  </g>
+</svg>
