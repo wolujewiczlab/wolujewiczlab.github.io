@@ -31,21 +31,31 @@
       
       <!-- Right: Network Animation -->
       <div class="footer-animation-wrapper">
-        <img src="{{ '/assets/images/hero-network-signal.svg' | relative_url }}" alt="Network" class="footer-network-animation">
+        <img src="/assets/images/hero-network-signal.svg" alt="" class="footer-network-animation">
       </div>
     </div>
   </footer>
 </div>
 
 <style>
-/* FOOTER LAYOUT WITH ANIMATION */
+/* FOOTER LAYOUT WITH ANIMATION - COMPACT */
+.page__footer {
+    margin-top: 3em;
+    padding: 1em 0 0.5em;  /* Reduced padding */
+}
+
+.page__footer-follow {
+    margin-bottom: 0.5em;  /* Reduced margin */
+}
+
 .page__footer-copyright {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 15px;
+    margin-top: 0.5em;  /* Reduced from default */
+    padding-top: 0.5em;
 }
 
 .footer-left {
@@ -66,6 +76,7 @@
 .footer-network-animation {
     width: 180px;
     height: auto;
+    display: block;
 }
 
 @media (max-width: 768px) {
