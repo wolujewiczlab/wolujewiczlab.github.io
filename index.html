@@ -226,15 +226,15 @@ main,
 
 .animated-banner {
     width: 100%;
-    height: 100vh;  /* FULL viewport height for true full-screen */
-    min-height: 650px;  /* Minimum height fallback */
+    height: calc(100vh - 70px);  /* Full viewport MINUS header height for perfect fit */
+    min-height: 600px;  /* Adjusted minimum height */
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-    padding-top: 70px;  /* Account for black navigation header */
+    margin-top: 70px;  /* Push down to account for fixed header */
 }
 
 .banner-content {
@@ -1049,7 +1049,7 @@ main,
                 Integrative Genomics and Computational Biomedicine
             </p>
             <p class="banner-description">
-                We apply genomic and computational approaches to investigate the genetic architecture of neurological disorders and the dynamics of infectious disease transmission, with an emphasis on precision medicine and public health impact.
+                We apply genomic and machine learning approaches to study neurogenetic diseases as well as vector-borne pathogens, advancing precision medicine and public health.
             </p>
         </div>
     </div>
