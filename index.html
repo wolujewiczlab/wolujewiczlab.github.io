@@ -257,11 +257,11 @@ main,
 }
 
 .banner-tagline {
-    font-size: 28px;
+    font-size: 32px;  /* INCREASED from 28px for better sub-header presence */
     font-weight: 600;
     color: #22a8b8;
     letter-spacing: 0.5px;
-    font-family: 'Playfair Display', serif;  /* Consistent with title */
+    font-family: 'Playfair Display', serif;
     margin-bottom: 25px;
 }
 
@@ -276,11 +276,11 @@ main,
     margin: 0 auto;
 }
 
-/* DNA TICKERS - Equal spacing from edges */
+/* DNA TICKERS - Optimized symmetrical spacing */
 .dna-ticker-top {
     position: absolute;
     width: 100%;
-    top: 10%;  /* Equal distance from top edge */
+    top: 8%;  /* Moved up slightly for better balance */
     font-family: 'Courier New', monospace;
     font-size: 32px;
     font-weight: 700;
@@ -304,7 +304,7 @@ main,
 .dna-ticker-bottom {
     position: absolute;
     width: 100%;
-    top: 90%;  /* Equal distance from bottom edge (10% from bottom) */
+    top: 92%;  /* Symmetrical with top (8% from bottom) */
     font-family: 'Courier New', monospace;
     font-size: 32px;
     font-weight: 700;
@@ -393,11 +393,13 @@ main,
 @keyframes largeDotFloat {
     0%, 100% { 
         transform: translateY(0) scale(1); 
-        opacity: 0.6; 
+        opacity: 0.5;
+        filter: brightness(1);
     }
     50% { 
-        transform: translateY(-35px) scale(1.2); 
-        opacity: 1; 
+        transform: translateY(-40px) scale(1.8);  /* BIGGER scale effect */
+        opacity: 1;
+        filter: brightness(1.4) saturate(1.3);  /* Sleek sparkle at peak */
     }
 }
 
@@ -628,53 +630,35 @@ main,
 /* Overview Stats/Icons Section */
 .overview-stats {
     display: flex;
-    gap: 30px;
-    margin-top: 35px;
-    padding-top: 25px;
-    border-top: 1px solid #e0e0e0;  /* Subtle separator above icons */
-    justify-content: space-between;  /* Space between icons and text */
-    align-items: center;  /* Vertically center everything */
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+    justify-content: center;
+    align-items: center;
 }
 
-.stat-icons-group {
-    display: flex;
-    gap: 30px;
-}
-
-.stat-item {
+.institutional-affiliation {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 25px;
 }
 
-.stat-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;  /* Perfect circle */
-    border: 2px solid #22a8b8;  /* Sleek turquoise border */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    color: #22a8b8;
-    transition: all 0.3s ease;
-    background: transparent;
+.bobcat-logo {
+    flex-shrink: 0;
 }
 
-.stat-icon:hover {
-    background: #22a8b8;  /* Fill on hover */
-    color: #ffffff;  /* White icon on hover */
-    transform: translateY(-3px);  /* Subtle lift */
-    box-shadow: 0 4px 12px rgba(34, 168, 184, 0.3);
+.bobcat-logo img {
+    width: 80px;
+    height: auto;
+    display: block;
 }
 
 .institutional-text {
-    text-align: right;
-    line-height: 1.3;
+    text-align: left;
+    line-height: 1.4;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-self: center;  /* Vertically center with icons */
 }
 
 .institutional-text a {
@@ -686,26 +670,23 @@ main,
     opacity: 0.7;
 }
 
-.institutional-text .school-line {
-    font-size: 13px;
-    font-weight: 600;
-    color: #1e3a5f;  /* Navy blue like Quinnipiac */
+.institutional-text .university-line {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e3a5f;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    margin-bottom: 18px;  /* Increased from 14px to 18px to lower text more */
+    margin: 0 0 6px 0;
 }
 
-.institutional-text .university-line {
-    font-size: 15px;
-    font-weight: 700;
-    color: #1e3a5f;  /* Navy blue like Quinnipiac */
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.institutional-text .school-line {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    letter-spacing: 1px;
     font-family: 'Inter', sans-serif;
     margin: 0;
-    margin-top: 0;  /* Keep bottom line where it is */
 }
 
 .stat-text {
@@ -1083,31 +1064,18 @@ main,
                     Our research integrates genomic and multi-omic data with artificial intelligence and machine learning to elucidate the molecular and genetic underpinnings of neurological disorders and vector-borne diseases. We apply systems biology and computational genomics approaches to investigate neural tube defects and complex neurogenetic conditions, including multiple sclerosis, autism spectrum disorder, and schizophrenia. In parallel, we leverage long-read metagenomic sequencing to advance regional surveillance of tick-borne pathogens and improve public health monitoring. Collectively, our group develops innovative computational methods and high-throughput sequencing strategies to identify disease biomarkers, uncover pathogenic mechanisms, and accelerate precision medicine applications in neuroscience and public health.
                 </p>
                 
-                <!-- Icons and Institutional Text -->
+                <!-- Institutional Affiliation with Bobcat -->
                 <div class="overview-stats">
-                    <div class="stat-icons-group">
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-microscope"></i>
-                            </div>
+                    <div class="institutional-affiliation">
+                        <div class="bobcat-logo">
+                            <img src="/assets/images/quinnipiac-bobcat.png" alt="Quinnipiac Bobcat">
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
+                        <div class="institutional-text">
+                            <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
+                                <p class="university-line">Quinnipiac University</p>
+                                <p class="school-line">School of Health Sciences</p>
+                            </a>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-icon">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="institutional-text">
-                        <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
-                            <p class="school-line">School of Health Sciences</p>
-                            <p class="university-line">Quinnipiac University</p>
-                        </a>
                     </div>
                 </div>
             </div>
