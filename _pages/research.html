@@ -250,6 +250,11 @@ main,
 
 .research-themes {
     margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(34, 168, 184, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
+    border-radius: 16px;
+    border: 5px solid #22a8b8;
+    box-shadow: 0 12px 32px rgba(34, 168, 184, 0.25);
 }
 
 .research-themes h3 {
@@ -270,7 +275,7 @@ main,
 
 .theme-item {
     font-size: 16px;
-    color: #b0b0b0;
+    color: #e0e0e0;
     padding-left: 20px;
     position: relative;
     font-family: 'Inter', sans-serif;
@@ -315,39 +320,16 @@ main,
     display: flex;
     justify-content: center;
     padding: 30px;
-    background: linear-gradient(135deg, rgba(34, 168, 184, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
-    border-radius: 16px;
-    border: 1px solid rgba(34, 168, 184, 0.15);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    background: transparent;
     position: relative;
-    overflow: hidden;
-}
-
-/* Subtle animated background accent */
-.reads-animation-wrapper::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(34, 168, 184, 0.08) 0%, transparent 70%);
-    animation: pulse-glow 4s ease-in-out infinite;
-    pointer-events: none;
-}
-
-@keyframes pulse-glow {
-    0%, 100% { opacity: 0.3; transform: scale(1); }
-    50% { opacity: 0.6; transform: scale(1.1); }
 }
 
 .reads-animation {
     width: 100%;
-    max-width: 600px;  /* Enlarged from 500px */
+    max-width: 600px;
     height: auto;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 4px 12px rgba(34, 168, 184, 0.2));
 }
 
 
