@@ -19,14 +19,34 @@
 </div>
 
 <style>
-/* COMPACT FOOTER - MINIMAL HEIGHT */
+/* ULTRA-COMPACT FOOTER - BLACK BACKGROUND */
 .page__footer {
-    margin-top: 2em;
-    padding: 0.8em 0 0.3em;  /* Minimal padding */
+    margin-top: 0 !important;
+    padding: 0 !important;
+    border-top: none !important;
+    background-color: #000000 !important;  /* Black background like header */
+}
+
+.page__footer::before {
+    display: none !important;
+}
+
+.page__footer footer {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-top: none !important;
+    background-color: #000000 !important;  /* Black background */
+}
+
+.page__footer footer::before {
+    display: none !important;
 }
 
 .page__footer-follow {
-    display: none;  /* Hide social icons section entirely */
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .page__footer-copyright {
@@ -35,8 +55,12 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin: 0;  /* No extra margin */
-    padding: 0;  /* No extra padding */
+    margin: 0 !important;
+    padding: 0.8em 0 0.5em 0 !important;
+    border-top: none !important;
+    border: none !important;
+    background-color: #000000 !important;  /* Black background */
+    color: #ffffff !important;  /* White text on black */
 }
 
 .footer-left {
@@ -45,10 +69,11 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    color: #ffffff !important;  /* White text on black background */
 }
 
 .footer-email {
-    color: #22a8b8;
+    color: #22a8b8 !important;  /* Turquoise stands out on black */
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -57,12 +82,13 @@
 }
 
 .footer-email:hover {
-    color: #34c8d8;
+    color: #34c8d8 !important;  /* Lighter turquoise on hover */
     text-decoration: underline;
 }
 
 .footer-email i {
     font-size: 14px;
+    color: #22a8b8 !important;
 }
 
 .footer-animation-wrapper {
