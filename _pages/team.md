@@ -189,9 +189,13 @@ author_profile: false
     text-align: center;
 }
 
-/* STUDENTS SECTION */
+/* STUDENTS SECTION - White box containers */
 .student-category {
-    margin-bottom: 50px;
+    margin-bottom: 40px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .student-category h3 {
@@ -202,15 +206,21 @@ author_profile: false
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 .student-item {
-    margin-bottom: 25px;
-    padding: 20px;
+    margin-bottom: 20px;
+    padding: 15px 20px;
     background: #f8f8f8;
-    border-radius: 8px;
+    border-radius: 6px;
     border-left: 4px solid #22a8b8;
     transition: all 0.3s ease;
+}
+
+.student-item:last-child {
+    margin-bottom: 0;
 }
 
 .student-item:hover {
@@ -384,12 +394,12 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Natalie Grober</div>
-                <div class="student-info">Graduate Student</div>
+                <div class="student-info">Graduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Reese Triana</div>
-                <div class="student-info">Graduate Student</div>
+                <div class="student-info">Graduate Researcher</div>
             </div>
             
             <div class="student-item">
@@ -404,12 +414,12 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Phil Smit</div>
-                <div class="student-info">Medical Student</div>
+                <div class="student-info">Medical Student Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Alan Chai</div>
-                <div class="student-info">Medical Student</div>
+                <div class="student-info">Medical Student Researcher</div>
             </div>
             
             <div class="student-item">
@@ -424,32 +434,32 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Megan Shuguli</div>
-                <div class="student-info">Former Graduate Student</div>
+                <div class="student-info">Former Graduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Brandon Assi</div>
-                <div class="student-info">Former Graduate Student</div>
+                <div class="student-info">Former Graduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Gianna Gorvan</div>
-                <div class="student-info">Former Graduate Student</div>
+                <div class="student-info">Former Graduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Alexandra Fassett</div>
-                <div class="student-info">Former Graduate Student</div>
+                <div class="student-info">Former Graduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Brianna Dalipovski</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Undergraduate Researcher</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">John Gribbin</div>
-                <div class="student-info">Former Medical Student</div>
+                <div class="student-info">Former Medical Student Researcher</div>
             </div>
         </div>
     </div>
