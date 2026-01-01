@@ -43,14 +43,14 @@ author_profile: false
     width: 100%;
     height: auto;
     border-radius: 8px;
-    border: 4px solid #22a8b8;
-    box-shadow: 0 12px 40px rgba(34, 168, 184, 0.3);
+    border: 4px solid #666666;  /* Professional grey instead of turquoise */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);  /* Subtle shadow, no glow */
     transition: all 0.3s ease;
 }
 
 .pi-photo:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 16px 48px rgba(34, 168, 184, 0.4);
+    transform: translateY(-3px);  /* Reduced from -5px */
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);  /* Subtle lift, no colored glow */
 }
 
 .pi-info {
@@ -259,9 +259,21 @@ author_profile: false
 .collaborator-institution h3 {
     font-size: 20px;
     font-weight: 600;
-    color: #1a1a1a;
     margin-bottom: 15px;
     font-family: 'Inter', sans-serif;
+}
+
+/* Institution-specific colors */
+.collaborator-institution h3.weill-cornell {
+    color: #B31B1B;  /* Cornell red */
+}
+
+.collaborator-institution h3.quinnipiac {
+    color: #FF8C00;  /* Quinnipiac orange */
+}
+
+.collaborator-institution h3.caes {
+    color: #4169E1;  /* Royal blue */
 }
 
 .collaborator-list {
@@ -462,6 +474,11 @@ author_profile: false
                 <div class="student-info">Former Medical Student Researcher</div>
             </div>
         </div>
+        
+        <!-- Volunteer Acknowledgment - Under Alumni -->
+        <div class="volunteer-note" style="margin-top: 30px; text-align: left; max-width: 100%;">
+            * This list includes students engaged in formal research for credit or thesis work. We are deeply grateful for the contributions of our research volunteers and lab assistants.
+        </div>
     </div>
     
     <!-- RIGHT COLUMN: COLLABORATORS -->
@@ -470,7 +487,7 @@ author_profile: false
         
         <!-- Weill Cornell Medicine -->
         <div class="collaborator-institution">
-            <h3>Weill Cornell Medicine</h3>
+            <h3 class="weill-cornell">Weill Cornell Medicine</h3>
             <div class="collaborator-list">
                 <div class="collaborator-item">
                     <div class="collaborator-name">Ross Lab</div>
@@ -489,7 +506,7 @@ author_profile: false
         
         <!-- Quinnipiac University -->
         <div class="collaborator-institution">
-            <h3>Quinnipiac University</h3>
+            <h3 class="quinnipiac">Quinnipiac University</h3>
             <div class="collaborator-list">
                 <div class="collaborator-item">
                     <div class="collaborator-name">Takacs Lab</div>
@@ -508,7 +525,7 @@ author_profile: false
         
         <!-- Connecticut Agricultural Experiment Station -->
         <div class="collaborator-institution">
-            <h3>Connecticut Agricultural Experiment Station</h3>
+            <h3 class="caes">Connecticut Agricultural Experiment Station</h3>
             <div class="collaborator-list">
                 <div class="collaborator-item">
                     <div class="collaborator-name">Dr. Goudarz Molaei</div>
@@ -520,10 +537,5 @@ author_profile: false
         </div>
     </div>
     
-</div>
-
-<!-- Volunteer Acknowledgment -->
-<div class="volunteer-note">
-    * This list includes students engaged in formal research for credit or thesis work. We are deeply grateful for the contributions of our research volunteers and lab assistants.
 </div>
 </div>
