@@ -30,7 +30,7 @@ author_profile: false
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 320px 1fr;  /* Reduced from 400px */
     gap: 60px;
     align-items: start;
 }
@@ -152,17 +152,41 @@ author_profile: false
     padding: 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    gap: 120px;  /* Increased from 80px for better separation */
+}
+
+/* Dark background wrapper for better contrast */
+.team-columns-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    padding: 80px 0;
 }
 
 .team-column h2 {
     font-size: 32px;
     font-weight: 600;
-    color: #1a1a1a;
+    color: #ffffff;  /* Changed from #1a1a1a to white */
     margin-bottom: 40px;
     font-family: 'Playfair Display', serif;
     padding-bottom: 15px;
     border-bottom: 3px solid #22a8b8;
+}
+
+/* Volunteer footnote */
+.volunteer-note {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 13px;
+    color: #999;
+    font-style: italic;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 /* STUDENTS SECTION */
@@ -321,12 +345,6 @@ author_profile: false
                 </div>
             </div>
             
-            <div class="pi-bio">
-                <p>
-                    Dr. Wolujewicz leads a computational genomics laboratory focused on understanding the molecular and genetic basis of neurological disorders and vector-borne diseases. His research integrates whole-genome sequencing, multi-omic profiling, and machine learning to advance precision medicine and public health applications.
-                </p>
-            </div>
-            
             <div class="pi-links">
                 <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" class="pi-link">
                     <i class="fab fa-orcid"></i> ORCID
@@ -343,6 +361,7 @@ author_profile: false
 </div>
 
 <!-- TWO-COLUMN SECTION: Students & Collaborators -->
+<div class="team-columns-wrapper">
 <div class="team-columns-section">
     
     <!-- LEFT COLUMN: STUDENTS -->
@@ -365,12 +384,12 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Natalie Grober</div>
-                <div class="student-info">Undergraduate Researcher</div>
+                <div class="student-info">Graduate Student</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Reese Triana</div>
-                <div class="student-info">Undergraduate Researcher</div>
+                <div class="student-info">Graduate Student</div>
             </div>
             
             <div class="student-item">
@@ -385,12 +404,12 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Phil Smit</div>
-                <div class="student-info">Undergraduate Researcher</div>
+                <div class="student-info">Medical Student</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Alan Chai</div>
-                <div class="student-info">Undergraduate Researcher</div>
+                <div class="student-info">Medical Student</div>
             </div>
             
             <div class="student-item">
@@ -405,22 +424,22 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">Megan Shuguli</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Graduate Student</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Brandon Assi</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Graduate Student</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Gianna Gorvan</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Graduate Student</div>
             </div>
             
             <div class="student-item">
                 <div class="student-name">Alexandra Fassett</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Graduate Student</div>
             </div>
             
             <div class="student-item">
@@ -430,7 +449,7 @@ author_profile: false
             
             <div class="student-item">
                 <div class="student-name">John Gribbin</div>
-                <div class="student-info">Former Student</div>
+                <div class="student-info">Former Medical Student</div>
             </div>
         </div>
     </div>
@@ -491,4 +510,10 @@ author_profile: false
         </div>
     </div>
     
+</div>
+
+<!-- Volunteer Acknowledgment -->
+<div class="volunteer-note">
+    * This list includes students engaged in formal research for credit or thesis work. We are deeply grateful for the contributions of our research volunteers and lab assistants.
+</div>
 </div>
