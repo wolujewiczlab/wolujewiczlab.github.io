@@ -1,28 +1,6 @@
 <div class="page__footer">
   <footer>
-    <!-- Site Footer Content -->
-    {% include footer/custom.html %}
-    
-    <div class="page__footer-follow">
-      <ul class="social-icons">
-        {% if site.data.ui-text[site.locale].follow_label %}
-          <li><strong>{{ site.data.ui-text[site.locale].follow_label }}</strong></li>
-        {% endif %}
-
-        {% if site.footer.links %}
-          {% for link in site.footer.links %}
-            {% if link.label and link.url %}
-              <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label }}</a></li>
-            {% endif %}
-          {% endfor %}
-        {% endif %}
-
-        {% unless site.atom_feed.hide %}
-          <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-        {% endunless %}
-      </ul>
-    </div>
-
+    <!-- Minimal Footer - Just copyright/email and animation -->
     <div class="page__footer-copyright">
       <!-- Left: Name and Email -->
       <div class="footer-left">
@@ -32,7 +10,7 @@
         </a>
       </div>
       
-      <!-- Right: Network Animation - ENLARGED -->
+      <!-- Right: Network Animation -->
       <div class="footer-animation-wrapper">
         <img src="/assets/images/hero-network-signal.svg" alt="" class="footer-network-animation">
       </div>
@@ -41,14 +19,14 @@
 </div>
 
 <style>
-/* FOOTER LAYOUT - COMPACT WITH LARGE VIBRANT ANIMATION */
+/* COMPACT FOOTER - MINIMAL HEIGHT */
 .page__footer {
-    margin-top: 3em;
-    padding: 1em 0 0.5em;
+    margin-top: 2em;
+    padding: 0.8em 0 0.3em;  /* Minimal padding */
 }
 
 .page__footer-follow {
-    margin-bottom: 0.5em;
+    display: none;  /* Hide social icons section entirely */
 }
 
 .page__footer-copyright {
@@ -57,8 +35,8 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 30px;
-    margin-top: 0.5em;
-    padding-top: 0.5em;
+    margin: 0;  /* No extra margin */
+    padding: 0;  /* No extra padding */
 }
 
 .footer-left {
