@@ -45,9 +45,19 @@ permalink: /publications/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* HEADER - Black banner matching main page */
+/* BLACK TOP NAVIGATION BAR - Same as Main Page */
+.masthead {
+    background-color: #000000 !important;
+    position: relative;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+/* HEADER BANNER - Dark grey background for Publications title */
 .publications-header { 
-    background: #000000; 
+    background: #2a2a2a;  /* Dark grey instead of black */
     padding: 80px 40px 60px 40px; 
     text-align: center; 
 }
