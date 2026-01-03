@@ -167,16 +167,19 @@ permalink: /contact/
     <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
 </div>
 
-<!-- MAP SECTION - Static Map with Embedded Markers -->
-<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0; overflow: hidden;">
-    <img 
-        src="https://maps.googleapis.com/maps/api/staticmap?center=41.405,-72.87&zoom=11&size=1200x500&markers=color:red%7Clabel:M%7C41.4197,-72.8942&markers=color:blue%7Clabel:N%7C41.3900,-72.8600&key=YOUR_API_KEY&style=feature:poi%7Cvisibility:simplified"
-        alt="Quinnipiac University Campuses"
-        style="width: 100%; height: 100%; object-fit: cover;"
-    />
+<!-- MAP SECTION - Embedded Google Maps showing both campuses -->
+<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0;">
+    <iframe 
+        src="https://www.google.com/maps/d/embed?mid=1_custom_map_id&ehbc=2E312F"
+        width="100%" 
+        height="500" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
     
     <!-- Campus Legend -->
-    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 10;">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
             <div style="width: 12px; height: 12px; background: #dc2626; border-radius: 50%;"></div>
             <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Mount Carmel Campus</span>
@@ -251,31 +254,6 @@ permalink: /contact/
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss research partnerships.</p>
-            </div>
-        </div>
-
-    </div>
-</div>
-            </div>
-        </div>
-
-        <!-- Prospective Members Card -->
-        <div class="contact-card" style="background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
-            <h2>Join Our Lab</h2>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated graduate students interested in computational genomics, systems biology, and precision medicine. Please email with your CV and research interests.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Undergraduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Undergraduate research opportunities available for students interested in bioinformatics, genomics, and data science.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss potential research partnerships and projects.</p>
             </div>
         </div>
 
