@@ -5,6 +5,21 @@ permalink: /contact/
 ---
 
 <style>
+/* BLACK TOP NAVIGATION BAR - Same as Other Pages */
+.masthead {
+    background-color: #000000 !important;
+    position: relative;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+/* Remove page title */
+.page__title {
+    display: none !important;
+}
+
 /* DNA HELIX IN NAV BAR */
 .nav-dna-container {
     position: absolute;
@@ -147,19 +162,30 @@ permalink: /contact/
 })();
 </script>
 
-<!-- PAGE HEADER - Same Black Background as Other Pages -->
-<div style="background: #000000; padding: 80px 40px 60px 40px; text-align: center;">
-    <h1 style="font-family: 'Playfair Display', serif; font-size: 56px; color: #ffffff; margin-bottom: 20px;">Contact</h1>
-    <p style="font-size: 20px; color: #b0b0b0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
+<!-- PAGE HEADER - Grey Background with Subtitle Only -->
+<div style="background: #2a2a2a; padding: 50px 40px 40px 40px; text-align: center;">
+    <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
 </div>
 
-<!-- MAP SECTION - Correct Connecticut Location -->
+<!-- MAP SECTION - Dual Campus Markers -->
 <div style="width: 100%; height: 500px; position: relative; margin-bottom: 0;">
     <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d94551.06!2d-72.89!3d41.40!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9d7e3c1e1e1%3A0x1e1e1e1e1e1e1e1e!2sQuinnipiac%20University!5e0!3m2!1sen!2sus!4v1609459200000!5m2!1sen!2sus"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47625.5!2d-72.9!3d41.42!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9e3a0f5d5f5%3A0x5c5c5c5c5c5c5c5c!2sQuinnipiac%20University%20-%20Mount%20Carmel%20Campus!5e0!3m2!1sen!2sus!4v1609459200000!5m2!1sen!2sus&markers=color:red%7Clabel:M%7C41.4197,-72.8942&markers=color:blue%7Clabel:N%7C41.3900,-72.8600"
         style="width: 100%; height: 100%; border: none; filter: grayscale(10%);"
         loading="lazy">
     </iframe>
+    
+    <!-- Campus Labels -->
+    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <div style="width: 12px; height: 12px; background: #dc2626; border-radius: 50%;"></div>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Mount Carmel Campus</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+            <div style="width: 12px; height: 12px; background: #2563eb; border-radius: 50%;"></div>
+            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">North Haven Campus</span>
+        </div>
+    </div>
 </div>
 
 <!-- CONTACT INFO SECTION -->
@@ -174,6 +200,11 @@ permalink: /contact/
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Principal Investigator</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Paul Wolujewicz, PhD, MPH<br>Assistant Professor</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Office Location</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">SITE-271</p>
             </div>
             
             <div style="margin-bottom: 20px;">
@@ -198,13 +229,13 @@ permalink: /contact/
             </div>
             
             <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>Frank H. Netter MD School of Medicine<br>370 Bassett Road<br>North Haven, CT 06473</p>
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Dry Lab Location</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">MNH-141B</p>
             </div>
             
             <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Additional Affiliation</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Weill Cornell Medicine<br>Brain and Mind Research Institute</p>
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>Frank H. Netter MD School of Medicine<br>370 Bassett Road<br>North Haven, CT 06473</p>
             </div>
         </div>
 
@@ -213,13 +244,8 @@ permalink: /contact/
             <h2>Join Our Lab</h2>
             
             <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated graduate students interested in computational genomics, systems biology, and precision medicine.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Undergraduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Undergraduate research opportunities available for students interested in bioinformatics and genomics.</p>
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Students</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated students interested in computational biology and genomics.</p>
             </div>
             
             <div style="margin-bottom: 20px;">
