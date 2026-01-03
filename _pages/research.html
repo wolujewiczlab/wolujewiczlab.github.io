@@ -330,6 +330,69 @@ main,
     z-index: 1;
 }
 
+/* RESEARCH HIGHLIGHT BOXES - For poster-style content */
+.research-highlight-box {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    border-left: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+.highlight-visual {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.highlight-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.highlight-visual-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.highlight-visual-row img {
+    border-radius: 6px;
+}
+
+.highlight-text {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #2a2a2a;
+    font-family: 'Inter', sans-serif;
+}
+
+.highlight-text-small {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #2a2a2a;
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+}
+
+.highlight-header h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+}
+
+/* Logo containers */
+.weill-cornell-logo-container,
+.caes-logo-container {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 .helix-elegant .strand {
     position: absolute;
@@ -803,9 +866,27 @@ main,
     </div>
     
     <div class="tone-light">
-        <img src="/assets/images/ntd-research.jpg" alt="NTD Research" class="overlapping-image">
+        <!-- Top Section: TFBS Functional Significance -->
+        <div class="research-highlight-box">
+            <div class="highlight-visual">
+                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 280px;">
+            </div>
+            <div class="highlight-text">
+                <p>Using a case-control study design, we derived functional significance scores for rare non-protein-coding genomic variants that disrupt brain-specific transcription factor binding sites (TFBS) <em>(Wolujewicz et al, 2024)</em>.</p>
+            </div>
+        </div>
         
-        <!-- BDRP Logo - Below Circos Plot -->
+        <!-- Bottom Section: Trio Cohort Analysis -->
+        <div class="research-highlight-box">
+            <div class="highlight-visual">
+                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis" style="max-width: 260px;">
+            </div>
+            <div class="highlight-text">
+                <p>Leveraging case-parent trio cohorts, we are systematically analyzing combinations of rare variation transmitted from parental alleles to fully elucidate the genetic architecture of NTDs and delineate contributions from inherited versus <em>de novo</em> variants.</p>
+            </div>
+        </div>
+        
+        <!-- BDRP Logo -->
         <div class="bdrp-logo-container-right">
             <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" class="bdrp-logo">
             <p class="bdrp-caption">The Society for Birth Defects Research and Prevention advances understanding of birth defects through interdisciplinary research and global collaboration.</p>
@@ -816,7 +897,33 @@ main,
 <!-- Neurogenetic Disorders Section - Navy/Light Blue -->
 <div id="neurogenetic-disorders" class="two-tone-section section-neurogenetics reverse">
     <div class="tone-light">
-        <img src="/assets/images/neurogenetics-research.jpg" alt="Neurogenetic Research" class="overlapping-image">
+        <!-- ASD: Extracellular Vesicle Analysis -->
+        <div class="research-highlight-box">
+            <div class="highlight-header">
+                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 18px;">Autism Spectrum Disorder</h4>
+            </div>
+            <div class="highlight-visual-row">
+                <img src="/assets/images/asd-ev-network.png" alt="ASD Network Analysis" style="max-width: 200px; margin-right: 15px;">
+                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 250px;">
+            </div>
+            <p class="highlight-text-small">Investigating multi-omic signatures in patient-derived extracellular vesicles and brain organoids to identify molecular subtypes and therapeutic targets.</p>
+        </div>
+        
+        <!-- MS: Polygenic Risk Scores -->
+        <div class="research-highlight-box">
+            <div class="highlight-header">
+                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 18px;">Multiple Sclerosis</h4>
+            </div>
+            <div class="highlight-text">
+                <p>We are generating polygenic risk scores for MS patients using genome-wide SNPs. We are also working with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
+                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk" style="max-width: 280px; margin-top: 15px;">
+            </div>
+        </div>
+        
+        <!-- Weill Cornell Logo -->
+        <div class="weill-cornell-logo-container">
+            <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine - Feil Family Brain & Mind Research Institute" style="max-width: 300px;">
+        </div>
     </div>
     
     <div class="tone-dark">
@@ -889,11 +996,29 @@ main,
     </div>
     
     <div class="tone-light">
-        <!-- Tick Image Above Main Figure -->
-        <div class="tick-image-container">
-            <img src="/assets/images/blacklegged-tick.png" alt="Blacklegged Tick (Ixodes scapularis)" class="tick-image">
+        <!-- Top: Workflow Overview -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p>Working closely with the <strong>Connecticut Agricultural Experiment Station (CAES)</strong>, we are investigating the role of metagenomics for vector-borne public health surveillance. We've established Nanopore-based workflows that can detect pathogens as well as report the microbial diversity present within tick genomes.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow" style="max-width: 450px; margin-top: 15px;">
+            </div>
         </div>
         
-        <img src="/assets/images/metagenomics-research.jpg" alt="Metagenomics Research" class="overlapping-image">
+        <!-- Bottom: Microbial Diversity -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p><strong>Microbial diversity across 72 <em>Ixodes scapularis</em> specimens.</strong> We are currently investigating de novo assembly for these pathogens as well as looking into transcriptomic and metatranscriptomic analyses.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity" style="max-width: 350px; margin-top: 15px;">
+            </div>
+        </div>
+        
+        <!-- CAES Logo -->
+        <div class="caes-logo-container">
+            <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 220px; margin-top: 25px;">
+        </div>
     </div>
 </div>
