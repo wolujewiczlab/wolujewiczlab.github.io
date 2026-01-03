@@ -394,18 +394,20 @@ main,
     font-size: 20px;  /* Larger headers */
 }
 
-/* Logo containers */
+/* Logo containers - All same size at bottom */
 .weill-cornell-logo-container,
-.caes-logo-container {
+.caes-logo-container,
+.bdrp-logo-container-bottom {
     text-align: center;
-    margin-top: 30px;
-    padding-top: 25px;
+    margin-top: 40px;
+    padding-top: 30px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .weill-cornell-logo-container img,
-.caes-logo-container img {
-    max-width: 400px !important;  /* Larger logos */
+.caes-logo-container img,
+.bdrp-logo-container-bottom img {
+    max-width: 280px !important;  /* All logos same size as BDRP */
 }
 
 
@@ -881,30 +883,30 @@ main,
     </div>
     
     <div class="tone-light">
-        <!-- TFBS Functional Significance -->
+        <!-- Case-Control Study (TOP) -->
         <div class="research-highlight-box">
             <div class="highlight-text">
                 <p>Using a case-control study design, we derived functional significance scores for rare non-protein-coding genomic variants that disrupt brain-specific transcription factor binding sites (TFBS) <em>(Wolujewicz et al, 2024)</em>.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance">
+                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 550px; width: 100%;">
             </div>
         </div>
         
-        <!-- Trio Cohort Analysis -->
+        <!-- Case-Parent Trio (BOTTOM) -->
         <div class="research-highlight-box">
             <div class="highlight-text">
                 <p>Leveraging case-parent trio cohorts, we are systematically analyzing combinations of rare variation transmitted from parental alleles to fully elucidate the genetic architecture of NTDs and delineate contributions from inherited versus <em>de novo</em> variants.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis">
+                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis" style="max-width: 550px; width: 100%;">
             </div>
         </div>
         
-        <!-- BDRP Logo -->
-        <div class="bdrp-logo-container-right">
-            <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" class="bdrp-logo">
-            <p class="bdrp-caption">The Society for Birth Defects Research and Prevention advances understanding of birth defects through interdisciplinary research and global collaboration.</p>
+        <!-- BDRP Logo at Bottom -->
+        <div class="bdrp-logo-container-bottom">
+            <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" style="max-width: 280px;">
+            <p style="font-size: 14px; color: #666; margin-top: 12px; line-height: 1.6;">The Society for Birth Defects Research and Prevention advances understanding of birth defects through interdisciplinary research and global collaboration.</p>
         </div>
     </div>
 </div>
@@ -912,36 +914,36 @@ main,
 <!-- Neurogenetic Disorders Section - Navy/Light Blue -->
 <div id="neurogenetic-disorders" class="two-tone-section section-neurogenetics reverse">
     <div class="tone-light">
-        <!-- ASD: Extracellular Vesicle Analysis -->
+        <!-- ASD: Extracellular Vesicle Analysis (TOP) -->
         <div class="research-highlight-box">
             <div class="highlight-header">
-                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 18px;">Autism Spectrum Disorder</h4>
+                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 20px;">Autism Spectrum Disorder</h4>
             </div>
             <div class="highlight-text">
                 <p>Investigating multi-omic signatures in patient-derived extracellular vesicles and brain organoids to identify molecular subtypes and therapeutic targets.</p>
             </div>
             <div class="highlight-visual-row">
-                <img src="/assets/images/asd-ev-network.png" alt="ASD Network Analysis">
-                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis">
+                <img src="/assets/images/asd-ev-network.png" alt="ASD Network Analysis" style="max-width: 500px; width: 100%;">
+                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 650px; width: 100%;">
             </div>
         </div>
         
-        <!-- MS: Polygenic Risk Scores -->
+        <!-- MS: Polygenic Risk Scores (BOTTOM) -->
         <div class="research-highlight-box">
             <div class="highlight-header">
-                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 18px;">Multiple Sclerosis</h4>
+                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 20px;">Multiple Sclerosis</h4>
             </div>
             <div class="highlight-text">
                 <p>We are generating polygenic risk scores for MS patients using genome-wide SNPs. We are also working with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk">
+                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk" style="max-width: 600px; width: 100%;">
             </div>
         </div>
         
-        <!-- Weill Cornell Logo -->
+        <!-- Weill Cornell Logo at Bottom (Same size as BDRP) -->
         <div class="weill-cornell-logo-container">
-            <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine - Feil Family Brain & Mind Research Institute" style="max-width: 320px;">
+            <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine - Feil Family Brain & Mind Research Institute" style="max-width: 280px;">
         </div>
     </div>
     
@@ -1021,7 +1023,7 @@ main,
                 <p>Working closely with the <strong>Connecticut Agricultural Experiment Station (CAES)</strong>, we are investigating the role of metagenomics for vector-borne public health surveillance. We've established Nanopore-based workflows that can detect pathogens as well as report the microbial diversity present within tick genomes.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow">
+                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow" style="max-width: 700px; width: 100%;">
             </div>
         </div>
         
@@ -1031,13 +1033,14 @@ main,
                 <p><strong>Microbial diversity across 72 <em>Ixodes scapularis</em> specimens.</strong> We are currently investigating de novo assembly for these pathogens as well as looking into transcriptomic and metatranscriptomic analyses.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity">
+                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity" style="max-width: 650px; width: 100%;">
             </div>
         </div>
         
-        <!-- CAES Logo -->
+        <!-- CAES Logo at Bottom (Same size as BDRP) with Description -->
         <div class="caes-logo-container">
-            <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 240px;">
+            <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 280px;">
+            <p style="font-size: 14px; color: #666; margin-top: 12px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">CAES is a nationally recognized public research institution that conducts applied and basic scientific investigations in agriculture, public health, and environmental sciences, including statewide surveillance and research on vector-borne diseases.</p>
         </div>
     </div>
 </div>
