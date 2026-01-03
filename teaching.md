@@ -1,10 +1,25 @@
 ---
 layout: default
-title: Teaching
+title: ""
 permalink: /teaching/
 ---
 
 <style>
+/* BLACK TOP NAVIGATION BAR */
+.masthead {
+    background-color: #000000 !important;
+    position: relative;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+/* Remove page title */
+.page__title {
+    display: none !important;
+}
+
 /* DNA NAV */
 .nav-dna-container { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: 33px; height: 50px; pointer-events: none; z-index: 100; }
 .helix-nav { width: 100%; height: 100%; position: relative; }
@@ -45,25 +60,12 @@ permalink: /teaching/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* HEADER */
-.teaching-header {
-    background: #000000;
-    padding: 80px 40px 60px 40px;
-    text-align: center;
-}
-
-.teaching-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    color: #ffffff;
-    margin: 0;
-}
-
 /* MAIN CONTAINER */
 .teaching-container {
     max-width: 100%;
     background: #f5f5f5;
     padding: 80px 40px;
+    margin-top: 0 !important;
 }
 
 
@@ -211,10 +213,6 @@ permalink: /teaching/
 })();
 </script>
 
-<div class="teaching-header">
-    <h1>Teaching</h1>
-</div>
-
 <div class="teaching-container">
     
     <!-- CURRICULUM INNOVATION -->
@@ -222,20 +220,6 @@ permalink: /teaching/
         <h2 class="section-title">Curriculum Innovation</h2>
         
         <div class="course-grid">
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS622 / MED740</div>
-                    <h3 class="course-title">Machine Learning in Medical Sciences<span class="new-badge">NEW</span></h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2026</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Hands-on training in machine learning and AI applications for biomedical research, covering supervised learning, neural networks, and practical genomic data analysis.</p>
-                </div>
-            </div>
             
             <div class="course-card">
                 <div class="course-header">
@@ -247,7 +231,21 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2025</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Foundation in computational approaches for biomedical research, including Python programming, bioinformatics workflows, and genomic data interpretation.</p>
+                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, DNA/RNA sequencing workflows, and machine learning applications in precision medicine.</p>
+                </div>
+            </div>
+            
+            <div class="course-card">
+                <div class="course-header">
+                    <div class="course-code">BMS622 / MED740</div>
+                    <h3 class="course-title">Machine Learning in Medical Sciences</h3>
+                </div>
+                <div class="course-body">
+                    <div class="course-meta">
+                        <span class="meta-badge">Spring 2026</span>
+                        <span class="meta-badge">Graduate</span>
+                    </div>
+                    <p class="course-description">Advanced training in machine learning and AI applications for biomedical research, covering supervised learning, neural networks, and practical genomic data analysis. Co-taught with Dr. Richard Feinn at the Frank H. Netter MD School of Medicine.</p>
                 </div>
             </div>
             
@@ -279,15 +277,6 @@ permalink: /teaching/
                 </div>
             </div>
             
-        </div>
-        
-        <div class="section-divider"></div>
-        
-        <!-- CORE COURSES -->
-        <h2 class="section-title">Core Instruction</h2>
-        
-        <div class="course-grid">
-            
             <div class="course-card">
                 <div class="course-header">
                     <div class="course-code">BMS578</div>
@@ -301,6 +290,15 @@ permalink: /teaching/
                     <p class="course-description">Molecular and cellular mechanisms underlying neurological and psychiatric disorders.</p>
                 </div>
             </div>
+            
+        </div>
+        
+        <div class="section-divider"></div>
+        
+        <!-- CORE COURSES -->
+        <h2 class="section-title">Core Instruction</h2>
+        
+        <div class="course-grid">
             
             <div class="course-card">
                 <div class="course-header">
