@@ -330,68 +330,82 @@ main,
     z-index: 1;
 }
 
-/* RESEARCH HIGHLIGHT BOXES - Enlarged content to fill space */
+/* RESEARCH HIGHLIGHT BOXES - Horizontal stacked layout with 3x larger images */
 .research-highlight-box {
-    margin-bottom: 25px;  /* Reduced from 35px */
-    padding: 35px;  /* Increased from 30px */
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    border-left: 4px solid rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 50px 60px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    border-left: 6px solid rgba(0, 0, 0, 0.15);
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;  /* Text left (narrower), Image right (wider) */
+    gap: 60px;
+    align-items: center;
 }
 
 .highlight-visual {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin: 25px 0;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 0;
 }
 
 .highlight-visual img {
-    max-width: 100%;  /* Use full width! */
-    width: 100%;  /* Force larger size */
+    max-width: 100%;
+    width: 100%;  /* Fill the image column completely */
     height: auto;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .highlight-visual-row {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    margin: 25px 0;
+    gap: 30px;
+    margin: 0;
+    width: 100%;
 }
 
 .highlight-visual-row img {
-    border-radius: 6px;
-    max-width: 95%;  /* Nearly full width */
-    width: 95%;
+    border-radius: 8px;
+    max-width: 100%;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .highlight-text {
-    font-size: 17px;  /* Increased from 15px */
-    line-height: 1.9;  /* More spacing */
+    font-size: 18px;  /* Larger readable text */
+    line-height: 2;
     color: #2a2a2a;
     font-family: 'Inter', sans-serif;
-    margin: 20px 0;  /* More margin */
+    margin: 0;
 }
 
 .highlight-text p {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
 }
 
 .highlight-text-small {
-    font-size: 16px;  /* Increased from 14px */
-    line-height: 1.8;
+    font-size: 17px;
+    line-height: 1.9;
     color: #2a2a2a;
     font-family: 'Inter', sans-serif;
-    margin: 18px 0;
+    margin: 0;
+}
+
+.highlight-header {
+    grid-column: 1 / -1;  /* Headers span full width */
+    margin-bottom: 20px;
 }
 
 .highlight-header h4 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
-    font-size: 20px;  /* Larger headers */
+    font-size: 24px;
+    color: #1a1a1a;
+    margin: 0;
 }
 
 /* Logo containers - All same size at bottom */
@@ -399,15 +413,16 @@ main,
 .caes-logo-container,
 .bdrp-logo-container-bottom {
     text-align: center;
-    margin-top: 40px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
 }
 
 .weill-cornell-logo-container img,
 .caes-logo-container img,
 .bdrp-logo-container-bottom img {
     max-width: 280px !important;  /* All logos same size as BDRP */
+}
 }
 
 
@@ -496,11 +511,10 @@ main,
 
 .tone-light {
     background: #f5ebe0; /* Warm cream like Landau */
-    padding: 100px 80px 100px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 60px 120px;  /* Horizontal padding for wider content */
+    display: block;  /* Changed from flex */
     position: relative;
+    width: 100%;  /* Full width */
 }
 
 /* Alternate colors for variety */
@@ -889,7 +903,7 @@ main,
                 <p>Using a case-control study design, we derived functional significance scores for rare non-protein-coding genomic variants that disrupt brain-specific transcription factor binding sites (TFBS) <em>(Wolujewicz et al, 2024)</em>.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 550px; width: 100%;">
+                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance">
             </div>
         </div>
         
@@ -899,7 +913,7 @@ main,
                 <p>Leveraging case-parent trio cohorts, we are systematically analyzing combinations of rare variation transmitted from parental alleles to fully elucidate the genetic architecture of NTDs and delineate contributions from inherited versus <em>de novo</em> variants.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis" style="max-width: 550px; width: 100%;">
+                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis">
             </div>
         </div>
         
@@ -917,27 +931,27 @@ main,
         <!-- ASD: Extracellular Vesicle Analysis (TOP) -->
         <div class="research-highlight-box">
             <div class="highlight-header">
-                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 20px;">Autism Spectrum Disorder</h4>
+                <h4>Autism Spectrum Disorder</h4>
             </div>
             <div class="highlight-text">
                 <p>Investigating multi-omic signatures in patient-derived extracellular vesicles and brain organoids to identify molecular subtypes and therapeutic targets.</p>
             </div>
             <div class="highlight-visual-row">
-                <img src="/assets/images/asd-ev-network.png" alt="ASD Network Analysis" style="max-width: 500px; width: 100%;">
-                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 650px; width: 100%;">
+                <img src="/assets/images/asd-ev-network.png" alt="ASD Network Analysis">
+                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis">
             </div>
         </div>
         
         <!-- MS: Polygenic Risk Scores (BOTTOM) -->
         <div class="research-highlight-box">
             <div class="highlight-header">
-                <h4 style="color: #1a1a1a; margin: 0 0 15px 0; font-size: 20px;">Multiple Sclerosis</h4>
+                <h4>Multiple Sclerosis</h4>
             </div>
             <div class="highlight-text">
                 <p>We are generating polygenic risk scores for MS patients using genome-wide SNPs. We are also working with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk" style="max-width: 600px; width: 100%;">
+                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk">
             </div>
         </div>
         
@@ -1023,7 +1037,7 @@ main,
                 <p>Working closely with the <strong>Connecticut Agricultural Experiment Station (CAES)</strong>, we are investigating the role of metagenomics for vector-borne public health surveillance. We've established Nanopore-based workflows that can detect pathogens as well as report the microbial diversity present within tick genomes.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow" style="max-width: 700px; width: 100%;">
+                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow">
             </div>
         </div>
         
@@ -1033,7 +1047,7 @@ main,
                 <p><strong>Microbial diversity across 72 <em>Ixodes scapularis</em> specimens.</strong> We are currently investigating de novo assembly for these pathogens as well as looking into transcriptomic and metatranscriptomic analyses.</p>
             </div>
             <div class="highlight-visual">
-                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity" style="max-width: 650px; width: 100%;">
+                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity">
             </div>
         </div>
         
