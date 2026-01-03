@@ -1,20 +1,36 @@
 ---
 layout: single
-title: "Team"
+title: ""
 permalink: /team/
 author_profile: false
 ---
 
 <style>
+/* BLACK TOP NAVIGATION BAR - Same as Main Page */
+.masthead {
+    background-color: #000000 !important;
+    position: relative;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
 /* TEAM PAGE - PROFESSIONAL & SLEEK */
 
 /* Remove default spacing */
 .page__content {
     max-width: 100%;
     padding: 0;
+    margin-top: 0 !important;
 }
 
-/* PRINCIPAL INVESTIGATOR SECTION - Landau Lab Inspired */
+/* Remove page title */
+.page__title {
+    display: none !important;
+}
+
+/* PRINCIPAL INVESTIGATOR SECTION - Starts immediately after header */
 .pi-section {
     width: 100vw;
     position: relative;
@@ -24,6 +40,7 @@ author_profile: false
     margin-right: -50vw;
     background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
     padding: 80px 40px;
+    margin-top: 0 !important;
 }
 
 .pi-container {
@@ -368,10 +385,10 @@ author_profile: false
             </div>
             
             <div class="pi-links">
-                <a href="https://orcid.org/0000-0002-1234-5678" target="_blank" class="pi-link">
+                <a href="https://orcid.org/0000-0003-2982-9448" target="_blank" class="pi-link">
                     <i class="fab fa-orcid"></i> ORCID
                 </a>
-                <a href="https://www.linkedin.com/in/paulwolujewicz/" target="_blank" class="pi-link">
+                <a href="https://www.linkedin.com/in/paul-wolujewicz-82b73314/" target="_blank" class="pi-link">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
                 <a href="mailto:paul.wolujewicz@quinnipiac.edu" class="pi-link">
@@ -489,18 +506,22 @@ author_profile: false
         <div class="collaborator-institution">
             <h3 class="weill-cornell">Weill Cornell Medicine</h3>
             <div class="collaborator-list">
-                <div class="collaborator-item">
-                    <div class="collaborator-name">Ross Lab</div>
-                    <a href="https://medicine.weill.cornell.edu/" target="_blank" class="collaborator-link">
-                        Weill Cornell Medicine →
-                    </a>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-name">Colak Lab</div>
-                    <a href="https://medicine.weill.cornell.edu/" target="_blank" class="collaborator-link">
-                        Weill Cornell Medicine →
-                    </a>
-                </div>
+                <a href="https://brainandmind.weill.cornell.edu/ross-laboratory" target="_blank" style="text-decoration: none;">
+                    <div class="collaborator-item">
+                        <div class="collaborator-name">Ross Lab</div>
+                        <span class="collaborator-link">
+                            Weill Cornell Medicine →
+                        </span>
+                    </div>
+                </a>
+                <a href="https://www.colaklab.com/" target="_blank" style="text-decoration: none;">
+                    <div class="collaborator-item">
+                        <div class="collaborator-name">Colak Lab</div>
+                        <span class="collaborator-link">
+                            Weill Cornell Medicine →
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
         
