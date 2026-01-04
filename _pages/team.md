@@ -550,7 +550,7 @@ author_profile: false
             <div class="collaborator-list">
                 <div class="collaborator-item">
                     <div class="collaborator-name">Dr. Goudarz Molaei</div>
-                    <a href="https://portal.ct.gov/caes" target="_blank" class="collaborator-link">
+                    <a href="https://portal.ct.gov/caes/tick-office/tick-office/tick-testing-laboratory" target="_blank" class="collaborator-link">
                         CAES →
                     </a>
                 </div>
