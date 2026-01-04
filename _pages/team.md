@@ -506,7 +506,7 @@ author_profile: false
         <div class="collaborator-institution">
             <h3 class="weill-cornell">Weill Cornell Medicine</h3>
             <div class="collaborator-list">
-                <a href="https://brainandmind.weill.cornell.edu/ross-laboratory" target="_blank" style="text-decoration: none;">
+                <a href="https://gradschool.weill.cornell.edu/faculty/m-elizabeth-ross" target="_blank" style="text-decoration: none;">
                     <div class="collaborator-item">
                         <div class="collaborator-name">Ross Lab</div>
                         <span class="collaborator-link">
@@ -529,18 +529,22 @@ author_profile: false
         <div class="collaborator-institution">
             <h3 class="quinnipiac">Quinnipiac University</h3>
             <div class="collaborator-list">
-                <div class="collaborator-item">
-                    <div class="collaborator-name">Takacs Lab</div>
-                    <a href="https://www.qu.edu/" target="_blank" class="collaborator-link">
-                        Quinnipiac University →
-                    </a>
-                </div>
-                <div class="collaborator-item">
-                    <div class="collaborator-name">Eggers Lab</div>
-                    <a href="https://www.qu.edu/" target="_blank" class="collaborator-link">
-                        Quinnipiac University →
-                    </a>
-                </div>
+                <a href="https://www.qu.edu/faculty-and-staff/carter-takacs-phd/" target="_blank" style="text-decoration: none;">
+                    <div class="collaborator-item">
+                        <div class="collaborator-name">Takacs Lab</div>
+                        <span class="collaborator-link">
+                            Quinnipiac University →
+                        </span>
+                    </div>
+                </a>
+                <a href="https://www.qu.edu/faculty-and-staff/christian-eggers/" target="_blank" style="text-decoration: none;">
+                    <div class="collaborator-item">
+                        <div class="collaborator-name">Eggers Lab</div>
+                        <span class="collaborator-link">
+                            Quinnipiac University →
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
         
@@ -548,12 +552,14 @@ author_profile: false
         <div class="collaborator-institution">
             <h3 class="caes">Connecticut Agricultural Experiment Station</h3>
             <div class="collaborator-list">
-                <div class="collaborator-item">
-                    <div class="collaborator-name">Dr. Goudarz Molaei</div>
-                    <a href="https://portal.ct.gov/caes/tick-office/tick-office/tick-testing-laboratory" target="_blank" class="collaborator-link">
-                        CAES →
-                    </a>
-                </div>
+                <a href="https://portal.ct.gov/caes/tick-office/tick-office/tick-testing-laboratory" target="_blank" style="text-decoration: none;">
+                    <div class="collaborator-item">
+                        <div class="collaborator-name">Dr. Goudarz Molaei</div>
+                        <span class="collaborator-link">
+                            CAES →
+                        </span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
