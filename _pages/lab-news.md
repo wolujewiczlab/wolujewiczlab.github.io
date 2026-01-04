@@ -362,10 +362,10 @@ permalink: /lab-news/
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
             
-            <!-- NEWS ITEM: Brandon NEMCA Presentation -->
+            <!-- NEWS ITEM: Brandon NMCA Presentation -->
             <div class="news-item">
                 <div class="news-date">December 2025</div>
-                <h2 class="news-title">Brandon Assi Presents at 71st Annual NEMCA Meeting</h2>
+                <h2 class="news-title">Brandon Assi Presents at 71st Annual NMCA Meeting</h2>
                 
                 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                     <div>
