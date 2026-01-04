@@ -2,6 +2,8 @@
 main:
   - title: "Research"
     url: /research/
+  - title: "Lab News"
+    url: /lab-news/
   - title: "Team"
     url: /team/
   - title: "Publications"
