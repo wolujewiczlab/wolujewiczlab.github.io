@@ -448,6 +448,40 @@ permalink: /lab-news/
                 </div>
             </div>
             
+            <!-- NEWS ITEM: NEURON Conference Session Chair -->
+            <div class="news-item">
+                <div class="news-date">April 2025</div>
+                <h2 class="news-title">Session Chair at NEURON Conference</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Dr. Wolujewicz chaired the session "AI Tools in Neurobiology" at the annual NEURON Conference, co-hosted by Quinnipiac University and University of Connecticut. The session brought together researchers applying artificial intelligence and computational approaches to neurobiological questions spanning neurodevelopment, disease modeling, and data-intensive neuroscience.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/neuron-conference-2025.jpg" alt="NEURON Conference 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEWS ITEM: Outstanding Mentor Awards -->
+            <div class="news-item">
+                <div class="news-date">March 2025</div>
+                <h2 class="news-title">Outstanding Mentor Awards and Gribbin Receives Wikel Scientific Scholarship Award</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            At the annual Capstone Scholars Day for the Frank H. Netter School of Medicine, John Gribbin (MD'25) was awarded the Stephen Wikel, PhD Scientific Scholarship Award for his outstanding capstone research. Dr. Paul Wolujewicz and Dr. James K. Soda were jointly recognized as Outstanding Capstone Mentors for 2025, honored for their exceptional mentorship and dedication to fostering student research careers. Their collaborative guidance helped shape John's project and exemplified the values of curiosity, perseverance, and ingenuity in pursuit of bettering the lives of others.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 Awards" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
             <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
             
         </div>
