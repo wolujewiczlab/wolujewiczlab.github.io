@@ -414,6 +414,40 @@ permalink: /lab-news/
                 </div>
             </div>
             
+            <!-- NEWS ITEM: BDRP Regular Membership -->
+            <div class="news-item">
+                <div class="news-date">August 2025</div>
+                <h2 class="news-title">Dr. Wolujewicz Approved for Regular Membership in BDRP</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Dr. Wolujewicz was approved for Regular Membership in the Society for Birth Defects Research and Prevention (BDRP). This appointment reflects the lab's ongoing contributions to research on neural tube defects and other congenital disorders, and provides an important platform for scientific exchange, collaboration, and leadership within the birth defects research community.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" style="max-width: 280px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEWS ITEM: BDRP Denver Conference -->
+            <div class="news-item">
+                <div class="news-date">July 2025</div>
+                <h2 class="news-title">Invited Speaker at BDRP Annual Meeting in Denver</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Dr. Wolujewicz served as an invited speaker and mini-course lead at the 65th Annual Meeting of the Society for Birth Defects Research and Prevention (BDRP) in Denver, Colorado. He led a focused mini-course on Artificial Intelligence in Genomics, highlighting emerging AI-driven approaches for variant interpretation, multi-omic integration, and disease risk modeling in the context of congenital disorders and neurodevelopmental disease.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/bdrp-denver-2025.jpg" alt="BDRP Annual Meeting Denver 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
             <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
             
         </div>
