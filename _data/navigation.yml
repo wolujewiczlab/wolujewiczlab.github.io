@@ -10,5 +10,6 @@ main:
     url: /teaching/
   - title: "CV"
     url: /assets/files/PaulWolujewicz_CV_2026.pdf
+    external: true
   - title: "Contact"
     url: /contact/
