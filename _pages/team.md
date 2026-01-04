@@ -357,6 +357,14 @@ author_profile: false
         gap: 60px;
     }
 }
+
+/* Responsive institutional photos */
+@media (max-width: 768px) {
+    .institutional-photos {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+}
 </style>
 
 <!-- PRINCIPAL INVESTIGATOR SECTION -->
@@ -561,6 +569,37 @@ author_profile: false
                     </div>
                 </a>
             </div>
+        </div>
+    </div>
+    
+    <!-- INSTITUTIONAL PHOTO GALLERY -->
+    <div style="max-width: 1200px; margin: 80px auto 60px auto; padding: 0 40px;">
+        <div class="institutional-photos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            
+            <!-- Quinnipiac University -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/quinnipiac-campus.jpg" alt="Quinnipiac University" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Quinnipiac University</p>
+                </div>
+            </div>
+            
+            <!-- Weill Cornell Medicine -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/weill-cornell-campus.jpg" alt="Weill Cornell Medicine" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Weill Cornell Medicine</p>
+                </div>
+            </div>
+            
+            <!-- Connecticut Agricultural Experiment Station -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/caes-building.jpg" alt="Connecticut Agricultural Experiment Station" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Connecticut Agricultural<br>Experiment Station</p>
+                </div>
+            </div>
+            
         </div>
     </div>
     
