@@ -67,7 +67,7 @@ permalink: /lab-news/
 .news-page {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+    background: #f5f5f5;  /* Light grey background like Publications */
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -88,7 +88,7 @@ permalink: /lab-news/
 .floating-shape {
     position: absolute;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(34, 168, 184, 0.03), transparent);
+    background: radial-gradient(circle, rgba(34, 168, 184, 0.02), transparent);
     animation: float 20s infinite ease-in-out;
 }
 
@@ -119,11 +119,11 @@ permalink: /lab-news/
 @keyframes float {
     0%, 100% {
         transform: translate(0, 0) scale(1);
-        opacity: 0.03;
+        opacity: 0.02;
     }
     50% {
         transform: translate(50px, -50px) scale(1.1);
-        opacity: 0.06;
+        opacity: 0.04;
     }
 }
 
@@ -131,7 +131,7 @@ permalink: /lab-news/
 .gradient-line {
     position: absolute;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(34, 168, 184, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(34, 168, 184, 0.05), transparent);
     animation: slide 15s infinite linear;
 }
 
@@ -164,26 +164,28 @@ permalink: /lab-news/
     z-index: 1;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 100px 40px 80px 40px;
+    padding: 80px 40px;
 }
 
 /* PAGE HEADER */
 .news-header {
+    background: #2a2a2a;  /* Dark grey like Publications banner */
     text-align: center;
-    margin-bottom: 80px;
+    padding: 80px 40px 60px 40px;
+    margin: 0 0 0 0;
 }
 
 .news-header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 64px;
+    font-size: 56px;
     font-weight: 700;
     color: #ffffff;
-    margin: 0 0 20px 0;
+    margin: 0 0 15px 0;
     letter-spacing: -1px;
 }
 
 .news-header p {
-    font-size: 20px;
+    font-size: 18px;
     color: rgba(255, 255, 255, 0.7);
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -196,38 +198,41 @@ permalink: /lab-news/
     gap: 40px;
 }
 
-/* INDIVIDUAL NEWS ITEM */
+/* INDIVIDUAL NEWS ITEM - White cards like Publications page */
 .news-item {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    background: #ffffff;  /* Pure white background */
+    border: 3px solid #22a8b8;  /* Turquoise border */
+    border-radius: 8px;
     padding: 40px;
+    margin-bottom: 40px;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .news-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(34, 168, 184, 0.3);
+    box-shadow: 0 8px 24px rgba(34, 168, 184, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(34, 168, 184, 0.1);
 }
 
 .news-date {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 13px;
+    font-weight: 700;
     color: #22a8b8;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 15px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(34, 168, 184, 0.1);
+    border-radius: 4px;
 }
 
 .news-title {
     font-family: 'Playfair Display', serif;
     font-size: 28px;
     font-weight: 600;
-    color: #ffffff;
+    color: #1a1a1a;  /* Dark text on white */
     margin: 0 0 20px 0;
     line-height: 1.3;
 }
@@ -235,8 +240,8 @@ permalink: /lab-news/
 .news-description {
     font-family: 'Inter', sans-serif;
     font-size: 16px;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+    color: #333333;  /* Dark grey text */
     margin: 0;
 }
 
@@ -275,6 +280,12 @@ permalink: /lab-news/
     
     .news-content {
         padding: 60px 20px 40px 20px;
+    }
+    
+    /* Stack layout on mobile */
+    .news-item > div[style*="grid-template-columns"] {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
     }
 }
 </style>
@@ -339,18 +350,37 @@ permalink: /lab-news/
         <div class="gradient-line line-2"></div>
     </div>
     
+    <!-- HEADER - Full Width Banner -->
+    <div class="news-header">
+        <h1>Latest News in the Wolujewicz Lab</h1>
+        <p>Updates, achievements, and milestones from our research group</p>
+    </div>
+    
     <!-- CONTENT -->
     <div class="news-content">
-        <!-- HEADER -->
-        <div class="news-header">
-            <h1>Latest News in the Wolujewicz Lab</h1>
-            <p>Updates, achievements, and milestones from our research group</p>
-        </div>
         
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
             
-            <!-- ADD YOUR NEWS ITEMS BELOW THIS LINE -->
+            <!-- NEWS ITEM: Brandon NEMCA Presentation -->
+            <div class="news-item">
+                <div class="news-date">December 2025</div>
+                <h2 class="news-title">Brandon Assi Presents at 71st Annual NEMCA Meeting</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Brandon Assi presents his Master's thesis work at the 71st Annual Meeting Northeastern Mosquito Control Association Conference in Hyannis, MA. His research focuses on Nanopore metagenomic sequencing for real-time vector-borne pathogen surveillance in collaboration with the Connecticut Agricultural Experiment Station.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NEMCA 2025" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                        <p style="font-size: 11px; color: #666666; margin-top: 8px; text-align: center; font-style: italic;">Brandon presenting at NEMCA, Hyannis MA</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
             
         </div>
     </div>
