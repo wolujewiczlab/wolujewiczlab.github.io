@@ -515,10 +515,10 @@ main,
 
 .tone-dark {
     background: #8b2e3f; /* Deep burgundy like Landau */
-    padding: 60px 60px 60px 80px;  /* Reduced from 100px top/bottom */
+    padding: 40px 60px 50px 80px;  /* Much less top padding, slightly more bottom */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;  /* Align to top instead of center */
 }
 
 .tone-light {
@@ -912,7 +912,7 @@ main,
         <!-- Case-Control Study (TOP) -->
         <div class="research-highlight-box">
             <div class="highlight-text">
-                <p>Spina bifida is a complex congenital condition whose genetic causes extend beyond traditional protein-coding mutations. In this study, we applied advanced computational genomics and deep-learning approaches to uncover how subtle changes in the regulatory regions of the genome can disrupt early neural tube development. By integrating whole-genome sequencing, transcription factor binding maps, and three-dimensional chromatin architecture, we identified rare regulatory variants that alter gene expression programs essential for nervous system formation. These findings highlight the importance of non-coding DNA in human birth defects and provide a new framework for precision-medicine approaches to understanding and ultimately preventing neural tube defects.</p>
+                <p>Spina bifida is a complex congenital condition whose genetic causes extend beyond traditional protein-coding mutations. Recently, we applied advanced computational genomics and deep-learning approaches to uncover how subtle changes in the regulatory regions of the genome can disrupt early neural tube development. By integrating whole-genome sequencing, transcription factor binding maps, and three-dimensional chromatin architecture, we identified rare regulatory variants that alter gene expression programs essential for nervous system formation. These findings highlight the importance of non-coding DNA in human birth defects and provide a new framework for precision-medicine approaches to understanding and ultimately preventing neural tube defects.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 300px;">
@@ -946,7 +946,7 @@ main,
                 <h4>Autism Spectrum Disorder</h4>
             </div>
             <div class="highlight-text">
-                <p>In collaboration with the Colak Lab at Weill Cornell Medicine, this study leverages patient-derived three-dimensional forebrain organoids to investigate how autism spectrum disorder (ASD) alters molecular communication during early brain development. By profiling extracellular vesicles—small particles that mediate cell-to-cell signaling—we identified striking differences in RNA and protein cargo between ASD and neurotypical organoids, implicating pathways involved in synaptic function, protein regulation, and chromatin remodeling. These findings uncover a previously underappreciated mechanism of disrupted cellular communication in autism and highlight extracellular vesicles as promising biomarkers and therapeutic targets for neurodevelopmental disorders.</p>
+                <p>In collaboration with the Colak Lab at Weill Cornell Medicine, we recently leveraged patient-derived three-dimensional forebrain organoids to investigate how autism spectrum disorder (ASD) alters molecular communication during early brain development. By profiling extracellular vesicles—small particles that mediate cell-to-cell signaling—we identified striking differences in RNA and protein cargo between ASD and neurotypical organoids, implicating pathways involved in synaptic function, protein regulation, and chromatin remodeling. These findings uncover a previously underappreciated mechanism of disrupted cellular communication in autism and highlight extracellular vesicles as promising biomarkers and therapeutic targets for neurodevelopmental disorders.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 350px;">
@@ -1045,7 +1045,7 @@ main,
         <!-- Workflow Overview -->
         <div class="research-highlight-box">
             <div class="highlight-text">
-                <p>This study presents a portable, real-time genomic surveillance pipeline using Oxford Nanopore long-read sequencing to enable unbiased detection of tick-borne pathogens directly from blacklegged ticks. Working in partnership with the Connecticut Agricultural Experiment Station (CAES), we developed and validated a metagenomic workflow capable of simultaneously identifying bacterial, protozoal, and viral pathogens while preserving quantitative signal. The approach demonstrates strong precision, supports future strain-level genomic resolution, and illustrates how next-generation sequencing can enhance public health surveillance and early detection of emerging vector-borne disease threats.</p>
+                <p>We present a portable, real-time genomic surveillance pipeline using Oxford Nanopore long-read sequencing to enable unbiased detection of tick-borne pathogens directly from blacklegged ticks. Working in partnership with the Connecticut Agricultural Experiment Station (CAES), we developed and validated a metagenomic workflow capable of simultaneously identifying bacterial, protozoal, and viral pathogens while preserving quantitative signal. The approach demonstrates strong precision, supports future strain-level genomic resolution, and illustrates how next-generation sequencing can enhance public health surveillance and early detection of emerging vector-borne disease threats.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow" class="workflow-large">
