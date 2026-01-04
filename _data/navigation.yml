@@ -8,5 +8,7 @@ main:
     url: /publications/
   - title: "Teaching"
     url: /teaching/
+  - title: "CV"
+    url: /assets/files/PaulWolujewicz_CV_2026.pdf
   - title: "Contact"
     url: /contact/
