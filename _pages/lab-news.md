@@ -374,8 +374,7 @@ permalink: /lab-news/
                         </p>
                     </div>
                     <div>
-                        <img src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NEMCA 2025" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                        <p style="font-size: 11px; color: #666666; margin-top: 8px; text-align: center; font-style: italic;">Brandon presenting at NEMCA, Hyannis MA</p>
+                        <img src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NEMCA 2025" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                     </div>
                 </div>
             </div>
