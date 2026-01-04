@@ -379,6 +379,40 @@ permalink: /lab-news/
                 </div>
             </div>
             
+            <!-- NEWS ITEM: CAES Research Affiliate -->
+            <div class="news-item">
+                <div class="news-date">November 2025</div>
+                <h2 class="news-title">Dr. Wolujewicz Appointed as CAES Research Affiliate</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Dr. Wolujewicz is appointed as a CAES Research Affiliate. This appointment formalizes ongoing collaborations with the Connecticut Agricultural Experiment Station and strengthens joint efforts in vector-borne pathogen genomics and public health surveillance.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 280px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEWS ITEM: ASHG Annual Meeting -->
+            <div class="news-item">
+                <div class="news-date">October 2025</div>
+                <h2 class="news-title">Wolujewicz Lab Members Present at ASHG Annual Meeting</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Members of the Wolujewicz Lab had a strong presence at the American Society of Human Genetics (ASHG) Annual Meeting, highlighting multiple advances in neurogenetics research. Phil Smit (M4) co-authored a recently accepted manuscript in Translational Psychiatry entitled "Extracellular Vesicle Profiling Reveals Novel Autism Signatures in Patient-Derived Forebrain Organoids" and was selected to deliver a platform presentation at ASHG, an especially competitive and prestigious honor. Alan Chai (M3) presented a poster examining the contribution of short tandem repeat expansions to the genomic architecture of central nervous system structural birth defects, leveraging genome-wide computational detection methods and a novel machine-learning framework for pathogenicity prediction; his abstract received a Reviewers' Choice designation, placing it in the top 10% of accepted posters. In parallel, Rachel Schlak and Katrina Etts (M3) presented work exploring a digenic inheritance model for neural tube defect risk, introducing a prioritization strategy for maternally and paternally inherited variant combinations with potential clinical relevance for genetic counseling and family planning.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/ashg-2025.jpg" alt="Lab members at ASHG 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
             <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
             
         </div>
