@@ -350,18 +350,7 @@ permalink: /lab-news/
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
             
-            <!-- NEWS ITEM TEMPLATE - Copy this block for each news item -->
-            <div class="news-item">
-                <div class="news-date">January 2026</div>
-                <h2 class="news-title">Your News Title Here</h2>
-                <p class="news-description">
-                    Your news description goes here. This can be multiple paragraphs if needed. Describe the achievement, publication, grant, new lab member, or other milestone.
-                </p>
-                <!-- Optional: Add a link -->
-                <!-- <a href="#" class="news-link" target="_blank">Read more</a> -->
-            </div>
-            
-            <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
+            <!-- ADD YOUR NEWS ITEMS BELOW THIS LINE -->
             
         </div>
     </div>
