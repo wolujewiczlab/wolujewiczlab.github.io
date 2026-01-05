@@ -105,7 +105,7 @@ permalink: /contact/
     /* Position DNA right after the logo, not on top of it */
     .nav-dna-container {
         left: auto !important;
-        right: 70px !important;  /* Position to left of hamburger menu */  /* Position after "Wolujewicz Lab" text */
+        right: 55px !important;  /* Top-right corner, left of hamburger */  /* Position after "Wolujewicz Lab" text */
         right: auto !important;
         width: 25px !important;
         height: 40px !important;
@@ -121,22 +121,51 @@ permalink: /contact/
     
     /* Force hamburger menu to show */
     .greedy-nav__toggle {
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         display: block !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         opacity: 1 !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         visibility: visible !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         z-index: 200 !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         position: relative !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
     }
     
-    /* Hide all visible nav links on mobile */
-    .greedy-nav .visible-links {
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
         display: none !important;
     }
     
+    /* Hide all visible nav links on mobile */
+    
     /* Make sure hidden links list works */
-    .greedy-nav .hidden-links {
-        display: block !important;
-    }
 }
 
 /* Extra small phones */
