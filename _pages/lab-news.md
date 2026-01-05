@@ -302,22 +302,26 @@ permalink: /lab-news/
 @media (max-width: 768px) {
     /* Position DNA right after the logo, not on top of it */
     .nav-dna-container {
-        left: 180px !important;
+        left: auto !important;
+        right: 70px !important;  /* Position to left of hamburger menu */
         right: auto !important;
+        transform: translateY(-50%) scale(0.65) !important;
         width: 25px !important;
         height: 40px !important;
-        transform: translateY(-50%) scale(0.75) !important;
+        z-index: 50 !important;
     }
     
     .site-title {
-        max-width: 160px !important;
-        font-size: 16px !important;
+        max-width: 180px !important;
+        font-size: 15px !important;
     }
     
     .greedy-nav__toggle {
         display: block !important;
         opacity: 1 !important;
         visibility: visible !important;
+        z-index: 200 !important;
+        position: relative !important;
     }
     
     .greedy-nav .visible-links {
@@ -326,17 +330,19 @@ permalink: /lab-news/
     
     .greedy-nav .hidden-links {
         display: block !important;
+        z-index: 300 !important;
     }
 }
 
 /* Extra small phones */
 @media (max-width: 380px) {
     .nav-dna-container {
-        left: 140px !important;
+        right: 60px !important;  /* Closer to hamburger on small screens */
+        transform: translateY(-50%) scale(0.55) !important;
     }
     
     .site-title {
-        max-width: 120px !important;
+        max-width: 110px !important;
         font-size: 14px !important;
     }
 }
