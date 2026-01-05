@@ -414,6 +414,23 @@ permalink: /lab-news/
                 </div>
             </div>
             
+            <!-- NEWS ITEM: QUIPRS Summer Research -->
+            <div class="news-item">
+                <div class="news-date">October 2025</div>
+                <h2 class="news-title">QUIPRS Undergraduate Researchers Present at Bobcat Weekend</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            During Quinnipiac University's 2025 QUIPRS Summer Research Program, the Wolujewicz Lab co-mentored two undergraduate researchers, Jenna Visich and Jesse Matijevic, on independent genomics-focused projects spanning neurodevelopmental biology and infectious disease genomics. Jenna investigated brain development using RNA-seq analyses in ADNP mutant zebrafish models (co-mentored with Dr. Carter Takacs), while Jesse explored genome assembly strategies for <em>Borrelia burgdorferi</em> from both <em>Ixodes scapularis</em> vectors and cultured pathogen samples. Both students successfully presented their research during Bobcat Weekend, highlighting the lab's continued commitment to interdisciplinary, student-driven research and mentorship from project inception through public dissemination.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIPRS Students at Bobcat Weekend 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
             <!-- NEWS ITEM: BDRP Regular Membership -->
             <div class="news-item">
                 <div class="news-date">August 2025</div>
@@ -478,6 +495,23 @@ permalink: /lab-news/
                     </div>
                     <div>
                         <img src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 Awards" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEWS ITEM: NTD International Conference -->
+            <div class="news-item">
+                <div class="news-date">August 2024</div>
+                <h2 class="news-title">Platform Presentation at 13th International Conference on Neural Tube Defects</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            Dr. Wolujewicz was invited to deliver a platform presentation at the 13th International Conference on Neural Tube Defects, an international forum bringing together leading investigators in developmental biology, genetics, and birth defects research. The presentation entitled, "Evidence for Pathogenic Expansions in NTD Case-Parent Trios," highlights ongoing work from the Wolujewicz Lab focused on the genetic architecture of neural tube defects using family-based genomic analyses. The invitation reflects the growing international recognition of the lab's contributions to neurogenetics and congenital disorder research.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                     </div>
                 </div>
             </div>
