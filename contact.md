@@ -184,7 +184,7 @@ permalink: /contact/
             <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
             <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
             
-            <form id="contactForm" action="https://formspree.io/f/xnnqoeae" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <form id="contactForm" action="https://formspree.io/f/paul.wolujewicz@quinnipiac.edu" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Name</label>
                     <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
@@ -192,13 +192,16 @@ permalink: /contact/
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Email</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                    <input type="email" name="_replyto" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Message</label>
                     <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
                 </div>
+                
+                <input type="hidden" name="_subject" value="New contact from Wolujewicz Lab website">
+                <input type="text" name="_gotcha" style="display:none">
                 
                 <button type="submit" id="submitBtn" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
                 
