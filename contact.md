@@ -110,6 +110,14 @@ permalink: /contact/
     display: flex;
     align-items: center;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}
 </style>
 
 <script>
@@ -167,27 +175,42 @@ permalink: /contact/
     <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
 </div>
 
-<!-- MAP SECTION - Embedded Google Maps showing both campuses -->
-<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0;">
-    <iframe 
-        src="https://www.google.com/maps/d/embed?mid=1_custom_map_id&ehbc=2E312F"
-        width="100%" 
-        height="500" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy">
-    </iframe>
-    
-    <!-- Campus Legend -->
-    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 10;">
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-            <div style="width: 12px; height: 12px; background: #dc2626; border-radius: 50%;"></div>
-            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Mount Carmel Campus</span>
+<!-- TWO-COLUMN SECTION: Contact Form + QU Image -->
+<div style="background: #ffffff; padding: 80px 40px;">
+    <div class="contact-form-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        
+        <!-- LEFT: Contact Form -->
+        <div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
+            <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Name</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Email</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Message</label>
+                    <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
+                </div>
+                
+                <button type="submit" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
+            </form>
+            
+            <p style="font-size: 14px; color: #999; margin-top: 20px;">Or email directly: <a href="mailto:paul.wolujewicz@quinnipiac.edu" style="color: #22a8b8; text-decoration: none;">paul.wolujewicz@quinnipiac.edu</a></p>
         </div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-            <div style="width: 12px; height: 12px; background: #2563eb; border-radius: 50%;"></div>
-            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">North Haven Campus</span>
+        
+        <!-- RIGHT: QU Image -->
+        <div>
+            <img src="/assets/images/qu-contact.png" alt="Quinnipiac University" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
         </div>
+        
     </div>
 </div>
 
@@ -227,24 +250,20 @@ permalink: /contact/
             <h2>Quinnipiac University - North Haven</h2>
             
             <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Joint Appointment</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Biomedical Sciences<br>School of Medicine</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Dry Lab Location</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">MNH-141B</p>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>Frank H. Netter MD School of Medicine<br>370 Bassett Road<br>North Haven, CT 06473</p>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>370 Bassett Road<br>North Haven, CT 06473</p>
             </div>
         </div>
 
         <!-- Prospective Members Card -->
         <div class="contact-card">
-            <h2>Join Our Lab</h2>
+            <span style="display: inline-block; background: #22a8b8; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">JOIN OUR LAB</span>
+            <h2>Opportunities</h2>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Students</h3>
@@ -254,6 +273,25 @@ permalink: /contact/
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss research partnerships.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated graduate students interested in computational genomics, systems biology, and precision medicine. Please email with your CV and research interests.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Undergraduate Students</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Undergraduate research opportunities available for students interested in bioinformatics, genomics, and data science.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss potential research partnerships and projects.</p>
             </div>
         </div>
 
