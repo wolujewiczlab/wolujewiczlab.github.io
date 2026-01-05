@@ -110,6 +110,14 @@ permalink: /contact/
     display: flex;
     align-items: center;
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+}
 </style>
 
 <script>
@@ -167,44 +175,42 @@ permalink: /contact/
     <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
 </div>
 
-<!-- MAP SECTION - Interactive Google Maps with Embedded Markers -->
-<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0; overflow: hidden;">
-    <iframe
-        width="100%"
-        height="500"
-        style="border:0;"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=41.405,-72.87&zoom=11&maptype=roadmap">
-    </iframe>
-    
-    <!-- Mount Carmel Pin Overlay -->
-    <div style="position: absolute; top: 32%; left: 48%; transform: translate(-50%, -50%); pointer-events: none;">
-        <div style="position: relative;">
-            <div style="width: 30px; height: 30px; background: #dc2626; border: 3px solid white; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>
-            <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 8px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; font-size: 11px; font-weight: 600;">Mount Carmel</div>
+<!-- TWO-COLUMN SECTION: Contact Form + QU Image -->
+<div style="background: #ffffff; padding: 80px 40px;">
+    <div class="contact-form-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+        
+        <!-- LEFT: Contact Form -->
+        <div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
+            <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
+            
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Name</label>
+                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Email</label>
+                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                </div>
+                
+                <div>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Message</label>
+                    <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
+                </div>
+                
+                <button type="submit" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
+            </form>
+            
+            <p style="font-size: 14px; color: #999; margin-top: 20px;">Or email directly: <a href="mailto:paul.wolujewicz@quinnipiac.edu" style="color: #22a8b8; text-decoration: none;">paul.wolujewicz@quinnipiac.edu</a></p>
         </div>
-    </div>
-    
-    <!-- North Haven Pin Overlay -->
-    <div style="position: absolute; top: 68%; left: 52%; transform: translate(-50%, -50%); pointer-events: none;">
-        <div style="position: relative;">
-            <div style="width: 30px; height: 30px; background: #2563eb; border: 3px solid white; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>
-            <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 8px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; font-size: 11px; font-weight: 600;">North Haven</div>
+        
+        <!-- RIGHT: QU Image -->
+        <div>
+            <img src="/assets/images/qu-contact.png" alt="Quinnipiac University" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
         </div>
-    </div>
-    
-    <!-- Campus Legend -->
-    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); pointer-events: auto;">
-        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-            <div style="width: 12px; height: 12px; background: #dc2626; border-radius: 50%;"></div>
-            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Mount Carmel Campus</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 8px;">
-            <div style="width: 12px; height: 12px; background: #2563eb; border-radius: 50%;"></div>
-            <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">North Haven Campus</span>
-        </div>
+        
     </div>
 </div>
 
@@ -244,24 +250,20 @@ permalink: /contact/
             <h2>Quinnipiac University - North Haven</h2>
             
             <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Joint Appointment</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Biomedical Sciences<br>School of Medicine</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Dry Lab Location</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">MNH-141B</p>
             </div>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>Frank H. Netter MD School of Medicine<br>370 Bassett Road<br>North Haven, CT 06473</p>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>370 Bassett Road<br>North Haven, CT 06473</p>
             </div>
         </div>
 
         <!-- Prospective Members Card -->
         <div class="contact-card">
-            <h2>Join Our Lab</h2>
+            <span style="display: inline-block; background: #22a8b8; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">JOIN OUR LAB</span>
+            <h2>Opportunities</h2>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Students</h3>
@@ -276,12 +278,6 @@ permalink: /contact/
 
     </div>
 </div>
-            </div>
-        </div>
-
-        <!-- Prospective Members Card -->
-        <div class="contact-card" style="background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
-            <h2>Join Our Lab</h2>
             
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
