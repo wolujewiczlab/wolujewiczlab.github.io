@@ -186,17 +186,17 @@ permalink: /contact/
             
             <form action="mailto:paul.wolujewicz@quinnipiac.edu" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Name</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Name</label>
                     <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Email</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Email</label>
                     <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Message</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Message</label>
                     <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
                 </div>
                 
