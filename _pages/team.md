@@ -87,9 +87,25 @@ author_profile: false
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* MOBILE RESPONSIVE - Hide DNA on mobile to prevent overlap */
+/* MOBILE RESPONSIVE - Reposition DNA and fix menu */
 @media (max-width: 768px) {
+    /* Move DNA to left side and make smaller */
     .nav-dna-container {
+        left: 15px !important;
+        right: auto !important;
+        width: 25px !important;
+        height: 40px !important;
+        transform: translateY(-50%) scale(0.8) !important;
+    }
+    
+    /* Ensure hamburger menu is visible and on the right */
+    .greedy-nav__toggle {
+        display: block !important;
+        margin-left: auto;
+    }
+    
+    /* Hide visible links on mobile */
+    .greedy-nav .visible-links {
         display: none !important;
     }
 }
