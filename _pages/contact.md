@@ -184,7 +184,12 @@ permalink: /contact/
             <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
             <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
             
-            <form id="contactForm" action="https://formspree.io/f/paul.wolujewicz@quinnipiac.edu" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
+                <input type="hidden" name="access_key" value="990a721d-3864-4ff3-9ab9-9a9d0bb06794">
+                <input type="hidden" name="subject" value="New Contact from Wolujewicz Lab Website">
+                <input type="hidden" name="redirect" value="https://wolujewiczlab.github.io/contact">
+                <input type="checkbox" name="botcheck" style="display: none;">
+                
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Name</label>
                     <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
@@ -192,16 +197,13 @@ permalink: /contact/
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Email</label>
-                    <input type="email" name="_replyto" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Message</label>
                     <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
                 </div>
-                
-                <input type="hidden" name="_subject" value="New contact from Wolujewicz Lab website">
-                <input type="text" name="_gotcha" style="display:none">
                 
                 <button type="submit" id="submitBtn" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
                 
@@ -212,34 +214,41 @@ permalink: /contact/
         </div>
         
         <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusDiv = document.getElementById('formStatus');
+
+        form.addEventListener('submit', async function(e) {
             e.preventDefault();
-            
-            const form = e.target;
-            const submitBtn = document.getElementById('submitBtn');
-            const statusDiv = document.getElementById('formStatus');
             
             // Disable button and show loading state
             submitBtn.disabled = true;
             submitBtn.textContent = 'Sending...';
             submitBtn.style.background = '#999';
             
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
             try {
-                const response = await fetch(form.action, {
+                const response = await fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
-                    body: new FormData(form),
                     headers: {
+                        'Content-Type': 'application/json',
                         'Accept': 'application/json'
-                    }
+                    },
+                    body: json
                 });
                 
-                if (response.ok) {
+                const result = await response.json();
+                
+                if (result.success) {
                     // Success
                     statusDiv.style.display = 'block';
                     statusDiv.style.background = '#d4edda';
                     statusDiv.style.color = '#155724';
                     statusDiv.style.border = '1px solid #c3e6cb';
-                    statusDiv.textContent = '✓ Message sent successfully!';
+                    statusDiv.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
                     form.reset();
                     
                     // Reset button
@@ -252,7 +261,7 @@ permalink: /contact/
                         statusDiv.style.display = 'none';
                     }, 5000);
                 } else {
-                    throw new Error('Form submission failed');
+                    throw new Error(result.message || 'Submission failed');
                 }
             } catch (error) {
                 // Error
@@ -260,7 +269,7 @@ permalink: /contact/
                 statusDiv.style.background = '#f8d7da';
                 statusDiv.style.color = '#721c24';
                 statusDiv.style.border = '1px solid #f5c6cb';
-                statusDiv.textContent = '✗ Error sending message. Please try again or email directly.';
+                statusDiv.textContent = '✗ Error sending message. Please email directly at paul.wolujewicz@quinnipiac.edu';
                 
                 // Reset button
                 submitBtn.textContent = 'Send Message';
