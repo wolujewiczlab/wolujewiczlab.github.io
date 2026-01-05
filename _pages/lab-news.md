@@ -414,19 +414,19 @@ permalink: /lab-news/
                 </div>
             </div>
             
-            <!-- NEWS ITEM: QUIPRS Summer Research -->
+            <!-- NEWS ITEM: QUIP-RS Summer Research -->
             <div class="news-item">
                 <div class="news-date">October 2025</div>
-                <h2 class="news-title">QUIPRS Undergraduate Researchers Present at Bobcat Weekend</h2>
+                <h2 class="news-title">QUIP-RS Undergraduate Researchers Present at Bobcat Weekend</h2>
                 
                 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                     <div>
                         <p class="news-description">
-                            During Quinnipiac University's 2025 QUIPRS Summer Research Program, the Wolujewicz Lab co-mentored two undergraduate researchers, Jenna Visich and Jesse Matijevic, on independent genomics-focused projects spanning neurodevelopmental biology and infectious disease genomics. Jenna investigated brain development using RNA-seq analyses in ADNP mutant zebrafish models (co-mentored with Dr. Carter Takacs), while Jesse explored genome assembly strategies for <em>Borrelia burgdorferi</em> from both <em>Ixodes scapularis</em> vectors and cultured pathogen samples. Both students successfully presented their research during Bobcat Weekend, highlighting the lab's continued commitment to interdisciplinary, student-driven research and mentorship from project inception through public dissemination.
+                            During Quinnipiac University's 2025 QUIP-RS Summer Research Program, the Wolujewicz Lab co-mentored two undergraduate researchers, Jenna Visich and Jesse Matijevic, on independent genomics-focused projects spanning neurodevelopmental biology and infectious disease genomics. Jenna investigated brain development using RNA-seq analyses in ADNP mutant zebrafish models (co-mentored with Dr. Carter Takacs), while Jesse explored genome assembly strategies for <em>Borrelia burgdorferi</em> from both <em>Ixodes scapularis</em> vectors and cultured pathogen samples. Both students successfully presented their research during Bobcat Weekend, highlighting the lab's continued commitment to interdisciplinary, student-driven research and mentorship from project inception through public dissemination.
                         </p>
                     </div>
                     <div>
-                        <img src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIPRS Students at Bobcat Weekend 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                        <img src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIP-RS Students at Bobcat Weekend 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                     </div>
                 </div>
             </div>
@@ -495,6 +495,23 @@ permalink: /lab-news/
                     </div>
                     <div>
                         <img src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 Awards" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- NEWS ITEM: QUIP-RS 2024 Kaylee Presentation -->
+            <div class="news-item">
+                <div class="news-date">October 2024</div>
+                <h2 class="news-title">Kaylee Pettengill Presents at QUIP-RS Research Symposium</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            As part of the 2024 QUIP-RS Research Symposium held during Bobcat Weekend, Kaylee Pettengill presented her undergraduate research project, "Identifying Structural Variation in Spina Bifida Patient Genomes," conducted in the Wolujewicz Lab. Her work applied whole-genome sequencing and case-parent trio analyses to identify copy number variants and other structural genomic alterations that may contribute to neural tube defect risk.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/kaylee-quiprs-2024.jpg" alt="Kaylee Pettengill at QUIP-RS 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                     </div>
                 </div>
             </div>
