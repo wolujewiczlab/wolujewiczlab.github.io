@@ -91,6 +91,13 @@ permalink: /contact/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
+/* MOBILE RESPONSIVE - Hide DNA on mobile to prevent overlap */
+@media (max-width: 768px) {
+    .nav-dna-container {
+        display: none !important;
+    }
+}
+
 /* Contact Cards - Fixed Height for Alignment */
 .contact-card {
     background: #ffffff;
@@ -185,7 +192,7 @@ permalink: /contact/
             <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
             
             <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
-                <input type="hidden" name="access_key" value="990a721d-3864-4ff3-9ab9-9a9d0bb06794">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
                 <input type="hidden" name="subject" value="New Contact from Wolujewicz Lab Website">
                 <input type="hidden" name="redirect" value="https://wolujewiczlab.github.io/contact">
                 <input type="checkbox" name="botcheck" style="display: none;">
