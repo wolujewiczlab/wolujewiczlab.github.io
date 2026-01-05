@@ -533,6 +533,23 @@ permalink: /lab-news/
                 </div>
             </div>
             
+            <!-- NEWS ITEM: John Gribbin AAN Presentation -->
+            <div class="news-item">
+                <div class="news-date">April 2024</div>
+                <h2 class="news-title">John Gribbin Presents at American Academy of Neurology Annual Meeting</h2>
+                
+                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                    <div>
+                        <p class="news-description">
+                            In April 2024, John Gribbin delivered a platform presentation at the American Academy of Neurology (AAN) Annual Meeting entitled "X Chromosome Analysis in Multiple Sclerosis for Identification of Genes Implicated in Female-biased Disease Presentation." His talk focused on computational analysis of X chromosome gene expression in multiple sclerosis, with the goal of identifying genes that may contribute to the well-recognized sex differences in MS prevalence and clinical course.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="/assets/images/news/john-aan-2024.jpg" alt="John Gribbin at AAN 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    </div>
+                </div>
+            </div>
+            
             <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
             
         </div>
