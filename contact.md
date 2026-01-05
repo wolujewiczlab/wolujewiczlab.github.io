@@ -184,19 +184,19 @@ permalink: /contact/
             <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
             <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
             
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+            <form action="mailto:paul.wolujewicz@quinnipiac.edu" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Name</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Name</label>
                     <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Email</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Email</label>
                     <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #333; margin-bottom: 6px;">Message</label>
+                    <label style="display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin-bottom: 6px;">Message</label>
                     <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
                 </div>
                 
@@ -278,22 +278,5 @@ permalink: /contact/
 
     </div>
 </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated graduate students interested in computational genomics, systems biology, and precision medicine. Please email with your CV and research interests.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Undergraduate Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Undergraduate research opportunities available for students interested in bioinformatics, genomics, and data science.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss potential research partnerships and projects.</p>
-            </div>
-        </div>
 
-    </div>
-</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
