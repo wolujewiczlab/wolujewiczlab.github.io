@@ -87,26 +87,66 @@ author_profile: false
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* MOBILE RESPONSIVE - Reposition DNA and fix menu */
-@media (max-width: 768px) {
-    /* Move DNA to left side and make smaller */
+/* RESPONSIVE LAYOUT - All Screen Sizes */
+
+/* Large screens (iMac, large desktop) - Keep DNA far right */
+@media (min-width: 1400px) {
     .nav-dna-container {
-        left: 15px !important;
+        right: 8% !important;
+    }
+}
+
+/* Medium screens (laptop) - Normal positioning */
+@media (min-width: 769px) and (max-width: 1399px) {
+    .nav-dna-container {
+        right: 5% !important;
+    }
+}
+
+/* Tablet and Mobile - Reposition DNA next to logo */
+@media (max-width: 768px) {
+    /* Position DNA right after the logo, not on top of it */
+    .nav-dna-container {
+        left: 180px !important;  /* Position after "Wolujewicz Lab" text */
         right: auto !important;
         width: 25px !important;
         height: 40px !important;
-        transform: translateY(-50%) scale(0.8) !important;
+        transform: translateY(-50%) scale(0.75) !important;
     }
     
-    /* Ensure hamburger menu is visible and on the right */
+    /* Ensure the site title has room */
+    .site-title {
+        max-width: 160px !important;
+        font-size: 16px !important;
+    }
+    
+    /* Force hamburger menu to show */
     .greedy-nav__toggle {
         display: block !important;
-        margin-left: auto;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
-    /* Hide visible links on mobile */
+    /* Hide all visible nav links on mobile */
     .greedy-nav .visible-links {
         display: none !important;
+    }
+    
+    /* Make sure hidden links list works */
+    .greedy-nav .hidden-links {
+        display: block !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .nav-dna-container {
+        left: 140px !important;  /* Closer for small screens */
+    }
+    
+    .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
     }
 }
 
