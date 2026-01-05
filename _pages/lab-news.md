@@ -399,7 +399,7 @@ permalink: /lab-news/
             <!-- NEWS ITEM: ASHG Annual Meeting -->
             <div class="news-item">
                 <div class="news-date">October 2025</div>
-                <h2 class="news-title">Wolujewicz Lab Members Present at ASHG Annual Meeting</h2>
+                <h2 class="news-title">Quinnipiac Netter Students Working in the Wolujewicz Lab Present at the 2025 ASHG Annual Meeting</h2>
                 
                 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                     <div>
@@ -524,8 +524,9 @@ permalink: /lab-news/
                 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                     <div>
                         <p class="news-description">
-                            Dr. Wolujewicz was invited to deliver a platform presentation at the 13th International Conference on Neural Tube Defects, an international forum bringing together leading investigators in developmental biology, genetics, and birth defects research. The presentation entitled, "Evidence for Pathogenic Expansions in NTD Case-Parent Trios," highlights ongoing work from the Wolujewicz Lab focused on the genetic architecture of neural tube defects using family-based genomic analyses. The invitation reflects the growing international recognition of the lab's contributions to neurogenetics and congenital disorder research.
+                            Dr. Wolujewicz was accepted to deliver a platform presentation at the 13th International Conference on Neural Tube Defects, an international forum bringing together leading investigators in developmental biology, genetics, and birth defects research. The presentation entitled, "Evidence for Pathogenic Expansions in NTD Case-Parent Trios," highlights ongoing work from the Wolujewicz Lab focused on the genetic architecture of neural tube defects using family-based genomic analyses. The acceptance reflects the growing international recognition of the lab's contributions to neurogenetics and congenital disorder research.
                         </p>
+                        <a href="https://birthdefectsresearch.org/" class="news-link" target="_blank">Visit BDRP website</a>
                     </div>
                     <div>
                         <img src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
