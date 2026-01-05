@@ -288,6 +288,65 @@ permalink: /lab-news/
         gap: 20px !important;
     }
 }
+
+/* RESPONSIVE DNA LAYOUT - All Screen Sizes */
+
+/* Large screens (iMac, large desktop) - Keep DNA far right */
+@media (min-width: 1400px) {
+    .nav-dna-container {
+        right: 8% !important;
+    }
+}
+
+/* Medium screens (laptop) - Normal positioning */
+@media (min-width: 769px) and (max-width: 1399px) {
+    .nav-dna-container {
+        right: 5% !important;
+    }
+}
+
+/* Tablet and Mobile - Reposition DNA next to logo */
+@media (max-width: 768px) {
+    /* Position DNA right after the logo, not on top of it */
+    .nav-dna-container {
+        left: 180px !important;
+        right: auto !important;
+        width: 25px !important;
+        height: 40px !important;
+        transform: translateY(-50%) scale(0.75) !important;
+    }
+    
+    .site-title {
+        max-width: 160px !important;
+        font-size: 16px !important;
+    }
+    
+    .greedy-nav__toggle {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .greedy-nav .visible-links {
+        display: none !important;
+    }
+    
+    .greedy-nav .hidden-links {
+        display: block !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .nav-dna-container {
+        left: 140px !important;
+    }
+    
+    .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
+    }
+}
 </style>
 
 <script>
@@ -558,3 +617,4 @@ permalink: /lab-news/
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
