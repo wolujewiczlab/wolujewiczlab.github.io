@@ -1,0 +1,1129 @@
+---
+layout: splash
+classes: wide
+title: "Research"
+permalink: /research/
+---
+
+<!-- Import Playfair Display Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* BLACK TOP NAVIGATION BAR */
+.masthead {
+    background-color: #000000 !important;
+    position: relative;
+}
+
+.greedy-nav {
+    background: #000000 !important;
+}
+
+/* DNA HELIX IN NAV BAR - Option 3 Cascading Wave */
+.nav-dna-container {
+    position: absolute;
+    right: 5%;  /* Positioned on right side, between "Contact" and edge */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 33px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.helix-nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.helix-nav .strand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.helix-nav .nucleotide {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.helix-nav .strand-left .nucleotide:nth-child(1) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: 0s, 0s;
+    top: 0%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(2) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -0.7s, -0.75s;
+    top: 14%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(3) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -1.4s, -1.5s;
+    top: 28%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(4) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -2.1s, -2.25s;
+    top: 42%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(5) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -2.8s, -3s;
+    top: 56%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(6) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -3.5s, -3.75s;
+    top: 70%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(7) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -4.2s, -4.5s;
+    top: 84%;
+}
+.helix-nav .strand-left .nucleotide:nth-child(8) { 
+    animation: sine-left-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -4.9s, -5.25s;
+    top: 98%;
+}
+
+.helix-nav .strand-right .nucleotide:nth-child(1) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: 0s, -5s;
+    top: 0%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(2) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -0.7s, -6.25s;
+    top: 14%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(3) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -1.4s, -7.5s;
+    top: 28%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(4) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -2.1s, -8.75s;
+    top: 42%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(5) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -2.8s, -10s;
+    top: 56%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(6) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -3.5s, -11.25s;
+    top: 70%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(7) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -4.2s, -12.5s;
+    top: 84%;
+}
+.helix-nav .strand-right .nucleotide:nth-child(8) { 
+    animation: sine-right-nav 5s ease-in-out infinite, color-chase-nav 6s linear infinite;
+    animation-delay: -4.9s, -13.75s;
+    top: 98%;
+}
+
+@keyframes color-chase-nav {
+    0%, 100% { 
+        background: radial-gradient(circle, #ec4899, #be185d); 
+        box-shadow: 0 0 20px rgba(236, 72, 153, 1);
+    }
+    16.66% { 
+        background: radial-gradient(circle, #3b82f6, #1e40af); 
+        box-shadow: 0 0 20px rgba(59, 130, 246, 1);
+    }
+    33.33% { 
+        background: radial-gradient(circle, #a855f7, #7c3aed); 
+        box-shadow: 0 0 20px rgba(168, 85, 247, 1);
+    }
+    50% { 
+        background: radial-gradient(circle, #06b6d4, #0891b2); 
+        box-shadow: 0 0 20px rgba(6, 182, 212, 1);
+    }
+    66.66% { 
+        background: radial-gradient(circle, #10b981, #059669); 
+        box-shadow: 0 0 20px rgba(16, 185, 129, 1);
+    }
+    83.33% { 
+        background: radial-gradient(circle, #f59e0b, #d97706); 
+        box-shadow: 0 0 20px rgba(245, 158, 11, 1);
+    }
+}
+
+@keyframes sine-left-nav {
+    0% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+}
+
+@keyframes sine-right-nav {
+    0% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    50% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+}
+
+.greedy-nav .visible-links {
+    margin-left: 30px;
+}
+
+.site-title,
+.site-subtitle {
+    color: #ffffff !important;
+}
+
+/* HIDE SIDEBAR */
+.sidebar,
+.author__avatar,
+.author__content,
+.author__urls-wrapper {
+    display: none !important;
+}
+
+.page {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+.page__content,
+main,
+.initial-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* BLACK INTRO SECTION - Full height like main banner */
+.research-intro {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background: #1a1a1a;
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    padding: 100px 40px;
+}
+
+.intro-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.2fr 500px;
+    gap: 100px;
+    align-items: center;
+}
+
+.intro-text h1 {
+    font-size: 52px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+}
+
+.intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    color: #d0d0d0;
+    margin-bottom: 35px;
+    font-family: 'Inter', sans-serif;
+}
+
+.research-themes {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, rgba(34, 168, 184, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
+    border-radius: 16px;
+}
+
+.research-themes h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #22a8b8;
+    margin-bottom: 25px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.theme-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.theme-item {
+    font-size: 16px;
+    color: #e0e0e0;
+    padding-left: 20px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.theme-item:before {
+    content: "▸";
+    color: #22a8b8;
+    position: absolute;
+    left: 0;
+}
+
+/* Right column - word cloud and animation */
+.intro-visual-column {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+}
+
+.intro-image-wrapper {
+    position: relative;
+    width: 85%;  /* Shrunk from 100% for higher-res appearance */
+}
+
+.intro-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 5px solid #ffffff;  /* White border */
+    box-shadow: 0 12px 32px rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+}
+
+.intro-image:hover {
+    box-shadow: 0 16px 40px rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+.reads-animation-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background: transparent;
+    position: relative;
+}
+
+.reads-animation {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* RESEARCH HIGHLIGHT BOXES - Stacked layout: text above, image below */
+.research-highlight-box {
+    margin-bottom: 40px;
+    padding: 50px 60px;
+    background: #ffffff;  /* Pure white instead of translucent */
+    border-radius: 12px;
+    border-left: 6px solid rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;  /* Stack vertically */
+    gap: 30px;
+}
+
+.highlight-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center images */
+    gap: 20px;
+    margin: 0;
+    width: 100%;
+    background: #ffffff;  /* White background */
+}
+
+.highlight-visual img {
+    max-width: 100%;
+    width: auto;  /* Let image determine width */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #ffffff;  /* White background for images */
+}
+
+.highlight-visual-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+    width: 100%;
+    background: #ffffff;  /* White background */
+}
+
+.highlight-visual-row img {
+    border-radius: 8px;
+    max-width: 100%;
+    width: auto;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    background: #ffffff;  /* White background for images */
+}
+
+/* Special sizing for metagenomics workflow */
+.workflow-large {
+    max-width: 100% !important;
+    width: 100% !important;  /* 2.5x larger - full width */
+}
+
+.highlight-text {
+    font-size: 18px;
+    line-height: 2;
+    color: #2a2a2a;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    width: 100%;  /* Full width for text */
+}
+
+.highlight-text p {
+    margin-bottom: 20px;
+}
+
+.highlight-text-small {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #2a2a2a;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    width: 100%;
+}
+
+.highlight-header {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.highlight-header h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+/* Logo containers - All same size at bottom */
+.weill-cornell-logo-container,
+.caes-logo-container,
+.bdrp-logo-container-bottom {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.weill-cornell-logo-container img,
+.caes-logo-container img,
+.bdrp-logo-container-bottom img {
+    max-width: 280px !important;  /* All logos same size as BDRP */
+}
+}
+
+
+.helix-elegant .strand {
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    top: 0;
+    border-radius: 3px;
+}
+
+.helix-elegant .strand-left {
+    left: 50%;
+    background: linear-gradient(to bottom, 
+        #2D5A7B 0%,      /* Deep academic blue */
+        #4A7BA7 25%,     /* Medium blue */
+        #6B9BC3 50%,     /* Lighter blue */
+        #4A7BA7 75%,     /* Medium blue */
+        #2D5A7B 100%     /* Deep academic blue */
+    );
+    animation: elegant-wave-left 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(45, 90, 123, 0.4);
+}
+
+.helix-elegant .strand-right {
+    right: 50%;
+    background: linear-gradient(to bottom, 
+        #5A7D8C 0%,      /* Muted teal-grey */
+        #7A9DAC 25%,     /* Light teal-grey */
+        #9DBDCC 50%,     /* Lighter teal-grey */
+        #7A9DAC 75%,     /* Light teal-grey */
+        #5A7D8C 100%     /* Muted teal-grey */
+    );
+    animation: elegant-wave-right 6s ease-in-out infinite;
+    box-shadow: 0 0 25px rgba(90, 125, 140, 0.3);
+}
+
+@keyframes elegant-wave-left {
+    0%, 100% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
+    50% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
+}
+
+@keyframes elegant-wave-right {
+    0%, 100% { 
+        transform: translateX(80px);
+        opacity: 1;
+    }
+    50% { 
+        transform: translateX(-80px);
+        opacity: 0.7;
+    }
+}
+
+/* TWO-TONE SECTIONS - Landau Lab Style */
+.two-tone-section {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 700px;
+    scroll-margin-top: 80px;
+}
+
+/* Alternate layout for different sections */
+.two-tone-section.reverse {
+    grid-template-columns: 55% 45%;
+}
+
+.tone-dark {
+    background: #8b2e3f; /* Deep burgundy like Landau */
+    padding: 60px 60px 60px 80px;  /* Reduced from 100px top/bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tone-light {
+    background: #f5ebe0; /* Warm cream like Landau */
+    padding: 50px 120px;  /* Reduced from 60px vertical */
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+/* Alternate colors for variety */
+.section-neurogenetics .tone-dark {
+    background: #1e3a5f; /* Navy blue */
+}
+
+.section-neurogenetics .tone-light {
+    background: #e8f2f7; /* Light blue */
+}
+
+.section-metagenomics .tone-dark {
+    background: #2d5a3b; /* Forest green */
+}
+
+.section-metagenomics .tone-light {
+    background: #f0f7f0; /* Light green */
+}
+
+/* Section Icons - Matching Homepage Style */
+.section-icon-circle {
+    font-size: 56px;
+    color: #d3d3d3;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid #22a8b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    background: transparent;
+    box-shadow: 0 2px 8px rgba(34, 168, 184, 0.15);
+}
+
+.section-icon-circle i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Context Boxes */
+.context-box {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #22a8b8;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+}
+
+.context-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+.context-box strong {
+    color: #22a8b8;
+    font-weight: 600;
+}
+
+.context-box em {
+    color: rgba(255, 255, 255, 0.75);
+    font-style: italic;
+}
+
+/* BDRP Logo - Right Side Below Circos */
+.bdrp-logo-container-right {
+    margin-top: 40px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bdrp-logo-container-right .bdrp-logo {
+    max-width: 280px;
+    height: auto;
+    opacity: 0.95;
+    transition: opacity 0.3s;
+    margin-bottom: 15px;
+}
+
+.bdrp-logo-container-right .bdrp-logo:hover {
+    opacity: 1;
+}
+
+.bdrp-caption {
+    font-size: 13px;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Tick Image Above Main Figure */
+.tick-image-container {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.tick-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: -0.5px;
+    line-height: 1.1;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 35px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.section-description {
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 40px;
+}
+
+/* Key Research Questions Box */
+.key-questions {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 8px;
+    border-left: 4px solid #22a8b8;
+    backdrop-filter: blur(10px);
+}
+
+.key-questions h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.key-questions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.key-questions li {
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 12px;
+    padding-left: 25px;
+    position: relative;
+    font-family: 'Inter', sans-serif;
+}
+
+.key-questions li:before {
+    content: "▸";
+    color: #22a8b8;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+}
+
+/* Overlapping image - Landau style */
+.overlapping-image {
+    width: 120%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: -10%;
+}
+
+.reverse .overlapping-image {
+    left: auto;
+    right: -10%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .intro-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .intro-image {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .two-tone-section,
+    .two-tone-section.reverse {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+    
+    .tone-dark,
+    .tone-light {
+        padding: 60px 40px;
+    }
+    
+    .overlapping-image,
+    .reverse .overlapping-image {
+        width: 100%;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+    }
+    
+    .theme-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .research-intro {
+        padding: 60px 20px;
+    }
+    
+    .intro-text h1 {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .tone-dark,
+    .tone-light {
+        padding: 50px 30px;
+    }
+}
+
+/* RESPONSIVE DNA LAYOUT - All Screen Sizes */
+
+/* Large screens (iMac, large desktop) */
+@media (min-width: 1400px) {
+    .nav-dna-container {
+        right: 8% !important;
+    }
+}
+
+/* Medium screens (laptop) */
+@media (min-width: 769px) and (max-width: 1399px) {
+    .nav-dna-container {
+        right: 5% !important;
+    }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 768px) {
+    .nav-dna-container {
+        left: 180px !important;
+        right: auto !important;
+        width: 25px !important;
+        height: 40px !important;
+        transform: translateY(-50%) scale(0.75) !important;
+    }
+    
+    .site-title {
+        max-width: 160px !important;
+        font-size: 16px !important;
+    }
+    
+    .greedy-nav__toggle {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .greedy-nav .visible-links {
+        display: none !important;
+    }
+    
+    .greedy-nav .hidden-links {
+        display: block !important;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 380px) {
+    .nav-dna-container {
+        left: 140px !important;
+    }
+    
+    .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
+    }
+}
+</style>
+
+<script>
+// Inject DNA Helix into Navigation Bar
+(function() {
+    'use strict';
+    
+    function addDNAToNav() {
+        const masthead = document.querySelector('.masthead');
+        if (!masthead) return;
+        
+        // Check if already added
+        if (document.querySelector('.nav-dna-container')) return;
+        
+        // Create DNA helix container
+        const dnaContainer = document.createElement('div');
+        dnaContainer.className = 'nav-dna-container';
+        dnaContainer.innerHTML = `
+            <div class="helix-nav">
+                <div class="strand strand-left">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+                <div class="strand strand-right">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+            </div>
+        `;
+        
+        masthead.appendChild(dnaContainer);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', addDNAToNav);
+    } else {
+        addDNAToNav();
+    }
+    
+    setTimeout(addDNAToNav, 100);
+    setTimeout(addDNAToNav, 500);
+})();
+</script>
+
+<!-- BLACK INTRO SECTION - Full Width, Full Height -->
+<div class="research-intro">
+    <div class="intro-content">
+        <div class="intro-text">
+            <h1>Research</h1>
+            <p>
+                Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology, investigating fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
+            </p>
+            
+            <div class="research-themes">
+                <h3>Core Research Themes</h3>
+                <div class="theme-list">
+                    <div class="theme-item">Genomic Medicine</div>
+                    <div class="theme-item">Machine Learning</div>
+                    <div class="theme-item">Systems Biology</div>
+                    <div class="theme-item">Metagenomics</div>
+                    <div class="theme-item">Neurobiology</div>
+                    <div class="theme-item">Public Health Surveillance</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column: Word Cloud + Animation -->
+        <div class="intro-visual-column">
+            <!-- Word Cloud Image with border -->
+            <div class="intro-image-wrapper">
+                <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
+            </div>
+            
+            <!-- Reads to Tree Animation -->
+            <div class="reads-animation-wrapper">
+                <img src="/assets/images/hero-reads-to-tree.svg" alt="Sequencing Analysis" class="reads-animation">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Neural Tube Defects Section - Burgundy/Cream -->
+<div id="neural-tube-defects" class="two-tone-section section-ntd">
+    <div class="tone-dark">
+        <!-- Matching Icon from Homepage -->
+        <div class="section-icon-circle">
+            <i class="fas fa-brain"></i>
+        </div>
+        
+        <h2 class="section-title">Neural Tube Defects</h2>
+        
+        <p class="section-subtitle">
+            Employing systems biology and integrative genomics to advance our understanding of structural birth defects affecting the developing brain and spinal cord
+        </p>
+        
+        <!-- Brief Background -->
+        <div class="context-box">
+            <p><strong>Background:</strong> Neural tube defects (NTDs) are among the most common and severe congenital malformations worldwide, affecting approximately 1 in 1,000 pregnancies. These disorders result from failure of the neural tube to close properly during early embryonic development (days 21-28 post-conception), leading to conditions including spina bifida, anencephaly, and encephalocele. While folic acid supplementation has reduced NTD prevalence, significant cases persist, highlighting the complex genetic and environmental etiology.</p>
+        </div>
+        
+        <p class="section-description">
+            Our laboratory investigates the complex molecular and genetic mechanisms underlying NTD pathogenesis using cutting-edge genomic technologies and computational approaches. We integrate population genomics, regulatory genomics, and systems-level network analysis to identify rare and common genetic variants contributing to NTD risk.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>What are the rare and common genetic variants that contribute to NTD risk?</li>
+                <li>How do gene regulatory networks govern neural tube closure during embryonic development?</li>
+                <li>Can machine learning predict NTD risk for precision genetic counseling?</li>
+                <li>What gene-environment interactions contribute to NTD etiology?</li>
+                <li>How can multi-omic integration reveal novel therapeutic targets?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="tone-light">
+        <!-- Case-Control Study (TOP) -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p>Using a case-control study design, we derived functional significance scores for rare non-protein-coding genomic variants that disrupt brain-specific transcription factor binding sites (TFBS) <em>(Wolujewicz et al, 2024)</em>.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 300px;">
+            </div>
+        </div>
+        
+        <!-- Case-Parent Trio (BOTTOM) -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p>Leveraging case-parent trio cohorts, we are systematically analyzing combinations of rare variation transmitted from parental alleles to fully elucidate the genetic architecture of NTDs and delineate contributions from inherited versus <em>de novo</em> variants.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis" style="max-width: 300px;">
+            </div>
+        </div>
+        
+        <!-- BDRP Logo at Bottom -->
+        <div class="bdrp-logo-container-bottom">
+            <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" style="max-width: 280px;">
+            <p style="font-size: 14px; color: #666; margin-top: 12px; line-height: 1.6;">The Society for Birth Defects Research and Prevention advances understanding of birth defects through interdisciplinary research and global collaboration.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Neurogenetic Disorders Section - Navy/Light Blue -->
+<div id="neurogenetic-disorders" class="two-tone-section section-neurogenetics reverse">
+    <div class="tone-light">
+        <!-- ASD: Extracellular Vesicle Analysis (TOP) -->
+        <div class="research-highlight-box">
+            <div class="highlight-header">
+                <h4>Autism Spectrum Disorder</h4>
+            </div>
+            <div class="highlight-text">
+                <p>Investigating multi-omic signatures in patient-derived extracellular vesicles and brain organoids to identify molecular subtypes and therapeutic targets.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 350px;">
+            </div>
+        </div>
+        
+        <!-- Weill Cornell Logo - BETWEEN ASD and MS -->
+        <div class="weill-cornell-logo-container" style="margin-top: 30px; margin-bottom: 30px;">
+            <img src="/assets/images/weill-cornell-logo.png" alt="Weill Cornell Medicine - Feil Family Brain & Mind Research Institute" style="max-width: 280px;">
+        </div>
+        
+        <!-- MS: Polygenic Risk Scores (BOTTOM) -->
+        <div class="research-highlight-box">
+            <div class="highlight-header">
+                <h4>Multiple Sclerosis</h4>
+            </div>
+            <div class="highlight-text">
+                <p>We are generating polygenic risk scores for MS patients using genome-wide SNPs. We are also working with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk" style="max-width: 300px;">
+            </div>
+        </div>
+    </div>
+    
+    <div class="tone-dark">
+        <!-- Matching Icon from Homepage -->
+        <div class="section-icon-circle">
+            <i class="fas fa-dna"></i>
+        </div>
+        
+        <h2 class="section-title">Neurogenetic Disorders</h2>
+        
+        <p class="section-subtitle">
+            Investigating the multi-omic signatures of complex neurogenetic conditions through advanced computational approaches and high-throughput genomic technologies
+        </p>
+        
+        <!-- Brief Background -->
+        <div class="context-box">
+            <p><strong>Background:</strong> Complex neurogenetic disorders affect millions globally and arise from intricate interactions between multiple genes and environmental factors. Multiple sclerosis (MS), affecting ~2.8 million people worldwide, involves autoimmune-mediated demyelination driven by both genetic susceptibility and environmental triggers. Autism spectrum disorder (ASD) affects 1 in 36 children in the U.S., with heritability estimates of 70-90% yet remarkable genetic heterogeneity involving hundreds of risk loci. Understanding these polygenic conditions requires integrative multi-omic approaches to decode disease mechanisms.</p>
+        </div>
+        
+        <p class="section-description">
+            Our research integrates genomic, transcriptomic, epigenomic, and proteomic data to decode molecular disease mechanisms and identify precision medicine strategies for conditions including multiple sclerosis, autism spectrum disorder, and schizophrenia.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>How can multi-omic integration reveal disease biomarkers and subtypes?</li>
+                <li>What machine learning approaches best classify neurogenetic disorders?</li>
+                <li>How does cellular heterogeneity contribute to disease manifestation?</li>
+                <li>What gene-gene and gene-environment networks drive pathogenesis?</li>
+                <li>Can computational models enable personalized therapeutic strategies?</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Public Health Metagenomics Section - Forest Green/Light Green -->
+<div id="public-health-metagenomics" class="two-tone-section section-metagenomics">
+    <div class="tone-dark">
+        <!-- Matching Icon from Homepage -->
+        <div class="section-icon-circle">
+            <i class="fas fa-viruses"></i>
+        </div>
+        
+        <h2 class="section-title">Public Health Metagenomics</h2>
+        
+        <p class="section-subtitle">
+            Leveraging long-read metagenomic sequencing to advance epidemiological surveillance of vector-borne pathogens and improve public health monitoring
+        </p>
+        
+        <!-- Brief Background -->
+        <div class="context-box">
+            <p><strong>Background:</strong> Vector-borne diseases account for more than 17% of all infectious diseases globally, causing over 700,000 deaths annually. In the northeastern United States, blacklegged ticks (<em>Ixodes scapularis</em>) transmit numerous pathogens including <em>Borrelia burgdorferi</em> (Lyme disease), <em>Anaplasma phagocytophilum</em>, <em>Babesia microti</em>, and emerging pathogens like <em>Borrelia miyamotoi</em> and Powassan virus. Climate change and expanding tick habitats are driving increased disease incidence, necessitating enhanced surveillance strategies.</p>
+        </div>
+        
+        <p class="section-description">
+            Our laboratory employs Oxford Nanopore long-read sequencing to generate comprehensive pathogen profiles from field-collected ticks and develop real-time surveillance strategies through partnerships with the Connecticut Agricultural Experiment Station and state health departments. This work enables rapid pathogen detection, community composition analysis, and public health decision-making.
+        </p>
+        
+        <div class="key-questions">
+            <h4>Key Research Questions</h4>
+            <ul>
+                <li>What is the diversity of tick-borne pathogen communities in Connecticut?</li>
+                <li>How can bioinformatics enable rapid pathogen detection and classification?</li>
+                <li>What temporal and spatial patterns drive pathogen prevalence?</li>
+                <li>Can environmental and climate data predict pathogen emergence?</li>
+                <li>How do we translate genomic surveillance into public health action?</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="tone-light">
+        <!-- Workflow Overview -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p>Working closely with the <strong>Connecticut Agricultural Experiment Station (CAES)</strong>, we are investigating the role of metagenomics for vector-borne public health surveillance. We've established Nanopore-based workflows that can detect pathogens as well as report the microbial diversity present within tick genomes.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/metagenomics-workflow.png" alt="Metagenomic Workflow" class="workflow-large">
+            </div>
+        </div>
+        
+        <!-- Microbial Diversity -->
+        <div class="research-highlight-box">
+            <div class="highlight-text">
+                <p><strong>Microbial diversity across 72 <em>Ixodes scapularis</em> specimens.</strong> We are currently investigating de novo assembly for these pathogens as well as looking into transcriptomic and metatranscriptomic analyses.</p>
+            </div>
+            <div class="highlight-visual">
+                <img src="/assets/images/metagenomics-diversity.png" alt="Microbial Diversity" style="max-width: 400px;">
+            </div>
+        </div>
+        
+        <!-- CAES Logo at Bottom (Same size as BDRP) with Description -->
+        <div class="caes-logo-container">
+            <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 280px;">
+            <p style="font-size: 14px; color: #666; margin-top: 12px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto;">CAES is a nationally recognized public research institution that conducts applied and basic scientific investigations in agriculture, public health, and environmental sciences, including statewide surveillance and research on vector-borne diseases.</p>
+        </div>
+    </div>
+</div>
