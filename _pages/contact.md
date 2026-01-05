@@ -167,20 +167,36 @@ permalink: /contact/
     <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
 </div>
 
-<!-- MAP SECTION - Working Google Maps showing Quinnipiac area -->
-<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0;">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23812.892445678!2d-72.90541234567891!3d41.40498765432109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7d9e3a6b3c5d7%3A0x8e6f5d4c3b2a1!2sQuinnipiac%20University!5e0!3m2!1sen!2sus!4v1234567890123"
-        width="100%" 
-        height="500" 
-        style="border:0;" 
-        allowfullscreen="" 
+<!-- MAP SECTION - Interactive Google Maps with Embedded Markers -->
+<div style="width: 100%; height: 500px; position: relative; margin-bottom: 0; overflow: hidden;">
+    <iframe
+        width="100%"
+        height="500"
+        style="border:0;"
         loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps/embed/v1/view?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&center=41.405,-72.87&zoom=11&maptype=roadmap">
     </iframe>
     
+    <!-- Mount Carmel Pin Overlay -->
+    <div style="position: absolute; top: 32%; left: 48%; transform: translate(-50%, -50%); pointer-events: none;">
+        <div style="position: relative;">
+            <div style="width: 30px; height: 30px; background: #dc2626; border: 3px solid white; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>
+            <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 8px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; font-size: 11px; font-weight: 600;">Mount Carmel</div>
+        </div>
+    </div>
+    
+    <!-- North Haven Pin Overlay -->
+    <div style="position: absolute; top: 68%; left: 52%; transform: translate(-50%, -50%); pointer-events: none;">
+        <div style="position: relative;">
+            <div style="width: 30px; height: 30px; background: #2563eb; border: 3px solid white; border-radius: 50%; box-shadow: 0 4px 8px rgba(0,0,0,0.3);"></div>
+            <div style="position: absolute; top: -25px; left: 50%; transform: translateX(-50%); background: white; padding: 4px 8px; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,0.2); white-space: nowrap; font-size: 11px; font-weight: 600;">North Haven</div>
+        </div>
+    </div>
+    
     <!-- Campus Legend -->
-    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); z-index: 10;">
+    <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(255, 255, 255, 0.95); padding: 15px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); pointer-events: auto;">
         <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
             <div style="width: 12px; height: 12px; background: #dc2626; border-radius: 50%;"></div>
             <span style="font-size: 13px; font-weight: 600; color: #1a1a1a;">Mount Carmel Campus</span>
@@ -255,6 +271,31 @@ permalink: /contact/
             <div style="margin-bottom: 20px;">
                 <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
                 <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss research partnerships.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+            </div>
+        </div>
+
+        <!-- Prospective Members Card -->
+        <div class="contact-card" style="background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);">
+            <h2>Join Our Lab</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Graduate Students</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated graduate students interested in computational genomics, systems biology, and precision medicine. Please email with your CV and research interests.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Undergraduate Students</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Undergraduate research opportunities available for students interested in bioinformatics, genomics, and data science.</p>
+            </div>
+            
+            <div style="margin-bottom: 20px;">
+                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
+                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss potential research partnerships and projects.</p>
             </div>
         </div>
 
