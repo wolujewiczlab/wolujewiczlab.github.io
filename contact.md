@@ -184,20 +184,20 @@ permalink: /contact/
             <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
             <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
             
-            <form action="mailto:paul.wolujewicz@quinnipiac.edu" method="post" enctype="text/plain" style="display: flex; flex-direction: column; gap: 20px;">
+            <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Name</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                    <input type="text" id="senderName" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Email</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
+                    <input type="email" id="senderEmail" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
                 </div>
                 
                 <div>
                     <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Message</label>
-                    <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
+                    <textarea id="messageText" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
                 </div>
                 
                 <button type="submit" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
@@ -205,6 +205,25 @@ permalink: /contact/
             
             <p style="font-size: 14px; color: #999; margin-top: 20px;">Or email directly: <a href="mailto:paul.wolujewicz@quinnipiac.edu" style="color: #22a8b8; text-decoration: none;">paul.wolujewicz@quinnipiac.edu</a></p>
         </div>
+        
+        <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('senderName').value;
+            const email = document.getElementById('senderEmail').value;
+            const message = document.getElementById('messageText').value;
+            
+            const subject = encodeURIComponent('Website Contact Form Submission');
+            const body = encodeURIComponent(
+                'Name: ' + name + '\n' +
+                'Email: ' + email + '\n\n' +
+                'Message:\n' + message
+            );
+            
+            window.location.href = 'mailto:paul.wolujewicz@quinnipiac.edu?subject=' + subject + '&body=' + body;
+        });
+        </script>
         
         <!-- RIGHT: QU Image -->
         <div>
