@@ -100,24 +100,29 @@ author_profile: false
 @media (max-width: 768px) {
     /* Position DNA right after the logo, not on top of it */
     .nav-dna-container {
-        left: 180px !important;  /* Position after "Wolujewicz Lab" text */
+        left: auto !important;
+        right: 70px !important;  /* Position to left of hamburger menu */
         right: auto !important;
         width: 25px !important;
         height: 40px !important;
-        transform: translateY(-50%) scale(0.75) !important;
+        transform: translateY(-50%) scale(0.65) !important;
+        z-index: 50 !important;
     }
     
     /* Ensure the site title has room */
     .site-title {
-        max-width: 160px !important;
-        font-size: 16px !important;
+        max-width: 180px !important;
+        font-size: 15px !important;
     }
     
     /* Force hamburger menu to show */
     .greedy-nav__toggle {
         display: block !important;
+        z-index: 300 !important;
         opacity: 1 !important;
         visibility: visible !important;
+        z-index: 200 !important;
+        position: relative !important;
     }
     
     /* Hide all visible nav links on mobile */
@@ -128,6 +133,7 @@ author_profile: false
     /* Make sure hidden links list works */
     .greedy-nav .hidden-links {
         display: block !important;
+        z-index: 300 !important;
     }
 }
 
