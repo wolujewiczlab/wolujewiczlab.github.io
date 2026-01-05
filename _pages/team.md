@@ -16,6 +16,84 @@ author_profile: false
     background: #000000 !important;
 }
 
+/* DNA HELIX IN NAV BAR */
+.nav-dna-container {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 33px;
+    height: 50px;
+    pointer-events: none;
+    z-index: 100;
+}
+
+.helix-nav {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.helix-nav .strand {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.helix-nav .nucleotide {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    left: 50%;
+}
+
+.helix-nav .strand-left .nucleotide:nth-child(1) { top: 0%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: 0s, 0s; }
+.helix-nav .strand-left .nucleotide:nth-child(2) { top: 14%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -0.7s, -0.75s; }
+.helix-nav .strand-left .nucleotide:nth-child(3) { top: 28%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -1.4s, -1.5s; }
+.helix-nav .strand-left .nucleotide:nth-child(4) { top: 42%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -2.1s, -2.25s; }
+.helix-nav .strand-left .nucleotide:nth-child(5) { top: 56%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -2.8s, -3s; }
+.helix-nav .strand-left .nucleotide:nth-child(6) { top: 70%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -3.5s, -3.75s; }
+.helix-nav .strand-left .nucleotide:nth-child(7) { top: 84%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -4.2s, -4.5s; }
+.helix-nav .strand-left .nucleotide:nth-child(8) { top: 98%; animation: sine-left-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -4.9s, -5.25s; }
+
+.helix-nav .strand-right .nucleotide:nth-child(1) { top: 0%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: 0s, -3s; }
+.helix-nav .strand-right .nucleotide:nth-child(2) { top: 14%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -0.7s, -3.75s; }
+.helix-nav .strand-right .nucleotide:nth-child(3) { top: 28%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -1.4s, -4.5s; }
+.helix-nav .strand-right .nucleotide:nth-child(4) { top: 42%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -2.1s, -5.25s; }
+.helix-nav .strand-right .nucleotide:nth-child(5) { top: 56%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -2.8s, 0s; }
+.helix-nav .strand-right .nucleotide:nth-child(6) { top: 70%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -3.5s, -0.75s; }
+.helix-nav .strand-right .nucleotide:nth-child(7) { top: 84%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -4.2s, -1.5s; }
+.helix-nav .strand-right .nucleotide:nth-child(8) { top: 98%; animation: sine-right-nav 5s ease-in-out infinite, color-chase 6s linear infinite; animation-delay: -4.9s, -2.25s; }
+
+@keyframes color-chase {
+    0%, 100% { background: radial-gradient(circle, #ec4899, #be185d); box-shadow: 0 0 20px rgba(236, 72, 153, 1); }
+    16.66% { background: radial-gradient(circle, #3b82f6, #1e40af); box-shadow: 0 0 20px rgba(59, 130, 246, 1); }
+    33.33% { background: radial-gradient(circle, #a855f7, #7c3aed); box-shadow: 0 0 20px rgba(168, 85, 247, 1); }
+    50% { background: radial-gradient(circle, #06b6d4, #0891b2); box-shadow: 0 0 20px rgba(6, 182, 212, 1); }
+    66.66% { background: radial-gradient(circle, #10b981, #059669); box-shadow: 0 0 20px rgba(16, 185, 129, 1); }
+    83.33% { background: radial-gradient(circle, #f59e0b, #d97706); box-shadow: 0 0 20px rgba(245, 158, 11, 1); }
+}
+
+@keyframes sine-left-nav {
+    0% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    100% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+}
+
+@keyframes sine-right-nav {
+    0% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+    50% { transform: translateX(-50%) translateX(-9px) scale(0.8); opacity: 0.6; }
+    100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
+}
+
+/* MOBILE RESPONSIVE - Hide DNA on mobile to prevent overlap */
+@media (max-width: 768px) {
+    .nav-dna-container {
+        display: none !important;
+    }
+}
+
 /* TEAM PAGE - PROFESSIONAL & SLEEK */
 
 /* Remove default spacing */
@@ -570,38 +648,87 @@ author_profile: false
                 </a>
             </div>
         </div>
-        
-        <!-- INSTITUTIONAL PHOTO GALLERY - Under Collaborators -->
-        <div style="margin-top: 60px;">
-            <div style="display: grid; grid-template-columns: 1fr; gap: 25px;">
-                
-                <!-- Quinnipiac University -->
-                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                    <img src="/assets/images/team/quinnipiac-campus.jpg" alt="Quinnipiac University" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;">
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Quinnipiac University</p>
-                    </div>
+    </div>
+    
+    <!-- INSTITUTIONAL PHOTO GALLERY -->
+    <div style="max-width: 1200px; margin: 80px auto 60px auto; padding: 0 40px;">
+        <div class="institutional-photos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+            
+            <!-- Quinnipiac University -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/quinnipiac-campus.jpg" alt="Quinnipiac University" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Quinnipiac University</p>
                 </div>
-                
-                <!-- Weill Cornell Medicine -->
-                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                    <img src="/assets/images/team/weill-cornell-campus.jpg" alt="Weill Cornell Medicine" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;">
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Weill Cornell Medicine</p>
-                    </div>
-                </div>
-                
-                <!-- Connecticut Agricultural Experiment Station -->
-                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                    <img src="/assets/images/team/caes-building.jpg" alt="Connecticut Agricultural Experiment Station" style="width: 100%; aspect-ratio: 1/1; object-fit: cover; display: block;">
-                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5); line-height: 1.3;">Connecticut Agricultural<br>Experiment Station</p>
-                    </div>
-                </div>
-                
             </div>
+            
+            <!-- Weill Cornell Medicine -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/weill-cornell-campus.jpg" alt="Weill Cornell Medicine" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Weill Cornell Medicine</p>
+                </div>
+            </div>
+            
+            <!-- Connecticut Agricultural Experiment Station -->
+            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+                <img src="/assets/images/team/caes-building.jpg" alt="Connecticut Agricultural Experiment Station" style="width: 100%; height: 280px; object-fit: cover; display: block;">
+                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Connecticut Agricultural<br>Experiment Station</p>
+                </div>
+            </div>
+            
         </div>
     </div>
     
 </div>
 </div>
+
+<script>
+(function() {
+    function addDNAToNav() {
+        const masthead = document.querySelector('.masthead');
+        if (!masthead || masthead.querySelector('.nav-dna-container')) {
+            return;
+        }
+        
+        const dnaContainer = document.createElement('div');
+        dnaContainer.className = 'nav-dna-container';
+        dnaContainer.innerHTML = `
+            <div class="helix-nav">
+                <div class="strand strand-left">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+                <div class="strand strand-right">
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                    <div class="nucleotide"></div>
+                </div>
+            </div>
+        `;
+        
+        masthead.appendChild(dnaContainer);
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', addDNAToNav);
+    } else {
+        addDNAToNav();
+    }
+    
+    setTimeout(addDNAToNav, 100);
+    setTimeout(addDNAToNav, 500);
+})();
+</script>
