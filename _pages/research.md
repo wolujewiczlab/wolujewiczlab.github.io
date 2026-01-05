@@ -783,14 +783,7 @@ main,
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
 
-/* Large screens (iMac, large desktop) */
-@media (min-width: 1400px) {
-    .nav-dna-container {
-        right: 8% !important;
-    }
-}
-
-/* Medium screens (laptop) */
+/* Medium screens (laptop) - Keep default positioning */
 @media (min-width: 769px) and (max-width: 1399px) {
     .nav-dna-container {
         right: 5% !important;
