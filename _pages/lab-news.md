@@ -441,6 +441,7 @@ permalink: /lab-news/
                         <p class="news-description">
                             Dr. Wolujewicz was approved for Regular Membership in the Society for Birth Defects Research and Prevention (BDRP). This appointment reflects the lab's ongoing contributions to research on neural tube defects and other congenital disorders, and provides an important platform for scientific exchange, collaboration, and leadership within the birth defects research community.
                         </p>
+                        <a href="https://birthdefectsresearch.org/" class="news-link" target="_blank">Visit BDRP website</a>
                     </div>
                     <div>
                         <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" style="max-width: 280px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
@@ -526,7 +527,6 @@ permalink: /lab-news/
                         <p class="news-description">
                             Dr. Wolujewicz was accepted to deliver a platform presentation at the 13th International Conference on Neural Tube Defects, an international forum bringing together leading investigators in developmental biology, genetics, and birth defects research. The presentation entitled, "Evidence for Pathogenic Expansions in NTD Case-Parent Trios," highlights ongoing work from the Wolujewicz Lab focused on the genetic architecture of neural tube defects using family-based genomic analyses. The acceptance reflects the growing international recognition of the lab's contributions to neurogenetics and congenital disorder research.
                         </p>
-                        <a href="https://birthdefectsresearch.org/" class="news-link" target="_blank">Visit BDRP website</a>
                     </div>
                     <div>
                         <img src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
