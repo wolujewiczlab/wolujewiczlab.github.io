@@ -168,7 +168,6 @@ permalink: /publications/
     
     .site-title {
     
-    /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links {
         display: none !important;
     }
@@ -198,26 +197,6 @@ permalink: /publications/
 })();
         }
     });
-    // MOBILE MENU FIX - Force dropdown to show
-    (function() {
-        function initMobileMenu() {
-            const toggle = document.querySelector(".greedy-nav__toggle");
-            const nav = document.querySelector(".greedy-nav");
-            const hiddenLinks = document.querySelector(".greedy-nav .hidden-links");
-            
-            if (!toggle || !hiddenLinks) return;
-            
-            // Ensure hidden links are properly set up
-            if (window.innerWidth <= 768) {
-                // Make sure all links are in the hidden-links container
-                const visibleLinks = document.querySelectorAll(".greedy-nav .visible-links a");
-                visibleLinks.forEach(link => {
-                    const li = document.createElement("li");
-                    li.style.listStyle = "none";
-                    const clone = link.cloneNode(true);
-                    li.appendChild(clone);
-                    hiddenLinks.appendChild(li);
-                });
                 
                 // Handle toggle click
                 toggle.addEventListener("click", function(e) {
