@@ -796,6 +796,7 @@ main,
         width: 25px !important;
         height: 40px !important;
         z-index: 50 !important;
+        display: none !important;  /* Hide DNA on mobile */
     }
     
     .site-title {

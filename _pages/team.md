@@ -107,6 +107,7 @@ author_profile: false
         height: 40px !important;
         transform: translateY(-50%) scale(0.65) !important;
         z-index: 50 !important;
+        display: none !important;  /* Hide DNA on mobile */
     }
     
     /* Ensure the site title has room */
