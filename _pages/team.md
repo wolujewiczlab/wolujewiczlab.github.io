@@ -101,7 +101,7 @@ author_profile: false
     /* Position DNA right after the logo, not on top of it */
     .nav-dna-container {
         left: auto !important;
-        right: 70px !important;  /* Position to left of hamburger menu */
+        right: 55px !important;  /* Top-right corner, left of hamburger */
         right: auto !important;
         width: 25px !important;
         height: 40px !important;
@@ -115,26 +115,11 @@ author_profile: false
         font-size: 15px !important;
     }
     
-    /* Force hamburger menu to show */
-    .greedy-nav__toggle {
-        display: block !important;
-        z-index: 300 !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        z-index: 200 !important;
-        position: relative !important;
-    }
+    
     
     /* Hide all visible nav links on mobile */
-    .greedy-nav .visible-links {
-        display: none !important;
-    }
     
     /* Make sure hidden links list works */
-    .greedy-nav .hidden-links {
-        display: block !important;
-        z-index: 300 !important;
-    }
 }
 
 /* Extra small phones */
@@ -703,36 +688,36 @@ author_profile: false
                 </a>
             </div>
         </div>
-    </div>
-    
-    <!-- INSTITUTIONAL PHOTO GALLERY -->
-    <div style="max-width: 1200px; margin: 80px auto 60px auto; padding: 0 40px;">
-        <div class="institutional-photos" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
-            
-            <!-- Quinnipiac University -->
-            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                <img src="/assets/images/team/quinnipiac-campus.jpg" alt="Quinnipiac University" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Quinnipiac University</p>
+        
+        <!-- INSTITUTIONAL PHOTO GALLERY - In Right Column -->
+        <div style="margin-top: 60px;">
+            <div style="display: flex; flex-direction: column; gap: 25px;">
+                
+                <!-- Quinnipiac University -->
+                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); aspect-ratio: 1/1;">
+                    <img src="/assets/images/team/quinnipiac-campus.jpg" alt="Quinnipiac University" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Quinnipiac University</p>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Weill Cornell Medicine -->
-            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                <img src="/assets/images/team/weill-cornell-campus.jpg" alt="Weill Cornell Medicine" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Weill Cornell Medicine</p>
+                
+                <!-- Weill Cornell Medicine -->
+                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); aspect-ratio: 1/1;">
+                    <img src="/assets/images/team/weill-cornell-campus.jpg" alt="Weill Cornell Medicine" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Weill Cornell Medicine</p>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Connecticut Agricultural Experiment Station -->
-            <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
-                <img src="/assets/images/team/caes-building.jpg" alt="Connecticut Agricultural Experiment Station" style="width: 100%; height: 280px; object-fit: cover; display: block;">
-                <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
-                    <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Connecticut Agricultural<br>Experiment Station</p>
+                
+                <!-- Connecticut Agricultural Experiment Station -->
+                <div style="position: relative; overflow: hidden; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); aspect-ratio: 1/1;">
+                    <img src="/assets/images/team/caes-building.jpg" alt="Connecticut Agricultural Experiment Station" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); padding: 20px 15px 15px 15px;">
+                        <p style="color: #ffffff; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; margin: 0; text-shadow: 0 2px 4px rgba(0,0,0,0.5);">Connecticut Agricultural<br>Experiment Station</p>
+                    </div>
                 </div>
+                
             </div>
-            
         </div>
     </div>
     
