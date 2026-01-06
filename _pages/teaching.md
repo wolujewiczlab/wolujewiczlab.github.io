@@ -449,7 +449,7 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2025-26</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Critical examination of health inequities and genomics in precision public health.</p>
+                    <p class="course-description">Critical examination of health inequities in clinical and public health settings.</p>
                 </div>
             </div>
             
