@@ -117,7 +117,9 @@ permalink: /contact/
     .site-title {
     
     /* Force all nav links into hamburger menu */
-    .greedy-nav .visible-links {
+    .greedy-nav .visible-links,
+    .greedy-nav .visible-links li,
+    .greedy-nav .visible-links a {
         display: none !important;
     }
     
@@ -232,42 +234,6 @@ permalink: /contact/
     setTimeout(addDNAToNav, 100);
     setTimeout(addDNAToNav, 500);
 })();
-        }
-    });
-                
-                // Handle toggle click
-                toggle.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isHidden = hiddenLinks.classList.contains("hidden");
-                    
-                    if (isHidden) {
-                        hiddenLinks.classList.remove("hidden");
-                        hiddenLinks.style.display = "block";
-                        hiddenLinks.style.position = "absolute";
-                        hiddenLinks.style.top = "100%";
-                        hiddenLinks.style.right = "0";
-                        hiddenLinks.style.background = "#000";
-                        hiddenLinks.style.padding = "10px 0";
-                        hiddenLinks.style.minWidth = "200px";
-                        hiddenLinks.style.zIndex = "1000";
-                    } else {
-                        hiddenLinks.classList.add("hidden");
-                        hiddenLinks.style.display = "none";
-                    }
-                });
-            }
-        }
-        
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", initMobileMenu);
-        } else {
-            initMobileMenu();
-        }
-        
-        setTimeout(initMobileMenu, 500);
-    })();
 </script>
 
 <!-- PAGE HEADER - Grey Background with Subtitle Only -->
