@@ -302,7 +302,7 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2025</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, DNA/RNA sequencing workflows, and machine learning applications in precision medicine.</p>
+                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, and DNA/RNA sequencing workflows.</p>
                 </div>
             </div>
             
