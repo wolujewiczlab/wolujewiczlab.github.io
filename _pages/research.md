@@ -177,9 +177,6 @@ permalink: /research/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-.greedy-nav .visible-links {
-    margin-left: 30px;
-}
 
 .site-title,
 .site-subtitle {
@@ -794,7 +791,7 @@ main,
 @media (max-width: 768px) {
     .nav-dna-container {
         left: auto !important;
-        right: 70px !important;  /* Position to left of hamburger menu */
+        right: 55px !important;  /* Top-right corner, left of hamburger */
         transform: translateY(-50%) scale(0.65) !important;
         width: 25px !important;
         height: 40px !important;
@@ -807,27 +804,55 @@ main,
     }
     
     .greedy-nav__toggle {
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         display: block !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         opacity: 1 !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         visibility: visible !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         z-index: 200 !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
         position: relative !important;
+    
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
+        display: none !important;
+    }
     }
     
-    .greedy-nav .visible-links {
+    /* Hide individual nav links on mobile */
+    .greedy-nav .visible-links li {
         display: none !important;
     }
     
-    .greedy-nav .hidden-links {
-        display: block !important;
-        z-index: 300 !important;
-    }
+    
 }
 
 /* Extra small phones */
 @media (max-width: 380px) {
     .nav-dna-container {
-        right: 60px !important;  /* Closer to hamburger on small screens */
+        right: 50px !important;  /* Closer to edge on small screens */
         transform: translateY(-50%) scale(0.55) !important;
     }
     
