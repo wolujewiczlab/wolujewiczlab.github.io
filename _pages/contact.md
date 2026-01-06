@@ -115,6 +115,15 @@ permalink: /contact/
     
     /* Ensure the site title has room */
     .site-title {
+    
+    /* Force all nav links into hamburger menu */
+    .greedy-nav .visible-links {
+        display: none !important;
+    }
+    
+    .greedy-nav__toggle {
+        display: block !important;
+    }
         max-width: 180px !important;
         font-size: 15px !important;
     }
@@ -133,6 +142,15 @@ permalink: /contact/
     }
     
     .site-title {
+    
+    /* Force all nav links into hamburger menu */
+    .greedy-nav .visible-links {
+        display: none !important;
+    }
+    
+    .greedy-nav__toggle {
+        display: block !important;
+    }
         max-width: 120px !important;
         font-size: 14px !important;
     }
@@ -215,21 +233,62 @@ permalink: /contact/
     setTimeout(addDNAToNav, 100);
     setTimeout(addDNAToNav, 500);
 })();
-    // Mobile menu visibility fix
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.querySelector('.greedy-nav__toggle');
-        const hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
-        
-        if (toggle && hiddenLinks) {
-            toggle.addEventListener('click', function(e) {
-                // Force menu to show on mobile
-                if (window.innerWidth <= 768) {
-                    hiddenLinks.classList.toggle('hidden');
-                    hiddenLinks.style.display = hiddenLinks.style.display === 'block' ? 'none' : 'block';
-                }
-            });
         }
     });
+    // MOBILE MENU FIX - Force dropdown to show
+    (function() {
+        function initMobileMenu() {
+            const toggle = document.querySelector(".greedy-nav__toggle");
+            const nav = document.querySelector(".greedy-nav");
+            const hiddenLinks = document.querySelector(".greedy-nav .hidden-links");
+            
+            if (!toggle || !hiddenLinks) return;
+            
+            // Ensure hidden links are properly set up
+            if (window.innerWidth <= 768) {
+                // Make sure all links are in the hidden-links container
+                const visibleLinks = document.querySelectorAll(".greedy-nav .visible-links a");
+                visibleLinks.forEach(link => {
+                    const li = document.createElement("li");
+                    li.style.listStyle = "none";
+                    const clone = link.cloneNode(true);
+                    li.appendChild(clone);
+                    hiddenLinks.appendChild(li);
+                });
+                
+                // Handle toggle click
+                toggle.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isHidden = hiddenLinks.classList.contains("hidden");
+                    
+                    if (isHidden) {
+                        hiddenLinks.classList.remove("hidden");
+                        hiddenLinks.style.display = "block";
+                        hiddenLinks.style.position = "absolute";
+                        hiddenLinks.style.top = "100%";
+                        hiddenLinks.style.right = "0";
+                        hiddenLinks.style.background = "#000";
+                        hiddenLinks.style.padding = "10px 0";
+                        hiddenLinks.style.minWidth = "200px";
+                        hiddenLinks.style.zIndex = "1000";
+                    } else {
+                        hiddenLinks.classList.add("hidden");
+                        hiddenLinks.style.display = "none";
+                    }
+                });
+            }
+        }
+        
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initMobileMenu);
+        } else {
+            initMobileMenu();
+        }
+        
+        setTimeout(initMobileMenu, 500);
+    })();
 </script>
 
 <!-- PAGE HEADER - Grey Background with Subtitle Only -->
@@ -339,6 +398,60 @@ permalink: /contact/
                 submitBtn.disabled = false;
             }
         });
+    // MOBILE MENU FIX - Force dropdown to show
+    (function() {
+        function initMobileMenu() {
+            const toggle = document.querySelector(".greedy-nav__toggle");
+            const nav = document.querySelector(".greedy-nav");
+            const hiddenLinks = document.querySelector(".greedy-nav .hidden-links");
+            
+            if (!toggle || !hiddenLinks) return;
+            
+            // Ensure hidden links are properly set up
+            if (window.innerWidth <= 768) {
+                // Make sure all links are in the hidden-links container
+                const visibleLinks = document.querySelectorAll(".greedy-nav .visible-links a");
+                visibleLinks.forEach(link => {
+                    const li = document.createElement("li");
+                    li.style.listStyle = "none";
+                    const clone = link.cloneNode(true);
+                    li.appendChild(clone);
+                    hiddenLinks.appendChild(li);
+                });
+                
+                // Handle toggle click
+                toggle.addEventListener("click", function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isHidden = hiddenLinks.classList.contains("hidden");
+                    
+                    if (isHidden) {
+                        hiddenLinks.classList.remove("hidden");
+                        hiddenLinks.style.display = "block";
+                        hiddenLinks.style.position = "absolute";
+                        hiddenLinks.style.top = "100%";
+                        hiddenLinks.style.right = "0";
+                        hiddenLinks.style.background = "#000";
+                        hiddenLinks.style.padding = "10px 0";
+                        hiddenLinks.style.minWidth = "200px";
+                        hiddenLinks.style.zIndex = "1000";
+                    } else {
+                        hiddenLinks.classList.add("hidden");
+                        hiddenLinks.style.display = "none";
+                    }
+                });
+            }
+        }
+        
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", initMobileMenu);
+        } else {
+            initMobileMenu();
+        }
+        
+        setTimeout(initMobileMenu, 500);
+    })();
         </script>
         
         <!-- RIGHT: QU Image -->
