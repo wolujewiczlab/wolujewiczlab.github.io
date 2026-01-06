@@ -771,4 +771,19 @@ author_profile: false
     setTimeout(addDNAToNav, 100);
     setTimeout(addDNAToNav, 500);
 })();
+    // Mobile menu visibility fix
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.greedy-nav__toggle');
+        const hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
+        
+        if (toggle && hiddenLinks) {
+            toggle.addEventListener('click', function(e) {
+                // Force menu to show on mobile
+                if (window.innerWidth <= 768) {
+                    hiddenLinks.classList.toggle('hidden');
+                    hiddenLinks.style.display = hiddenLinks.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        }
+    });
 </script>

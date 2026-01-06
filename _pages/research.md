@@ -803,48 +803,7 @@ main,
         font-size: 15px !important;
     }
     
-    .greedy-nav__toggle {
     
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-        display: block !important;
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-        opacity: 1 !important;
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-        visibility: visible !important;
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-        z-index: 200 !important;
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-        position: relative !important;
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
-    }
-    
-    /* Hide individual nav links on mobile */
-    .greedy-nav .visible-links li {
-        display: none !important;
-    }
     
     
 }
@@ -915,6 +874,21 @@ main,
     setTimeout(addDNAToNav, 100);
     setTimeout(addDNAToNav, 500);
 })();
+    // Mobile menu visibility fix
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggle = document.querySelector('.greedy-nav__toggle');
+        const hiddenLinks = document.querySelector('.greedy-nav .hidden-links');
+        
+        if (toggle && hiddenLinks) {
+            toggle.addEventListener('click', function(e) {
+                // Force menu to show on mobile
+                if (window.innerWidth <= 768) {
+                    hiddenLinks.classList.toggle('hidden');
+                    hiddenLinks.style.display = hiddenLinks.style.display === 'block' ? 'none' : 'block';
+                }
+            });
+        }
+    });
 </script>
 
 <!-- BLACK INTRO SECTION - Full Width, Full Height -->
