@@ -198,13 +198,6 @@ permalink: /teaching/
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
 
-/* Large screens (iMac, large desktop) */
-@media (min-width: 1400px) {
-    .nav-dna-container {
-        right: 8% !important;
-    }
-}
-
 /* Medium screens (laptop) */
 @media (min-width: 769px) and (max-width: 1399px) {
     .nav-dna-container {
@@ -302,7 +295,7 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2025</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, and DNA/RNA sequencing workflows.</p>
+                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, DNA/RNA sequencing workflows, and machine learning applications in precision medicine.</p>
                 </div>
             </div>
             
