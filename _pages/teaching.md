@@ -343,7 +343,7 @@ permalink: /teaching/
                         <span class="meta-badge">Summer 2024</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Integration of genetics and neuroscience to understand inherited neurological disorders, bridging molecular mechanisms with clinical phenotypes.</p>
+                    <p class="course-description">Integration of genetics and neuroscience to understand inherited neurological disorders.</p>
                 </div>
             </div>
             
@@ -357,7 +357,7 @@ permalink: /teaching/
                         <span class="meta-badge">Fall 2025</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Molecular and cellular mechanisms underlying neurological and psychiatric disorders.</p>
+                    <p class="course-description">Molecular and cellular processes underlying neurological disorders, bridging molecular mechanisms with clinical phenotypes.</p>
                 </div>
             </div>
             
@@ -380,7 +380,7 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2024-26</span>
                         <span class="meta-badge">Undergraduate</span>
                     </div>
-                    <p class="course-description">Applied molecular biology techniques and biotechnology applications in medicine and research.</p>
+                    <p class="course-description">Applied molecular biology techniques and biotechnology applications in medicine and biomedical research. Combined lecture and laboratory course.</p>
                 </div>
             </div>
             
@@ -394,7 +394,7 @@ permalink: /teaching/
                         <span class="meta-badge">Spring 2025-26</span>
                         <span class="meta-badge">Graduate</span>
                     </div>
-                    <p class="course-description">Critical examination of health inequities and genomics in precision public health.</p>
+                    <p class="course-description">Critical examination of health inequities in clinical and public health settings.</p>
                 </div>
             </div>
             
