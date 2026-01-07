@@ -512,7 +512,7 @@ main,
 
 .tone-dark {
     background: #8b2e3f; /* Deep burgundy like Landau */
-    padding: 40px 60px 60px 80px;  /* Reduced top padding from 60px to 40px */
+    padding: 20px 60px 60px 80px;  /* Reduced top padding to 20px for icons closer to top */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -554,7 +554,7 @@ main,
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;  /* Reduced from 30px to bring title closer */
     transition: all 0.3s ease;
     background: transparent;
     box-shadow: 0 2px 8px rgba(34, 168, 184, 0.15);
