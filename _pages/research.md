@@ -512,10 +512,10 @@ main,
 
 .tone-dark {
     background: #8b2e3f; /* Deep burgundy like Landau */
-    padding: 20px 60px 60px 80px;  /* Reduced top padding to 20px for icons closer to top */
+    padding: 40px 60px 50px 80px;  /* Optimized spacing from earlier version */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;  /* Align to top instead of center - KEY FIX */
 }
 
 .tone-light {
@@ -554,7 +554,7 @@ main,
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;  /* Reduced from 30px to bring title closer */
+    margin-bottom: 30px;  /* Optimized value from earlier version */
     transition: all 0.3s ease;
     background: transparent;
     box-shadow: 0 2px 8px rgba(34, 168, 184, 0.15);
