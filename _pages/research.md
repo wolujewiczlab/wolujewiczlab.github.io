@@ -1024,7 +1024,7 @@ main,
                 <h4>Multiple Sclerosis</h4>
             </div>
             <div class="highlight-text">
-                <p>We are generating polygenic risk scores for MS patients using genome-wide SNPs. We are also working with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
+                <p>We are working closely with the <strong>Mandell Center for Comprehensive Multiple Sclerosis Care and Neuroscience Research</strong> to advance understanding of myelin pathology, collaboratively studying genetic variants, transcriptional programs and signaling pathways that may underlie MS or contribute to disease risk.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/ms-polygenic-risk.png" alt="MS Polygenic Risk" style="max-width: 300px;">
