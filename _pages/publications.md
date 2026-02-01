@@ -199,7 +199,7 @@ permalink: /publications/
 
 <div class="publications-container">
     
-    <!-- PREPARING TO SUBMIT -->
+    <!-- SUBMITTED -->
     <div class="pub-card">
         <div class="pub-content">
             <h3 class="pub-title">Nanopore Sequencing Enables Broad Detection and Surveillance of Tick-Borne Pathogens in Ixodes scapularis<span class="under-review-badge">PREPARING TO SUBMIT</span></h3>
