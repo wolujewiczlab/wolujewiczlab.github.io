@@ -426,6 +426,24 @@ permalink: /lab-news/
         
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
+
+            <!-- NEWS ITEM: CDC Vector Week 2026 -->
+<div class="news-item">
+    <div class="news-date">March 2026</div>
+    <h2 class="news-title">Dr. Wolujewicz Attends CDC Vector Week 2026 in Fort Collins, CO</h2>
+    
+    <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+        <div>
+            <p class="news-description">
+                Dr. Wolujewicz attended the CDC Division of Vector-Borne Diseases (DVBD) Vector Week 2026 conference, held March 10–13, 2026 at Colorado State University in Fort Collins, Colorado. The three-day meeting convened federal, state, and academic researchers to address surveillance, diagnostics, modeling, and control of vector-borne pathogens across the United States. Dr. Wolujewicz presented a poster on the lab's ongoing tick-borne pathogen metagenomics work and participated in the pre-conference CSTE/CDC Vector-Borne Disease Modeling Workshop, which brought together disease modelers and public health decision-makers to advance forecasting methods for Lyme disease, West Nile virus, and dengue. Conference sessions of particular relevance to the lab's research included next-generation sequencing approaches for vector-borne disease diagnostics, blacklegged tick surveillance and pathogen detection, and emerging rickettsial diseases.
+            </p>
+        </div>
+        <div>
+            <img src="/assets/images/news/cdc_vector.jpg" alt="CDC Vector Week 2026" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+        </div>
+    </div>
+</div>
+
             
             <!-- NEWS ITEM: Brandon NMCA Presentation -->
             <div class="news-item">
