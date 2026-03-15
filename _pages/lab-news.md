@@ -439,7 +439,7 @@ permalink: /lab-news/
             </p>
         </div>
         <div>
-            <img src="/assets/images/news/cdc_vector.jpg" alt="CDC Vector Week 2026" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+            <img src="/assets/images/news/cdc-vector-week-2026.jpg" alt="CDC Vector Week 2026" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
         </div>
     </div>
 </div>
