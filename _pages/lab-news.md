@@ -540,7 +540,7 @@ permalink: /lab-news/
                 <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                     <div>
                         <p class="news-description">
-                            Dr. Wolujewicz was approved for Regular Membership in the Society for Birth Defects Research and Prevention (BDRP). This appointment reflects the lab's ongoing contributions to research on neural tube defects and other congenital disorders, and provides an important platform for scientific exchange, collaboration, and leadership within the birth defects research community.
+                            Paul was approved for Regular Membership in the Society for Birth Defects Research and Prevention (BDRP). This appointment reflects the lab's ongoing contributions to research on neural tube defects and other congenital disorders, and provides an important platform for scientific exchange, collaboration, and leadership within the birth defects research community.
                         </p>
                         <a href="https://birthdefectsresearch.org/" class="news-link" target="_blank">Visit BDRP website</a>
                     </div>
