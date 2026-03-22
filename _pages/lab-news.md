@@ -430,7 +430,7 @@ permalink: /lab-news/
 <!-- NEWS ITEM: KTRN2026 -->
         <div class="news-item">
             <div class="news-date">March 2026</div>
-            <h2 class="news-title">Dr. Wolujewicz Participates in KTRN2026 — Krabbe Translational Research Network Annual Meeting in Minneapolis, MN</h2>
+            <h2 class="news-title">Dr. Wolujewicz Participates in KTRN2026 - Krabbe Translational Research Network - Annual Meeting in Minneapolis, MN</h2>
             
             <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
                 <div>
