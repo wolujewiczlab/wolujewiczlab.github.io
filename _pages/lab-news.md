@@ -427,6 +427,23 @@ permalink: /lab-news/
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
 
+<!-- NEWS ITEM: KTRN2026 -->
+        <div class="news-item">
+            <div class="news-date">March 2026</div>
+            <h2 class="news-title">Dr. Wolujewicz Participates in KTRN2026 — Krabbe Translational Research Network Annual Meeting in Minneapolis, MN</h2>
+            
+            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+                <div>
+                    <p class="news-description">
+                        Dr. Wolujewicz was honored to participate in the Krabbe Translational Research Network's annual meeting, KTRN2026, held March 18–20, 2026 in Minneapolis, MN. Invited by the Rosenau Family Research Foundation, this energizing and inspiring gathering brought together a multidisciplinary consortium of basic and translational scientists, clinicians, newborn screening experts, industry representatives, and patient advocates united around advancing the science of Krabbe disease. Dr. Wolujewicz contributed to a translational science roundtable, where expert discussions centered on deepening disease understanding, improving GALC variant characterization, identifying prognostic and predictive biomarkers, and refining newborn screening strategies. The meeting was a remarkable convergence of scientific rigor and patient-centered purpose, and we look forward to the collaborative discoveries and roadmap initiatives that will emerge from this gathering as the field charts its mission through the remainder of the decade.
+                    </p>
+                </div>
+                <div>
+                    <img src="/assets/images/news/ktrn-2026.jpg" alt="Dr. Wolujewicz at KTRN2026 Minneapolis" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                </div>
+            </div>
+        </div>
+
             <!-- NEWS ITEM: CDC Vector Week 2026 -->
 <div class="news-item">
     <div class="news-date">March 2026</div>
