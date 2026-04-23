@@ -427,6 +427,36 @@ permalink: /lab-news/
         <!-- NEWS TIMELINE -->
         <div class="news-timeline">
 
+<!-- NEWS ITEM: NEURON 2026 -->
+<div class="news-item">
+    <div class="news-date">April 2026</div>
+    <h2 class="news-title">NEURON 2026: Workshop and Student Poster Presentations</h2>
+    
+    <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
+        <div>
+            <p class="news-description">
+                The 39th annual NEURON conference co-hosted by Quinnipiac University and the University of Connecticut was held in QU's new SITE building this year. Dr. Wolujewicz led an interactive workshop entitled "AI and Systems Neuroscience," exploring how computational and machine learning frameworks are transforming our ability to model neural activity, interpret multi-omic datasets, and advance our mechanistic understanding of neurological disease.
+            </p>
+            <p class="news-description" style="margin-top: 16px;">
+                Three members of the lab presented original research at the conference poster session:
+            </p>
+            <p class="news-description" style="margin-top: 16px;">
+                <strong>Natalie Grober</strong> (GBMS, co-mentored by Dr. Carter Takacs and Dr. Wolujewicz) presented her Master's thesis project: <em>Defining Neurodevelopmental Roles of HNRNPU Through CRISPR/Cas-Mediated Knockdown and Transcriptomic Analysis.</em> Her work investigates the functions of HNRNPU during early vertebrate development using zebrafish models and RNA sequencing.
+            </p>
+            <p class="news-description" style="margin-top: 16px;">
+                <strong>Audrey Chodkiewicz</strong> presented her independent study research: <em>Early-Life Stress Induces Gene Expression Changes in the Rat Hippocampus.</em> Her project examines how maternal separation during critical developmental windows shapes hippocampal transcriptomic landscapes, with implications for understanding stress-related neuropsychiatric vulnerability.
+            </p>
+            <p class="news-description" style="margin-top: 16px;">
+                <strong>Reese Triana</strong> presented his independent study research: <em>A Case-Control Volumetric Analysis of Hippocampal Atrophy in Relapsing-Remitting Multiple Sclerosis.</em> In addition to his poster, Reese was selected to deliver a data blitz oral presentation on his work in which he highlighted key findings from automated MRI segmentation analyses of hippocampal volume in RRMS patients relative to healthy controls.
+            </p>
+        </div>
+        <div>
+            <img src="/assets/images/news/neuron-conference-2026.jpg" alt="Wolujewicz Lab at NEURON 2026" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+        </div>
+    </div>
+</div>
+
+
 <!-- NEWS ITEM: KTRN2026 -->
         <div class="news-item">
             <div class="news-date">March 2026</div>
