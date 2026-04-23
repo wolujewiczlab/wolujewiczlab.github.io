@@ -435,19 +435,16 @@ permalink: /lab-news/
     <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
         <div>
             <p class="news-description">
-                The 39th annual NEURON conference co-hosted by Quinnipiac University and the University of Connecticut was held in QU's new SITE building this year. Dr. Wolujewicz led an interactive workshop entitled "AI and Systems Neuroscience," exploring how computational and machine learning frameworks are transforming our ability to model neural activity, interpret multi-omic datasets, and advance our mechanistic understanding of neurological disease.
+                The 39th annual NEURON conference co-hosted by Quinnipiac University and the University of Connecticut was held in QU's new SITE building this year. Dr. Wolujewicz led an interactive workshop entitled "AI and Systems Neuroscience," exploring how computational and machine learning frameworks are transforming our ability to model neural activity, interpret multi-omic datasets, and advance our mechanistic understanding of neurological disease. Several students presented their research:
             </p>
             <p class="news-description" style="margin-top: 16px;">
-                Three members of the lab presented original research at the conference poster session:
+                Natalie Grober (GBMS, co-mentored by Dr. Carter Takacs and Dr. Wolujewicz) presented her Master's thesis project: <em>Defining Neurodevelopmental Roles of HNRNPU Through CRISPR/Cas-Mediated Knockdown and Transcriptomic Analysis.</em> Her work investigates the functions of HNRNPU during early vertebrate development using zebrafish models and RNA sequencing.
             </p>
             <p class="news-description" style="margin-top: 16px;">
-                <strong>Natalie Grober</strong> (GBMS, co-mentored by Dr. Carter Takacs and Dr. Wolujewicz) presented her Master's thesis project: <em>Defining Neurodevelopmental Roles of HNRNPU Through CRISPR/Cas-Mediated Knockdown and Transcriptomic Analysis.</em> Her work investigates the functions of HNRNPU during early vertebrate development using zebrafish models and RNA sequencing.
+                Audrey Chodkiewicz presented her independent study research: <em>Early-Life Stress Induces Gene Expression Changes in the Rat Hippocampus.</em> Her project examines how maternal separation during critical developmental windows shapes hippocampal transcriptomic landscapes, with implications for understanding stress-related neuropsychiatric vulnerability.
             </p>
             <p class="news-description" style="margin-top: 16px;">
-                <strong>Audrey Chodkiewicz</strong> presented her independent study research: <em>Early-Life Stress Induces Gene Expression Changes in the Rat Hippocampus.</em> Her project examines how maternal separation during critical developmental windows shapes hippocampal transcriptomic landscapes, with implications for understanding stress-related neuropsychiatric vulnerability.
-            </p>
-            <p class="news-description" style="margin-top: 16px;">
-                <strong>Reese Triana</strong> presented his independent study research: <em>A Case-Control Volumetric Analysis of Hippocampal Atrophy in Relapsing-Remitting Multiple Sclerosis.</em> In addition to his poster, Reese was selected to deliver a data blitz oral presentation on his work in which he highlighted key findings from automated MRI segmentation analyses of hippocampal volume in RRMS patients relative to healthy controls.
+                Reese Triana presented his independent study research: <em>A Case-Control Volumetric Analysis of Hippocampal Atrophy in Relapsing-Remitting Multiple Sclerosis.</em> In addition to his poster, Reese was selected to deliver a data blitz oral presentation on his work in which he highlighted key findings from automated MRI segmentation analyses of hippocampal volume in RRMS patients relative to healthy controls.
             </p>
         </div>
         <div>
