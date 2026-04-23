@@ -440,7 +440,7 @@ permalink: /lab-news/
                     <a href="https://www.rosenaufoundation.org" class="news-link" target="_blank">Learn more about the Rosenau Family Research Foundation and Krabbe disease</a>
                 </div>
                 <div>
-                    <img src="/assets/images/news/ktrn-2026.jpg" alt="Dr. Wolujewicz at KTRN2026 Minneapolis" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
+                    <img src="/assets/images/news/ktrn-2026.jpg" alt="Dr. Wolujewicz at KTRN2026 Minneapolis" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
                 </div>
             </div>
         </div>
