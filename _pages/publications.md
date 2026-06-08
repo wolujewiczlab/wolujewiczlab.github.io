@@ -199,17 +199,6 @@ permalink: /publications/
 
 <div class="publications-container">
     
-    <!-- UNDER REVIEW -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Performance and Limitations of Nanopore Sequencing in Public Health Surveillance of Tick-Borne Pathogens in Ixodes scapularis<span class="under-review-badge">UNDER REVIEW</span></h3>
-            <p class="pub-authors">Brandon Assi, Noelle Khalil, Jesse Matijevic, Evan Rogers, Christian H. Eggers, Goudarz Molaei, <span class="author-highlight">Paul Wolujewicz</span></p>
-            <div class="pub-meta"><span class="meta-tag">METAGENOMICS</span><span class="meta-tag">NANOPORE</span><span class="meta-tag">PUBLIC HEALTH</span></div>
-            <div class="pub-links"><a href="/assets/pdfs/assi-nanopore.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/assi-nanopore.png" alt="Tick surveillance"></div>
-    </div>
-    
     <!-- 2025 -->
     <div class="pub-card">
         <div class="pub-content">
