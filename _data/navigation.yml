@@ -4,8 +4,8 @@ main:
     url: /research/
   - title: "Lab News"
     url: /lab-news/
-  - title: "Team"
-    url: /team/
+  # - title: "Team"        # temporarily hidden; restore with team.md
+  #   url: /team/
   - title: "Publications"
     url: /publications/
   - title: "Teaching"
