@@ -378,7 +378,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">September 2026</div>
                 <h3 class="news-title">Joining the Frank H. Netter MD School of Medicine</h3>
-                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
+                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
             </div>
         </article>
 
@@ -386,7 +386,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">August 2026</div>
                 <h3 class="news-title">Faculty Fellow, User Experience and Behavioral Insights Lab</h3>
-                <p class="news-description">Dr. Wolujewicz was named a 2026&ndash;27 Faculty Fellow of the School of Business's User Experience and Behavioral Insights (UXBI) Lab, representing medicine in its interdisciplinary Faculty Lab Fellows Program. He will present the lab's research in the UXBI Fall 2026 Research Series on November 12.</p>
+                <p class="news-description">Paul was named a 2026&ndash;27 Faculty Fellow of the School of Business's User Experience and Behavioral Insights (UXBI) Lab, representing medicine in its interdisciplinary Faculty Lab Fellows Program. He will present the lab's research in the UXBI Fall 2026 Research Series on November 12.</p>
                 <a href="https://www.qu.edu/schools/business/facilities-and-resources/user-experience-and-behavioral-insights-lab/" class="news-link" target="_blank" rel="noopener">About the UXBI Lab</a>
             </div>
         </article>
