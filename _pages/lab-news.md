@@ -115,7 +115,7 @@ permalink: /lab-news/
 /* Single entry */
 .news-item {
     display: grid;
-    grid-template-columns: 1fr 210px;
+    grid-template-columns: 1fr 220px;
     gap: 32px;
     align-items: start;
     padding: 28px 0;
@@ -165,11 +165,14 @@ permalink: /lab-news/
 .news-thumb {
     display: block;
     box-sizing: border-box;
-    width: 210px;
-    height: 140px;
-    object-fit: cover;
+    width: 220px;
+    height: auto;
     border-radius: 4px;
-    background: #e9e9e6;
+}
+.news-thumb--logo {
+    background: #ffffff;
+    border: 1px solid #e2e2de;
+    padding: 16px 18px;
 }
 
 /* Short one-line entries (no title, no photo) */
@@ -186,7 +189,8 @@ permalink: /lab-news/
     .news-year-block { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
     .news-year { position: static; border-top: none; padding: 0 0 10px; font-size: 26px; }
     .news-item { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
-    .news-thumb { width: 100%; height: 210px; order: -1; }
+    .news-thumb { width: 100%; order: -1; }
+    .news-thumb--logo { width: auto; max-width: 260px; }
     .news-title { font-size: 21px; }
 }
 
@@ -356,7 +360,7 @@ permalink: /lab-news/
                 <h3 class="news-title">Outstanding Faculty Scholar Award</h3>
                 <p class="news-description">Dr. Wolujewicz received the 2026 School of Health Sciences Outstanding Faculty Scholar Award at Quinnipiac University, recognizing excellence in research and scholarship.</p>
             </div>
-            <img class="news-thumb" style="object-position: 50% 30%;" src="/assets/images/news/faculty-scholar-award-2026.jpg" alt="Dr. Wolujewicz receiving the 2026 Outstanding Faculty Scholar Award">
+            <img class="news-thumb" src="/assets/images/news/faculty-scholar-award-2026.jpg" alt="Dr. Wolujewicz receiving the 2026 Outstanding Faculty Scholar Award">
         </article>
 
         <article class="news-item">
@@ -401,14 +405,16 @@ permalink: /lab-news/
                 <h3 class="news-title">Brandon Assi Presents at NMCA 2025</h3>
                 <p class="news-description">Brandon Assi presented his Master's thesis on Nanopore metagenomic sequencing for real-time vector-borne pathogen surveillance, done with the Connecticut Agricultural Experiment Station, at the 71st Northeastern Mosquito Control Association meeting.</p>
             </div>
-            <img class="news-thumb" style="object-position: 50% 20%;" src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NMCA 2025">
+            <img class="news-thumb" src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NMCA 2025">
         </article>
 
-        <article class="news-item news-item--brief">
+        <article class="news-item">
             <div>
                 <div class="news-date">November 2025</div>
-                <p class="news-description">Dr. Wolujewicz was appointed Research Affiliate at the Connecticut Agricultural Experiment Station (CAES).</p>
+                <h3 class="news-title">Research Affiliate, Connecticut Agricultural Experiment Station</h3>
+                <p class="news-description">Dr. Wolujewicz was appointed a Research Affiliate at CAES, formalizing the lab's collaborations on vector-borne pathogen genomics and public health surveillance.</p>
             </div>
+            <img class="news-thumb news-thumb--logo" src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station">
         </article>
 
         <article class="news-item">
@@ -430,11 +436,13 @@ permalink: /lab-news/
             <img class="news-thumb" src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIP-RS students at Bobcat Weekend 2025">
         </article>
 
-        <article class="news-item news-item--brief">
+        <article class="news-item">
             <div>
                 <div class="news-date">August 2025</div>
+                <h3 class="news-title">Regular Membership in BDRP</h3>
                 <p class="news-description">Dr. Wolujewicz was approved for Regular Membership in the Society for Birth Defects Research and Prevention.</p>
             </div>
+            <img class="news-thumb news-thumb--logo" src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention">
         </article>
 
         <article class="news-item">
