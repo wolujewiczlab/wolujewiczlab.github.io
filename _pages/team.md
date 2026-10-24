@@ -2,6 +2,7 @@
 layout: single
 title: ""
 permalink: /team/
+published: false  # Team page temporarily offline (Oct 2026) - set to true to restore
 author_profile: false
 ---
 

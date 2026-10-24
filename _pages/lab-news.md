@@ -4,6 +4,10 @@ title: ""
 permalink: /lab-news/
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* BLACK TOP NAVIGATION BAR */
 .masthead {
@@ -63,230 +67,173 @@ permalink: /lab-news/
     100% { transform: translateX(-50%) translateX(9px) scale(1.2); opacity: 1; }
 }
 
-/* PAGE CONTAINER WITH ANIMATED BACKGROUND */
+/* ============ LAB NEWS — LAYOUT ============ */
+.news-page h1, .news-year, .news-title { font-variant-numeric: lining-nums; }
 .news-page {
-    position: relative;
-    min-height: 100vh;
-    background: #f5f5f5;  /* Light grey background like Publications */
-    overflow: hidden;
+    background: #f7f7f5;
+    margin: 0;
     padding: 0;
-    margin: 0;
+    min-height: 100vh;
 }
 
-/* ANIMATED BACKGROUND ELEMENTS - Subtle Geometric Shapes */
-.bg-animation {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 0;
-    pointer-events: none;
-}
-
-.floating-shape {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(34, 168, 184, 0.02), transparent);
-    animation: float 20s infinite ease-in-out;
-}
-
-.shape-1 {
-    width: 400px;
-    height: 400px;
-    top: 10%;
-    left: -10%;
-    animation-delay: 0s;
-}
-
-.shape-2 {
-    width: 300px;
-    height: 300px;
-    top: 60%;
-    right: -5%;
-    animation-delay: -7s;
-}
-
-.shape-3 {
-    width: 250px;
-    height: 250px;
-    bottom: 20%;
-    left: 30%;
-    animation-delay: -14s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-        opacity: 0.02;
-    }
-    50% {
-        transform: translate(50px, -50px) scale(1.1);
-        opacity: 0.04;
-    }
-}
-
-/* GRADIENT LINES */
-.gradient-line {
-    position: absolute;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(34, 168, 184, 0.05), transparent);
-    animation: slide 15s infinite linear;
-}
-
-.line-1 {
-    width: 60%;
-    top: 25%;
-    left: -60%;
-    animation-delay: 0s;
-}
-
-.line-2 {
-    width: 50%;
-    top: 65%;
-    right: -50%;
-    animation-delay: -5s;
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(200%);
-    }
-}
-
-/* CONTENT CONTAINER */
-.news-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 80px 40px;
-}
-
-/* PAGE HEADER */
 .news-header {
-    background: #2a2a2a;  /* Dark grey like Publications banner */
+    background: #2a2a2a;
     text-align: center;
-    padding: 80px 40px 60px 40px;
-    margin: 0 0 0 0;
+    padding: 72px 24px 56px;
 }
-
 .news-header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 56px;
-    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
     color: #ffffff;
-    margin: 0 0 15px 0;
-    letter-spacing: -1px;
+    margin: 0 0 12px;
+    letter-spacing: -0.5px;
 }
-
 .news-header p {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.7);
     font-family: 'Inter', sans-serif;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.65);
     margin: 0;
 }
 
-/* NEWS ITEMS CONTAINER */
-.news-timeline {
-    display: flex;
-    flex-direction: column;
+.news-content {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 64px 40px 96px;
+}
+
+/* Year block: year label on the left, entries on the right */
+.news-year-block {
+    display: grid;
+    grid-template-columns: 120px 1fr;
     gap: 40px;
+    margin-bottom: 56px;
 }
+.news-year {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 30px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+    padding-top: 26px;
+    border-top: 2px solid #22a8b8;
+    align-self: start;
+    position: sticky;
+    top: 24px;
+}
+.news-entries { border-top: 2px solid #1a1a1a; }
 
-/* INDIVIDUAL NEWS ITEM - White cards like Publications page */
+/* Single entry */
 .news-item {
-    background: #ffffff;  /* Pure white background */
-    border: 3px solid #22a8b8;  /* Turquoise border */
-    border-radius: 8px;
-    padding: 40px;
-    margin-bottom: 40px;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 1fr 210px;
+    gap: 32px;
+    align-items: start;
+    padding: 28px 0;
+    border-bottom: 1px solid #e2e2de;
 }
-
-.news-item:hover {
-    box-shadow: 0 8px 24px rgba(34, 168, 184, 0.2);
-    transform: translateY(-2px);
-}
+.news-item--text { grid-template-columns: 1fr; }
 
 .news-date {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #22a8b8;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 15px;
-    display: inline-block;
-    padding: 6px 12px;
-    background: rgba(34, 168, 184, 0.1);
-    border-radius: 4px;
-}
-
-.news-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 28px;
+    font-size: 12px;
     font-weight: 600;
-    color: #1a1a1a;  /* Dark text on white */
-    margin: 0 0 20px 0;
-    line-height: 1.3;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #178896;
+    margin-bottom: 8px;
 }
-
+.news-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 1.3;
+    color: #1a1a1a;
+    margin: 0 0 10px;
+}
 .news-description {
     font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    line-height: 1.8;
-    color: #333333;  /* Dark grey text */
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #474747;
     margin: 0;
+    max-width: 640px;
 }
-
 .news-link {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 12px;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #22a8b8;
+    color: #178896;
     text-decoration: none;
-    transition: color 0.3s ease;
+    border-bottom: 1px solid rgba(23, 136, 150, 0.3);
+    transition: border-color 0.2s ease;
+}
+.news-link:hover { border-bottom-color: #178896; }
+.news-link::after { content: " \2192"; }
+
+.news-thumb {
+    display: block;
+    box-sizing: border-box;
+    width: 210px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #e9e9e6;
 }
 
-.news-link:hover {
-    color: #1a8a9a;
+/* Short one-line entries */
+.news-brief {
+    list-style: none;
+    margin: 0;
+    padding: 20px 0 0;
+}
+.news-brief li {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #474747;
+    padding: 6px 0;
+    margin: 0;
+}
+.news-brief li span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    padding-top: 2px;
 }
 
-.news-link::after {
-    content: " →";
+/* Collapsed archive */
+.news-archive summary {
+    list-style: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #178896;
+    padding: 18px 0;
+    border-top: 2px solid #1a1a1a;
 }
+.news-archive summary::-webkit-details-marker { display: none; }
+.news-archive summary::after { content: "Show 2024 news \2193"; }
+.news-archive[open] summary::after { content: "Hide 2024 news \2191"; }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    .news-header h1 {
-        font-size: 42px;
-    }
-    
-    .news-item {
-        padding: 30px;
-    }
-    
-    .news-title {
-        font-size: 24px;
-    }
-    
-    .news-content {
-        padding: 60px 20px 40px 20px;
-    }
-    
-    /* Stack layout on mobile */
-    .news-item > div[style*="grid-template-columns"] {
-        grid-template-columns: 1fr !important;
-        gap: 20px !important;
-    }
+@media (max-width: 860px) {
+    .news-content { padding: 40px 20px 64px; }
+    .news-header { padding: 56px 20px 44px; }
+    .news-header h1 { font-size: 38px; }
+    .news-year-block { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
+    .news-year { position: static; border-top: none; padding: 0 0 10px; font-size: 26px; }
+    .news-item { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
+    .news-thumb { width: 100%; height: 210px; order: -1; }
+    .news-title { font-size: 21px; }
+    .news-brief li { grid-template-columns: 1fr; gap: 2px; padding: 8px 0; }
 }
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
@@ -406,283 +353,187 @@ permalink: /lab-news/
 </script>
 
 <div class="news-page">
-    <!-- ANIMATED BACKGROUND -->
-    <div class="bg-animation">
-        <div class="floating-shape shape-1"></div>
-        <div class="floating-shape shape-2"></div>
-        <div class="floating-shape shape-3"></div>
-        <div class="gradient-line line-1"></div>
-        <div class="gradient-line line-2"></div>
-    </div>
-    
-    <!-- HEADER - Full Width Banner -->
+
     <div class="news-header">
-        <h1>Latest News in the Wolujewicz Lab</h1>
-        <p>Updates, achievements, and milestones from our research group</p>
+        <h1>Lab News</h1>
+        <p>Updates and milestones from the Wolujewicz Lab</p>
     </div>
-    
-    <!-- CONTENT -->
+
     <div class="news-content">
-        
-        <!-- NEWS TIMELINE -->
-        <div class="news-timeline">
 
-<!-- NEWS ITEM: NEURON 2026 -->
-<div class="news-item">
-    <div class="news-date">April 2026</div>
-    <h2 class="news-title">NEURON 2026: Workshop and Student Poster Presentations</h2>
-    
-    <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-        <div>
-            <p class="news-description">
-                The 39th annual NEURON conference co-hosted by Quinnipiac University and the University of Connecticut was held in QU's new SITE building this year. Dr. Wolujewicz led an interactive workshop entitled "AI and Systems Neuroscience," exploring how computational and machine learning frameworks are transforming our ability to model neural activity, interpret multi-omic datasets, and advance our mechanistic understanding of neurological disease. Several students presented their research:
-            </p>
-            <p class="news-description" style="margin-top: 16px;">
-                Natalie Grober (GBMS, co-mentored by Dr. Carter Takacs and Dr. Wolujewicz) presented her Master's thesis project: <em>Defining Neurodevelopmental Roles of HNRNPU Through CRISPR/Cas-Mediated Knockdown and Transcriptomic Analysis.</em> Her work investigates the functions of HNRNPU during early vertebrate development using zebrafish models and RNA sequencing.
-            </p>
-            <p class="news-description" style="margin-top: 16px;">
-                Audrey Chodkiewicz presented her independent study research: <em>Early-Life Stress Induces Gene Expression Changes in the Rat Hippocampus.</em> Her project examines how maternal separation during critical developmental windows shapes hippocampal transcriptomic landscapes, with implications for understanding stress-related neuropsychiatric vulnerability.
-            </p>
-            <p class="news-description" style="margin-top: 16px;">
-                Reese Triana presented his independent study research: <em>A Case-Control Volumetric Analysis of Hippocampal Atrophy in Relapsing-Remitting Multiple Sclerosis.</em> In addition to his poster, Reese was selected to deliver a data blitz oral presentation on his work in which he highlighted key findings from automated MRI segmentation analyses of hippocampal volume in RRMS patients relative to healthy controls.
-            </p>
-        </div>
-        <div>
-            <img src="/assets/images/news/neuron-conference-2026.jpg" alt="Wolujewicz Lab at NEURON 2026" style="width: 100%; height: 400px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-        </div>
-    </div>
-</div>
+<!--
+  HOW TO ADD NEWS
+  - Entry with photo: copy any <article class="news-item"> block; put the image in /assets/images/news/.
+  - Entry without photo: use <article class="news-item news-item--text"> and leave out the <img>.
+  - One-liners: add an <li> to that year's <ul class="news-brief">.
+  - Newest first. Keep descriptions to 1-3 sentences.
+-->
 
+<!-- ============================== 2026 ============================== -->
+<section class="news-year-block">
+    <h2 class="news-year">2026</h2>
+    <div class="news-entries">
 
-<!-- NEWS ITEM: KTRN2026 -->
-        <div class="news-item">
-            <div class="news-date">March 2026</div>
-            <h2 class="news-title">KTRN2026 - Krabbe Translational Research Network - Annual Meeting</h2>
-            
-            <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                <div>
-                    <p class="news-description">
-                        Paul was honored to participate in the Krabbe Translational Research Network's annual meeting, KTRN2026, held March 18–20, 2026 in Minneapolis, MN. Invited by the Rosenau Family Research Foundation, this energizing and inspiring gathering brought together a multidisciplinary consortium of basic and translational scientists, clinicians, newborn screening experts, industry representatives, and patient advocates united around advancing the science of Krabbe disease. Paul contributed to a translational science roundtable, where expert discussions centered on deepening disease understanding, improving GALC variant characterization, identifying prognostic and predictive biomarkers, and refining newborn screening strategies. The meeting was a remarkable convergence of scientific rigor and patient-centered purpose, and we look forward to the collaborative discoveries and roadmap initiatives that will emerge from this gathering as the field charts its mission through the remainder of the decade.
-                    </p>
-                    <a href="https://www.rosenaufoundation.org" class="news-link" target="_blank">Learn more about the Rosenau Family Research Foundation and Krabbe disease</a>
-                </div>
-                <div>
-                    <img src="/assets/images/news/ktrn-2026.jpg" alt="Dr. Wolujewicz at KTRN2026 Minneapolis" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                </div>
+        <article class="news-item news-item--text">
+            <div>
+                <div class="news-date">September 2026</div>
+                <h3 class="news-title">Joining the Frank H. Netter MD School of Medicine</h3>
+                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
             </div>
-        </div>
+        </article>
 
-            <!-- NEWS ITEM: CDC Vector Week 2026 -->
-<div class="news-item">
-    <div class="news-date">March 2026</div>
-    <h2 class="news-title">CDC Vector Week 2026 in Fort Collins, CO</h2>
-    
-    <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-        <div>
-            <p class="news-description">
-                Paul attended the CDC Division of Vector-Borne Diseases (DVBD) Vector Week 2026 conference, held at Colorado State University in Fort Collins, Colorado. The meeting convened federal, state, and academic researchers to address surveillance, diagnostics, modeling, and control of vector-borne pathogens across the United States. Paul presented a poster on the lab's ongoing tick-borne pathogen metagenomics work and participated in the pre-conference CSTE/CDC Vector-Borne Disease Modeling Workshop, which brought together disease modelers and public health decision-makers to advance forecasting methods for Lyme disease, West Nile virus, and dengue. Conference sessions of particular relevance to the lab's research included next-generation sequencing approaches for vector-borne disease diagnostics, blacklegged tick surveillance and pathogen detection, and emerging rickettsial diseases.
-            </p>
-        </div>
-        <div>
-            <img src="/assets/images/news/cdc-vector-week-2026.jpg" alt="CDC Vector Week 2026" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-        </div>
+        <article class="news-item news-item--text">
+            <div>
+                <div class="news-date">August 2026</div>
+                <h3 class="news-title">Faculty Fellow, User Experience and Behavioral Insights Lab</h3>
+                <p class="news-description">Dr. Wolujewicz was named a 2026&ndash;27 Faculty Fellow of the School of Business's User Experience and Behavioral Insights (UXBI) Lab, representing medicine in its interdisciplinary Faculty Lab Fellows Program. He will present the lab's research in the UXBI Fall 2026 Research Series on November 12.</p>
+                <a href="https://www.qu.edu/schools/business/facilities-and-resources/user-experience-and-behavioral-insights-lab/" class="news-link" target="_blank" rel="noopener">About the UXBI Lab</a>
+            </div>
+        </article>
+
+        <article class="news-item news-item--text">
+            <div>
+                <div class="news-date">June 2026</div>
+                <h3 class="news-title">Platform Presentation and Student Poster at BDRP 2026</h3>
+                <!-- TODO: add talk/poster titles; to add a photo, switch to "news-item" and add an <img class="news-thumb"> after this <div> -->
+                <p class="news-description">At the 66th Annual Meeting of the Society for Birth Defects Research and Prevention in Washington, DC, Dr. Wolujewicz gave a platform presentation on tandem repeat expansions in myelomeningocele case-parent trios. Netter medical students Maya Puar and Katrina Etts (M4) co-presented a poster.</p>
+            </div>
+        </article>
+
+        <article class="news-item">
+            <div>
+                <div class="news-date">April 2026</div>
+                <h3 class="news-title">Outstanding Faculty Scholar Award</h3>
+                <p class="news-description">Dr. Wolujewicz received the 2026 School of Health Sciences Outstanding Faculty Scholar Award at Quinnipiac University, recognizing excellence in research and scholarship.</p>
+            </div>
+            <img class="news-thumb" style="object-position: 50% 30%;" src="/assets/images/news/faculty-scholar-award-2026.jpg" alt="Dr. Wolujewicz receiving the 2026 Outstanding Faculty Scholar Award">
+        </article>
+
+        <article class="news-item">
+            <div>
+                <div class="news-date">April 2026</div>
+                <h3 class="news-title">NEURON 2026: Workshop and Student Posters</h3>
+                <p class="news-description">At the 39th NEURON conference (Quinnipiac/UConn), Dr. Wolujewicz led the workshop "AI and Systems Neuroscience." Natalie Grober presented her HNRNPU zebrafish thesis work, Audrey Chodkiewicz presented on early-life stress and the rat hippocampal transcriptome, and Reese Triana presented hippocampal volumetrics in RRMS, including a data blitz talk.</p>
+            </div>
+            <img class="news-thumb" src="/assets/images/news/neuron-conference-2026.jpg" alt="Wolujewicz Lab at NEURON 2026">
+        </article>
+
+        <article class="news-item">
+            <div>
+                <div class="news-date">March 2026</div>
+                <h3 class="news-title">Krabbe Translational Research Network Meeting</h3>
+                <p class="news-description">Invited by the Rosenau Family Research Foundation, Dr. Wolujewicz joined the KTRN2026 translational science roundtable in Minneapolis, focused on GALC variant characterization, biomarkers, and newborn screening for Krabbe disease.</p>
+                <a href="https://www.rosenaufoundation.org" class="news-link" target="_blank" rel="noopener">Rosenau Family Research Foundation</a>
+            </div>
+            <img class="news-thumb" src="/assets/images/news/ktrn-2026.jpg" alt="Dr. Wolujewicz at KTRN2026 in Minneapolis">
+        </article>
+
+        <article class="news-item">
+            <div>
+                <div class="news-date">March 2026</div>
+                <h3 class="news-title">CDC Vector Week 2026</h3>
+                <p class="news-description">Dr. Wolujewicz presented the lab's tick-borne pathogen metagenomics work at CDC Vector Week in Fort Collins, CO, and took part in the CSTE/CDC Vector-Borne Disease Modeling Workshop.</p>
+            </div>
+            <img class="news-thumb" src="/assets/images/news/cdc-vector-week-2026.jpg" alt="CDC Vector Week 2026">
+        </article>
+
     </div>
-</div>
+</section>
 
-            
-            <!-- NEWS ITEM: Brandon NMCA Presentation -->
-            <div class="news-item">
+<!-- ============================== 2025 ============================== -->
+<section class="news-year-block">
+    <h2 class="news-year">2025</h2>
+    <div class="news-entries">
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">December 2025</div>
-                <h2 class="news-title">Brandon Assi Presents at 71st Annual NMCA Meeting</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Brandon Assi presents his Master's thesis work at the 71st Annual Meeting Northeastern Mosquito Control Association Conference in Hyannis, MA. His research focuses on Nanopore metagenomic sequencing for real-time vector-borne pathogen surveillance in collaboration with the Connecticut Agricultural Experiment Station.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NEMCA 2025" style="max-width: 300px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Brandon Assi Presents at NMCA 2025</h3>
+                <p class="news-description">Brandon Assi presented his Master's thesis on Nanopore metagenomic sequencing for real-time vector-borne pathogen surveillance, done with the Connecticut Agricultural Experiment Station, at the 71st Northeastern Mosquito Control Association meeting.</p>
             </div>
-            
-            <!-- NEWS ITEM: CAES Research Affiliate -->
-            <div class="news-item">
-                <div class="news-date">November 2025</div>
-                <h2 class="news-title">Dr. Wolujewicz Appointed as CAES Research Affiliate</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Dr. Wolujewicz is appointed as a CAES Research Affiliate. This appointment formalizes ongoing collaborations with the Connecticut Agricultural Experiment Station and strengthens joint efforts in vector-borne pathogen genomics and public health surveillance.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/caes-logo.png" alt="Connecticut Agricultural Experiment Station" style="max-width: 400px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- NEWS ITEM: ASHG Annual Meeting -->
-            <div class="news-item">
+            <img class="news-thumb" style="object-position: 50% 20%;" src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NMCA 2025">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">October 2025</div>
-                <h2 class="news-title">Quinnipiac Netter Students Working in the Wolujewicz Lab Present at the 2025 ASHG Annual Meeting</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Members of the Wolujewicz Lab had a strong presence at the American Society of Human Genetics (ASHG) Annual Meeting, highlighting multiple advances in neurogenetics research. Phil Smit (M4) co-authored a recently accepted manuscript in Translational Psychiatry entitled "Extracellular Vesicle Profiling Reveals Novel Autism Signatures in Patient-Derived Forebrain Organoids" and was selected to deliver a platform presentation at ASHG, an especially competitive and prestigious honor. Alan Chai (M3) presented a poster examining the contribution of short tandem repeat expansions to the genomic architecture of central nervous system structural birth defects, leveraging genome-wide computational detection methods and a novel machine-learning framework for pathogenicity prediction; his abstract received a Reviewers' Choice designation, placing it in the top 10% of accepted posters. In parallel, Rachel Schlak and Katrina Etts (M3) presented work exploring a digenic inheritance model for neural tube defect risk, introducing a prioritization strategy for maternally and paternally inherited variant combinations with potential clinical relevance for genetic counseling and family planning.
-                        </p>
-                        <a href="https://www.qu.edu/quinnipiac-today/school-of-medicine-professor-students-presentcutting-edgeresearch-onneurogenomicswork-at-national-conference-2025-11-24/" class="news-link" target="_blank">Read the Quinnipiac Today article</a>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/ashg-2025.jpg" alt="Lab members at ASHG 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Netter Students Present at ASHG 2025</h3>
+                <p class="news-description">Phil Smit (M4) gave a platform talk on extracellular vesicle signatures in autism organoids (<em>Translational Psychiatry</em>). Alan Chai (M3) earned a Reviewers' Choice award (top 10%) for his poster on tandem repeat expansions in CNS birth defects, and Rachel Schlak and Katrina Etts (M3) presented a digenic inheritance model for neural tube defect risk.</p>
+                <a href="https://www.qu.edu/quinnipiac-today/school-of-medicine-professor-students-presentcutting-edgeresearch-onneurogenomicswork-at-national-conference-2025-11-24/" class="news-link" target="_blank" rel="noopener">Quinnipiac Today article</a>
             </div>
-            
-            <!-- NEWS ITEM: QUIP-RS Summer Research -->
-            <div class="news-item">
+            <img class="news-thumb" src="/assets/images/news/ashg-2025.jpg" alt="Lab members at ASHG 2025">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">October 2025</div>
-                <h2 class="news-title">QUIP-RS Undergraduate Researchers Present at Bobcat Weekend</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            During Quinnipiac University's 2025 QUIP-RS Summer Research Program, the Wolujewicz Lab co-mentored two undergraduate researchers, Jenna Visich and Jesse Matijevic, on independent genomics-focused projects spanning neurodevelopmental biology and infectious disease genomics. Jenna investigated brain development using RNA-seq analyses in ADNP mutant zebrafish models (co-mentored with Dr. Carter Takacs), while Jesse explored genome assembly strategies for <em>Borrelia burgdorferi</em> from both <em>Ixodes scapularis</em> vectors and cultured pathogen samples. Both students successfully presented their research during Bobcat Weekend, highlighting the lab's continued commitment to interdisciplinary, student-driven research and mentorship from project inception through public dissemination.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIP-RS Students at Bobcat Weekend 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">QUIP-RS Researchers Present at Bobcat Weekend</h3>
+                <p class="news-description">Summer researchers Jenna Visich (RNA-seq in ADNP mutant zebrafish, co-mentored with Dr. Carter Takacs) and Jesse Matijevic (<em>Borrelia burgdorferi</em> genome assembly) presented their projects.</p>
             </div>
-            
-            <!-- NEWS ITEM: BDRP Regular Membership -->
-            <div class="news-item">
-                <div class="news-date">August 2025</div>
-                <h2 class="news-title">Dr. Wolujewicz Approved for Regular Membership in BDRP</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Paul was approved for Regular Membership in the Society for Birth Defects Research and Prevention (BDRP). This appointment reflects the lab's ongoing contributions to research on neural tube defects and other congenital disorders, and provides an important platform for scientific exchange, collaboration, and leadership within the birth defects research community.
-                        </p>
-                        <a href="https://birthdefectsresearch.org/" class="news-link" target="_blank">Visit BDRP website</a>
-                    </div>
-                    <div>
-                        <img src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention" style="max-width: 280px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- NEWS ITEM: BDRP Denver Conference -->
-            <div class="news-item">
+            <img class="news-thumb" src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIP-RS students at Bobcat Weekend 2025">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">July 2025</div>
-                <h2 class="news-title">Invited Speaker at BDRP Annual Meeting in Denver</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Dr. Wolujewicz served as an invited speaker and mini-course lead at the 65th Annual Meeting of the Society for Birth Defects Research and Prevention (BDRP) in Denver, Colorado. He led a focused mini-course on Artificial Intelligence in Genomics, highlighting emerging AI-driven approaches for variant interpretation, multi-omic integration, and disease risk modeling in the context of congenital disorders and neurodevelopmental disease.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/bdrp-denver-2025.jpg" alt="BDRP Annual Meeting Denver 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Invited Speaker at BDRP 2025, Denver</h3>
+                <p class="news-description">Dr. Wolujewicz led a mini-course on Artificial Intelligence in Genomics at the 65th BDRP Annual Meeting, covering AI approaches to variant interpretation, multi-omic integration, and risk modeling.</p>
             </div>
-            
-            <!-- NEWS ITEM: NEURON Conference Session Chair -->
-            <div class="news-item">
-                <div class="news-date">April 2025</div>
-                <h2 class="news-title">Session Chair at NEURON Conference</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Dr. Wolujewicz chaired the session "AI Tools in Neurobiology" at the annual NEURON Conference, co-hosted by Quinnipiac University and University of Connecticut. The session brought together researchers applying artificial intelligence and computational approaches to neurobiological questions spanning neurodevelopment, disease modeling, and data-intensive neuroscience.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/neuron-conference-2025.jpg" alt="NEURON Conference 2025" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- NEWS ITEM: Outstanding Mentor Awards -->
-            <div class="news-item">
+            <img class="news-thumb" src="/assets/images/news/bdrp-denver-2025.jpg" alt="BDRP Annual Meeting, Denver 2025">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">March 2025</div>
-                <h2 class="news-title">Outstanding Mentor Awards and Gribbin Receives Wikel Scientific Scholarship Award</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            At the annual Capstone Scholars Day for the Frank H. Netter School of Medicine, John Gribbin (MD'25) was awarded the Stephen Wikel, PhD Scientific Scholarship Award for his outstanding capstone research. Dr. Paul Wolujewicz and Dr. James K. Soda were jointly recognized as Outstanding Capstone Mentors for 2025, honored for their exceptional mentorship and dedication to fostering student research careers. Their collaborative guidance helped shape John's project and exemplified the values of curiosity, perseverance, and ingenuity in pursuit of bettering the lives of others.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 Awards" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Outstanding Capstone Mentor Award</h3>
+                <p class="news-description">Dr. Wolujewicz and Dr. James K. Soda were named 2025 Outstanding Capstone Mentors at Netter's Capstone Scholars Day, where their mentee John Gribbin (MD '25) received the Stephen Wikel, PhD Scientific Scholarship Award.</p>
             </div>
-            
-            <!-- NEWS ITEM: QUIP-RS 2024 Kaylee Presentation -->
-            <div class="news-item">
+            <img class="news-thumb" style="object-position: 50% 15%;" src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 awards">
+        </article>
+
+        <ul class="news-brief">
+            <li><span>Nov 2025</span> Appointed Research Affiliate at the Connecticut Agricultural Experiment Station (CAES).</li>
+            <li><span>Aug 2025</span> Approved for Regular Membership in the Society for Birth Defects Research and Prevention.</li>
+            <li><span>Apr 2025</span> Chaired the "AI Tools in Neurobiology" session at the NEURON Conference.</li>
+        </ul>
+
+    </div>
+</section>
+
+<!-- ============================== 2024 ============================== -->
+<section class="news-year-block">
+    <h2 class="news-year">2024</h2>
+    <details class="news-archive">
+        <summary></summary>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">October 2024</div>
-                <h2 class="news-title">Kaylee Pettengill Presents at QUIP-RS Research Symposium</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            As part of the 2024 QUIP-RS Research Symposium held during Bobcat Weekend, Kaylee Pettengill presented her undergraduate research project, "Identifying Structural Variation in Spina Bifida Patient Genomes," conducted in the Wolujewicz Lab. Her work applied whole-genome sequencing and case-parent trio analyses to identify copy number variants and other structural genomic alterations that may contribute to neural tube defect risk.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/kaylee-quiprs-2024.jpg" alt="Kaylee Pettengill at QUIP-RS 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Kaylee Pettengill Presents at QUIP-RS Symposium</h3>
+                <p class="news-description">Kaylee presented "Identifying Structural Variation in Spina Bifida Patient Genomes," applying trio whole-genome sequencing to detect CNVs and structural variants in neural tube defects.</p>
             </div>
-            
-            <!-- NEWS ITEM: NTD International Conference -->
-            <div class="news-item">
+            <img class="news-thumb" src="/assets/images/news/kaylee-quiprs-2024.jpg" alt="Kaylee Pettengill at QUIP-RS 2024">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">August 2024</div>
-                <h2 class="news-title">Platform Presentation at 13th International Conference on Neural Tube Defects</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            Dr. Wolujewicz was accepted to deliver a platform presentation at the 13th International Conference on Neural Tube Defects, an international forum bringing together leading investigators in developmental biology, genetics, and birth defects research. The presentation entitled, "Evidence for Pathogenic Expansions in NTD Case-Parent Trios," highlights ongoing work from the Wolujewicz Lab focused on the genetic architecture of neural tube defects using family-based genomic analyses. The acceptance reflects the growing international recognition of the lab's contributions to neurogenetics and congenital disorder research.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">Platform Talk at the 13th International Conference on Neural Tube Defects</h3>
+                <p class="news-description">Dr. Wolujewicz presented "Evidence for Pathogenic Expansions in NTD Case-Parent Trios."</p>
             </div>
-            
-            <!-- NEWS ITEM: John Gribbin AAN Presentation -->
-            <div class="news-item">
+            <img class="news-thumb" src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects">
+        </article>
+
+        <article class="news-item">
+            <div>
                 <div class="news-date">April 2024</div>
-                <h2 class="news-title">John Gribbin Presents at American Academy of Neurology Annual Meeting</h2>
-                
-                <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 35px; align-items: start; margin-top: 25px;">
-                    <div>
-                        <p class="news-description">
-                            In April 2024, John Gribbin delivered a platform presentation at the American Academy of Neurology (AAN) Annual Meeting entitled "X Chromosome Analysis in Multiple Sclerosis for Identification of Genes Implicated in Female-biased Disease Presentation." His talk focused on computational analysis of X chromosome gene expression in multiple sclerosis, with the goal of identifying genes that may contribute to the well-recognized sex differences in MS prevalence and clinical course.
-                        </p>
-                    </div>
-                    <div>
-                        <img src="/assets/images/news/john-aan-2024.jpg" alt="John Gribbin at AAN 2024" style="max-width: 450px; width: 100%; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.15);">
-                    </div>
-                </div>
+                <h3 class="news-title">John Gribbin Presents at AAN 2024</h3>
+                <p class="news-description">John gave a platform talk on X chromosome analysis in multiple sclerosis to identify genes behind female-biased disease presentation.</p>
             </div>
-            
-            <!-- ADD MORE NEWS ITEMS BELOW THIS LINE -->
-            
-        </div>
+            <img class="news-thumb" src="/assets/images/news/john-aan-2024.jpg" alt="John Gribbin at AAN 2024">
+        </article>
+    </details>
+</section>
+
     </div>
 </div>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
