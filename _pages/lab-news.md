@@ -491,7 +491,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">August 2024</div>
                 <h3 class="news-title">Platform Talk at the 13th International Conference on Neural Tube Defects</h3>
-                <p class="news-description">Dr. Wolujewicz presented "Evidence for Pathogenic Expansions in NTD Case-Parent Trios."</p>
+                <p class="news-description">Dr. Wolujewicz presented "Evidence for Fine-Scale Structural Variation in Human NTD Cases."</p>
             </div>
             <img class="news-thumb" src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects">
         </article>
