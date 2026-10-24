@@ -328,12 +328,13 @@ permalink: /lab-news/
     <h2 class="news-year">2026</h2>
     <div class="news-entries">
 
-        <article class="news-item news-item--text">
+        <article class="news-item">
             <div>
                 <div class="news-date">September 2026</div>
                 <h3 class="news-title">Joining the Frank H. Netter MD School of Medicine</h3>
                 <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
             </div>
+            <img class="news-thumb news-thumb--logo" style="padding: 20px 44px;" src="/assets/images/news/netter-som-seal.jpg" alt="Frank H. Netter MD School of Medicine seal">
         </article>
 
         <article class="news-item news-item--text">
@@ -345,13 +346,14 @@ permalink: /lab-news/
             </div>
         </article>
 
-        <article class="news-item news-item--text">
+        <article class="news-item">
             <div>
                 <div class="news-date">June 2026</div>
                 <h3 class="news-title">Platform Presentation and Student Poster at BDRP 2026</h3>
-                <!-- TODO: add talk/poster titles; to add a photo, switch to "news-item" and add an <img class="news-thumb"> after this <div> -->
+                <!-- TODO: add talk/poster titles; swap the logo for a meeting photo if you have one -->
                 <p class="news-description">At the 66th Annual Meeting of the Society for Birth Defects Research and Prevention in Washington, DC, Dr. Wolujewicz gave a platform presentation on tandem repeat expansions in myelomeningocele case-parent trios. Netter medical students Maya Puar and Katrina Etts (M4) co-presented a poster.</p>
             </div>
+            <img class="news-thumb news-thumb--logo" src="/assets/images/bdrp-logo.png" alt="Society for Birth Defects Research and Prevention">
         </article>
 
         <article class="news-item">
@@ -491,7 +493,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">August 2024</div>
                 <h3 class="news-title">Platform Talk at the 13th International Conference on Neural Tube Defects</h3>
-                <p class="news-description">Dr. Wolujewicz presented "Evidence for Fine-Scale Structural Variation in Human NTD Cases."</p>
+                <p class="news-description">Dr. Wolujewicz presented "Evidence for Pathogenic Expansions in NTD Case-Parent Trios."</p>
             </div>
             <img class="news-thumb" src="/assets/images/news/ntd-conference-2024.jpg" alt="13th International Conference on Neural Tube Defects">
         </article>
