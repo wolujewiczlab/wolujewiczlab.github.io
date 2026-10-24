@@ -68,7 +68,7 @@ permalink: /lab-news/
 }
 
 /* ============ LAB NEWS — LAYOUT ============ */
-.news-page h1, .news-year, .news-title { font-variant-numeric: lining-nums; }
+.news-page-title, .news-year, .news-title { font-variant-numeric: lining-nums; }
 .news-page {
     background: #f7f7f5;
     margin: 0;
@@ -76,30 +76,19 @@ permalink: /lab-news/
     min-height: 100vh;
 }
 
-.news-header {
-    background: #2a2a2a;
-    text-align: center;
-    padding: 72px 24px 56px;
-}
-.news-header h1 {
+.news-page-title {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 52px;
+    font-size: 40px;
     font-weight: 600;
-    color: #ffffff;
-    margin: 0 0 12px;
-    letter-spacing: -0.5px;
-}
-.news-header p {
-    font-family: 'Inter', sans-serif;
-    font-size: 17px;
-    color: rgba(255, 255, 255, 0.65);
-    margin: 0;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+    margin: 0 0 40px;
 }
 
 .news-content {
     max-width: 1040px;
     margin: 0 auto;
-    padding: 64px 40px 96px;
+    padding: 56px 40px 96px;
 }
 
 /* Year block: year label on the left, entries on the right */
@@ -183,57 +172,22 @@ permalink: /lab-news/
     background: #e9e9e6;
 }
 
-/* Short one-line entries */
-.news-brief {
-    list-style: none;
-    margin: 0;
-    padding: 20px 0 0;
-}
-.news-brief li {
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 16px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    color: #474747;
-    padding: 6px 0;
-    margin: 0;
-}
-.news-brief li span {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #8a8a8a;
-    padding-top: 2px;
-}
-
-/* Collapsed archive */
-.news-archive summary {
-    list-style: none;
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    color: #178896;
+/* Short one-line entries (no title, no photo) */
+.news-item--brief {
+    grid-template-columns: 1fr;
     padding: 18px 0;
-    border-top: 2px solid #1a1a1a;
 }
-.news-archive summary::-webkit-details-marker { display: none; }
-.news-archive summary::after { content: "Show 2024 news \2193"; }
-.news-archive[open] summary::after { content: "Hide 2024 news \2191"; }
+.news-item--brief .news-date { margin-bottom: 4px; }
+.news-item--brief .news-description { color: #333; }
 
 @media (max-width: 860px) {
     .news-content { padding: 40px 20px 64px; }
-    .news-header { padding: 56px 20px 44px; }
-    .news-header h1 { font-size: 38px; }
+    .news-page-title { font-size: 32px; margin-bottom: 28px; }
     .news-year-block { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
     .news-year { position: static; border-top: none; padding: 0 0 10px; font-size: 26px; }
     .news-item { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
     .news-thumb { width: 100%; height: 210px; order: -1; }
     .news-title { font-size: 21px; }
-    .news-brief li { grid-template-columns: 1fr; gap: 2px; padding: 8px 0; }
 }
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
@@ -354,18 +308,14 @@ permalink: /lab-news/
 
 <div class="news-page">
 
-    <div class="news-header">
-        <h1>Lab News</h1>
-        <p>Updates and milestones from the Wolujewicz Lab</p>
-    </div>
-
     <div class="news-content">
+        <h1 class="news-page-title">Lab News</h1>
 
 <!--
   HOW TO ADD NEWS
   - Entry with photo: copy any <article class="news-item"> block; put the image in /assets/images/news/.
   - Entry without photo: use <article class="news-item news-item--text"> and leave out the <img>.
-  - One-liners: add an <li> to that year's <ul class="news-brief">.
+  - One-liners: use <article class="news-item news-item--brief"> with just a date and one sentence.
   - Newest first. Keep descriptions to 1-3 sentences.
 -->
 
@@ -378,7 +328,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">September 2026</div>
                 <h3 class="news-title">Joining the Frank H. Netter MD School of Medicine</h3>
-                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
+                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
             </div>
         </article>
 
@@ -386,7 +336,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">August 2026</div>
                 <h3 class="news-title">Faculty Fellow, User Experience and Behavioral Insights Lab</h3>
-                <p class="news-description">Paul was named a 2026&ndash;27 Faculty Fellow of the School of Business's User Experience and Behavioral Insights (UXBI) Lab, representing medicine in its interdisciplinary Faculty Lab Fellows Program. He will present the lab's research in the UXBI Fall 2026 Research Series on November 12.</p>
+                <p class="news-description">Dr. Wolujewicz was named a 2026&ndash;27 Faculty Fellow of the School of Business's User Experience and Behavioral Insights (UXBI) Lab, representing medicine in its interdisciplinary Faculty Lab Fellows Program. He will present the lab's research in the UXBI Fall 2026 Research Series on November 12.</p>
                 <a href="https://www.qu.edu/schools/business/facilities-and-resources/user-experience-and-behavioral-insights-lab/" class="news-link" target="_blank" rel="noopener">About the UXBI Lab</a>
             </div>
         </article>
@@ -454,6 +404,13 @@ permalink: /lab-news/
             <img class="news-thumb" style="object-position: 50% 20%;" src="/assets/images/news/brandon-nemca-2025.jpg" alt="Brandon Assi at NMCA 2025">
         </article>
 
+        <article class="news-item news-item--brief">
+            <div>
+                <div class="news-date">November 2025</div>
+                <p class="news-description">Dr. Wolujewicz was appointed Research Affiliate at the Connecticut Agricultural Experiment Station (CAES).</p>
+            </div>
+        </article>
+
         <article class="news-item">
             <div>
                 <div class="news-date">October 2025</div>
@@ -473,6 +430,13 @@ permalink: /lab-news/
             <img class="news-thumb" src="/assets/images/news/quiprs-bobcat-weekend-2025.jpg" alt="QUIP-RS students at Bobcat Weekend 2025">
         </article>
 
+        <article class="news-item news-item--brief">
+            <div>
+                <div class="news-date">August 2025</div>
+                <p class="news-description">Dr. Wolujewicz was approved for Regular Membership in the Society for Birth Defects Research and Prevention.</p>
+            </div>
+        </article>
+
         <article class="news-item">
             <div>
                 <div class="news-date">July 2025</div>
@@ -482,20 +446,21 @@ permalink: /lab-news/
             <img class="news-thumb" src="/assets/images/news/bdrp-denver-2025.jpg" alt="BDRP Annual Meeting, Denver 2025">
         </article>
 
+        <article class="news-item news-item--brief">
+            <div>
+                <div class="news-date">April 2025</div>
+                <p class="news-description">Dr. Wolujewicz chaired the "AI Tools in Neurobiology" session at the NEURON Conference.</p>
+            </div>
+        </article>
+
         <article class="news-item">
             <div>
                 <div class="news-date">March 2025</div>
                 <h3 class="news-title">Outstanding Capstone Mentor Award</h3>
                 <p class="news-description">Dr. Wolujewicz and Dr. James K. Soda were named 2025 Outstanding Capstone Mentors at Netter's Capstone Scholars Day, where their mentee John Gribbin (MD '25) received the Stephen Wikel, PhD Scientific Scholarship Award.</p>
             </div>
-            <img class="news-thumb" style="object-position: 50% 15%;" src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 awards">
+            <img class="news-thumb" src="/assets/images/news/capstone-awards-2025.jpg" alt="Capstone Scholars Day 2025 awards">
         </article>
-
-        <ul class="news-brief">
-            <li><span>Nov 2025</span> Appointed Research Affiliate at the Connecticut Agricultural Experiment Station (CAES).</li>
-            <li><span>Aug 2025</span> Approved for Regular Membership in the Society for Birth Defects Research and Prevention.</li>
-            <li><span>Apr 2025</span> Chaired the "AI Tools in Neurobiology" session at the NEURON Conference.</li>
-        </ul>
 
     </div>
 </section>
@@ -503,8 +468,7 @@ permalink: /lab-news/
 <!-- ============================== 2024 ============================== -->
 <section class="news-year-block">
     <h2 class="news-year">2024</h2>
-    <details class="news-archive">
-        <summary></summary>
+    <div class="news-entries">
 
         <article class="news-item">
             <div>
@@ -532,7 +496,7 @@ permalink: /lab-news/
             </div>
             <img class="news-thumb" src="/assets/images/news/john-aan-2024.jpg" alt="John Gribbin at AAN 2024">
         </article>
-    </details>
+    </div>
 </section>
 
     </div>
