@@ -223,8 +223,8 @@ main,
 
 .animated-banner {
     width: 100%;
-    height: 100vh;  /* FULL viewport height for true full-screen */
-    min-height: 650px;  /* Minimum height fallback */
+    height: 88vh;  /* Leaves the next section peeking in below */
+    min-height: 620px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -243,33 +243,43 @@ main,
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-.banner-content h1 {
-    font-size: 56px;
+.banner-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
     font-weight: 600;
-    margin-bottom: 20px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+    margin: 0 0 22px;
+}
+
+.banner-content h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 68px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
     color: #ffffff;
-    text-shadow: 0 3px 20px rgba(0,0,0,0.6);
-    letter-spacing: -1px;
-    font-family: 'Playfair Display', serif;
+    text-shadow: 0 3px 20px rgba(0,0,0,0.5);
+    margin: 0 0 18px;
 }
 
 .banner-tagline {
-    font-size: 44px;  /* INCREASED from 40px - slightly larger */
-    font-weight: 700;  /* BOLD - increased from 600 */
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
     color: #22a8b8;
-    letter-spacing: 0.5px;
-    font-family: 'Playfair Display', serif;
-    margin-bottom: 25px;
+    letter-spacing: 0;
+    margin: 0 0 28px;
 }
 
 .banner-description {
-    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
     font-weight: 400;
-    color: rgba(255, 255, 255, 0.85);
-    font-family: 'Playfair Display', serif;  /* CHANGED to Playfair for consistency */
-    font-style: italic;
     line-height: 1.7;
-    max-width: 750px;
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 680px;
     margin: 0 auto;
 }
 
@@ -406,6 +416,71 @@ main,
 .large-dot.cyan { background: #06b6d4; box-shadow: 0 0 35px rgba(6, 182, 212, 0.8); }
 .large-dot.green { background: #10b981; box-shadow: 0 0 35px rgba(16, 185, 129, 0.8); }
 .large-dot.orange { background: #f59e0b; box-shadow: 0 0 35px rgba(245, 158, 11, 0.8); }
+
+/* ===== Banner enhancements (Oct 2026) ===== */
+.banner-actions {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 36px;
+}
+.banner-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-decoration: none !important;
+    color: #ffffff !important;
+    padding: 12px 26px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.banner-btn:hover { border-color: rgba(255, 255, 255, 0.7); background: rgba(255, 255, 255, 0.07); }
+.banner-btn--primary {
+    background: #22a8b8;
+    border-color: #22a8b8;
+    color: #0f172a !important;
+}
+.banner-btn--primary:hover { background: #3cc3d3; border-color: #3cc3d3; }
+
+/* Dot wrapper carries the cursor offset; the dot inside keeps its float animation */
+.large-dot-wrap {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    transform: translate(var(--mx, 0px), var(--my, 0px));
+    transition: transform 0.9s cubic-bezier(.22,.61,.36,1);
+}
+.large-dot-wrap .large-dot { left: 0; top: 0; }
+
+/* Faint network lines between nearby dots */
+.banner-links {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 65;
+}
+
+/* Base-pair flash across the two tickers */
+.ticker-content-top span, .ticker-content-bottom span {
+    display: inline-block;
+    transition: color 0.7s ease, text-shadow 0.7s ease, transform 0.7s ease;
+}
+.pair-flash {
+    color: #ffffff !important;
+    transform: scale(1.35);
+    text-shadow: 0 0 6px var(--pair-color), 0 0 18px var(--pair-color), 0 0 32px var(--pair-color) !important;
+}
+
+@media (max-width: 768px) {
+    .banner-actions { margin-top: 26px; gap: 10px; }
+    .banner-btn { font-size: 13px; padding: 10px 20px; }
+}
 
 /* SUBTLE DOTS AT EDGES */
 .edge-dots-top, .edge-dots-bottom {
@@ -803,13 +878,18 @@ main,
         height: 350px;
     }
     
-    .banner-content h1 {
-        font-size: 36px;
+    .animated-banner {
+        height: auto !important;
+        min-height: 520px !important;
     }
-    
-    .banner-content p {
-        font-size: 18px;
-    }
+
+    .banner-content { padding: 100px 22px 96px; }
+    .banner-eyebrow { font-size: 11px; letter-spacing: 0.1em; line-height: 1.6; margin-bottom: 16px; }
+    .banner-eyebrow span { display: block; }
+    .banner-eyebrow .eyebrow-sep { display: none; }
+    .banner-content h1 { font-size: 40px; }
+    .banner-content .banner-tagline { font-size: 21px; margin-bottom: 20px; }
+    .banner-content .banner-description { font-size: 15.5px; }
     
     .research-grid {
         grid-template-columns: 1fr;
@@ -854,13 +934,8 @@ main,
         height: 300px;
     }
     
-    .banner-content h1 {
-        font-size: 28px;
-    }
-    
-    .banner-content p {
-        font-size: 16px;
-    }
+    .banner-content h1 { font-size: 34px; }
+    .banner-content .banner-tagline { font-size: 19px; }
     
     .research-section {
         padding: 50px 15px;
@@ -1113,16 +1188,20 @@ main,
             <div class="ticker-content-bottom"></div>
         </div>
         
+        <canvas class="banner-links" id="banner-links" aria-hidden="true"></canvas>
         <div class="large-dots" id="banner-dots"></div>
         
         <div class="banner-content">
+            <p class="banner-eyebrow"><span>Frank H. Netter MD School of Medicine</span><span class="eyebrow-sep"> &middot; </span><span>Quinnipiac University</span></p>
             <h1>Wolujewicz Lab</h1>
-            <p class="banner-tagline">
-                Integrative Genomics and Computational Biomedicine
-            </p>
+            <p class="banner-tagline">Neurogenomics &amp; Public Health Metagenomics</p>
             <p class="banner-description">
-                We apply genomic and computational approaches to investigate the genetic architecture of neurological disorders and the dynamics of infectious disease transmission, with an emphasis on precision medicine and public health impact.
+                We use genome sequencing, multi-omics, and machine learning to uncover the genetic causes of neurological disease and to track tick-borne pathogens, advancing precision medicine and public health.
             </p>
+            <div class="banner-actions">
+                <a class="banner-btn banner-btn--primary" href="/research/">Our Research</a>
+                <a class="banner-btn" href="/lab-news/">Lab News</a>
+            </div>
         </div>
     </div>
 </div>
@@ -1272,7 +1351,7 @@ main,
                     const colorClass = colorClasses[colorIndex];
                     tickerSeqTop += '<span class="' + colorClass + '">' + longDNATop[i] + '</span>';
                 } else {
-                    tickerSeqTop += longDNATop[i];
+                    tickerSeqTop += '<span>' + longDNATop[i] + '</span>';
                 }
             }
             tickerTop.innerHTML = tickerSeqTop + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tickerSeqTop;
@@ -1289,7 +1368,7 @@ main,
                     const colorClass = colorClasses[colorIndex];
                     tickerSeqBottom += '<span class="' + colorClass + '">' + longDNABottom[i] + '</span>';
                 } else {
-                    tickerSeqBottom += longDNABottom[i];
+                    tickerSeqBottom += '<span>' + longDNABottom[i] + '</span>';
                 }
             }
             tickerBottom.innerHTML = tickerSeqBottom + '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' + tickerSeqBottom;
@@ -1307,20 +1386,134 @@ main,
         const largeDots = document.getElementById('banner-dots');
         if (largeDots) {
             dotConfigs.forEach(function(config) {
+                const wrap = document.createElement('div');
+                wrap.className = 'large-dot-wrap';
+                wrap.style.left = config.left;
+                wrap.style.top = config.top;
                 const dot = document.createElement('div');
                 dot.className = 'large-dot ' + config.color;
-                dot.style.left = config.left;
-                dot.style.top = config.top;
                 dot.style.animationDelay = config.delay + 's';
-                largeDots.appendChild(dot);
+                wrap.appendChild(dot);
+                largeDots.appendChild(wrap);
             });
         }
     }
     
+
+    /* ---------- Banner enhancements (Oct 2026) ---------- */
+    var DOT_RGB = { pink: '236,72,153', blue: '59,130,246', purple: '168,85,247', cyan: '6,182,212', green: '16,185,129', orange: '245,158,11' };
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function initEnhancements() {
+        var banner = document.querySelector('.animated-banner');
+        if (!banner || reduceMotion) return;
+        var wraps = Array.prototype.slice.call(banner.querySelectorAll('.large-dot-wrap'));
+        var visible = true;
+        if ('IntersectionObserver' in window) {
+            new IntersectionObserver(function (e) { visible = e[0].isIntersecting; }).observe(banner);
+        }
+
+        /* 3. Dots drift gently away from the cursor */
+        var canHover = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+        if (canHover) {
+            var pending = null, ticking = false;
+            banner.addEventListener('mousemove', function (ev) {
+                pending = ev;
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(function () {
+                    ticking = false;
+                    var e = pending, R = 220, PUSH = 46;
+                    wraps.forEach(function (w) {
+                        var r = w.getBoundingClientRect();
+                        var mx = parseFloat(w.style.getPropertyValue('--mx')) || 0;
+                        var my = parseFloat(w.style.getPropertyValue('--my')) || 0;
+                        var cx = r.left + r.width / 2 - mx, cy = r.top + r.height / 2 - my;
+                        var dx = cx - e.clientX, dy = cy - e.clientY, d = Math.sqrt(dx * dx + dy * dy) || 1;
+                        var k = d < R ? (1 - d / R) : 0;
+                        w.style.setProperty('--mx', (dx / d * PUSH * k).toFixed(1) + 'px');
+                        w.style.setProperty('--my', (dy / d * PUSH * k).toFixed(1) + 'px');
+                    });
+                });
+            });
+            banner.addEventListener('mouseleave', function () {
+                wraps.forEach(function (w) { w.style.setProperty('--mx', '0px'); w.style.setProperty('--my', '0px'); });
+            });
+        }
+
+        /* 5. Faint lines between nearby dots */
+        var canvas = document.getElementById('banner-links');
+        if (canvas && canvas.getContext) {
+            var ctx = canvas.getContext('2d'), dpr = Math.min(window.devicePixelRatio || 1, 2);
+            var resize = function () {
+                var r = banner.getBoundingClientRect();
+                canvas.width = r.width * dpr; canvas.height = r.height * dpr;
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            };
+            resize(); window.addEventListener('resize', resize);
+            var MAXD = 300;
+            var draw = function () {
+                requestAnimationFrame(draw);
+                if (!visible) return;
+                var b = banner.getBoundingClientRect();
+                ctx.clearRect(0, 0, b.width, b.height);
+                var pts = wraps.map(function (w) {
+                    var dot = w.firstChild, r = dot.getBoundingClientRect();
+                    return { x: r.left + r.width / 2 - b.left, y: r.top + r.height / 2 - b.top, c: DOT_RGB[dot.classList[1]] };
+                });
+                for (var i = 0; i < pts.length; i++) {
+                    for (var j = i + 1; j < pts.length; j++) {
+                        var dx = pts[i].x - pts[j].x, dy = pts[i].y - pts[j].y, d = Math.sqrt(dx * dx + dy * dy);
+                        if (d > MAXD) continue;
+                        var a = Math.pow(1 - d / MAXD, 1.6) * 0.32;
+                        var g = ctx.createLinearGradient(pts[i].x, pts[i].y, pts[j].x, pts[j].y);
+                        g.addColorStop(0, 'rgba(' + pts[i].c + ',' + a + ')');
+                        g.addColorStop(1, 'rgba(' + pts[j].c + ',' + a + ')');
+                        ctx.strokeStyle = g; ctx.lineWidth = 1;
+                        ctx.beginPath(); ctx.moveTo(pts[i].x, pts[i].y); ctx.lineTo(pts[j].x, pts[j].y); ctx.stroke();
+                    }
+                }
+            };
+            requestAnimationFrame(draw);
+        }
+
+        /* 4. Base-pairing flash: a base in the top strand and its complement below light up together */
+        var top = banner.querySelector('.ticker-content-top'), bot = banner.querySelector('.ticker-content-bottom');
+        if (top && bot) {
+            var COMP = { A: 'T', T: 'A', C: 'G', G: 'C' };
+            var COLORS = ['#ec4899', '#3b82f6', '#a855f7', '#06b6d4', '#10b981', '#f59e0b'], ci = 0;
+            var plain = function (el) { return Array.prototype.filter.call(el.querySelectorAll('span'), function (sp) { return !sp.className; }); };
+            var topSpans = plain(top), botSpans = plain(bot);
+            var inBand = function (sp, lo, hi) { var r = sp.getBoundingClientRect(); return r.left > lo && r.right < hi; };
+            setInterval(function () {
+                if (!visible || document.hidden) return;
+                var b = banner.getBoundingClientRect();
+                var lo = b.left + b.width * 0.15, hi = b.left + b.width * 0.85;
+                var cands = topSpans.filter(function (sp) { return inBand(sp, lo, hi); });
+                if (!cands.length) return;
+                var t = cands[Math.floor(Math.random() * cands.length)];
+                var tx = t.getBoundingClientRect().left, best = null, bestD = 1e9;
+                botSpans.forEach(function (sp) {
+                    var d = Math.abs(sp.getBoundingClientRect().left - tx);
+                    if (d < bestD) { bestD = d; best = sp; }
+                });
+                if (!best || bestD > 40) return;
+                best.textContent = COMP[t.textContent] || best.textContent;
+                var col = COLORS[ci++ % COLORS.length];
+                [t, best].forEach(function (sp) {
+                    sp.style.setProperty('--pair-color', col);
+                    sp.classList.add('pair-flash');
+                    setTimeout(function () { sp.classList.remove('pair-flash'); }, 1400);
+                });
+            }, 2600);
+        }
+    }
+
+    function start() { initBanner(); initEnhancements(); }
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initBanner);
+        document.addEventListener('DOMContentLoaded', start);
     } else {
-        initBanner();
+        start();
     }
 })();
 </script>
