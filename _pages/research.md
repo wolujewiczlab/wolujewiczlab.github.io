@@ -855,7 +855,9 @@ html { scroll-behavior: smooth; }
 .rx-inner { max-width: 1040px; margin: 0 auto; }
 .rx-intro .rx-title, .rx-intro .rx-lede, .rx-intro .rx-methods { text-align: center; }
 .rx-intro p.rx-lede { margin: 0 auto 20px !important; }
-.rx-intro p.rx-methods { margin: 0 auto 52px !important; }
+.rx-intro p.rx-methods { margin: 0 auto 52px !important; text-wrap: balance; }
+.rx-methods span { white-space: nowrap; }
+.rx-intro p.rx-lede { text-wrap: pretty; }
 .rx-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 40px;
@@ -992,7 +994,7 @@ html { scroll-behavior: smooth; }
     <div class="rx-inner">
         <h1 class="rx-title">Research</h1>
         <p class="rx-lede">We study the genetic architecture of neurological disease and the tick-borne pathogens that shape public health in our region. Combining whole-genome sequencing, long-read metagenomics, and machine learning, we look for the variants, pathways, and pathogens that matter for patients and communities.</p>
-        <p class="rx-methods">Whole-genome sequencing &middot; Long-read metagenomics &middot; Machine learning &middot; Systems biology &middot; Multi-omic integration</p>
+        <p class="rx-methods"><span>Whole-genome sequencing</span> &middot; <span>Long-read metagenomics</span> &middot; <span>Machine learning</span> &middot; <span>Systems biology</span> &middot; <span>Multi-omic integration</span></p>
 
         <nav class="rx-areas" aria-label="Research areas">
             <a class="rx-area rx-area--ntd" href="#neural-tube-defects">
