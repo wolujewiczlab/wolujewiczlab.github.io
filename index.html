@@ -689,6 +689,18 @@ main,
     margin: 0;
 }
 
+.institutional-text a { display: block; }
+.institutional-text p.university-line,
+.institutional-text p.school-line { line-height: 1.35; }
+.overview-text .institutional-text p.school-line { margin-bottom: 0; }
+.institutional-text p.school-line--joint {
+    font-size: 12.5px;
+    font-weight: 500;
+    color: #888;
+    letter-spacing: 0.5px;
+    margin: 8px 0 0 0;
+}
+
 .stat-text {
     font-size: 14px;
     color: #555;
@@ -890,9 +902,11 @@ main,
         gap: 20px;
     }
     
-    .institutional-text {
-        display: none;  /* Hide on mobile to keep it clean */
-    }
+    .institutional-affiliation { gap: 14px; }
+    .bobcat-logo img { width: 64px; }
+    .institutional-text p.university-line { font-size: 14px; letter-spacing: 1px; }
+    .institutional-text p.school-line { font-size: 13px; letter-spacing: 0.3px; }
+    .institutional-text p.school-line--joint { font-size: 12px; }
     
     .stat-icon {
         width: 50px;
@@ -1130,12 +1144,17 @@ main,
                 <div class="overview-stats">
                     <div class="institutional-affiliation">
                         <div class="bobcat-logo">
-                            <img src="/assets/images/quinnipiac-bobcat.png" alt="Quinnipiac Bobcat">
+                            <a href="https://medicine.qu.edu/" target="_blank" rel="noopener noreferrer">
+                                <img src="/assets/images/netter-som-seal.png" alt="Frank H. Netter MD School of Medicine">
+                            </a>
                         </div>
                         <div class="institutional-text">
-                            <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
+                            <a href="https://medicine.qu.edu/" target="_blank" rel="noopener noreferrer">
                                 <p class="university-line">Quinnipiac University</p>
-                                <p class="school-line">School of Health Sciences</p>
+                                <p class="school-line">Frank H. Netter MD School of Medicine</p>
+                            </a>
+                            <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
+                                <p class="school-line school-line--joint">Joint appointment &middot; School of Health Sciences</p>
                             </a>
                         </div>
                     </div>
@@ -1201,8 +1220,8 @@ main,
         <div class="affiliations-grid">
             <!-- Quinnipiac University -->
             <div class="affiliation-item">
-                <a href="https://www.qu.edu/" target="_blank" rel="noopener noreferrer">
-                    <img src="/assets/images/quinnipiac-logo.png" alt="Quinnipiac University">
+                <a href="https://medicine.qu.edu/" target="_blank" rel="noopener noreferrer">
+                    <img src="/assets/images/quinnipiac-logo.png" alt="Quinnipiac University Frank H. Netter MD School of Medicine">
                 </a>
             </div>
             
