@@ -249,9 +249,10 @@ main,
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.6);
     margin: 0 0 22px;
 }
+.banner-content p.banner-eyebrow { margin: 0 auto 22px !important; }
 
 .banner-content h1 {
     font-family: 'Playfair Display', Georgia, serif;
@@ -261,7 +262,7 @@ main,
     letter-spacing: -0.5px;
     color: #ffffff;
     text-shadow: 0 3px 20px rgba(0,0,0,0.5);
-    margin: 0 0 18px;
+    margin: 0 0 16px;
 }
 
 .banner-tagline {
@@ -477,35 +478,45 @@ main,
     display: inline-block;
     position: relative;
     vertical-align: top;
-    transition: color 0.7s ease, text-shadow 0.7s ease, transform 0.45s ease, max-width 0.7s ease, opacity 0.7s ease;
+    transition: color 0.6s ease, text-shadow 0.6s ease;
 }
 .ticker-content-top span.v-hit, .ticker-content-bottom span.v-hit {
     color: #ffffff !important;
-    text-shadow: 0 0 6px var(--v-color), 0 0 18px var(--v-color), 0 0 30px var(--v-color) !important;
+    text-shadow: 0 0 4px var(--v-color), 0 0 14px var(--v-color), 0 0 28px var(--v-color) !important;
 }
-.ticker-content-top span.v-grow, .ticker-content-bottom span.v-grow { max-width: 0; opacity: 0; overflow: hidden; }
-.ticker-content-top span.v-shrink, .ticker-content-bottom span.v-shrink { max-width: 0 !important; opacity: 0 !important; overflow: hidden; }
-.ticker-content-top span.v-flip, .ticker-content-bottom span.v-flip { transform: scaleX(0); }
+/* inversion carrier: lifts, spins like a coin, lands */
+.v-seg {
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: 50% 50%;
+    transition: transform 0.5s cubic-bezier(.22,.61,.36,1);
+    will-change: transform;
+}
 .v-label {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(calc(-50% + var(--v-dx, 0px)), 4px);
     font-family: 'Inter', sans-serif;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.08em;
+    line-height: 1;
     white-space: nowrap;
     color: var(--v-color);
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid var(--v-color);
+    border-radius: 999px;
+    padding: 4px 9px 4px;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.45s ease, transform 0.45s ease;
     pointer-events: none;
+    z-index: 2;
 }
-.v-label.on { opacity: 0.95; }
-/* Room inside the ticker strips for the variant labels (strips clip horizontally) */
-.dna-ticker-top { padding-bottom: 26px; }
-.dna-ticker-bottom { padding-top: 26px; }
-.ticker-content-top .v-label { top: 100%; margin-top: 4px; }
-.ticker-content-bottom .v-label { bottom: 100%; margin-bottom: 4px; }
+.v-label.on { opacity: 1; transform: translate(calc(-50% + var(--v-dx, 0px)), 0); }
+.ticker-content-top .v-label { top: 100%; margin-top: 8px; }
+.ticker-content-bottom .v-label { bottom: 100%; margin-bottom: 8px; }
+.dna-ticker-top { padding-bottom: 36px; }
+.dna-ticker-bottom { padding-top: 36px; }
 
 @media (max-width: 768px) {
     .banner-actions { margin-top: 26px; gap: 10px; }
@@ -917,6 +928,7 @@ main,
     .banner-eyebrow { font-size: 11px; letter-spacing: 0.1em; line-height: 1.6; margin-bottom: 16px; }
     .banner-eyebrow span { display: block; }
     .banner-eyebrow .eyebrow-sep { display: none; }
+    .banner-eyebrow span:last-child::before { content: 'at '; }
     .banner-content h1 { font-size: 40px; }
     .banner-content .banner-tagline { font-size: 21px; margin-bottom: 20px; }
     .banner-content .banner-description { font-size: 15.5px; }
@@ -1222,8 +1234,8 @@ main,
         <div class="large-dots" id="banner-dots"></div>
         
         <div class="banner-content">
-            <p class="banner-eyebrow"><span>Frank H. Netter MD School of Medicine</span><span class="eyebrow-sep"> &middot; </span><span>Quinnipiac University</span></p>
             <h1>Wolujewicz Lab</h1>
+            <p class="banner-eyebrow"><span>Frank H. Netter MD School of Medicine</span><span class="eyebrow-sep"> at </span><span>Quinnipiac University</span></p>
             <p class="banner-tagline">Neurogenomics &amp; Public Health Metagenomics</p>
             <p class="banner-description">
                 We use genome sequencing, multi-omics, and machine learning to uncover the genetic causes of neurological disease and to track tick-borne pathogens, advancing precision medicine and public health.
@@ -1511,53 +1523,64 @@ main,
         if (tops && bots) {
             var BASES = ['A', 'C', 'G', 'T'], COMP = { A: 'T', T: 'A', C: 'G', G: 'C' };
             var KINDS = [
-                { k: 'snv', c: '#ec4899' }, { k: 'ins', c: '#10b981' }, { k: 'del', c: '#f59e0b' },
-                { k: 'inv', c: '#a855f7' }, { k: 'dup', c: '#06b6d4' }
+                { k: 'snv', c: '#ec4899' }, { k: 'inv', c: '#a855f7' }, { k: 'ins', c: '#10b981' },
+                { k: 'del', c: '#f59e0b' }, { k: 'dup', c: '#06b6d4' }
             ];
             var kindIdx = 0;
+            var EASE = 'cubic-bezier(.22,.61,.36,1)';
             var rnd = function (n) { return Math.floor(Math.random() * n); };
+            var later = function (ms, fn) { setTimeout(fn, ms); };
+            var base = function (sp) { return sp.firstChild.nodeValue; };
+            var setBase = function (sp, ch) { sp.firstChild.nodeValue = ch; };
             var plainSpans = function (el) {
                 return Array.prototype.filter.call(el.children, function (sp) { return sp.tagName === 'SPAN' && !sp.className; });
             };
-            var allSpans = function (el) { return Array.prototype.slice.call(el.children); };
             var mk = function (ch) { var sp = document.createElement('span'); sp.textContent = ch; return sp; };
-            var label = function (sp, text, col) {
-                var l = document.createElement('i');
-                l.className = 'v-label'; l.textContent = text; l.style.setProperty('--v-color', col);
-                l.style.fontStyle = 'normal';
-                sp.appendChild(l);
-                requestAnimationFrame(function () { l.classList.add('on'); });
-                setTimeout(function () { l.classList.remove('on'); }, 2600);
-                setTimeout(function () { if (l.parentNode) l.parentNode.removeChild(l); }, 3200);
+            var tween = function (sp, css, ms, delay) {
+                later(delay || 0, function () {
+                    sp.style.transition = 'transform ' + ms + 'ms ' + EASE + ', opacity ' + ms + 'ms ease, filter ' + ms + 'ms ease, max-width ' + ms + 'ms ' + EASE + ', color 0.6s ease, text-shadow 0.6s ease';
+                    for (var k in css) sp.style[k] = css[k];
+                });
             };
-            var glow = function (list, col) {
+            var label = function (sp, text, col, delay, dx) {
+                later(delay || 0, function () {
+                    if (!sp.parentNode) return;
+                    var l = document.createElement('i');
+                    l.className = 'v-label'; l.textContent = text; l.style.fontStyle = 'normal';
+                    l.style.setProperty('--v-color', col);
+                    if (dx) l.style.setProperty('--v-dx', dx + 'px');
+                    sp.appendChild(l);
+                    requestAnimationFrame(function () { requestAnimationFrame(function () { l.classList.add('on'); }); });
+                    later(2200, function () { l.classList.remove('on'); });
+                    later(2800, function () { if (l.parentNode) l.parentNode.removeChild(l); });
+                });
+            };
+            var glow = function (list, col, ms) {
                 list.forEach(function (sp) { sp.style.setProperty('--v-color', col); sp.classList.add('v-hit'); });
-                setTimeout(function () { list.forEach(function (sp) { sp.classList.remove('v-hit'); }); }, 2600);
+                later(ms || 2600, function () { list.forEach(function (sp) { sp.classList.remove('v-hit'); }); });
             };
             /* Keep each ticker's length constant so its seamless loop never jumps:
                every insertion is balanced by removing bases already scrolled out of view, and vice versa. */
-            var offscreen = function (el, isTop) {
+            var balance = function (el, isTop, delta) {
                 var b = banner.getBoundingClientRect();
-                return plainSpans(el).filter(function (sp) {
+                var pool = plainSpans(el).filter(function (sp) {
                     var r = sp.getBoundingClientRect();
                     return isTop ? r.right < b.left - 40 : r.left > b.right + 40;
                 });
-            };
-            var balance = function (el, isTop, delta) {
-                var pool = offscreen(el, isTop);
                 if (delta > 0) {
                     for (var i = 0; i < delta && pool.length; i++) { var x = pool.splice(rnd(pool.length), 1)[0]; x.parentNode.removeChild(x); }
                 } else {
                     for (var j = 0; j < -delta && pool.length; j++) { var y = pool[rnd(pool.length)]; y.parentNode.insertBefore(mk(BASES[rnd(4)]), y); }
                 }
             };
-            /* Pick a run of n plain, adjacent bases near the centre of the banner */
-            var pickRun = function (el, n) {
-                var b = banner.getBoundingClientRect(), lo = b.left + b.width * 0.2, hi = b.left + b.width * 0.8;
-                var kids = allSpans(el), starts = [];
+            /* A run of n adjacent plain bases, inside the middle of the banner and clear of where it will scroll */
+            var pickRun = function (el, n, isTop) {
+                var b = banner.getBoundingClientRect();
+                var lo = b.left + b.width * (isTop ? 0.35 : 0.15), hi = b.left + b.width * (isTop ? 0.85 : 0.65);
+                var kids = Array.prototype.slice.call(el.children), starts = [];
                 for (var i = 0; i + n <= kids.length; i++) {
                     var ok = true;
-                    for (var j = 0; j < n; j++) { if (kids[i + j].tagName !== 'SPAN' || kids[i + j].className) { ok = false; break; } }
+                    for (var j = 0; j < n; j++) { if (kids[i + j].tagName !== 'SPAN' || kids[i + j].className || kids[i + j].style.transform) { ok = false; break; } }
                     if (!ok) continue;
                     var r1 = kids[i].getBoundingClientRect(), r2 = kids[i + n - 1].getBoundingClientRect();
                     if (r1.left > lo && r2.right < hi) starts.push(i);
@@ -1566,64 +1589,118 @@ main,
                 var s0 = starts[rnd(starts.length)];
                 return kids.slice(s0, s0 + n);
             };
+            var clean = function (list, ms) {
+                later(ms, function () { list.forEach(function (sp) { sp.style.transition = ''; sp.style.transform = ''; sp.style.opacity = ''; sp.style.filter = ''; sp.style.maxWidth = ''; }); });
+            };
 
             var fire = function () {
                 if (!visible || document.hidden) return;
                 var kind = KINDS[kindIdx++ % KINDS.length];
                 var isTop = Math.random() < 0.5, el = isTop ? tops : bots, col = kind.c;
+                var inward = isTop ? 1 : -1;   /* direction toward the centre of the banner */
 
+                /* SNV: the old base slides out, the new one slides in */
                 if (kind.k === 'snv') {
-                    var run = pickRun(el, 1); if (!run) return;
-                    var sp = run[0], from = sp.firstChild.nodeValue, to = BASES.filter(function (x) { return x !== from; })[rnd(3)];
-                    sp.classList.add('v-flip');
-                    setTimeout(function () { sp.firstChild.nodeValue = to; sp.classList.remove('v-flip'); }, 450);
-                    glow([sp], col); label(sp, from + '>' + to, col);
+                    var run = pickRun(el, 1, isTop); if (!run) return;
+                    var sp = run[0], from = base(sp), to = BASES.filter(function (x) { return x !== from; })[rnd(3)];
+                    glow([sp], col, 2600);
+                    tween(sp, { transform: 'translateY(' + (-14 * inward) + 'px)', opacity: '0', filter: 'blur(3px)' }, 260, 250);
+                    later(520, function () {
+                        setBase(sp, to);
+                        sp.style.transition = 'none';
+                        sp.style.transform = 'translateY(' + (14 * inward) + 'px)';
+                        void sp.offsetWidth;
+                        tween(sp, { transform: 'translateY(0) scale(1.18)', opacity: '1', filter: 'blur(0)' }, 420, 0);
+                        tween(sp, { transform: 'scale(1)' }, 500, 450);
+                    });
+                    clean([sp], 3000);
+                    label(sp, 'SNV  ' + from + '>' + to, col, 600);
                 }
+
+                /* Inversion: the segment lifts off, spins like a coin, and lands as its reverse complement */
+                else if (kind.k === 'inv') {
+                    var n4 = 5, run4 = pickRun(el, n4, isTop); if (!run4) return;
+                    var rc = run4.map(base).reverse().map(function (x) { return COMP[x] || x; });
+                    var seg = document.createElement('span');
+                    seg.className = 'v-seg';
+                    el.insertBefore(seg, run4[0]);
+                    run4.forEach(function (x) { seg.appendChild(x); });
+                    glow(run4, col, 3000);
+                    var lift = 'translateY(' + (18 * inward) + 'px) scale(1.06)';
+                    later(250, function () { seg.style.transform = lift; });
+                    later(800, function () {
+                        seg.style.transition = 'transform 0.32s cubic-bezier(.55,0,.75,.06)';
+                        seg.style.transform = lift + ' perspective(500px) rotateY(90deg)';
+                    });
+                    later(1130, function () {
+                        run4.forEach(function (x, i) { setBase(x, rc[i]); });
+                        seg.style.transition = 'none';
+                        seg.style.transform = lift + ' perspective(500px) rotateY(-90deg)';
+                        void seg.offsetWidth;
+                        seg.style.transition = 'transform 0.36s cubic-bezier(.25,.46,.45,.94)';
+                        seg.style.transform = lift + ' perspective(500px) rotateY(0deg)';
+                    });
+                    later(1600, function () {
+                        seg.style.transition = 'transform 0.55s cubic-bezier(.34,1.56,.64,1)';
+                        seg.style.transform = 'translateY(0) scale(1)';
+                    });
+                    label(run4[2], 'INV  ' + n4 + ' bp', col, 1750);
+                    later(4800, function () {
+                        if (!seg.parentNode) return;
+                        run4.forEach(function (x) { seg.parentNode.insertBefore(x, seg); });
+                        seg.parentNode.removeChild(seg);
+                    });
+                }
+
+                /* Insertion / duplication: the gap opens and new bases drop (or slide) into place */
                 else if (kind.k === 'ins' || kind.k === 'dup') {
-                    var n = kind.k === 'ins' ? 2 + rnd(2) : 3;
-                    var run2 = pickRun(el, kind.k === 'dup' ? n : 1); if (!run2) return;
-                    var anchor = run2[run2.length - 1], added = [];
+                    var dup = kind.k === 'dup';
+                    var n = dup ? 3 : 2 + rnd(2);
+                    var run2 = pickRun(el, dup ? n : 1, isTop); if (!run2) return;
+                    var anchor = run2[run2.length - 1], added = [], prev = anchor;
+                    var w = anchor.getBoundingClientRect().width;
                     for (var i = 0; i < n; i++) {
-                        var ch = kind.k === 'dup' ? run2[i].firstChild.nodeValue : BASES[rnd(4)];
-                        var ns = mk(ch); ns.className = 'v-grow';
-                        anchor.parentNode.insertBefore(ns, (added.length ? added[added.length - 1] : anchor).nextSibling);
+                        var ns = mk(dup ? base(run2[i]) : BASES[rnd(4)]);
+                        ns.style.maxWidth = '0px'; ns.style.opacity = '0'; ns.style.overflow = 'visible';
+                        ns.style.transform = dup ? 'translateX(' + (-w * n) + 'px)' : 'translateY(' + (-26 * inward) + 'px)';
+                        prev.parentNode.insertBefore(ns, prev.nextSibling); prev = ns;
                         added.push(ns);
                     }
-                    requestAnimationFrame(function () { requestAnimationFrame(function () {
-                        added.forEach(function (x) { x.style.maxWidth = '60px'; x.classList.remove('v-grow'); });
-                    }); });
-                    setTimeout(function () { added.forEach(function (x) { x.style.maxWidth = ''; }); }, 900);
-                    var lit = kind.k === 'dup' ? run2.concat(added) : added;
-                    glow(lit, col);
-                    label(added[Math.floor(added.length / 2)], kind.k === 'dup' ? 'dup' : 'ins ' + added.map(function (x) { return x.firstChild.nodeValue; }).join(''), col);
-                    setTimeout(function () { balance(el, isTop, n); }, 3400);
+                    if (dup) glow(run2, col, 3000);
+                    glow(added, col, 3000);
+                    added.forEach(function (x, i) {
+                        tween(x, { maxWidth: Math.ceil(w) + 'px' }, 550, 200 + i * 60);
+                        tween(x, { transform: 'translate(0,0)', opacity: '1' }, 600, 450 + i * 110);
+                    });
+                    clean(added, 3200);
+                    label(added[Math.floor(n / 2)], dup ? 'DUP  ' + n + ' bp' : 'INS  +' + added.map(base).join(''), col, 700);
+                    later(3600, function () { balance(el, isTop, n); });
                 }
+
+                /* Deletion: the run glows, its bases dissolve one by one, then the gap closes */
                 else if (kind.k === 'del') {
-                    var n2 = 2 + rnd(2), run3 = pickRun(el, n2); if (!run3) return;
-                    glow(run3, col);
-                    var mid = run3[Math.floor(n2 / 2)];
-                    label(mid, 'del', col);
-                    setTimeout(function () {
-                        run3.forEach(function (x) { x.style.maxWidth = x.getBoundingClientRect().width + 'px'; });
-                        requestAnimationFrame(function () { run3.forEach(function (x) { x.classList.add('v-shrink'); }); });
-                    }, 1100);
-                    setTimeout(function () {
+                    var n2 = 3, run3 = pickRun(el, n2, isTop); if (!run3) return;
+                    glow(run3, col, 1400);
+                    var anc = run3[0].previousElementSibling || run3[0];
+                    var ra = anc.getBoundingClientRect(), rm = run3[1].getBoundingClientRect();
+                    label(anc, 'DEL  ' + n2 + ' bp', col, 250, (rm.left + rm.width / 2) - (ra.left + ra.width / 2));
+                    run3.forEach(function (x, i) {
+                        var rot = (rnd(2) ? 1 : -1) * (12 + rnd(18));
+                        tween(x, { transform: 'translateY(' + (22 * inward) + 'px) rotate(' + rot + 'deg) scale(0.55)', opacity: '0', filter: 'blur(4px)' }, 650, 900 + i * 120);
+                    });
+                    later(1800, function () {
+                        run3.forEach(function (x) { x.style.maxWidth = x.getBoundingClientRect().width + 'px'; x.style.overflow = 'hidden'; });
+                        requestAnimationFrame(function () { run3.forEach(function (x) { tween(x, { maxWidth: '0px' }, 550, 0); }); });
+                        var l = anc.querySelector('.v-label');
+                        if (l) { l.style.transition = 'opacity 0.45s ease, transform 0.55s cubic-bezier(.22,.61,.36,1)'; l.style.setProperty('--v-dx', (ra.width / 2) + 'px'); }
+                    });
+                    later(2500, function () {
                         run3.forEach(function (x) { if (x.parentNode) x.parentNode.removeChild(x); });
                         balance(el, isTop, -n2);
-                    }, 2200);
-                }
-                else if (kind.k === 'inv') {
-                    var n3 = 5, run4 = pickRun(el, n3); if (!run4) return;
-                    var seq = run4.map(function (x) { return x.firstChild.nodeValue; });
-                    var rc = seq.slice().reverse().map(function (x) { return COMP[x] || x; });
-                    glow(run4, col); label(run4[2], 'inv', col);
-                    run4.forEach(function (x) { x.classList.add('v-flip'); });
-                    setTimeout(function () {
-                        run4.forEach(function (x, i) { x.firstChild.nodeValue = rc[i]; x.classList.remove('v-flip'); });
-                    }, 450);
+                    });
                 }
             };
-            setInterval(fire, 3200);
+            setInterval(fire, 3400);
             setTimeout(fire, 1200);
         }
     }
