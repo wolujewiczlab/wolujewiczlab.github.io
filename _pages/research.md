@@ -853,6 +853,9 @@ html { scroll-behavior: smooth; }
     box-sizing: border-box;
 }
 .rx-inner { max-width: 1040px; margin: 0 auto; }
+.rx-intro .rx-title, .rx-intro .rx-lede, .rx-intro .rx-methods { text-align: center; }
+.rx-intro p.rx-lede { margin: 0 auto 20px !important; }
+.rx-intro p.rx-methods { margin: 0 auto 52px !important; }
 .rx-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 40px;
@@ -875,7 +878,7 @@ html { scroll-behavior: smooth; }
     letter-spacing: 0.02em;
     line-height: 1.7;
     color: #777;
-    margin: 0 0 52px;
+    margin: 0 auto 52px;
 }
 .rx-areas {
     display: grid;
@@ -925,7 +928,7 @@ html { scroll-behavior: smooth; }
     .rx-intro { padding: 40px 20px 48px; }
     .rx-title { font-size: 32px; }
     .rx-lede { font-size: 17px; }
-    .rx-methods { margin-bottom: 36px; }
+    .rx-intro p.rx-methods { margin-bottom: 36px !important; }
     .rx-areas { grid-template-columns: 1fr; gap: 24px; }
 }
 </style>
