@@ -872,17 +872,10 @@ html { scroll-behavior: smooth; }
 .rx-methods {
     font-family: 'Inter', sans-serif;
     font-size: 14px;
+    letter-spacing: 0.02em;
     line-height: 1.7;
-    color: #666;
+    color: #777;
     margin: 0 0 52px;
-}
-.rx-methods span {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #178896;
-    margin-right: 12px;
 }
 .rx-areas {
     display: grid;
@@ -926,7 +919,7 @@ html { scroll-behavior: smooth; }
     line-height: 1.6;
     color: #555;
 }
-.rx-area-desc::after { content: " \2193"; color: #999; }
+.rx-area-desc::after { content: "\00a0\2193"; color: #999; }
 
 @media (max-width: 860px) {
     .rx-intro { padding: 40px 20px 48px; }
@@ -996,7 +989,7 @@ html { scroll-behavior: smooth; }
     <div class="rx-inner">
         <h1 class="rx-title">Research</h1>
         <p class="rx-lede">We study the genetic architecture of neurological disease and the tick-borne pathogens that shape public health in our region. Combining whole-genome sequencing, long-read metagenomics, and machine learning, we look for the variants, pathways, and pathogens that matter for patients and communities.</p>
-        <p class="rx-methods"><span>Approaches</span>Whole-genome sequencing &middot; Long-read metagenomics &middot; Machine learning &middot; Systems biology &middot; Multi-omic integration</p>
+        <p class="rx-methods">Whole-genome sequencing &middot; Long-read metagenomics &middot; Machine learning &middot; Systems biology &middot; Multi-omic integration</p>
 
         <nav class="rx-areas" aria-label="Research areas">
             <a class="rx-area rx-area--ntd" href="#neural-tube-defects">
