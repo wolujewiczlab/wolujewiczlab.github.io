@@ -840,6 +840,101 @@ main,
         font-size: 14px !important;
     }
 }
+
+/* ============ RESEARCH INTRO (Oct 2026 refresh) ============ */
+html { scroll-behavior: smooth; }
+.rx-intro {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    background: #f7f7f5;
+    padding: 64px 40px 72px;
+    box-sizing: border-box;
+}
+.rx-inner { max-width: 1040px; margin: 0 auto; }
+.rx-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px;
+    font-weight: 600;
+    color: #1a1a1a;
+    letter-spacing: -0.3px;
+    margin: 0 0 20px;
+}
+.rx-lede {
+    font-family: 'Inter', sans-serif;
+    font-size: 19px;
+    line-height: 1.7;
+    color: #333;
+    max-width: 780px;
+    margin: 0 0 20px;
+}
+.rx-methods {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #666;
+    margin: 0 0 52px;
+}
+.rx-methods span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #178896;
+    margin-right: 12px;
+}
+.rx-areas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+.rx-area {
+    display: block;
+    text-decoration: none;
+    padding-top: 18px;
+    border-top: 4px solid #8b2e3f;
+    transition: opacity 0.2s ease;
+}
+.rx-area--neuro { border-top-color: #1e3a5f; }
+.rx-area--meta  { border-top-color: #2d5a3b; }
+.rx-area:hover { opacity: 0.75; }
+.rx-num {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #8b2e3f;
+    margin-bottom: 6px;
+}
+.rx-area--neuro .rx-num { color: #1e3a5f; }
+.rx-area--meta  .rx-num { color: #2d5a3b; }
+.rx-area-title {
+    display: block;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #1a1a1a;
+    line-height: 1.3;
+    margin-bottom: 8px;
+}
+.rx-area-desc {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #555;
+}
+.rx-area-desc::after { content: " \2193"; color: #999; }
+
+@media (max-width: 860px) {
+    .rx-intro { padding: 40px 20px 48px; }
+    .rx-title { font-size: 32px; }
+    .rx-lede { font-size: 17px; }
+    .rx-methods { margin-bottom: 36px; }
+    .rx-areas { grid-template-columns: 1fr; gap: 24px; }
+}
 </style>
 
 <script>
@@ -896,40 +991,30 @@ main,
 })();
 </script>
 
-<!-- BLACK INTRO SECTION - Full Width, Full Height -->
-<div class="research-intro">
-    <div class="intro-content">
-        <div class="intro-text">
-            <h1>Research</h1>
-            <p>
-                Our laboratory advances precision medicine and public health through genomic technologies, artificial intelligence, and systems biology, investigating fundamental questions at the intersection of molecular genetics, neuroscience, and infectious disease epidemiology.
-            </p>
-            
-            <div class="research-themes">
-                <h3>Core Research Themes</h3>
-                <div class="theme-list">
-                    <div class="theme-item">Genomic Medicine</div>
-                    <div class="theme-item">Machine Learning</div>
-                    <div class="theme-item">Systems Biology</div>
-                    <div class="theme-item">Metagenomics</div>
-                    <div class="theme-item">Neurobiology</div>
-                    <div class="theme-item">Public Health Surveillance</div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Right Column: Word Cloud + Animation -->
-        <div class="intro-visual-column">
-            <!-- Word Cloud Image with border -->
-            <div class="intro-image-wrapper">
-                <img src="/assets/images/words.jpg" alt="Research Themes" class="intro-image">
-            </div>
-            
-            <!-- Reads to Tree Animation -->
-            <div class="reads-animation-wrapper">
-                <img src="/assets/images/hero-reads-to-tree.svg" alt="Sequencing Analysis" class="reads-animation">
-            </div>
-        </div>
+<!-- INTRO SECTION (Oct 2026 refresh) -->
+<div class="rx-intro">
+    <div class="rx-inner">
+        <h1 class="rx-title">Research</h1>
+        <p class="rx-lede">We study the genetic architecture of neurological disease and the tick-borne pathogens that shape public health in our region. Combining whole-genome sequencing, long-read metagenomics, and machine learning, we look for the variants, pathways, and pathogens that matter for patients and communities.</p>
+        <p class="rx-methods"><span>Approaches</span>Whole-genome sequencing &middot; Long-read metagenomics &middot; Machine learning &middot; Systems biology &middot; Multi-omic integration</p>
+
+        <nav class="rx-areas" aria-label="Research areas">
+            <a class="rx-area rx-area--ntd" href="#neural-tube-defects">
+                <span class="rx-num">01</span>
+                <span class="rx-area-title">Neural Tube Defects</span>
+                <span class="rx-area-desc">Rare coding, regulatory, and structural variation in spina bifida and related birth defects.</span>
+            </a>
+            <a class="rx-area rx-area--neuro" href="#neurogenetic-disorders">
+                <span class="rx-num">02</span>
+                <span class="rx-area-title">Neurogenetic Disorders</span>
+                <span class="rx-area-desc">Multi-omic signatures of multiple sclerosis, autism spectrum disorder, and schizophrenia.</span>
+            </a>
+            <a class="rx-area rx-area--meta" href="#public-health-metagenomics">
+                <span class="rx-num">03</span>
+                <span class="rx-area-title">Public Health Metagenomics</span>
+                <span class="rx-area-desc">Nanopore sequencing for surveillance of tick-borne pathogens in Connecticut.</span>
+            </a>
+        </nav>
     </div>
 </div>
 
