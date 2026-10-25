@@ -4,6 +4,10 @@ title: Publications
 permalink: /publications/
 ---
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
 /* DNA NAV */
 .nav-dna-container { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); width: 33px; height: 50px; pointer-events: none; z-index: 100; }
@@ -55,62 +59,69 @@ permalink: /publications/
     background: #000000 !important;
 }
 
-/* HEADER BANNER - Dark grey background for Publications title */
-.publications-header { 
-    background: #2a2a2a;  /* Dark grey instead of black */
-    padding: 80px 40px 60px 40px; 
-    text-align: center; 
+/* ============ PUBLICATIONS — LAYOUT ============ */
+.pub-page { background: #f7f7f5; margin: 0; padding: 0; min-height: 100vh; }
+.pub-content { max-width: 1040px; margin: 0 auto; padding: 56px 40px 96px; }
+.pub-page-title, .pub-year, .pub-title { font-variant-numeric: lining-nums; }
+.pub-page-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px; font-weight: 600; color: #1a1a1a;
+    letter-spacing: -0.3px; margin: 0 0 12px;
 }
-.publications-header h1 { 
-    font-family: 'Playfair Display', serif; 
-    font-size: 56px; 
-    color: #ffffff; 
-    margin: 0; 
+.pub-intro {
+    font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6;
+    color: #666; margin: 0 0 40px; max-width: 680px;
 }
+.pub-intro a { color: #178896; text-decoration: none; border-bottom: 1px solid rgba(23,136,150,0.3); }
+.pub-intro a:hover { border-bottom-color: #178896; }
 
-/* CONTAINER - Grey background behind publications */
-.publications-container { 
-    max-width: 100%; 
-    margin: 0 auto; 
-    padding: 80px 40px; 
-    background: #f5f5f5;  /* Light grey background */
+.pub-year-block { display: grid; grid-template-columns: 120px 1fr; gap: 40px; margin-bottom: 56px; }
+.pub-year {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 30px; font-weight: 600;
+    color: #1a1a1a; margin: 0; padding-top: 26px; border-top: 2px solid #22a8b8;
+    align-self: start; position: sticky; top: 24px;
 }
+.pub-entries { border-top: 2px solid #1a1a1a; }
 
-/* Inner content constrained */
-.pub-card { 
-    max-width: 1100px; 
-    margin: 0 auto 50px auto; 
-    display: grid; 
-    grid-template-columns: 1fr 320px; 
-    gap: 40px; 
-    padding: 40px; 
-    background: #ffffff;  /* White cards on grey */
-    border-radius: 12px; 
-    border-left: 5px solid #22a8b8; 
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); 
-    transition: all 0.3s ease; 
+.pub-item {
+    display: grid; grid-template-columns: 1fr 200px; gap: 36px; align-items: start;
+    padding: 30px 0; border-bottom: 1px solid #e2e2de;
 }
-.pub-card:hover { box-shadow: 0 8px 30px rgba(34, 168, 184, 0.2); transform: translateY(-3px); }
-.pub-content { display: flex; flex-direction: column; }
-.pub-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 600; color: #1a1a1a; line-height: 1.4; margin-bottom: 15px; transition: color 0.3s; }
-.pub-card:hover .pub-title { color: #22a8b8; }
-.pub-authors { font-family: 'Inter', sans-serif; font-size: 15px; color: #666; line-height: 1.6; margin-bottom: 12px; }
-.author-highlight { font-weight: 600; color: #1a1a1a; text-decoration: underline; }
-.pub-journal { font-family: 'Inter', sans-serif; font-size: 14px; font-style: italic; color: #888; margin-bottom: 15px; }
-.pub-meta { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 15px; }
-.meta-tag { font-family: 'Courier New', monospace; font-size: 11px; color: #22a8b8; background: rgba(34, 168, 184, 0.1); padding: 5px 12px; border-radius: 4px; border: 1px solid rgba(34, 168, 184, 0.3); }
-.pub-links { display: flex; gap: 15px; margin-top: auto; }
-.pub-link { font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: #22a8b8; text-decoration: none; padding: 8px 16px; border: 2px solid #22a8b8; border-radius: 6px; transition: all 0.3s; display: inline-flex; align-items: center; gap: 6px; }
-.pub-link:hover { background: #22a8b8; color: #ffffff; }
+.pub-title {
+    font-family: 'Playfair Display', Georgia, serif; font-size: 21px; font-weight: 600;
+    line-height: 1.35; color: #1a1a1a; margin: 0 0 10px;
+}
+.pub-authors { font-family: 'Inter', sans-serif; font-size: 14.5px; line-height: 1.6; color: #555; margin: 0 0 6px; }
+.author-highlight { font-weight: 700; color: #1a1a1a; }
+.pub-journal { font-family: 'Inter', sans-serif; font-size: 14.5px; color: #333; margin: 0 0 10px; }
+.pub-tags {
+    font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
+    color: #8a8a8a; margin: 0 0 12px;
+}
+.pub-links { display: flex; gap: 20px; }
+.pub-link {
+    font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+    color: #178896; text-decoration: none; border-bottom: 1px solid rgba(23,136,150,0.3);
+    transition: border-color 0.2s ease;
+}
+.pub-link:hover { border-bottom-color: #178896; }
+.pub-link::after { content: " \2197"; font-size: 11px; }
 
-/* VISUAL - Smaller, optimized for high-res images */
-.pub-visual { display: flex; align-items: center; justify-content: center; background: #ffffff; border-radius: 8px; overflow: hidden; border: 1px solid #e0e0e0; padding: 15px; }
-.pub-visual img { max-width: 100%; max-height: 280px; height: auto; object-fit: contain; }
+.pub-figure {
+    background: #ffffff; border: 1px solid #e2e2de; border-radius: 4px;
+    padding: 10px; display: flex; align-items: center; justify-content: center;
+}
+.pub-figure img { display: block; max-width: 100%; max-height: 200px; width: auto; height: auto; }
 
-.under-review-badge { display: inline-block; font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 700; color: #ffffff; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); padding: 6px 14px; border-radius: 20px; margin-left: 10px; animation: pulse-badge 2s ease-in-out infinite; }
-@keyframes pulse-badge { 0%, 100% { box-shadow: 0 0 10px rgba(245, 158, 11, 0.4); } 50% { box-shadow: 0 0 20px rgba(245, 158, 11, 0.7); } }
-
-@media (max-width: 1024px) { .pub-card { grid-template-columns: 1fr; } .pub-visual { order: -1; max-height: 300px; } }
+@media (max-width: 860px) {
+    .pub-content { padding: 40px 20px 64px; }
+    .pub-page-title { font-size: 32px; }
+    .pub-year-block { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
+    .pub-year { position: static; border-top: none; padding: 0 0 10px; font-size: 26px; }
+    .pub-item { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
+    .pub-figure { order: -1; max-width: 260px; }
+    .pub-title { font-size: 19px; }
+}
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
 
@@ -193,156 +204,217 @@ permalink: /publications/
 })();
 </script>
 
-<div class="publications-header">
-    <h1>Publications</h1>
-</div>
+<div class="pub-page">
+<div class="pub-content">
 
-<div class="publications-container">
-    
-    <!-- 2025 -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Extracellular vesicle profiling reveals novel autism signatures in patient-derived forebrain organoids</h3>
-            <p class="pub-authors">Stankovic I, Smit P, Cross J, Rai A, <span class="author-highlight">Wolujewicz P</span>, Greening D, Colak D</p>
-            <p class="pub-journal">Translational Psychiatry (2025) 15(1):393</p>
-            <div class="pub-meta"><span class="meta-tag">ASD</span><span class="meta-tag">ORGANOIDS</span><span class="meta-tag">EXTRACELLULAR VESICLES</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1038/s41398-025-03607-w" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/stankovic-2025.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/stankovic-2025.png" alt="EV profiling"></div>
+    <h1 class="pub-page-title">Publications</h1>
+    <p class="pub-intro">Selected peer-reviewed publications. <span class="author-highlight">Bold</span> marks Dr. Wolujewicz. For a complete list, see <a href="https://orcid.org/0000-0003-2982-9448" target="_blank" rel="noopener">ORCID</a> or the <a href="/assets/files/PaulWolujewicz_CV_2026.pdf" target="_blank">CV</a>.</p>
+
+<!--
+  HOW TO ADD A PAPER
+  - Copy any <article class="pub-item"> block into the right year (newest first).
+  - Put the figure in /assets/images/publications/ and the PDF in /assets/pdfs/.
+  - Wrap your name in <span class="author-highlight">...</span>.
+  - New year: copy a whole <section class="pub-year-block"> and change the year.
+-->
+
+<!-- ============================== 2025 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2025</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Extracellular vesicle profiling reveals novel autism signatures in patient-derived forebrain organoids</h3>
+                <p class="pub-authors">Stankovic I, Smit P, Cross J, Rai A, <span class="author-highlight">Wolujewicz P</span>, Greening D, Colak D</p>
+                <p class="pub-journal"><em>Translational Psychiatry</em> (2025) 15(1):393</p>
+                <p class="pub-tags">ASD &middot; Organoids &middot; Extracellular Vesicles</p>
+                <div class="pub-links"><a href="https://doi.org/10.1038/s41398-025-03607-w" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/stankovic-2025.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/stankovic-2025.png" alt="EV profiling" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2024 - Wolujewicz FIRST AUTHOR -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Integrative computational analyses implicate regulatory genomic elements contributing to spina bifida</h3>
-            <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, Thareja G, Suhre K, Elemento O, Finnell RH, Ross ME</p>
-            <p class="pub-journal">Genetics in Medicine Open (2024) 2:101894</p>
-            <div class="pub-meta"><span class="meta-tag">DEEP LEARNING</span><span class="meta-tag">SPINA BIFIDA</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1016/j.gimo.2024.101894" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2024.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2024.png" alt="Regulatory elements"></div>
+</section>
+
+<!-- ============================== 2024 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2024</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Integrative computational analyses implicate regulatory genomic elements contributing to spina bifida</h3>
+                <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, Thareja G, Suhre K, Elemento O, Finnell RH, Ross ME</p>
+                <p class="pub-journal"><em>Genetics in Medicine Open</em> (2024) 2:101894</p>
+                <p class="pub-tags">Deep Learning &middot; Spina Bifida</p>
+                <div class="pub-links"><a href="https://doi.org/10.1016/j.gimo.2024.101894" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/wolujewicz-2024.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/wolujewicz-2024.png" alt="Regulatory elements" loading="lazy"></div>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Schizophrenia endothelial cells exhibit higher permeability and altered angiogenesis patterns in patient-derived organoids</h3>
+                <p class="pub-authors">Stankovic I, Notaras M, <span class="author-highlight">Wolujewicz P</span>, Lu T, Lis R, Ross ME, Colak D</p>
+                <p class="pub-journal"><em>Translational Psychiatry</em> (2024) 14(1):53</p>
+                <p class="pub-tags">Schizophrenia &middot; Blood-brain Barrier &middot; Organoids</p>
+                <div class="pub-links"><a href="https://doi.org/10.1038/s41398-024-02740-2" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/stankovic-2024.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/stankovic-2024.png" alt="BBB permeability" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2024 - Stankovic -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Schizophrenia endothelial cells exhibit higher permeability and altered angiogenesis patterns in patient-derived organoids</h3>
-            <p class="pub-authors">Stankovic I, Notaras M, <span class="author-highlight">Wolujewicz P</span>, Lu T, Lis R, Ross ME, Colak D</p>
-            <p class="pub-journal">Translational Psychiatry (2024) 14(1):53</p>
-            <div class="pub-meta"><span class="meta-tag">SCHIZOPHRENIA</span><span class="meta-tag">BLOOD-BRAIN BARRIER</span><span class="meta-tag">ORGANOIDS</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1038/s41398-024-02740-2" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/stankovic-2024.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/stankovic-2024.png" alt="BBB permeability"></div>
+</section>
+
+<!-- ============================== 2023 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2023</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">A non-coding insertional mutation of Grhl2 causes gene over-expression and multiple structural anomalies including cleft palate, spina bifida and encephalocele</h3>
+                <p class="pub-authors">Crane-Smith Z, De Castro SCP, Nikolopoulou E, <span class="author-highlight">Wolujewicz P</span>, Smedley D, Lei Y, Mather E, Santos C, Hopkinson M, Pitsillides AA, Genomics England Research Consortium, Finnell RH, Ross ME, Copp AJ, Greene NDE</p>
+                <p class="pub-journal"><em>Human Molecular Genetics</em> (2023) 32(17):2681–2692</p>
+                <p class="pub-tags">GRHL2 &middot; Mouse Model &middot; Non-coding</p>
+                <div class="pub-links"><a href="https://doi.org/10.1093/hmg/ddad094" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/crane-smith-2023.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/crane-smith-2023.png" alt="Grhl2 mutation" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2023 -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">A non-coding insertional mutation of Grhl2 causes gene over-expression and multiple structural anomalies including cleft palate, spina bifida and encephalocele</h3>
-            <p class="pub-authors">Crane-Smith Z, De Castro SCP, Nikolopoulou E, <span class="author-highlight">Wolujewicz P</span>, Smedley D, Lei Y, Mather E, Santos C, Hopkinson M, Pitsillides AA, Genomics England Research Consortium, Finnell RH, Ross ME, Copp AJ, Greene NDE</p>
-            <p class="pub-journal">Human Molecular Genetics (2023) 32(17):2681–2692</p>
-            <div class="pub-meta"><span class="meta-tag">GRHL2</span><span class="meta-tag">MOUSE MODEL</span><span class="meta-tag">NON-CODING</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1093/hmg/ddad094" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/crane-smith-2023.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/crane-smith-2023.png" alt="Grhl2 mutation"></div>
+</section>
+
+<!-- ============================== 2022 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2022</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Astrocytes derived from ASD individuals alter behavior and destabilize neuronal activity through aberrant Ca<sup>2+</sup> signaling</h3>
+                <p class="pub-authors">Allen M, Huang BS, Notaras MJ, Lodhi A, Barrio-Alonso E, Lituma PJ, <span class="author-highlight">Wolujewicz P</span>, Witztum J, Longo F, Chen M, Greening DW, Klann E, Ross ME, Liston C, Colak D</p>
+                <p class="pub-journal"><em>Molecular Psychiatry</em> (2022) 27(5):2470–2484</p>
+                <p class="pub-tags">Autism &middot; Astrocytes &middot; Calcium Signaling</p>
+                <div class="pub-links"><a href="https://doi.org/10.1038/s41380-022-01486-x" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/allen-2022.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/allen-2022.png" alt="Astrocyte signaling" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2022 -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Astrocytes derived from ASD individuals alter behavior and destabilize neuronal activity through aberrant Ca<sup>2+</sup> signaling</h3>
-            <p class="pub-authors">Allen M, Huang BS, Notaras MJ, Lodhi A, Barrio-Alonso E, Lituma PJ, <span class="author-highlight">Wolujewicz P</span>, Witztum J, Longo F, Chen M, Greening DW, Klann E, Ross ME, Liston C, Colak D</p>
-            <p class="pub-journal">Molecular Psychiatry (2022) 27(5):2470–2484</p>
-            <div class="pub-meta"><span class="meta-tag">AUTISM</span><span class="meta-tag">ASTROCYTES</span><span class="meta-tag">CALCIUM SIGNALING</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1038/s41380-022-01486-x" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/allen-2022.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/allen-2022.png" alt="Astrocyte signaling"></div>
+</section>
+
+<!-- ============================== 2021 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2021</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Systems biology analysis of human genomes points to key pathways conferring spina bifida risk</h3>
+                <p class="pub-authors">Aguiar-Pulido V, <span class="author-highlight">Wolujewicz P</span>, Martinez-Fundichely A, Elhaik E, Thareja G, Abdel Aleem A, Chalhoub N, Cuykendall T, Al-Zamer J, Lei Y, El-Bashir H, Musser JM, Al-Kaabi A, Shaw GM, Khurana E, Suhre K, Mason CE, Elemento O, Finnell RH, Ross ME</p>
+                <p class="pub-journal"><em>Proceedings of the National Academy of Sciences</em> (2021) 118(51):e2106844118</p>
+                <p class="pub-tags">Systems Biology &middot; Spina Bifida</p>
+                <div class="pub-links"><a href="https://doi.org/10.1073/pnas.2106844118" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/aguiar-pulido-2021.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/aguiar-pulido-2021.png" alt="Systems biology" loading="lazy"></div>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Unraveling the complex genetics of neural tube defects: From biological models to human genomics and back</h3>
+                <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Steele JW, Kaltschmidt JA, Finnell RH, Ross ME</p>
+                <p class="pub-journal"><em>Genesis</em> (2021) 59(11):e23459</p>
+                <p class="pub-tags">Review &middot; Neural Tube Defects</p>
+                <div class="pub-links"><a href="https://doi.org/10.1002/dvg.23459" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/wolujewicz-rev-2021.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/wolujewicz-rev-2021.png" alt="NTD genetics" loading="lazy"></div>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Genome-wide investigation identifies a rare copy-number variant burden associated with human spina bifida</h3>
+                <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, AbdelAleem A, Nair V, Thareja G, Suhre K, Shaw GM, Finnell RH, Elemento O, Ross ME</p>
+                <p class="pub-journal"><em>Genetics in Medicine</em> (2021) 23(7):1211–1218</p>
+                <p class="pub-tags">Copy Number Variants &middot; Spina Bifida</p>
+                <div class="pub-links"><a href="https://doi.org/10.1038/s41436-021-01126-9" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/wolujewicz-2021.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/wolujewicz-2021.png" alt="CNV analysis" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2021 - Aguiar-Pulido PNAS -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Systems biology analysis of human genomes points to key pathways conferring spina bifida risk</h3>
-            <p class="pub-authors">Aguiar-Pulido V, <span class="author-highlight">Wolujewicz P</span>, Martinez-Fundichely A, Elhaik E, Thareja G, Abdel Aleem A, Chalhoub N, Cuykendall T, Al-Zamer J, Lei Y, El-Bashir H, Musser JM, Al-Kaabi A, Shaw GM, Khurana E, Suhre K, Mason CE, Elemento O, Finnell RH, Ross ME</p>
-            <p class="pub-journal">Proceedings of the National Academy of Sciences (2021) 118(51):e2106844118</p>
-            <div class="pub-meta"><span class="meta-tag">SYSTEMS BIOLOGY</span><span class="meta-tag">SPINA BIFIDA</span><span class="meta-tag">PNAS</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1073/pnas.2106844118" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/aguiar-pulido-2021.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/aguiar-pulido-2021.png" alt="Systems biology"></div>
+</section>
+
+<!-- ============================== 2020 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2020</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">A crowdsourced set of curated structural variants for the human genome</h3>
+                <p class="pub-authors">Chapman LM, Spies N, Pai P, Lim CS, Carroll A, Narzisi G, Watson CM, Proukakis C, Clarke WE, Nariai N, Dawson E, Jones G, Blankenberg D, Brueffer C, Xiao C, Kolora SRR, Alexander N, <span class="author-highlight">Wolujewicz P</span>, Ahmed AE, Smith G, et al.</p>
+                <p class="pub-journal"><em>PLoS Computational Biology</em> (2020) 16(6):e1007933</p>
+                <p class="pub-tags">Structural Variants &middot; Crowdsourced &middot; Benchmarking</p>
+                <div class="pub-links"><a href="https://doi.org/10.1371/journal.pcbi.1007933" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/chapman-2020.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/chapman-2020.png" alt="Structural variants" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2021 - Wolujewicz REVIEW -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Unraveling the complex genetics of neural tube defects: From biological models to human genomics and back</h3>
-            <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Steele JW, Kaltschmidt JA, Finnell RH, Ross ME</p>
-            <p class="pub-journal">Genesis (2021) 59(11):e23459</p>
-            <div class="pub-meta"><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1002/dvg.23459" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-rev-2021.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-rev-2021.png" alt="NTD genetics"></div>
+</section>
+
+<!-- ============================== 2019 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2019</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">The search for genetic determinants of human neural tube defects</h3>
+                <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Ross ME</p>
+                <p class="pub-journal"><em>Current Opinion in Pediatrics</em> (2019) 31(6):739–746</p>
+                <p class="pub-tags">Review &middot; Neural Tube Defects</p>
+                <div class="pub-links"><a href="https://doi.org/10.1097/MOP.0000000000000817" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/wolujewicz-2019.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/wolujewicz-2019.png" alt="NTD determinants" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2021 - Wolujewicz CNV -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Genome-wide investigation identifies a rare copy-number variant burden associated with human spina bifida</h3>
-            <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Aguiar-Pulido V, AbdelAleem A, Nair V, Thareja G, Suhre K, Shaw GM, Finnell RH, Elemento O, Ross ME</p>
-            <p class="pub-journal">Genetics in Medicine (2021) 23(7):1211–1218</p>
-            <div class="pub-meta"><span class="meta-tag">COPY NUMBER VARIANTS</span><span class="meta-tag">SPINA BIFIDA</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1038/s41436-021-01126-9" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2021.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2021.png" alt="CNV analysis"></div>
+</section>
+
+<!-- ============================== 2016 ============================== -->
+<section class="pub-year-block">
+    <h2 class="pub-year">2016</h2>
+    <div class="pub-entries">
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Astrocyte-produced leukemia inhibitory factor expands the neural stem/progenitor pool following perinatal hypoxia-ischemia</h3>
+                <p class="pub-authors">Felling RJ, Covey MV, <span class="author-highlight">Wolujewicz P</span>, Batish M, Levison SW</p>
+                <p class="pub-journal"><em>Journal of Neuroscience Research</em> (2016) 94(12):1531–1545</p>
+                <p class="pub-tags">Astrocytes &middot; Neural Progenitors &middot; Hypoxia-ischemia</p>
+                <div class="pub-links"><a href="https://doi.org/10.1002/jnr.23929" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/felling-2016.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/felling-2016.png" alt="LIF signaling" loading="lazy"></div>
+        </article>
+
+        <article class="pub-item">
+            <div class="pub-text">
+                <h3 class="pub-title">Profiling stem cell states in three-dimensional biomaterial niches using high content image informatics</h3>
+                <p class="pub-authors">Dhaliwal A, Brenner M, <span class="author-highlight">Wolujewicz P</span>, Zhang Z, Mao Y, Batish M, Kohn J, Moghe PV</p>
+                <p class="pub-journal"><em>Acta Biomaterialia</em> (2016) 45:98–109</p>
+                <p class="pub-tags">Stem Cells &middot; Biomaterials &middot; Image Analysis</p>
+                <div class="pub-links"><a href="https://doi.org/10.1016/j.actbio.2016.08.052" class="pub-link" target="_blank" rel="noopener">DOI</a><a href="/assets/pdfs/dhaliwal-2016.pdf" class="pub-link" target="_blank" rel="noopener">PDF</a></div>
+            </div>
+            <div class="pub-figure"><img src="/assets/images/publications/dhaliwal-2016.png" alt="Stem cell profiling" loading="lazy"></div>
+        </article>
+
     </div>
-    
-    <!-- 2020 -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">A crowdsourced set of curated structural variants for the human genome</h3>
-            <p class="pub-authors">Chapman LM, Spies N, Pai P, Lim CS, Carroll A, Narzisi G, Watson CM, Proukakis C, Clarke WE, Nariai N, Dawson E, Jones G, Blankenberg D, Brueffer C, Xiao C, Kolora SRR, Alexander N, <span class="author-highlight">Wolujewicz P</span>, Ahmed AE, Smith G, et al.</p>
-            <p class="pub-journal">PLoS Computational Biology (2020) 16(6):e1007933</p>
-            <div class="pub-meta"><span class="meta-tag">STRUCTURAL VARIANTS</span><span class="meta-tag">CROWDSOURCED</span><span class="meta-tag">BENCHMARKING</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1371/journal.pcbi.1007933" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/chapman-2020.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/chapman-2020.png" alt="Structural variants"></div>
-    </div>
-    
-    <!-- 2019 - Wolujewicz FIRST AUTHOR -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">The search for genetic determinants of human neural tube defects</h3>
-            <p class="pub-authors"><span class="author-highlight">Wolujewicz P</span>, Ross ME</p>
-            <p class="pub-journal">Current Opinion in Pediatrics (2019) 31(6):739–746</p>
-            <div class="pub-meta"><span class="meta-tag">REVIEW</span><span class="meta-tag">NEURAL TUBE DEFECTS</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1097/MOP.0000000000000817" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/wolujewicz-2019.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/wolujewicz-2019.png" alt="NTD determinants"></div>
-    </div>
-    
-    <!-- 2016 - Felling -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Astrocyte-produced leukemia inhibitory factor expands the neural stem/progenitor pool following perinatal hypoxia-ischemia</h3>
-            <p class="pub-authors">Felling RJ, Covey MV, <span class="author-highlight">Wolujewicz P</span>, Batish M, Levison SW</p>
-            <p class="pub-journal">Journal of Neuroscience Research (2016) 94(12):1531–1545</p>
-            <div class="pub-meta"><span class="meta-tag">ASTROCYTES</span><span class="meta-tag">NEURAL PROGENITORS</span><span class="meta-tag">HYPOXIA-ISCHEMIA</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1002/jnr.23929" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/felling-2016.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/felling-2016.png" alt="LIF signaling"></div>
-    </div>
-    
-    <!-- 2016 - Dhaliwal -->
-    <div class="pub-card">
-        <div class="pub-content">
-            <h3 class="pub-title">Profiling stem cell states in three-dimensional biomaterial niches using high content image informatics</h3>
-            <p class="pub-authors">Dhaliwal A, Brenner M, <span class="author-highlight">Wolujewicz P</span>, Zhang Z, Mao Y, Batish M, Kohn J, Moghe PV</p>
-            <p class="pub-journal">Acta Biomaterialia (2016) 45:98–109</p>
-            <div class="pub-meta"><span class="meta-tag">STEM CELLS</span><span class="meta-tag">BIOMATERIALS</span><span class="meta-tag">IMAGE ANALYSIS</span></div>
-            <div class="pub-links"><a href="https://doi.org/10.1016/j.actbio.2016.08.052" class="pub-link" target="_blank"><i class="fas fa-external-link-alt"></i> DOI</a><a href="/assets/pdfs/dhaliwal-2016.pdf" class="pub-link" target="_blank"><i class="fas fa-file-pdf"></i> PDF</a></div>
-        </div>
-        <div class="pub-visual"><img src="/assets/images/publications/dhaliwal-2016.png" alt="Stem cell profiling"></div>
-    </div>
-    
+</section>
+
+</div>
 </div>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
