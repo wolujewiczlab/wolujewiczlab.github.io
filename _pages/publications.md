@@ -66,7 +66,7 @@ permalink: /publications/
 .pub-page-title {
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 40px; font-weight: 600; color: #1a1a1a;
-    letter-spacing: -0.3px; margin: 0 0 12px;
+    letter-spacing: -0.3px; margin: 0 0 40px;
 }
 .pub-intro {
     font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.6;
@@ -115,7 +115,7 @@ permalink: /publications/
 
 @media (max-width: 860px) {
     .pub-content { padding: 40px 20px 64px; }
-    .pub-page-title { font-size: 32px; }
+    .pub-page-title { font-size: 32px; margin-bottom: 28px; }
     .pub-year-block { grid-template-columns: 1fr; gap: 0; margin-bottom: 40px; }
     .pub-year { position: static; border-top: none; padding: 0 0 10px; font-size: 26px; }
     .pub-item { grid-template-columns: 1fr; gap: 16px; padding: 24px 0; }
@@ -208,7 +208,6 @@ permalink: /publications/
 <div class="pub-content">
 
     <h1 class="pub-page-title">Publications</h1>
-    <p class="pub-intro">Selected peer-reviewed publications. <span class="author-highlight">Bold</span> marks Dr. Wolujewicz. For a complete list, see <a href="https://orcid.org/0000-0003-2982-9448" target="_blank" rel="noopener">ORCID</a> or the <a href="/assets/files/PaulWolujewicz_CV_2026.pdf" target="_blank">CV</a>.</p>
 
 <!--
   HOW TO ADD A PAPER
