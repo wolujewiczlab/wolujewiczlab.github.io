@@ -519,6 +519,20 @@ main,
 .v-label.on { opacity: 1; transform: translate(calc(-50% + var(--v-dx, 0px)), 0); }
 .ticker-content-top .v-label { top: 100%; margin-top: 8px; }
 .ticker-content-bottom .v-label { bottom: 100%; margin-bottom: 8px; }
+.v-fly {
+    position: absolute;
+    z-index: 75;
+    font-family: 'Courier New', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    white-space: nowrap;
+    line-height: normal;
+    color: #ffffff;
+    text-shadow: 0 0 4px var(--v-color), 0 0 14px var(--v-color), 0 0 28px var(--v-color);
+    pointer-events: none;
+    will-change: transform;
+}
 .dna-ticker-top { padding-bottom: 36px; }
 .dna-ticker-bottom { padding-top: 36px; }
 
@@ -1275,7 +1289,7 @@ main,
                                 <p class="school-line">Frank H. Netter MD School of Medicine</p>
                             </a>
                             <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener noreferrer">
-                                <p class="school-line school-line--joint">School of Health Sciences</p>
+                                <p class="school-line school-line--joint">Joint appointment &middot; School of Health Sciences</p>
                             </a>
                         </div>
                     </div>
@@ -1525,7 +1539,8 @@ main,
             var BASES = ['A', 'C', 'G', 'T'], COMP = { A: 'T', T: 'A', C: 'G', G: 'C' };
             var KINDS = [
                 { k: 'snv', c: '#ec4899' }, { k: 'inv', c: '#a855f7' }, { k: 'ins', c: '#10b981' },
-                { k: 'del', c: '#f59e0b' }, { k: 'dup', c: '#06b6d4' }
+                { k: 'str', c: '#facc15' }, { k: 'del', c: '#f59e0b' }, { k: 'dup', c: '#06b6d4' },
+                { k: 'tra', c: '#818cf8' }
             ];
             var kindIdx = 0;
             var EASE = 'cubic-bezier(.22,.61,.36,1)';
@@ -1575,9 +1590,10 @@ main,
                 }
             };
             /* A run of n adjacent plain bases, inside the middle of the banner and clear of where it will scroll */
-            var pickRun = function (el, n, isTop) {
+            var pickRun = function (el, n, isTop, zone) {
                 var b = banner.getBoundingClientRect();
                 var lo = b.left + b.width * (isTop ? 0.35 : 0.15), hi = b.left + b.width * (isTop ? 0.85 : 0.65);
+                if (zone) { lo = zone[0]; hi = zone[1]; }
                 var kids = Array.prototype.slice.call(el.children), starts = [];
                 for (var i = 0; i + n <= kids.length; i++) {
                     var ok = true;
@@ -1676,6 +1692,112 @@ main,
                     clean(added, 3200);
                     label(added[Math.floor(n / 2)], dup ? 'DUP  ' + n + ' bp' : 'INS  +' + added.map(base).join(''), col, 700);
                     later(3600, function () { balance(el, isTop, n); });
+                }
+
+                /* STR expansion: a run becomes a repeat motif, then copies stutter in and the count climbs */
+                else if (kind.k === 'str') {
+                    var MOTIFS = ['CAG', 'CGG', 'GAA', 'CTG'], motif = MOTIFS[rnd(MOTIFS.length)];
+                    var run5 = pickRun(el, 6, isTop); if (!run5) return;
+                    var w5 = run5[0].getBoundingClientRect().width;
+                    run5.forEach(function (x, i) {
+                        tween(x, { transform: 'translateY(' + (-10 * inward) + 'px)', opacity: '0' }, 200, i * 40);
+                        later(220 + i * 40, function () {
+                            setBase(x, motif[i % 3]);
+                            x.style.transition = 'none'; x.style.transform = 'translateY(' + (10 * inward) + 'px)'; void x.offsetWidth;
+                            tween(x, { transform: 'translateY(0)', opacity: '1' }, 300, 0);
+                        });
+                    });
+                    glow(run5, col, 4200);
+                    var copies = 3, all = [], last = run5[run5.length - 1], lab = null;
+                    label(run5[2], 'STR  (' + motif + ')×2', col, 450);
+                    later(500, function () { lab = run5[2].querySelector('.v-label'); });
+                    for (var c = 0; c < copies; c++) {
+                        (function (c) {
+                            later(800 + c * 520, function () {
+                                var grp = [];
+                                for (var j = 0; j < 3; j++) {
+                                    var ns = mk(motif[j]);
+                                    ns.style.maxWidth = '0px'; ns.style.opacity = '0'; ns.style.overflow = 'visible';
+                                    ns.style.transform = 'scale(0.4)';
+                                    last.parentNode.insertBefore(ns, last.nextSibling); last = ns;
+                                    grp.push(ns); all.push(ns);
+                                }
+                                glow(grp, col, 3400 - c * 520);
+                                grp.forEach(function (x, j) {
+                                    tween(x, { maxWidth: Math.ceil(w5) + 'px' }, 380, j * 40);
+                                    tween(x, { transform: 'scale(1)', opacity: '1' }, 420, 120 + j * 50);
+                                });
+                                later(200, function () { if (lab) lab.textContent = 'STR  (' + motif + ')×' + (c + 3); });
+                            });
+                        })(c);
+                    }
+                    clean(run5, 4400);
+                    later(4400, function () { clean(all, 0); });
+                    later(4800, function () { balance(el, isTop, copies * 3); });
+                }
+
+                /* Translocation: the strands glide to a halt, a segment from each lifts out, they cross mid-air,
+                   each lands in the other's place, and the strands glide back up to speed */
+                else if (kind.k === 'tra') {
+                    var bb = banner.getBoundingClientRect();
+                    var desc = banner.querySelector('.banner-description');
+                    if (!desc) return;
+                    var dr = desc.getBoundingClientRect();
+                    var cw = tops.firstElementChild ? tops.firstElementChild.getBoundingClientRect().width : 32;
+                    var n6 = 4, segW = n6 * cw;
+                    /* only the open space beside the text: never fly across it */
+                    var sides = [[bb.left + 16, dr.left - 36], [dr.right + 36, bb.right - 16]].filter(function (z) { return z[1] - z[0] > segW + 60; });
+                    if (!sides.length) return;   /* phones: not enough room, skip this cycle */
+                    var z = sides[rnd(sides.length)], outward = (z[0] < dr.left) ? -1 : 1;
+                    var anims = [];
+                    try { anims = tops.getAnimations().concat(bots.getAnimations()); } catch (err) { anims = []; }
+                    if (!anims.length) return;
+                    var ramp = function (to, ms) {
+                        var from = anims[0].playbackRate, st = performance.now();
+                        var go = function (now) {
+                            var t = Math.min(1, (now - st) / ms), e = 1 - Math.pow(1 - t, 3);
+                            anims.forEach(function (an) { an.playbackRate = from + (to - from) * e; });
+                            if (t < 1) requestAnimationFrame(go);
+                        };
+                        requestAnimationFrame(go);
+                    };
+                    var tRun = pickRun(tops, n6, true, z), bRun = pickRun(bots, n6, false, z);
+                    if (!tRun || !bRun) { kindIdx--; return; }   /* try again on the next beat */
+                    ramp(0, 500);
+                    glow(tRun.concat(bRun), col, 900);
+                    var mkFly = function (txt) {
+                        var f = document.createElement('div');
+                        f.className = 'v-fly'; f.textContent = txt; f.style.setProperty('--v-color', col);
+                        f.style.left = '0px'; f.style.top = '0px';
+                        banner.appendChild(f); return f;
+                    };
+                    later(650, function () {
+                        var tSeq = tRun.map(base).join(''), bSeq = bRun.map(base).join('');
+                        var B = banner.getBoundingClientRect(), A = tRun[0].getBoundingClientRect(), Q = bRun[0].getBoundingClientRect();
+                        var fT = mkFly(tSeq), fB = mkFly(bSeq);
+                        var place = function (f, x, y, sc) { f.style.transform = 'translate(' + x.toFixed(1) + 'px,' + y.toFixed(1) + 'px) scale(' + sc.toFixed(3) + ')'; };
+                        place(fT, A.left - B.left, A.top - B.top, 1); place(fB, Q.left - B.left, Q.top - B.top, 1);
+                        tRun.concat(bRun).forEach(function (x) { x.style.visibility = 'hidden'; });
+                        var t0 = performance.now(), DUR = 1150;
+                        var step = function (now) {
+                            var t = Math.min(1, (now - t0) / DUR);
+                            var e = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+                            var arc = Math.sin(Math.PI * t), sc = 1 + 0.14 * arc;
+                            place(fT, A.left + (Q.left - A.left) * e + outward * 52 * arc - B.left, A.top + (Q.top - A.top) * e - B.top, sc);
+                            place(fB, Q.left + (A.left - Q.left) * e - outward * 52 * arc - B.left, Q.top + (A.top - Q.top) * e - B.top, sc);
+                            if (t < 1) { requestAnimationFrame(step); return; }
+                            tRun.forEach(function (x, i) { setBase(x, bSeq[i]); x.style.visibility = ''; });
+                            bRun.forEach(function (x, i) { setBase(x, tSeq[i]); x.style.visibility = ''; });
+                            [fT, fB].forEach(function (f) { if (f.parentNode) f.parentNode.removeChild(f); });
+                            glow(tRun.concat(bRun), col, 1700);
+                            label(tRun[1], 'TRA  t(9;22)', col, 0);
+                            label(bRun[1], 'TRA  t(9;22)', col, 0);
+                            later(500, function () { ramp(1, 900); });
+                        };
+                        requestAnimationFrame(step);
+                    });
+                    /* safety net: always restore normal speed */
+                    later(4200, function () { anims.forEach(function (an) { an.playbackRate = 1; }); });
                 }
 
                 /* Deletion: the run glows, its bases dissolve one by one, then the gap closes */
