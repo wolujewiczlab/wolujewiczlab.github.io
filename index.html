@@ -245,13 +245,15 @@ main,
 
 .banner-eyebrow {
     font-family: 'Inter', sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 600;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
+    line-height: 1.7;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.6);
     margin: 0 0 22px;
 }
+.banner-eyebrow span { white-space: nowrap; }
 .banner-content p.banner-eyebrow { margin: 0 auto 22px !important; }
 
 .banner-content h1 {
@@ -278,7 +280,9 @@ main,
     margin-left: auto !important;
     margin-right: auto !important;
     text-align: center;
+    text-wrap: balance;
 }
+.banner-content p.banner-tagline { text-wrap: balance; }
 
 .banner-description {
     font-family: 'Inter', sans-serif;
@@ -925,10 +929,7 @@ main,
     }
 
     .banner-content { padding: 100px 22px 96px; }
-    .banner-eyebrow { font-size: 11px; letter-spacing: 0.1em; line-height: 1.6; margin-bottom: 16px; }
-    .banner-eyebrow span { display: block; }
-    .banner-eyebrow .eyebrow-sep { display: none; }
-    .banner-eyebrow span:last-child::before { content: 'at '; }
+    .banner-eyebrow { font-size: 10.5px; letter-spacing: 0.1em; line-height: 1.6; }
     .banner-content h1 { font-size: 40px; }
     .banner-content .banner-tagline { font-size: 21px; margin-bottom: 20px; }
     .banner-content .banner-description { font-size: 15.5px; }
@@ -1235,10 +1236,10 @@ main,
         
         <div class="banner-content">
             <h1>Wolujewicz Lab</h1>
-            <p class="banner-eyebrow"><span>Frank H. Netter MD School of Medicine</span><span class="eyebrow-sep"> at </span><span>Quinnipiac University</span></p>
-            <p class="banner-tagline">Neurogenomics &amp; Vector-borne Disease</p>
+            <p class="banner-eyebrow"><span>Frank H. Netter MD School of Medicine</span> <span>at Quinnipiac University</span></p>
+            <p class="banner-tagline">Neurogenomics &amp; Vector&#8209;Borne Disease</p>
             <p class="banner-description">
-                We use genome sequencing, multi-omics, and machine learning to uncover the genetic causes of neurological disease and to track tick-borne pathogens, advancing precision medicine and public health.
+                We use genome sequencing, multi-omics, and machine learning to uncover the genetic causes of neurological disease and to track tick&#8209;borne pathogens, advancing precision medicine and public health.
             </p>
             <div class="banner-actions">
                 <a class="banner-btn banner-btn--primary" href="/research/">Our Research</a>
