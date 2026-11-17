@@ -301,7 +301,7 @@ permalink: /contact/
             </div>
 
             <p class="ct-note">
-                Students interested in research with the lab, and colleagues interested in collaboration, are welcome to get in touch by email.
+                Students interested in research with the lab are encouraged to reach out via email.
             </p>
         </div>
 
