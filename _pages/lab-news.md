@@ -334,7 +334,7 @@ permalink: /lab-news/
             <div>
                 <div class="news-date">September 2026</div>
                 <h3 class="news-title">Joining the Frank H. Netter MD School of Medicine</h3>
-                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences, where the lab's graduate teaching and mentoring continue.</p>
+                <p class="news-description">Dr. Wolujewicz joined the Department of Medical Sciences at the Frank H. Netter MD School of Medicine as Assistant Professor, teaching in the pre-clerkship neuroscience curriculum. He keeps a joint appointment in Biomedical Sciences in the School of Health Sciences.</p>
             </div>
             <img class="news-thumb news-thumb--logo" style="padding: 20px 44px;" src="/assets/images/news/netter-som-seal.jpg" alt="Frank H. Netter MD School of Medicine seal">
         </article>
