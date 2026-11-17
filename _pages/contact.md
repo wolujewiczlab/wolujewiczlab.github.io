@@ -116,6 +116,10 @@ permalink: /contact/
     
     /* Ensure the site title has room */
     .site-title {
+        max-width: 180px !important;
+        font-size: 15px !important;
+    }
+
     
     /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links,
@@ -126,9 +130,6 @@ permalink: /contact/
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 180px !important;
-        font-size: 15px !important;
     }
     
     
@@ -145,6 +146,10 @@ permalink: /contact/
     }
     
     .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
+    }
+
     
     .greedy-nav .visible-links {
         display: none !important;
@@ -153,37 +158,62 @@ permalink: /contact/
     .greedy-nav__toggle {
         display: block !important;
     }
-        max-width: 120px !important;
-        font-size: 14px !important;
-    }
 }
 
-/* Contact Cards - Fixed Height for Alignment */
-.contact-card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+/* ============ CONTACT ============ */
+.ct-page { background: #f7f7f5; min-height: 100vh; }
+.ct-content { max-width: 1040px; margin: 0 auto; padding: 56px 40px 96px; }
+
+.ct-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px; font-weight: 600; color: #1a1a1a;
+    letter-spacing: -0.3px; margin: 0 0 40px;
 }
 
-.contact-card h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    color: #1a1a1a;
-    margin-bottom: 25px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #22a8b8;
-    min-height: 75px;
-    display: flex;
-    align-items: center;
+.ct-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+
+.ct-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 25px; font-weight: 600; color: #1a1a1a; margin: 0 0 8px;
+}
+.ct-role {
+    font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.65;
+    color: #555; margin: 0 0 32px; max-width: 420px;
+}
+.ct-role a { color: #1e3a5f; text-decoration: none; border-bottom: 1px solid rgba(30, 58, 95, 0.3); }
+.ct-role a:hover { border-bottom-color: #1e3a5f; }
+
+.ct-block { border-top: 1px solid #ddddd8; padding: 20px 0 0; margin-bottom: 20px; }
+.ct-block:first-of-type { border-top: 2px solid #1a1a1a; }
+.ct-label {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: #8a8a84; margin: 0 0 8px;
+}
+.ct-value {
+    font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6;
+    color: #1a1a1a; margin: 0;
+}
+.ct-value a { color: #1e3a5f; text-decoration: none; border-bottom: 1px solid rgba(30, 58, 95, 0.3); }
+.ct-value a:hover { border-bottom-color: #1e3a5f; }
+
+.ct-note {
+    font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7;
+    color: #555; margin: 32px 0 0; padding-top: 24px; border-top: 1px solid #ddddd8;
+    max-width: 420px;
 }
 
-/* Responsive styles */
-@media (max-width: 768px) {
-    .contact-form-grid {
-        grid-template-columns: 1fr !important;
-        gap: 40px !important;
-    }
+.ct-figure { margin: 0; }
+.ct-figure img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.ct-caption {
+    font-family: 'Inter', sans-serif; font-size: 12.5px; color: #8a8a84;
+    margin: 10px 0 0; letter-spacing: 0.02em;
+}
+
+@media (max-width: 860px) {
+    .ct-content { padding: 40px 20px 64px; }
+    .ct-title { font-size: 32px; margin-bottom: 28px; }
+    .ct-grid { grid-template-columns: 1fr; gap: 36px; }
+    .ct-figure { order: -1; }
 }
 </style>
 
@@ -237,220 +267,50 @@ permalink: /contact/
 })();
 </script>
 
-<!-- PAGE HEADER - Grey Background with Subtitle Only -->
-<div style="background: #2a2a2a; padding: 50px 40px 40px 40px; text-align: center;">
-    <p style="font-size: 20px; color: #d0d0d0; max-width: 700px; margin: 0 auto;">Get in touch with our laboratory or visit us at Quinnipiac University</p>
-</div>
+<div class="ct-page">
+<div class="ct-content">
 
-<!-- TWO-COLUMN SECTION: Contact Form + QU Image -->
-<div style="background: #ffffff; padding: 80px 40px;">
-    <div class="contact-form-grid" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
-        
-        <!-- LEFT: Contact Form -->
-        <div>
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 600; color: #1a1a1a; margin: 0 0 10px 0;">Get In Touch</h2>
-            <p style="font-size: 16px; color: #666; line-height: 1.6; margin: 0 0 30px 0;">Have questions about our research or interested in joining the lab? We'd love to hear from you.</p>
-            
-            <form id="contactForm" style="display: flex; flex-direction: column; gap: 20px;">
-                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
-                <input type="hidden" name="subject" value="New Contact from Wolujewicz Lab Website">
-                <input type="hidden" name="redirect" value="https://wolujewiczlab.github.io/contact">
-                <input type="checkbox" name="botcheck" style="display: none;">
-                
-                <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Name</label>
-                    <input type="text" name="name" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
-                </div>
-                
-                <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Email</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'">
-                </div>
-                
-                <div>
-                    <label style="display: block; font-size: 14px; font-weight: 600; color: #999999; margin-bottom: 6px;">Message</label>
-                    <textarea name="message" rows="6" required style="width: 100%; padding: 12px; border: 2px solid #e0e0e0; border-radius: 6px; font-size: 15px; font-family: inherit; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='#22a8b8'" onblur="this.style.borderColor='#e0e0e0'"></textarea>
-                </div>
-                
-                <button type="submit" id="submitBtn" style="background: #22a8b8; color: #ffffff; padding: 14px 32px; border: none; border-radius: 6px; font-size: 16px; font-weight: 600; cursor: pointer; transition: background 0.3s; font-family: inherit;" onmouseover="this.style.background='#1a8a9a'" onmouseout="this.style.background='#22a8b8'">Send Message</button>
-                
-                <div id="formStatus" style="display: none; padding: 12px; border-radius: 6px; text-align: center; font-size: 15px; font-weight: 500;"></div>
-            </form>
-            
-            <p style="font-size: 14px; color: #999; margin-top: 20px;">Or email directly: <a href="mailto:paul.wolujewicz@quinnipiac.edu" style="color: #22a8b8; text-decoration: none;">paul.wolujewicz@quinnipiac.edu</a></p>
-        </div>
-        
-        <script>
-        const form = document.getElementById('contactForm');
-        const submitBtn = document.getElementById('submitBtn');
-        const statusDiv = document.getElementById('formStatus');
+    <h1 class="ct-title">Contact</h1>
 
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Disable button and show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.style.background = '#999';
-            
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
+    <div class="ct-grid">
 
-            try {
-                const response = await fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                });
-                
-                const result = await response.json();
-                
-                if (result.success) {
-                    // Success
-                    statusDiv.style.display = 'block';
-                    statusDiv.style.background = '#d4edda';
-                    statusDiv.style.color = '#155724';
-                    statusDiv.style.border = '1px solid #c3e6cb';
-                    statusDiv.textContent = '✓ Message sent successfully! We\'ll get back to you soon.';
-                    form.reset();
-                    
-                    // Reset button
-                    submitBtn.textContent = 'Send Message';
-                    submitBtn.style.background = '#22a8b8';
-                    submitBtn.disabled = false;
-                    
-                    // Hide success message after 5 seconds
-                    setTimeout(() => {
-                        statusDiv.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error(result.message || 'Submission failed');
-                }
-            } catch (error) {
-                // Error
-                statusDiv.style.display = 'block';
-                statusDiv.style.background = '#f8d7da';
-                statusDiv.style.color = '#721c24';
-                statusDiv.style.border = '1px solid #f5c6cb';
-                statusDiv.textContent = '✗ Error sending message. Please email directly at paul.wolujewicz@quinnipiac.edu';
-                
-                // Reset button
-                submitBtn.textContent = 'Send Message';
-                submitBtn.style.background = '#22a8b8';
-                submitBtn.disabled = false;
-            }
-        });
-                
-                // Handle toggle click
-                toggle.addEventListener("click", function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isHidden = hiddenLinks.classList.contains("hidden");
-                    
-                    if (isHidden) {
-                        hiddenLinks.classList.remove("hidden");
-                        hiddenLinks.style.display = "block";
-                        hiddenLinks.style.position = "absolute";
-                        hiddenLinks.style.top = "100%";
-                        hiddenLinks.style.right = "0";
-                        hiddenLinks.style.background = "#000";
-                        hiddenLinks.style.padding = "10px 0";
-                        hiddenLinks.style.minWidth = "200px";
-                        hiddenLinks.style.zIndex = "1000";
-                    } else {
-                        hiddenLinks.classList.add("hidden");
-                        hiddenLinks.style.display = "none";
-                    }
-                });
-            }
-        }
-        
-        if (document.readyState === "loading") {
-            document.addEventListener("DOMContentLoaded", initMobileMenu);
-        } else {
-            initMobileMenu();
-        }
-        
-        setTimeout(initMobileMenu, 500);
-    })();
-        </script>
-        
-        <!-- RIGHT: QU Image -->
-        <div>
-            <img src="/assets/images/qu-contact.png" alt="Quinnipiac University" style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);">
-        </div>
-        
-    </div>
-</div>
+        <div class="ct-details">
+            <p class="ct-name">Paul Wolujewicz, PhD, MPH</p>
+            <p class="ct-role">
+                Assistant Professor of Medical Sciences, <a href="https://medicine.qu.edu/" target="_blank" rel="noopener">Frank H. Netter MD School of Medicine</a>, Quinnipiac University. Joint appointment in Biomedical Sciences, <a href="https://www.qu.edu/schools/health-sciences/" target="_blank" rel="noopener">School of Health Sciences</a>.
+            </p>
 
-<!-- CONTACT INFO SECTION -->
-<div style="background: #f8f8f8; padding: 80px 40px;">
-    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 60px;">
-        
-        <!-- Mount Carmel Campus Card -->
-        <div class="contact-card">
-            <span style="display: inline-block; background: #dc2626; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">MOUNT CARMEL CAMPUS</span>
-            <h2>Quinnipiac University - Hamden</h2>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Principal Investigator</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Paul Wolujewicz, PhD, MPH<br>Assistant Professor</p>
+            <div class="ct-block">
+                <p class="ct-label">Email</p>
+                <p class="ct-value"><a href="mailto:paul.wolujewicz@quinnipiac.edu">paul.wolujewicz@quinnipiac.edu</a></p>
             </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Office Location</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">SITE-271</p>
+
+            <div class="ct-block">
+                <p class="ct-label">Office</p>
+                <p class="ct-value">MNH-302H<br>North Haven Campus</p>
             </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>School of Health Sciences<br>275 Mount Carmel Avenue<br>Hamden, CT 06518</p>
+
+            <div class="ct-block">
+                <p class="ct-label">Mailing address</p>
+                <p class="ct-value">
+                    Quinnipiac University<br>
+                    Frank H. Netter MD School of Medicine<br>
+                    370 Bassett Road<br>
+                    North Haven, CT 06473
+                </p>
             </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Email</h3>
-                <p style="font-size: 16px; margin: 0;"><a href="mailto:paul.wolujewicz@quinnipiac.edu" style="color: #22a8b8; text-decoration: none;">paul.wolujewicz@quinnipiac.edu</a></p>
-            </div>
+
+            <p class="ct-note">
+                Students interested in research with the lab, and colleagues interested in collaboration, are welcome to get in touch by email.
+            </p>
         </div>
 
-        <!-- North Haven Campus Card -->
-        <div class="contact-card">
-            <span style="display: inline-block; background: #2563eb; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">NORTH HAVEN CAMPUS</span>
-            <h2>Quinnipiac University - North Haven</h2>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Dry Lab Location</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">MNH-141B</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Address</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Quinnipiac University<br>370 Bassett Road<br>North Haven, CT 06473</p>
-            </div>
-        </div>
-
-        <!-- Prospective Members Card -->
-        <div class="contact-card">
-            <span style="display: inline-block; background: #22a8b8; color: #ffffff; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 10px;">JOIN OUR LAB</span>
-            <h2>Opportunities</h2>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Students</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">We welcome motivated students interested in computational biology and genomics.</p>
-            </div>
-            
-            <div style="margin-bottom: 20px;">
-                <h3 style="font-size: 14px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px;">Collaborations</h3>
-                <p style="font-size: 16px; color: #1a1a1a; line-height: 1.6; margin: 0;">Interested in collaboration? Contact us to discuss research partnerships.</p>
-            </div>
-        </div>
+        <figure class="ct-figure">
+            <img src="/assets/images/north-haven-campus.jpg" alt="Quinnipiac University North Haven Campus" loading="lazy">
+            <p class="ct-caption">North Haven Campus, Quinnipiac University</p>
+        </figure>
 
     </div>
-</div>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</div>
+</div>

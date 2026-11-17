@@ -248,14 +248,14 @@ main,
 .research-themes {
     margin-top: 50px;
     padding: 30px;
-    background: linear-gradient(135deg, rgba(34, 168, 184, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
+    background: linear-gradient(135deg, rgba(30, 58, 95, 0.05) 0%, rgba(26, 26, 26, 0.02) 100%);
     border-radius: 16px;
 }
 
 .research-themes h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #22a8b8;
+    color: #1e3a5f;
     margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
@@ -278,7 +278,7 @@ main,
 
 .theme-item:before {
     content: "▸";
-    color: #22a8b8;
+    color: #1e3a5f;
     position: absolute;
     left: 0;
 }
@@ -432,8 +432,6 @@ main,
 .bdrp-logo-container-bottom img {
     max-width: 280px !important;  /* All logos same size as BDRP */
 }
-}
-
 
 .helix-elegant .strand {
     position: absolute;
@@ -550,14 +548,14 @@ main,
     width: 110px;
     height: 110px;
     border-radius: 50%;
-    border: 3px solid #22a8b8;
+    border: 3px solid #1e3a5f;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;  /* Optimized value from earlier version */
     transition: all 0.3s ease;
     background: transparent;
-    box-shadow: 0 2px 8px rgba(34, 168, 184, 0.15);
+    box-shadow: 0 2px 8px rgba(30, 58, 95, 0.15);
 }
 
 .section-icon-circle i {
@@ -571,7 +569,7 @@ main,
     background: rgba(255, 255, 255, 0.08);
     padding: 25px;
     border-radius: 8px;
-    border-left: 4px solid #22a8b8;
+    border-left: 4px solid #1e3a5f;
     margin-bottom: 30px;
     backdrop-filter: blur(10px);
 }
@@ -585,7 +583,7 @@ main,
 }
 
 .context-box strong {
-    color: #22a8b8;
+    color: #1e3a5f;
     font-weight: 600;
 }
 
@@ -669,7 +667,7 @@ main,
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
     border-radius: 8px;
-    border-left: 4px solid #22a8b8;
+    border-left: 4px solid #1e3a5f;
     backdrop-filter: blur(10px);
 }
 
@@ -701,7 +699,7 @@ main,
 
 .key-questions li:before {
     content: "▸";
-    color: #22a8b8;
+    color: #1e3a5f;
     font-size: 18px;
     position: absolute;
     left: 0;
@@ -800,6 +798,10 @@ main,
     }
     
     .site-title {
+        max-width: 180px !important;
+        font-size: 15px !important;
+    }
+
     
     /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links,
@@ -810,9 +812,6 @@ main,
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 180px !important;
-        font-size: 15px !important;
     }
     
     
@@ -828,6 +827,10 @@ main,
     }
     
     .site-title {
+        max-width: 110px !important;
+        font-size: 14px !important;
+    }
+
     
     .greedy-nav .visible-links {
         display: none !important;
@@ -835,9 +838,6 @@ main,
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 110px !important;
-        font-size: 14px !important;
     }
 }
 
@@ -1027,7 +1027,7 @@ html { scroll-behavior: smooth; }
         <h2 class="section-title">Neural Tube Defects</h2>
         
         <p class="section-subtitle">
-            Employing systems biology and integrative genomics to advance our understanding of structural birth defects affecting the developing brain and spinal cord
+            Coding, regulatory, and structural variation in birth defects of the developing brain and spinal cord
         </p>
         
         <!-- Brief Background -->
@@ -1036,7 +1036,7 @@ html { scroll-behavior: smooth; }
         </div>
         
         <p class="section-description">
-            Our laboratory investigates the complex molecular and genetic mechanisms underlying NTD pathogenesis using cutting-edge genomic technologies and computational approaches. We integrate population genomics, regulatory genomics, and systems-level network analysis to identify rare and common genetic variants contributing to NTD risk.
+            We investigate the molecular and genetic mechanisms underlying NTD pathogenesis using whole-genome sequencing and computational genomics. Our work integrates population genomics, regulatory genomics, and network analysis to identify rare and common variants contributing to NTD risk.
         </p>
         
         <div class="key-questions">
@@ -1055,7 +1055,7 @@ html { scroll-behavior: smooth; }
         <!-- Case-Control Study (TOP) -->
         <div class="research-highlight-box">
             <div class="highlight-text">
-                <p>Spina bifida is a complex congenital condition whose genetic causes extend beyond traditional protein-coding mutations. Recently, we applied advanced computational genomics and deep-learning approaches to uncover how subtle changes in the regulatory regions of the genome can disrupt early neural tube development. By integrating whole-genome sequencing, transcription factor binding maps, and three-dimensional chromatin architecture, we identified rare regulatory variants that alter gene expression programs essential for nervous system formation. These findings highlight the importance of non-coding DNA in human birth defects and provide a new framework for precision-medicine approaches to understanding and ultimately preventing neural tube defects.</p>
+                <p>Spina bifida is a complex congenital condition whose genetic causes extend beyond traditional protein-coding mutations. We applied computational genomics and deep-learning methods to ask how changes in the regulatory regions of the genome can disrupt early neural tube development. By integrating whole-genome sequencing, transcription factor binding maps, and three-dimensional chromatin architecture, we identified rare regulatory variants that alter gene expression programs essential for nervous system formation. These findings point to a role for non-coding DNA in human birth defects and offer a framework for studying, and potentially preventing, neural tube defects.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/ntd-tfbs-circos.png" alt="TFBS Functional Significance" style="max-width: 300px;">
@@ -1065,7 +1065,7 @@ html { scroll-behavior: smooth; }
         <!-- Case-Parent Trio (BOTTOM) -->
         <div class="research-highlight-box">
             <div class="highlight-text">
-                <p>Leveraging case-parent trio cohorts, we are systematically analyzing combinations of rare variation transmitted from parental alleles to fully elucidate the genetic architecture of NTDs and delineate contributions from inherited versus <em>de novo</em> variants.</p>
+                <p>Using case-parent trio cohorts, we are analyzing combinations of rare variation transmitted from parental alleles to map the genetic architecture of NTDs and separate inherited from <em>de novo</em> contributions.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/ntd-trio-inheritance.png" alt="Trio Cohort Analysis" style="max-width: 300px;">
@@ -1089,7 +1089,7 @@ html { scroll-behavior: smooth; }
                 <h4>Autism Spectrum Disorder</h4>
             </div>
             <div class="highlight-text">
-                <p>In collaboration with the Colak Lab at Weill Cornell Medicine, we recently leveraged patient-derived three-dimensional forebrain organoids to investigate how autism spectrum disorder (ASD) alters molecular communication during early brain development. By profiling extracellular vesicles—small particles that mediate cell-to-cell signaling—we identified striking differences in RNA and protein cargo between ASD and neurotypical organoids, implicating pathways involved in synaptic function, protein regulation, and chromatin remodeling. These findings uncover a previously underappreciated mechanism of disrupted cellular communication in autism and highlight extracellular vesicles as promising biomarkers and therapeutic targets for neurodevelopmental disorders.</p>
+                <p>In collaboration with the Colak Lab at Weill Cornell Medicine, we used patient-derived three-dimensional forebrain organoids to ask how autism spectrum disorder (ASD) alters molecular communication during early brain development. By profiling extracellular vesicles—small particles that mediate cell-to-cell signaling—we found differences in RNA and protein cargo between ASD and neurotypical organoids, implicating pathways involved in synaptic function, protein regulation, and chromatin remodeling. The results suggest a mechanism of disrupted cellular communication in autism and point to extracellular vesicles as candidate biomarkers for neurodevelopmental disorders.</p>
             </div>
             <div class="highlight-visual">
                 <img src="/assets/images/asd-ev-heatmap.png" alt="ASD EV Analysis" style="max-width: 350px;">
@@ -1124,7 +1124,7 @@ html { scroll-behavior: smooth; }
         <h2 class="section-title">Neurogenetic Disorders</h2>
         
         <p class="section-subtitle">
-            Investigating the multi-omic signatures of complex neurogenetic conditions through advanced computational approaches and high-throughput genomic technologies
+            Multi-omic signatures of complex neurogenetic conditions, from sequencing through to candidate biomarkers
         </p>
         
         <!-- Brief Background -->
@@ -1160,7 +1160,7 @@ html { scroll-behavior: smooth; }
         <h2 class="section-title">Public Health Metagenomics</h2>
         
         <p class="section-subtitle">
-            Leveraging long-read metagenomic sequencing to advance epidemiological surveillance of vector-borne pathogens and improve public health monitoring
+            Long-read metagenomic sequencing for surveillance of vector-borne pathogens in Connecticut
         </p>
         
         <!-- Brief Background -->
@@ -1169,7 +1169,7 @@ html { scroll-behavior: smooth; }
         </div>
         
         <p class="section-description">
-            Our laboratory employs Oxford Nanopore long-read sequencing to generate comprehensive pathogen profiles from field-collected ticks and develop real-time surveillance strategies through partnerships with the Connecticut Agricultural Experiment Station and state health departments. This work enables rapid pathogen detection, community composition analysis, and public health decision-making.
+            Our laboratory employs Oxford Nanopore long-read sequencing to generate pathogen profiles from field-collected ticks and develop real-time surveillance strategies through partnerships with the Connecticut Agricultural Experiment Station and state health departments. This work enables rapid pathogen detection, community composition analysis, and public health decision-making.
         </p>
         
         <div class="key-questions">

@@ -113,6 +113,10 @@ author_profile: false
     
     /* Ensure the site title has room */
     .site-title {
+        max-width: 180px !important;
+        font-size: 15px !important;
+    }
+
     
     /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links,
@@ -123,9 +127,6 @@ author_profile: false
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 180px !important;
-        font-size: 15px !important;
     }
     
     
@@ -142,6 +143,10 @@ author_profile: false
     }
     
     .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
+    }
+
     
     .greedy-nav .visible-links {
         display: none !important;
@@ -149,9 +154,6 @@ author_profile: false
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 120px !important;
-        font-size: 14px !important;
     }
 }
 
@@ -224,7 +226,7 @@ author_profile: false
 
 .pi-title {
     font-size: 20px;
-    color: #22a8b8;
+    color: #1e3a5f;
     margin-bottom: 8px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
@@ -245,7 +247,7 @@ author_profile: false
 
 .affiliation-item:before {
     content: "▸";
-    color: #22a8b8;
+    color: #1e3a5f;
     position: absolute;
     left: 0;
 }
@@ -257,7 +259,7 @@ author_profile: false
 }
 
 .affiliation-item a:hover {
-    color: #22a8b8;
+    color: #1e3a5f;
 }
 
 .pi-bio {
@@ -280,8 +282,8 @@ author_profile: false
     gap: 8px;
     padding: 12px 24px;
     background: transparent;
-    border: 2px solid #22a8b8;
-    color: #22a8b8;
+    border: 2px solid #1e3a5f;
+    color: #1e3a5f;
     text-decoration: none;
     border-radius: 6px;
     font-family: 'Inter', sans-serif;
@@ -291,10 +293,10 @@ author_profile: false
 }
 
 .pi-link:hover {
-    background: #22a8b8;
+    background: #1e3a5f;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(34, 168, 184, 0.3);
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
 }
 
 .pi-link i {
@@ -330,7 +332,7 @@ author_profile: false
     margin-bottom: 40px;
     font-family: 'Playfair Display', serif;
     padding-bottom: 15px;
-    border-bottom: 3px solid #22a8b8;
+    border-bottom: 3px solid #1e3a5f;
 }
 
 /* Volunteer footnote */
@@ -357,7 +359,7 @@ author_profile: false
 .student-category h3 {
     font-size: 22px;
     font-weight: 600;
-    color: #22a8b8;
+    color: #1e3a5f;
     margin-bottom: 25px;
     font-family: 'Inter', sans-serif;
     text-transform: uppercase;
@@ -371,7 +373,7 @@ author_profile: false
     padding: 15px 20px;
     background: #f8f8f8;
     border-radius: 6px;
-    border-left: 4px solid #22a8b8;
+    border-left: 4px solid #1e3a5f;
     transition: all 0.3s ease;
 }
 
@@ -443,11 +445,11 @@ author_profile: false
     background: #f8f8f8;
     border-radius: 6px;
     transition: all 0.3s ease;
-    border-left: 3px solid #22a8b8;
+    border-left: 3px solid #1e3a5f;
 }
 
 .collaborator-item:hover {
-    background: #22a8b8;
+    background: #1e3a5f;
     transform: translateX(5px);
 }
 
@@ -476,7 +478,7 @@ author_profile: false
 }
 
 .collaborator-link:hover {
-    color: #22a8b8;
+    color: #1e3a5f;
 }
 
 /* RESPONSIVE */

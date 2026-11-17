@@ -71,129 +71,70 @@ permalink: /teaching/
 
 
 
-/* COURSES SECTION */
-.courses-section {
-    max-width: 1100px;
-    margin: 0 auto;
+/* ============ TEACHING ============ */
+.tc-page { background: #f7f7f5; min-height: 100vh; }
+.tc-content { max-width: 940px; margin: 0 auto; padding: 56px 40px 96px; }
+
+.tc-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 40px; font-weight: 600; color: #1a1a1a;
+    letter-spacing: -0.3px; margin: 0 0 16px;
+}
+.tc-intro {
+    font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7;
+    color: #666; margin: 0 0 48px; max-width: 640px;
 }
 
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 36px;
-    color: #1a1a1a;
-    text-align: center;
-    margin-bottom: 50px;
+.tc-heading {
+    font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: #8a8a84;
+    margin: 0; padding-bottom: 14px; border-bottom: 2px solid #1a1a1a;
 }
 
-/* COURSE GRID */
-.course-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-bottom: 60px;
+.tc-course { padding: 28px 0; border-bottom: 1px solid #e2e2de; }
+.tc-code {
+    font-family: 'Inter', sans-serif; font-size: 12.5px; font-weight: 600;
+    letter-spacing: 0.06em; color: #1e3a5f; margin: 0 0 6px;
+}
+.tc-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 21px; font-weight: 600; color: #1a1a1a; margin: 0 0 8px;
+}
+.tc-meta {
+    font-family: 'Inter', sans-serif; font-size: 13px; color: #8a8a84;
+    margin: 0 0 12px; letter-spacing: 0.02em;
+}
+.tc-blurb {
+    font-family: 'Inter', sans-serif; font-size: 15.5px; line-height: 1.7;
+    color: #333; margin: 0; max-width: 680px;
 }
 
-/* COURSE CARD - Biomedical Theme */
-.course-card {
-    background: #ffffff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
-    border-top: 4px solid #22a8b8;
+.tc-note {
+    font-family: 'Inter', sans-serif; font-size: 15.5px; line-height: 1.7;
+    color: #333; margin: 28px 0 0; max-width: 680px;
 }
 
-.course-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(34, 168, 184, 0.2);
+.tc-section-gap { margin-top: 64px; }
+
+/* Previous teaching: compact rows, no blurbs */
+.tc-past {
+    padding: 16px 0; border-bottom: 1px solid #e2e2de;
+    display: grid; grid-template-columns: 150px 1fr 200px; gap: 24px; align-items: baseline;
+}
+.tc-past .tc-code { margin: 0; }
+.tc-past-name {
+    font-family: 'Inter', sans-serif; font-size: 15.5px; color: #1a1a1a; margin: 0;
+}
+.tc-past-meta {
+    font-family: 'Inter', sans-serif; font-size: 13px; color: #8a8a84; margin: 0; text-align: right;
 }
 
-.course-header {
-    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
-    padding: 25px;
-}
-
-.course-code {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: #22a8b8;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-}
-
-.course-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1.3;
-    margin: 0;
-}
-
-.course-body {
-    padding: 25px;
-}
-
-.course-meta {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-    flex-wrap: wrap;
-}
-
-.meta-badge {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    color: #666;
-    background: #f0f0f0;
-    padding: 5px 12px;
-    border-radius: 4px;
-    font-weight: 600;
-}
-
-.course-description {
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    line-height: 1.7;
-    color: #555;
-}
-
-.new-badge {
-    display: inline-block;
-    background: linear-gradient(135deg, #22a8b8 0%, #1a8a9a 100%);
-    color: #ffffff;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 4px 10px;
-    border-radius: 4px;
-    margin-left: 8px;
-}
-
-
-
-
-
-/* DIVIDER */
-.section-divider {
-    max-width: 1100px;
-    margin: 80px auto;
-    height: 2px;
-    background: linear-gradient(to right, transparent, #22a8b8, transparent);
-}
-
-@media (max-width: 768px) {
-    .course-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-bar {
-        grid-template-columns: 1fr;
-    }
-    
-    .philosophy-section {
-        padding: 40px 30px;
-    }
+@media (max-width: 860px) {
+    .tc-content { padding: 40px 20px 64px; }
+    .tc-title { font-size: 32px; }
+    .tc-course { padding: 22px 0; }
+    .tc-past { grid-template-columns: 1fr; gap: 4px; padding: 14px 0; }
+    .tc-past-meta { text-align: left; }
 }
 
 /* RESPONSIVE DNA LAYOUT - All Screen Sizes */
@@ -219,6 +160,10 @@ permalink: /teaching/
     }
     
     .site-title {
+        max-width: 140px !important;
+        font-size: 15px !important;
+    }
+
     
     /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links,
@@ -229,9 +174,6 @@ permalink: /teaching/
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 140px !important;
-        font-size: 15px !important;
     }
     
     
@@ -247,6 +189,10 @@ permalink: /teaching/
     }
     
     .site-title {
+        max-width: 120px !important;
+        font-size: 14px !important;
+    }
+
     
     .greedy-nav .visible-links {
         display: none !important;
@@ -254,9 +200,6 @@ permalink: /teaching/
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 120px !important;
-        font-size: 14px !important;
     }
 }
 </style>
@@ -277,166 +220,91 @@ permalink: /teaching/
 })();
 </script>
 
-<div class="teaching-container">
-    
-    <!-- CURRICULUM INNOVATION -->
-    <div class="courses-section">
-        <h2 class="section-title">Curriculum Innovation</h2>
-        
-        <div class="course-grid">
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS519 / MED700</div>
-                    <h3 class="course-title">Computational Biomedicine</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2025</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Hands-on training in R programming and computational approaches for analyzing biomedical big data. Covers quantitative biology, genome-wide association studies, DNA/RNA sequencing workflows, and machine learning applications in precision medicine.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS622 / MED740</div>
-                    <h3 class="course-title">Machine Learning in Medical Sciences</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2026</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Advanced training in machine learning and AI applications for biomedical research, covering supervised learning, neural networks, and practical genomic data analysis. Co-taught with Dr. Richard Feinn at the Frank H. Netter MD School of Medicine.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS312</div>
-                    <h3 class="course-title">Biomedical Genomics</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Fall 2024, 2025</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Examines how modern genomic technologies are transforming the diagnosis, risk assessment, and treatment of human disease. Students engage with real clinical case studies, population-scale sequencing data, and current research literature.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BIO500</div>
-                    <h3 class="course-title">Neurogenetics</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Summer 2024</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Integration of genetics and neuroscience to understand inherited neurological disorders.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS578</div>
-                    <h3 class="course-title">Cellular Basis of Neurobiological Disorders</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Fall 2025</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Deep dive into the cellular, molecular, and genetic mechanisms underlying neurodevelopmental and neurodegenerative diseases.</p>
-                </div>
-            </div>
-            
-        </div>
-        
-        <div class="section-divider"></div>
-        
-        <!-- CORE COURSES -->
-        <h2 class="section-title">Core Instruction</h2>
-        
-        <div class="course-grid">
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS472</div>
-                    <h3 class="course-title">Biotechnology</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2024-26</span>
-                        <span class="meta-badge">Undergraduate</span>
-                    </div>
-                    <p class="course-description">Applied molecular biology techniques and biotechnology applications in medicine and research.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS556</div>
-                    <h3 class="course-title">Seminar in Healthcare Disparities</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2025-26</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Critical examination of health inequities in clinical and public health settings.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BIO282</div>
-                    <h3 class="course-title">Genetics</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Fall 2023-25</span>
-                        <span class="meta-badge">Undergraduate</span>
-                    </div>
-                    <p class="course-description">Foundational genetics covering inheritance, molecular mechanisms, and genomic technologies.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BMS522/L</div>
-                    <h3 class="course-title">Immunology & Laboratory</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Fall 2023-24</span>
-                        <span class="meta-badge">Graduate</span>
-                    </div>
-                    <p class="course-description">Immune system function with hands-on laboratory component.</p>
-                </div>
-            </div>
-            
-            <div class="course-card">
-                <div class="course-header">
-                    <div class="course-code">BIO329</div>
-                    <h3 class="course-title">Neurobiology</h3>
-                </div>
-                <div class="course-body">
-                    <div class="course-meta">
-                        <span class="meta-badge">Spring 2023-24</span>
-                        <span class="meta-badge">Undergraduate</span>
-                    </div>
-                    <p class="course-description">Comprehensive study of nervous system structure, function, and cellular mechanisms.</p>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    
-</div>
+<div class="tc-page">
+<div class="tc-content">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <h1 class="tc-title">Teaching</h1>
+    <p class="tc-intro">
+        Courses taught at Quinnipiac University in the School of Health Sciences and the Frank H. Netter MD School of Medicine.
+    </p>
+
+    <p class="tc-heading">Current Courses</p>
+
+    <div class="tc-course">
+        <p class="tc-code">BMS 519 / MED 700</p>
+        <p class="tc-name">Computational Biomedicine</p>
+        <p class="tc-meta">Graduate</p>
+        <p class="tc-blurb">
+            Hands-on training in R programming and computational approaches for analyzing biomedical data. Covers quantitative biology, genome-wide association studies, DNA and RNA sequencing workflows, and machine learning applications in precision medicine.
+        </p>
+    </div>
+
+    <div class="tc-course">
+        <p class="tc-code">BMS 578</p>
+        <p class="tc-name">Cellular Basis of Neurobiological Disorders</p>
+        <p class="tc-meta">Graduate</p>
+        <p class="tc-blurb">
+            The cellular, molecular, and genetic mechanisms underlying neurodevelopmental and neurodegenerative disease, worked through the primary literature.
+        </p>
+    </div>
+
+    <div class="tc-course">
+        <p class="tc-code">BMS 312</p>
+        <p class="tc-name">Biomedical Genomics</p>
+        <p class="tc-meta">Graduate</p>
+        <p class="tc-blurb">
+            How genomic technologies are changing the diagnosis, risk assessment, and treatment of human disease. Students work with clinical case studies, population-scale sequencing data, and current research literature.
+        </p>
+    </div>
+
+    <p class="tc-note">
+        Also teaches in the pre-clerkship neuroscience curriculum at the Frank H. Netter MD School of Medicine.
+    </p>
+
+    <div class="tc-section-gap"></div>
+    <p class="tc-heading">Previous Teaching</p>
+
+    <div class="tc-past">
+        <p class="tc-code">BMS 622 / MED 740</p>
+        <p class="tc-past-name">Machine Learning in Medical Sciences</p>
+        <p class="tc-past-meta">Graduate &middot; Spring 2026</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BMS 556</p>
+        <p class="tc-past-name">Seminar in Healthcare Disparities</p>
+        <p class="tc-past-meta">Graduate &middot; Spring 2025&ndash;26</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BMS 472</p>
+        <p class="tc-past-name">Biotechnology</p>
+        <p class="tc-past-meta">Undergraduate &middot; Spring 2024&ndash;26</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BIO 282</p>
+        <p class="tc-past-name">Genetics</p>
+        <p class="tc-past-meta">Undergraduate &middot; Fall 2023&ndash;25</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BIO 500</p>
+        <p class="tc-past-name">Neurogenetics</p>
+        <p class="tc-past-meta">Graduate &middot; Summer 2024</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BMS 522/L</p>
+        <p class="tc-past-name">Immunology &amp; Laboratory</p>
+        <p class="tc-past-meta">Graduate &middot; Fall 2023&ndash;24</p>
+    </div>
+
+    <div class="tc-past">
+        <p class="tc-code">BIO 329</p>
+        <p class="tc-past-name">Neurobiology</p>
+        <p class="tc-past-meta">Undergraduate &middot; Spring 2023&ndash;24</p>
+    </div>
+
+</div>
+</div>

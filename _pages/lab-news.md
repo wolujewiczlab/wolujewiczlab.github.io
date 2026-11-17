@@ -105,7 +105,7 @@ permalink: /lab-news/
     color: #1a1a1a;
     margin: 0;
     padding-top: 26px;
-    border-top: 2px solid #22a8b8;
+    border-top: 2px solid #1e3a5f;
     align-self: start;
     position: sticky;
     top: 24px;
@@ -129,7 +129,7 @@ permalink: /lab-news/
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #178896;
+    color: #1e3a5f;
     margin-bottom: 8px;
 }
 .news-title {
@@ -154,12 +154,12 @@ permalink: /lab-news/
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    color: #178896;
+    color: #1e3a5f;
     text-decoration: none;
-    border-bottom: 1px solid rgba(23, 136, 150, 0.3);
+    border-bottom: 1px solid rgba(30, 58, 95, 0.3);
     transition: border-color 0.2s ease;
 }
-.news-link:hover { border-bottom-color: #178896; }
+.news-link:hover { border-bottom-color: #1e3a5f; }
 .news-link::after { content: " \2192"; }
 
 .news-thumb {
@@ -218,6 +218,10 @@ permalink: /lab-news/
     }
     
     .site-title {
+        max-width: 180px !important;
+        font-size: 15px !important;
+    }
+
     
     /* Force all nav links into hamburger menu */
     .greedy-nav .visible-links,
@@ -228,9 +232,6 @@ permalink: /lab-news/
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 180px !important;
-        font-size: 15px !important;
     }
     
     
@@ -246,6 +247,10 @@ permalink: /lab-news/
     }
     
     .site-title {
+        max-width: 110px !important;
+        font-size: 14px !important;
+    }
+
     
     .greedy-nav .visible-links {
         display: none !important;
@@ -253,9 +258,6 @@ permalink: /lab-news/
     
     .greedy-nav__toggle {
         display: block !important;
-    }
-        max-width: 110px !important;
-        font-size: 14px !important;
     }
 }
 </style>
