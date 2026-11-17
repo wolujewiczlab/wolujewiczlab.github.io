@@ -251,14 +251,14 @@ permalink: /teaching/
     <div class="tc-course">
         <p class="tc-code">BMS 312</p>
         <p class="tc-name">Biomedical Genomics</p>
-        <p class="tc-meta">Graduate</p>
+        <p class="tc-meta">Undergraduate</p>
         <p class="tc-blurb">
             How genomic technologies are changing the diagnosis, risk assessment, and treatment of human disease. Students work with clinical case studies, population-scale sequencing data, and current research literature.
         </p>
     </div>
 
     <p class="tc-note">
-        Also teaches in the pre-clerkship neuroscience curriculum at the Frank H. Netter MD School of Medicine.
+        I also teach in the pre-clerkship neuroscience and neurology curriculum at the Frank H. Netter MD School of Medicine.
     </p>
 
     <div class="tc-section-gap"></div>
